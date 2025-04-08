@@ -10,13 +10,14 @@ namespace Toybox.InputSystem {
         public StInputEvent MoveEvent;
         public float MoveValue;
         
+        public StInputEvent PlaceEvent;
         public StInputEvent GridMoveEvent;
         public Vector2 GridMoveDir;
-        public StInputEvent PlaceEvent;
 
 
         private void Start() {
             JumpEvent.Started += () => { Debug.Log(gameObject.name + "Jump"); };
+            PlaceEvent.Started += () => { Debug.Log(gameObject.name + "Place"); };
         }
 
         public void OnJump(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(JumpEvent, ctx);
@@ -25,9 +26,14 @@ namespace Toybox.InputSystem {
             MoveValue = ctx.ReadValue<float>();
             InputEventSystem.InvokeInputEvent(MoveEvent, ctx);
         }
-        
-        public void OnGridMove(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(GridMoveEvent, ctx);
+
         public void OnPlace(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(PlaceEvent, ctx);
+        
+        public void OnGridMove(InputAction.CallbackContext ctx) {
+            GridMoveDir = ctx.ReadValue<Vector2>();
+            InputEventSystem.InvokeInputEvent(GridMoveEvent, ctx);
+        }
+
     }
     
     

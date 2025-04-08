@@ -21,14 +21,14 @@ namespace Managers {
         }
         
         public void StartRaceMode() {
-            foreach (PlayerInput player in _playerManager.Players) {
-                player.currentActionMap = player.actions.FindActionMap("Race");
+            foreach (StPlayer player in _playerManager.Players) {
+                player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
             }
         }
 
         public void StartConstructMode() {
-            foreach (PlayerInput player in _playerManager.Players) {
-                player.currentActionMap = player.actions.FindActionMap("Construct");
+            foreach (StPlayer player in _playerManager.Players) {
+                player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
             }
         }
     }

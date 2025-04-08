@@ -473,18 +473,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1284504806 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8616433520341010374, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+--- !u!114 &1284504810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 965559377940951561, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
   m_PrefabInstance: {fileID: 5511080449749471119}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1284504810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284504806}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b030ca7e10da4eca88b5b7e662001791, type: 3}
@@ -1131,18 +1125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[[Managers]]'
       objectReference: {fileID: 0}
-    - target: {fileID: 8616433520341010374, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: m_Name
-      value: PlayerGameMode
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 1208248250268799004, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8616433520341010374, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1284504810}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

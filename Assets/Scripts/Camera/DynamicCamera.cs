@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Managers;
+using ToyBox.Player;
 using UnityEngine;
 
 public class DynamicCamera : MonoBehaviour
@@ -40,19 +42,20 @@ public class DynamicCamera : MonoBehaviour
         //if (_cameraObjects.Count > 0) 
         if(_playerManager.Players.Count>0)
         {
+            List<StPlayer> alivePlayers = GetAlivePlayers();
             _centerPlayerPos=Vector3.zero;
             _camSize = 0;
             //foreach (Transform player in _cameraObjects)
-            foreach (StPlayer player in _playerManager.Players)
+            foreach (StPlayer player in alivePlayers)
             {
                 //_centerPlayerPos += player.transform.position;
                 _centerPlayerPos += player.PlayerObject.transform.position;
             }
             //_centerPlayerPos/=_cameraObjects.Count;
-            _centerPlayerPos/=_playerManager.Players.Count;
+            _centerPlayerPos/=alivePlayers.Count;
             
             //foreach (Transform player in _cameraObjects)
-            foreach (StPlayer player in _playerManager.Players)
+            foreach (StPlayer player in alivePlayers)
             {
                 //float distance = Vector3.Distance(player.transform.position, _centerPlayerPos);
                 float distance = Vector3.Distance(player.PlayerObject.transform.position,_centerPlayerPos);
@@ -82,5 +85,20 @@ public class DynamicCamera : MonoBehaviour
             _mainCam.orthographicSize = _camSize;
         }
 
+    }
+
+    private List<StPlayer> GetAlivePlayers()
+    {
+        List<StPlayer> alivePlayers = new List<StPlayer>();
+        
+        foreach (StPlayer player in _playerManager.Players)
+        {
+            if (player.PlayerObject.GetComponent<PlayerMovement>().IsDead != true)
+            {
+                alivePlayers.Add(player);
+            }
+        }
+        
+        return alivePlayers;
     }
 }

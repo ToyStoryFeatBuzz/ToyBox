@@ -2821,7 +2821,7 @@ GameObject:
   - component: {fileID: 1055992082}
   - component: {fileID: 1055992083}
   - component: {fileID: 1055992084}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2908,7 +2908,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b5cc667b6f54ca341b2101159e6f1196, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5370,7 +5370,7 @@ GameObject:
   - component: {fileID: 1791515894}
   - component: {fileID: 1791515896}
   - component: {fileID: 1791515895}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5638,7 +5638,7 @@ GameObject:
   - component: {fileID: 1909459242}
   - component: {fileID: 1909459244}
   - component: {fileID: 1909459243}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6121,7 +6121,7 @@ GameObject:
   - component: {fileID: 1982504037}
   - component: {fileID: 1982504038}
   - component: {fileID: 1982504039}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6208,7 +6208,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b5cc667b6f54ca341b2101159e6f1196, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

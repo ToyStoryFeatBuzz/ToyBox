@@ -5,7 +5,8 @@ using UnityEngine;
 namespace ToyBox.Player
 {
     public class PlayerMovement : MonoBehaviour
-    {
+    { 
+        public bool IsDead;
         [SerializeField] float _acceleration;
         [SerializeField] float _deceleration;
         [SerializeField] float _maxSpeed;
@@ -32,29 +33,34 @@ namespace ToyBox.Player
 
         private void FixedUpdate()
         {
-            _rb.AddForceX(_acceleration * _inputManager.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse);
-            _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed);
-            
+            if (!IsDead)
+            {
 
-            if (_inputManager.MoveValue == 0)
-            {
-                _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
-            }
-            
-            if (_rb.IsTouchingLayers(LayerMask.GetMask("Ground")) && _performGroundCheck)
-            {
-                _isGrounded = true;
-                _remainJump = _maxJump;
-            }
-            else
-            {
-                _isGrounded = false;
+
+                _rb.AddForceX(_acceleration * _inputManager.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed);
+
+
+                if (_inputManager.MoveValue == 0)
+                {
+                    _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                }
+
+                if (_rb.IsTouchingLayers(LayerMask.GetMask("Ground")) && _performGroundCheck)
+                {
+                    _isGrounded = true;
+                    _remainJump = _maxJump;
+                }
+                else
+                {
+                    _isGrounded = false;
+                }
             }
         }
 
         private void OnJump()
         {
-            if (_remainJump != 0 || _isGrounded)
+            if ((_remainJump != 0 || _isGrounded) && !IsDead)
             {
                 _rb.gravityScale = 1;
                 _rb.linearVelocityY = 0;
@@ -69,6 +75,14 @@ namespace ToyBox.Player
         {
             _performGroundCheck = true;
             _rb.gravityScale = _gravity;
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("KillObject"))
+            {
+                IsDead = true;
+            }
         }
     }
 }

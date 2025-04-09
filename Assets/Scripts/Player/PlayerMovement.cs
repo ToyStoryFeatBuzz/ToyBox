@@ -15,18 +15,18 @@ namespace ToyBox.Player
         [SerializeField] float _gravity;
 
         bool _isGrounded;
-        
+        bool _performGroundCheck;
         PlayerInputManager _inputManager;
         Rigidbody2D _rb;
 
-        bool _performGroundCheck;
+        
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
             _inputManager = GetComponent<PlayerInputManager>();
             _inputManager.JumpEvent.Started += OnJump;
             _inputManager.JumpEvent.Canceled += OnJumpCancel;
-            _inputManager.JumpEvent.Performed += OnJumpCancel;
+            _inputManager.JumpEvent.Performed += OnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
             _remainJump = _maxJump;
         }
 
@@ -61,7 +61,7 @@ namespace ToyBox.Player
                 _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
                 _remainJump--;
                 _isGrounded = false;
-                _performGroundCheck = false;
+                _performGroundCheck = false; //Little hack to make sure the ground check does not trigger on the first frame after jumping, to prevent triple jumps
             }
         }
 

@@ -100,7 +100,7 @@ namespace ToyBox.Player
                 _isGrounded = false;
                 _performGroundCheck = false;
             }
-            else if ((_remainJump != 0 || _isGrounded) && !IsDead)
+            else if ((_remainJump != 0 && _isGrounded) && !IsDead)
             {
                 _rb.gravityScale = 1;
                 _rb.linearVelocityY = 0;
@@ -108,6 +108,15 @@ namespace ToyBox.Player
                 _remainJump--;
                 _isGrounded = false;
                 _performGroundCheck = false; //Little hack to make sure the ground check does not trigger on the first frame after jumping, to prevent triple jumps
+            }
+            else if (_remainJump != 0)
+            {
+                _rb.gravityScale = 1;
+                _rb.linearVelocityY = 0;
+                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
+                _remainJump = 0;
+                _isGrounded = false;
+                _performGroundCheck = false;
             }
         }
 
@@ -123,6 +132,12 @@ namespace ToyBox.Player
             {
                 IsDead = true;
             }
+        }
+
+        public void ApplyKnockBack(Vector2 knockBackVector)
+        {
+            _rb.linearVelocity = Vector2.zero;
+            _rb.AddForce(knockBackVector, ForceMode2D.Impulse);
         }
 
         void OnDrawGizmosSelected() //To show the overlap boxes in the editor

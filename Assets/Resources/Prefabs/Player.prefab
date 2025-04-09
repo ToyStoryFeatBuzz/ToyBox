@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1157256760377602241}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,6 +220,7 @@ MonoBehaviour:
   _maxJump: 2
   _remainJump: 2
   _wallJumpVector: {x: 4.43, y: 1.25}
+  _canWallJumpOnSameWall: 0
   _gravity: 4
   _groundOffset: {x: 0, y: -0.5}
   _groundCheckSize: {x: 0.88, y: 0.1}

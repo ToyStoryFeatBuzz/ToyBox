@@ -1125,6 +1125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[[Managers]]'
       objectReference: {fileID: 0}
+    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      propertyPath: Players.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

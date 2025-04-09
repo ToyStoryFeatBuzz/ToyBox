@@ -14,6 +14,7 @@ namespace ToyBox.Player
         [SerializeField] int _maxJump;
         [SerializeField] int _remainJump;
         [SerializeField] Vector2 _wallJumpVector;
+        [SerializeField] bool _canWallJumpOnSameWall;
         [SerializeField] float _gravity;
         [Space(10)]
         [Header("OverlapBox offsets")]
@@ -26,6 +27,7 @@ namespace ToyBox.Player
         [SerializeField] Vector2 _rightWallOffset;
         [SerializeField] Vector2 _rightWallCheckSize;
 
+        
         EWallJumpDirection _wallJumpDirection = EWallJumpDirection.None;
         
         bool _isGrounded;
@@ -74,7 +76,7 @@ namespace ToyBox.Player
         private void OnOnJump()
         {
             if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
-                    LayerMask.GetMask("Wall")) && !_isGrounded && _wallJumpDirection != EWallJumpDirection.Left)
+                    LayerMask.GetMask("Wall")) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall))
             {
                 Debug.Log("Walljump left");
                 _wallJumpDirection = EWallJumpDirection.Left;
@@ -86,7 +88,7 @@ namespace ToyBox.Player
                 _performGroundCheck = false;
             }
             else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0,
-                         LayerMask.GetMask("Wall")) && !_isGrounded && _wallJumpDirection != EWallJumpDirection.Right)
+                         LayerMask.GetMask("Wall")) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
                 Debug.Log("Walljump right");
                 _wallJumpDirection = EWallJumpDirection.Right;

@@ -13,17 +13,25 @@ namespace ToyBox.Player
         [SerializeField] float _jumpForce;
         [SerializeField] int _maxJump;
         [SerializeField] int _remainJump;
+        [SerializeField] Vector2 _wallJumpVector;
         [SerializeField] float _gravity;
         [Space(10)]
         [Header("OverlapBox offsets")]
+        [SerializeField] Vector2 _groundOffset;
+        [SerializeField] Vector2 _groundCheckSize;
+        [Space(5)]
+        [SerializeField] Vector2 _leftWallOffset;
+        [SerializeField] Vector2 _leftWallCheckSize;
+        [Space(5)]
+        [SerializeField] Vector2 _rightWallOffset;
+        [SerializeField] Vector2 _rightWallCheckSize;
+
+        EWallJumpDirection _wallJumpDirection = EWallJumpDirection.None;
         
         bool _isGrounded;
         bool _performGroundCheck;
         PlayerInputManager _inputManager;
         Rigidbody2D _rb;
-        
-        
-
         
         private void Start()
         {
@@ -50,10 +58,11 @@ namespace ToyBox.Player
                     _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
                 }
 
-                if (_rb.IsTouchingLayers(LayerMask.GetMask("Ground")) && _performGroundCheck)
+                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,LayerMask.GetMask("Ground")) && _performGroundCheck)
                 {
                     _isGrounded = true;
                     _remainJump = _maxJump;
+                    _wallJumpDirection = EWallJumpDirection.None;
                 }
                 else
                 {
@@ -64,7 +73,31 @@ namespace ToyBox.Player
 
         private void OnOnJump()
         {
-            if ((_remainJump != 0 || _isGrounded) && !IsDead)
+            if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
+                    LayerMask.GetMask("Wall")) && !_isGrounded && _wallJumpDirection != EWallJumpDirection.Left)
+            {
+                Debug.Log("Walljump left");
+                _wallJumpDirection = EWallJumpDirection.Left;
+                _rb.gravityScale = 1;
+                _rb.linearVelocity = Vector2.zero;
+                _rb.AddForce(_wallJumpVector*_jumpForce, ForceMode2D.Impulse);
+                _remainJump = 1;
+                _isGrounded = false;
+                _performGroundCheck = false;
+            }
+            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0,
+                         LayerMask.GetMask("Wall")) && !_isGrounded && _wallJumpDirection != EWallJumpDirection.Right)
+            {
+                Debug.Log("Walljump right");
+                _wallJumpDirection = EWallJumpDirection.Right;
+                _rb.gravityScale = 1;
+                _rb.linearVelocity = Vector2.zero;
+                _rb.AddForce(new Vector2(-_wallJumpVector.x,_wallJumpVector.y) * _jumpForce, ForceMode2D.Impulse);
+                _remainJump = 1;
+                _isGrounded = false;
+                _performGroundCheck = false;
+            }
+            else if ((_remainJump != 0 || _isGrounded) && !IsDead)
             {
                 _rb.gravityScale = 1;
                 _rb.linearVelocityY = 0;
@@ -92,8 +125,19 @@ namespace ToyBox.Player
         void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(new Vector2(transform.position.x,transform.position.y-0.7f), new Vector2(1f, 0.1f));
+            Gizmos.DrawWireCube(transform.position+(Vector3)_groundOffset, _groundCheckSize);
             Gizmos.color = Color.blue;
+            Gizmos.DrawWireCube(new Vector2(transform.position.x+_leftWallOffset.x,transform.position.y+_leftWallOffset.y), _leftWallCheckSize);
+            Gizmos.DrawWireCube(new Vector2(transform.position.x+_rightWallOffset.x,transform.position.y+_rightWallOffset.y), _rightWallCheckSize);
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, transform.position+(Vector3)_wallJumpVector);
         }
+    }
+
+    enum EWallJumpDirection
+    {
+        Left,
+        Right,
+        None
     }
 }

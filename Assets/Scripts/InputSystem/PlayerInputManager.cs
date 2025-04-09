@@ -5,33 +5,33 @@ using UnityEngine.InputSystem;
 
 namespace Toybox.InputSystem {
     public class PlayerInputManager : MonoBehaviour {
-        public StInputEvent JumpEvent;
+        public StInputEvent OnJumpEvent;
          
-        public StInputEvent MoveEvent;
+        public StInputEvent OnMoveEvent;
         public float MoveValue;
         
-        public StInputEvent PlaceEvent;
-        public StInputEvent GridMoveEvent;
+        public StInputEvent OnPlaceEvent;
+        public StInputEvent OnGridMoveEvent;
         public Vector2 GridMoveDir;
 
 
         private void Start() {
-            JumpEvent.Started += () => { Debug.Log(gameObject.name + "Jump"); };
-            PlaceEvent.Started += () => { Debug.Log(gameObject.name + "Place"); };
+            OnJumpEvent.Started += () => { Debug.Log(gameObject.name + "Jump"); };
+            OnPlaceEvent.Started += () => { Debug.Log(gameObject.name + "Place"); };
         }
 
-        public void OnJump(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(JumpEvent, ctx);
+        public void OnJump(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnJumpEvent, ctx);
 
         public void OnMove(InputAction.CallbackContext ctx) {
             MoveValue = ctx.ReadValue<float>();
-            InputEventSystem.InvokeInputEvent(MoveEvent, ctx);
+            InputEventSystem.InvokeInputEvent(OnMoveEvent, ctx);
         }
 
-        public void OnPlace(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(PlaceEvent, ctx);
+        public void OnPlace(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnPlaceEvent, ctx);
         
         public void OnGridMove(InputAction.CallbackContext ctx) {
             GridMoveDir = ctx.ReadValue<Vector2>();
-            InputEventSystem.InvokeInputEvent(GridMoveEvent, ctx);
+            InputEventSystem.InvokeInputEvent(OnGridMoveEvent, ctx);
         }
 
     }

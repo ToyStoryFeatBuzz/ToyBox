@@ -29,9 +29,9 @@ namespace ToyBox.Player
         {
             _rb = GetComponent<Rigidbody2D>();
             _inputManager = GetComponent<PlayerInputManager>();
-            _inputManager.JumpEvent.Started += OnJump;
-            _inputManager.JumpEvent.Canceled += OnJumpCancel;
-            _inputManager.JumpEvent.Performed += OnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
+            _inputManager.OnJumpEvent.Started += OnOnJump;
+            _inputManager.OnJumpEvent.Canceled += OnOnJumpCancel;
+            _inputManager.OnJumpEvent.Performed += OnOnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
             _remainJump = _maxJump;
         }
 
@@ -62,7 +62,7 @@ namespace ToyBox.Player
             }
         }
 
-        private void OnJump()
+        private void OnOnJump()
         {
             if ((_remainJump != 0 || _isGrounded) && !IsDead)
             {
@@ -75,7 +75,7 @@ namespace ToyBox.Player
             }
         }
 
-        private void OnJumpCancel()
+        private void OnOnJumpCancel()
         {
             _performGroundCheck = true;
             _rb.gravityScale = _gravity;

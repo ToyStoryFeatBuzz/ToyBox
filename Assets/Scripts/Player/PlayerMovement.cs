@@ -14,11 +14,15 @@ namespace ToyBox.Player
         [SerializeField] int _maxJump;
         [SerializeField] int _remainJump;
         [SerializeField] float _gravity;
-
+        [Space(10)]
+        [Header("OverlapBox offsets")]
+        
         bool _isGrounded;
         bool _performGroundCheck;
         PlayerInputManager _inputManager;
         Rigidbody2D _rb;
+        
+        
 
         
         private void Start()
@@ -83,6 +87,13 @@ namespace ToyBox.Player
             {
                 IsDead = true;
             }
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(new Vector2(transform.position.x,transform.position.y-0.7f), new Vector2(1f, 0.1f));
+            Gizmos.color = Color.blue;
         }
     }
 }

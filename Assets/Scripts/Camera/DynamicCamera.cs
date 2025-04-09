@@ -22,7 +22,7 @@ public class DynamicCamera : MonoBehaviour
     public Action ActualModeFunction;
     
     //Debug
-    [SerializeField] private List<Transform> _cameraObjects=new List<Transform>();
+    //[SerializeField] private List<Transform> _cameraObjects=new List<Transform>();
     void Start()
     {
         _mainCam = Camera.main;
@@ -37,24 +37,25 @@ public class DynamicCamera : MonoBehaviour
 
     public void RaceMode()
     {
-        if (_cameraObjects.Count > 0)
-            //if(_playerManager.Players.Count>0)
+        //if (_cameraObjects.Count > 0) 
+        if(_playerManager.Players.Count>0)
         {
             _centerPlayerPos=Vector3.zero;
             _camSize = 0;
-            foreach (Transform player in _cameraObjects)
-                //foreach (StPlayer player in _playerManager.Players)
+            //foreach (Transform player in _cameraObjects)
+            foreach (StPlayer player in _playerManager.Players)
             {
-                _centerPlayerPos += player.transform.position;
-                //_centerPlayerPos += player.PlayerObject.transform.position;
+                //_centerPlayerPos += player.transform.position;
+                _centerPlayerPos += player.PlayerObject.transform.position;
             }
-            _centerPlayerPos/=_cameraObjects.Count;
+            //_centerPlayerPos/=_cameraObjects.Count;
+            _centerPlayerPos/=_playerManager.Players.Count;
             
-            foreach (Transform player in _cameraObjects)
-                //foreach (StPlayer player in _playerManager.Players)
+            //foreach (Transform player in _cameraObjects)
+            foreach (StPlayer player in _playerManager.Players)
             {
-                float distance = Vector3.Distance(player.transform.position, _centerPlayerPos);
-                //float distance = Vector3.Distance(player.PlayerObject.transform.position,_centerPlayerPos);
+                //float distance = Vector3.Distance(player.transform.position, _centerPlayerPos);
+                float distance = Vector3.Distance(player.PlayerObject.transform.position,_centerPlayerPos);
                 if (_camSize < distance*_camSizeMultiplier)
                 {
                     _camSize = distance*_camSizeMultiplier;

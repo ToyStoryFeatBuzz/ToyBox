@@ -6,10 +6,13 @@ namespace ToyBox.Player
 {
     public class PlayerMovement : MonoBehaviour
     { 
+        #region VARIABLES
         public bool IsDead;
+        [Header("Movement variables")]
         [SerializeField] float _acceleration;
         [SerializeField] float _deceleration;
         [SerializeField] float _maxSpeed;
+        [Header("Jump variables")]
         [SerializeField] float _jumpForce;
         [SerializeField] int _maxJump;
         [SerializeField] int _remainJump;
@@ -26,7 +29,7 @@ namespace ToyBox.Player
         [Space(5)]
         [SerializeField] Vector2 _rightWallOffset;
         [SerializeField] Vector2 _rightWallCheckSize;
-
+        #endregion
         
         EWallJumpDirection _wallJumpDirection = EWallJumpDirection.None;
         

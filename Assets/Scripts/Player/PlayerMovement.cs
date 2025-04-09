@@ -26,6 +26,7 @@ namespace ToyBox.Player
             _inputManager = GetComponent<PlayerInputManager>();
             _inputManager.JumpEvent.Started += OnJump;
             _inputManager.JumpEvent.Canceled += OnJumpCancel;
+            _inputManager.JumpEvent.Performed += OnJumpCancel;
             _remainJump = _maxJump;
         }
 
@@ -49,19 +50,6 @@ namespace ToyBox.Player
             {
                 _isGrounded = false;
             }
-            
-            
-
-            //if (Physics2D.OverlapBox(new Vector2(transform.position.x, transform.position.y - 0.5f),
-            //        new Vector2(1, 0.1f), 0f, LayerMask.GetMask("Ground")))
-            //{
-            //    _isGrounded = true;
-            //    _remainJump = _maxJump;
-            //}
-            //else
-            //{
-            //    _isGrounded = false;
-            //}
         }
 
         private void OnJump()
@@ -79,15 +67,8 @@ namespace ToyBox.Player
 
         private void OnJumpCancel()
         {
-            Debug.Log("JumpCanceled");
             _performGroundCheck = true;
             _rb.gravityScale = _gravity;
-        }
-
-        void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(new Vector2(transform.position.x, transform.position.y - 0.5f), new Vector2(1f, 0.1f));
         }
     }
 }

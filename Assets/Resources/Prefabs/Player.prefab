@@ -218,7 +218,7 @@ MonoBehaviour:
   _jumpForce: 10
   _maxJump: 2
   _remainJump: 2
-  _gravity: 3
+  _gravity: 4
 --- !u!50 &-4477026410386236028
 Rigidbody2D:
   serializedVersion: 5
@@ -245,7 +245,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-1157256760377602241
 BoxCollider2D:
   m_ObjectHideFlags: 0

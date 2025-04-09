@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8432969575623354592}
   - component: {fileID: 7216990357613812954}
   - component: {fileID: 816963325045871209}
+  - component: {fileID: 9217010489635983876}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -178,6 +179,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1be6c408-55b9-4a9f-8573-1352625e1e3a
     m_ActionName: 'Construct/Place[/Mouse/leftButton,/SwitchProControllerHID/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816963325045871209}
+        m_TargetAssemblyTypeName: Toybox.InputSystem.PlayerInputManager, Assembly-CSharp
+        m_MethodName: OnRotateRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 90
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 17f6bd40-de32-4551-a03e-5305c1e72d13
+    m_ActionName: 'Construct/RotateRight[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816963325045871209}
+        m_TargetAssemblyTypeName: Toybox.InputSystem.PlayerInputManager, Assembly-CSharp
+        m_MethodName: OnRotateLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -90
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 89a37760-4329-4551-9815-9b9db7ce96f3
+    m_ActionName: 'Construct/RotateLeft[/Keyboard/a]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Race
@@ -197,3 +230,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveValue: 0
   GridMoveDir: {x: 0, y: 0}
+--- !u!114 &9217010489635983876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b5e3ee8ecee6e469a77fca5dfab432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doesSnap: 1
+  snapInterval: 1
+  objectsPrefabs:
+  - {fileID: 5475432701753714441, guid: 51ff7ae38a5800842adf447b16815a53, type: 3}
+  - {fileID: 6407882722982570177, guid: 7bb7e85a29fadd74ca83b90d7f4bf9ca, type: 3}
+  - {fileID: 5667357639506699088, guid: a115587b82d1e0644b72085da10d5ec5, type: 3}

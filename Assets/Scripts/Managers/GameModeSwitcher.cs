@@ -23,12 +23,14 @@ namespace Managers {
         public void StartRaceMode() {
             foreach (StPlayer player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
+                player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
             }
         }
 
         public void StartConstructMode() {
             foreach (StPlayer player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
+                player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }
         }
     }

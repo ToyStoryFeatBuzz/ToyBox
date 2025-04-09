@@ -78,7 +78,6 @@ namespace ToyBox.Player
             if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
                     LayerMask.GetMask("Wall")) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall))
             {
-                Debug.Log("Walljump left");
                 _wallJumpDirection = EWallJumpDirection.Left;
                 _rb.gravityScale = 1;
                 _rb.linearVelocity = Vector2.zero;
@@ -90,7 +89,6 @@ namespace ToyBox.Player
             else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0,
                          LayerMask.GetMask("Wall")) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
-                Debug.Log("Walljump right");
                 _wallJumpDirection = EWallJumpDirection.Right;
                 _rb.gravityScale = 1;
                 _rb.linearVelocity = Vector2.zero;
@@ -124,7 +122,7 @@ namespace ToyBox.Player
             }
         }
 
-        void OnDrawGizmosSelected()
+        void OnDrawGizmosSelected() //To show the overlap boxes in the editor
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(transform.position+(Vector3)_groundOffset, _groundCheckSize);

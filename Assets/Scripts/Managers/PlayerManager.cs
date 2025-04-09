@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using ToyBox.Player;
 
 namespace Managers {
     public class PlayerManager : MonoBehaviour {
@@ -16,9 +17,10 @@ namespace Managers {
             string name = "Player " + (Players.Count + 1);
             InputDevice device = player.user.pairedDevices.First();
             player.gameObject.name = name;
+            PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();
             
             Players.Add(new StPlayer
-                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device });
+                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats });
         }
 
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {
@@ -53,5 +55,6 @@ namespace Managers {
         public PlayerInput PlayerInput;
         public GameObject PlayerObject;
         public InputDevice Device;
+        public PlayerStats PlayerStats;
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using ToyBox.Player;
@@ -15,6 +16,7 @@ namespace ToyBox.Managers {
 
         public void AddPlayer(PlayerInput player) {
             string name = "Player " + (Players.Count + 1);
+            player.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = name;
             InputDevice device = player.user.pairedDevices.First();
             player.gameObject.name = name;
             PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();

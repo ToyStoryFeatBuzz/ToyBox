@@ -6,7 +6,7 @@ namespace ToyBox.Obstacles {
         private void OnCollisionEnter2D(Collision2D collision) {
             if (collision.gameObject.TryGetComponent(out PlayerMovement playerMovement)) {
                 playerMovement.IsDead = true;
-                playerMovement.enabled = false;
+                playerMovement.gameObject.transform.position = new Vector2(-999, -999); //Send the dead out of the map to avoid clutter on the race
             }
         }
     }

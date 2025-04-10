@@ -7,7 +7,7 @@ namespace ToyBox.Player {
         GameModeManager _gameModeManager => GameModeManager.Instance;
         
         private void Start() {
-            GetComponent<PlayerInputManager>().OnPauseEvent.Started += StartPause;
+            GetComponent<PlayerInputSystem>().OnPauseEvent.Started += StartPause;
         }
         
         void StartPause() {

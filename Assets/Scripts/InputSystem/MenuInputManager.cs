@@ -6,9 +6,10 @@ namespace Toybox.InputSystem {
         public static MenuInputManager Instance { get; private set; }
 
         public StInputEvent OnNavigateEvent;
-        public StInputEvent OnAnyEvent;
 
         public bool IsLastInputMouse;
+
+        public PlayerInput MenuInput;
         
         private void Awake() {
             if (Instance == null) {
@@ -18,11 +19,17 @@ namespace Toybox.InputSystem {
                 Destroy(gameObject);
             }
         }
-        
+
+        private void Start() {
+            MenuInput = GetComponent<PlayerInput>();
+            
+        }
+
         public void OnNavigate(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnNavigateEvent, ctx);
 
         public void OnAny(InputAction.CallbackContext ctx) {
             IsLastInputMouse = ctx.action.activeControl.device.name == "Mouse";
+            Debug.Log("Gay");
         }
 
         public void OnMouseMove(InputAction.CallbackContext ctx) {

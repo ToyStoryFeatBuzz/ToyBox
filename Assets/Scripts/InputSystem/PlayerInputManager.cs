@@ -1,5 +1,3 @@
-
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,11 +12,7 @@ namespace Toybox.InputSystem {
         public StInputEvent OnGridMoveEvent;
         public Vector2 GridMoveDir;
 
-
-        private void Start() {
-            OnJumpEvent.Started += () => { Debug.Log(gameObject.name + "Jump"); };
-            OnPlaceEvent.Started += () => { Debug.Log(gameObject.name + "Place"); };
-        }
+        public StInputEvent OnPauseEvent;
 
         public void OnJump(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnJumpEvent, ctx);
 
@@ -26,6 +20,8 @@ namespace Toybox.InputSystem {
             MoveValue = ctx.ReadValue<float>();
             InputEventSystem.InvokeInputEvent(OnMoveEvent, ctx);
         }
+        
+        public void OnPause(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnPauseEvent, ctx);
 
         public void OnPlace(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnPlaceEvent, ctx);
         

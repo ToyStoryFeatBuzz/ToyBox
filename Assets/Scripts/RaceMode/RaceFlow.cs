@@ -43,7 +43,7 @@ public class RaceFlow : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (_raceStarted)
         {

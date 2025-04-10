@@ -9,9 +9,8 @@ namespace ToyBox.Obstacles {
         [SerializeField] float knockBackForce;
 
         private void OnCollisionEnter2D(Collision2D collision) {
-            if (collision.gameObject.CompareTag("Player")) {
-                collision.gameObject.GetComponent<PlayerMovement>()
-                    .ApplyKnockBack(knockBackDirection.normalized * knockBackForce);
+            if ( collision.gameObject.TryGetComponent(out PlayerMovement playerMovement)) {
+                playerMovement.ApplyKnockBack(knockBackDirection.normalized * knockBackForce);
             }
         }
 

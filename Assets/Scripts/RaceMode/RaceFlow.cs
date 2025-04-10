@@ -10,18 +10,16 @@ public class RaceFlow : MonoBehaviour
 {
     [SerializeField] Transform _startTransform;
     
-    GameModeSwitcher _gameModeSwitcher;
+    GameModeManager _gameModeManager => GameModeManager.Instance;
     PlayerManager _playerManager;
 
     int _finishedPlayers;
     bool _raceStarted;
     
     
-    void Start()
-    {
-        _gameModeSwitcher = GameModeSwitcher.Instance;
-        _playerManager = _gameModeSwitcher.gameObject.GetComponent<PlayerManager>();
-        _gameModeSwitcher.RaceStart.AddListener(RaceStart);
+    void Start() {
+        _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
+        _gameModeManager.OnRaceStart += RaceStart;
     }
 
     private void RaceStart()
@@ -43,17 +41,12 @@ public class RaceFlow : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (_raceStarted)
-        {
-          if (GetAlivePlayers().Count == _finishedPlayers)
-          {
-              _gameModeSwitcher.RaceEnd.Invoke();
-              Debug.Log("Race ends");
-              _raceStarted = false;
-          }  
-        }
+    void Update() {
+        if (!_raceStarted) return;
+        if (GetAlivePlayers().Count != _finishedPlayers) return;
+        _gameModeManager.OnRaceEnd.Invoke();
+        Debug.Log("Race ends");
+        _raceStarted = false;
     }
 
     private List<StPlayer> GetAlivePlayers()

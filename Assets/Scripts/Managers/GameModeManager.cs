@@ -1,6 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Toybox.InputSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
 namespace Managers {
@@ -9,6 +11,11 @@ namespace Managers {
 
         private PlayerManager _playerManager;
         MenuInputManager _menuInputManager => MenuInputManager.Instance;
+
+        private PlayerInputManager _playerInputManager;
+
+        public Action OnRaceStart;
+        public Action OnRaceEnd;
         
         private void Awake() {
             if (Instance == null) {
@@ -21,12 +28,14 @@ namespace Managers {
 
         private void Start() {
             _playerManager = GetComponent<PlayerManager>();
+            _playerInputManager = GetComponent<PlayerInputManager>();
         }
         
         public void StartRaceMode() {
             foreach (StPlayer player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
             }
+            OnRaceStart?.Invoke();
         }
 
         public void StartConstructMode() {
@@ -37,7 +46,7 @@ namespace Managers {
 
         public void StartPause(StPlayer pausedPlayer) {
             Time.timeScale = 0f;
-            _playerManager.enabled = false;
+            _playerInputManager.enabled = false;
             foreach (StPlayer player in _playerManager.Players) {
                 player.PlayerInput.enabled = false;
             }
@@ -56,9 +65,9 @@ namespace Managers {
         public void EndPause() {
             _menuInputManager.MenuInput.enabled = false;
             foreach (StPlayer player in _playerManager.Players) {
-                player.PlayerInput.enabled = false;
+                player.PlayerInput.enabled = true;
             }
-            _playerManager.enabled = true;
+            _playerInputManager.enabled = true;
             Time.timeScale = 1f;
         }
     }

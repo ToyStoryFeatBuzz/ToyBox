@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsLastInputMouse: 0
+  MenuInput: {fileID: 0}
 --- !u!114 &1995618593192938870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +153,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 85ecb4fe-9ea1-480c-966a-07633f6069d3
     m_ActionName: 'UI/MouseMove[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2442064234514651381}
+        m_TargetAssemblyTypeName: Toybox.InputSystem.MenuInputManager, Assembly-CSharp
+        m_MethodName: ReleasePause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 303cf73b-25e6-4923-86ff-f4d87df2b9a5
+    m_ActionName: 'UI/Pause[/Keyboard/escape,/XInputControllerWindows/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI

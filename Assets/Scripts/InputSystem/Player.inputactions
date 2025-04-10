@@ -185,7 +185,7 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Gamepad",
+                    "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -291,22 +291,22 @@
                 },
                 {
                     "name": "",
-                    "id": "976c741b-47dd-45ce-bff9-e77b234843fa",
-                    "path": "<XRController>/{Primary2DAxis}",
+                    "id": "e544b592-bee5-443b-94ca-7b928cdf7c7f",
+                    "path": "<Joystick>/stick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "XR",
+                    "groups": "Joystick",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "e544b592-bee5-443b-94ca-7b928cdf7c7f",
-                    "path": "<Joystick>/stick",
+                    "id": "977a9821-b233-43d1-b553-2de8d3ff8a0b",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false

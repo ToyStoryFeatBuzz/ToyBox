@@ -77,6 +77,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9780cee249b3ec247929572d36bfbcb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 3197488185280598623}
+  objectsPrefabs:
+  - {fileID: 5475432701753714441, guid: 51ff7ae38a5800842adf447b16815a53, type: 3}
+  - {fileID: 6407882722982570177, guid: 7bb7e85a29fadd74ca83b90d7f4bf9ca, type: 3}
+  - {fileID: 5667357639506699088, guid: a115587b82d1e0644b72085da10d5ec5, type: 3}
+  objects: []
+  objectsBox: {fileID: 0}
+  topRight: {fileID: 0}
+  bottomLeft: {fileID: 0}
 --- !u!1 &8616433520341010374
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,3 +201,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b030ca7e10da4eca88b5b7e662001791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildsManager: {fileID: 5360689527927864296}

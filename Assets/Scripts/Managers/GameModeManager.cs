@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using Toybox.InputSystem;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Managers {
-    public class GameModeSwitcher : MonoBehaviour {
-        public static GameModeSwitcher Instance { get; private set; }
+    public class GameModeManager : MonoBehaviour {
+        public static GameModeManager Instance { get; private set; }
 
         private PlayerManager _playerManager;
+        MenuInputManager _menuInputManager => MenuInputManager.Instance;
         
         private void Awake() {
             if (Instance == null) {
@@ -30,6 +32,23 @@ namespace Managers {
             foreach (StPlayer player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
             }
+        }
+
+        public void StartPause() {
+            Time.timeScale = 0f;
+            foreach (StPlayer player in _playerManager.Players) {
+                player.PlayerInput.enabled = false;
+            }
+
+            _playerManager.enabled = false;
+            _menuInputManager.MenuInput.enabled = true;
+        }
+
+        public void EndPause() {
+            _menuInputManager.MenuInput.enabled = false;
+                        foreach (StPlayer player in _playerManager.Players) {
+                            player.PlayerInput.enabled = false;
+                        }
         }
     }
 }

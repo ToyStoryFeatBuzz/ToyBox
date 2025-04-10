@@ -10,6 +10,8 @@ namespace Toybox.InputSystem {
         
         public StInputEvent OnPlaceEvent;
         public StInputEvent OnGridMoveEvent;
+        public StInputEvent OnRotateRightEvent;
+        public StInputEvent OnRotateLeftEvent;
         public Vector2 GridMoveDir;
 
         public StInputEvent OnPauseEvent;
@@ -24,6 +26,8 @@ namespace Toybox.InputSystem {
         public void OnPause(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnPauseEvent, ctx);
 
         public void OnPlace(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnPlaceEvent, ctx);
+        public void OnRotateRight(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnRotateRightEvent, ctx);
+        public void OnRotateLeft(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnRotateLeftEvent, ctx);
         
         public void OnGridMove(InputAction.CallbackContext ctx) {
             GridMoveDir = ctx.ReadValue<Vector2>();

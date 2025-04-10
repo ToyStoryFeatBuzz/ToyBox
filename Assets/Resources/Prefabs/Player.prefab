@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -1157256760377602241}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,13 +212,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ea0364597bc7d43a81949287410a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsDead: 0
   _acceleration: 200
   _deceleration: 10
   _maxSpeed: 20
   _jumpForce: 10
   _maxJump: 2
   _remainJump: 2
+  _wallJumpVector: {x: 4.43, y: 1.25}
+  _canWallJumpOnSameWall: 0
   _gravity: 4
+  _groundOffset: {x: 0, y: -0.5}
+  _groundCheckSize: {x: 0.88, y: 0.1}
+  _leftWallOffset: {x: -0.55, y: 0}
+  _leftWallCheckSize: {x: 0.27, y: 0.72}
+  _rightWallOffset: {x: 0.55, y: 0}
+  _rightWallCheckSize: {x: 0.27, y: 0.72}
 --- !u!50 &-4477026410386236028
 Rigidbody2D:
   serializedVersion: 5
@@ -235,7 +244,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: b5cc667b6f54ca341b2101159e6f1196, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -244,7 +253,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &-1157256760377602241
 BoxCollider2D:

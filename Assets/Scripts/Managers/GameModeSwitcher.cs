@@ -29,6 +29,7 @@ namespace Managers {
             foreach (StPlayer player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
             }
+            RaceStart.Invoke();
         }
 
         public void StartConstructMode() {

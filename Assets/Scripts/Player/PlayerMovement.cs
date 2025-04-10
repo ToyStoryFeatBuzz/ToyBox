@@ -6,7 +6,7 @@ namespace ToyBox.Player
 {
     public class PlayerMovement : MonoBehaviour
     { 
-        #region VARIABLES
+        #region SERIALIZED VARIABLES
         public bool IsDead;
         [Header("Movement variables")]
         [SerializeField] float _acceleration;
@@ -19,6 +19,7 @@ namespace ToyBox.Player
         [SerializeField] Vector2 _wallJumpVector;
         [SerializeField] bool _canWallJumpOnSameWall;
         [SerializeField] float _gravity;
+        [SerializeField] LayerMask _groundLayer;
         [Space(10)]
         [Header("OverlapBox offsets")]
         [SerializeField] Vector2 _groundOffset;
@@ -37,6 +38,7 @@ namespace ToyBox.Player
         bool _performGroundCheck;
         PlayerInputManager _inputManager;
         Rigidbody2D _rb;
+        
         
         private void Start()
         {
@@ -63,7 +65,7 @@ namespace ToyBox.Player
                     _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
                 }
 
-                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,LayerMask.GetMask("Ground")) && _performGroundCheck)
+                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_groundLayer) && _performGroundCheck)
                 {
                     _isGrounded = true;
                     _remainJump = _maxJump;
@@ -79,7 +81,7 @@ namespace ToyBox.Player
         private void OnOnJump()
         {
             if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
-                    LayerMask.GetMask("Wall")) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall))
+                    _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall))
             {
                 _wallJumpDirection = EWallJumpDirection.Left;
                 _rb.gravityScale = 1;
@@ -90,7 +92,7 @@ namespace ToyBox.Player
                 _performGroundCheck = false;
             }
             else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0,
-                         LayerMask.GetMask("Wall")) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
+                         _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
                 _wallJumpDirection = EWallJumpDirection.Right;
                 _rb.gravityScale = 1;
@@ -126,13 +128,14 @@ namespace ToyBox.Player
             _rb.gravityScale = _gravity;
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            if (collision.gameObject.CompareTag("KillObject"))
-            {
-                IsDead = true;
-            }
-        }
+        //Not used see PlayerKiller.cs
+        //private void OnCollisionEnter2D(Collision2D collision)
+        //{
+        //    if (collision.gameObject.CompareTag("KillObject"))
+        //    {
+        //        IsDead = true;
+        //    }
+        //}
 
         public void ApplyKnockBack(Vector2 knockBackVector)
         {

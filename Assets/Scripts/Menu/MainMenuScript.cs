@@ -22,6 +22,9 @@ public class MainMenuScript : MonoBehaviour
     {
         Application.OpenURL(url);
     }
-    
-    
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

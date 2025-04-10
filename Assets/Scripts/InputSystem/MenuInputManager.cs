@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Managers;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Toybox.InputSystem {
@@ -29,11 +30,12 @@ namespace Toybox.InputSystem {
 
         public void OnAny(InputAction.CallbackContext ctx) {
             IsLastInputMouse = ctx.action.activeControl.device.name == "Mouse";
-            Debug.Log("Gay");
         }
 
         public void OnMouseMove(InputAction.CallbackContext ctx) {
             IsLastInputMouse = true;
         }
+        
+        public void ReleasePause(InputAction.CallbackContext ctx) => GameModeManager.Instance.EndPause();
     }
 }

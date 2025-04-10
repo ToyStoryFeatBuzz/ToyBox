@@ -84,6 +84,7 @@ MonoBehaviour:
   - {fileID: 5475432701753714441, guid: 51ff7ae38a5800842adf447b16815a53, type: 3}
   - {fileID: 6407882722982570177, guid: 7bb7e85a29fadd74ca83b90d7f4bf9ca, type: 3}
   - {fileID: 5667357639506699088, guid: a115587b82d1e0644b72085da10d5ec5, type: 3}
+  - {fileID: 6646100214048588130, guid: de77e87b121b8844f87c7a1ec57758c4, type: 3}
   objects: []
   objectsBox: {fileID: 0}
   topRight: {fileID: 0}

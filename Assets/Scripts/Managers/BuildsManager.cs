@@ -43,6 +43,26 @@ namespace ToyBox.Managers
         public void AddObject(Build build)
         {
             build.Place(true);
+
+            if (build.erase)
+            {
+                foreach (Build b in objects)
+                {
+                    foreach (var offset in build.offsets)
+                    {
+                        if (build.ContainsPos((Vector2)build.transform.position + offset))
+                        {
+                            objects.Remove(b);
+                            Destroy(b.gameObject);
+                        }
+                    }
+                }
+
+                Destroy(build.gameObject);
+
+                return;
+            }
+
             objects.Add(build);
         }
 

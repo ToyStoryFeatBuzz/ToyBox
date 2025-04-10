@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace Managers {
@@ -6,6 +7,10 @@ namespace Managers {
         public static GameModeSwitcher Instance { get; private set; }
 
         private PlayerManager _playerManager;
+        
+        // Race flow events
+        public UnityEvent RaceStart;
+        public UnityEvent RaceEnd;
         
         private void Awake() {
             if (Instance == null) {

@@ -36,17 +36,17 @@ namespace ToyBox.Player
         
         bool _isGrounded;
         bool _performGroundCheck;
-        PlayerInputManager _inputManager;
+        PlayerInputSystem _inputSystem;
         Rigidbody2D _rb;
         
         
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
-            _inputManager = GetComponent<PlayerInputManager>();
-            _inputManager.OnJumpEvent.Started += OnOnJump;
-            _inputManager.OnJumpEvent.Canceled += OnOnJumpCancel;
-            _inputManager.OnJumpEvent.Performed += OnOnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
+            _inputSystem = GetComponent<PlayerInputSystem>();
+            _inputSystem.OnJumpEvent.Started += OnOnJump;
+            _inputSystem.OnJumpEvent.Canceled += OnOnJumpCancel;
+            _inputSystem.OnJumpEvent.Performed += OnOnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
             _remainJump = _maxJump;
         }
 
@@ -56,11 +56,11 @@ namespace ToyBox.Player
             {
 
 
-                _rb.AddForceX(_acceleration * _inputManager.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse);
                 _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed);
 
 
-                if (_inputManager.MoveValue == 0)
+                if (_inputSystem.MoveValue == 0)
                 {
                     _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
                 }

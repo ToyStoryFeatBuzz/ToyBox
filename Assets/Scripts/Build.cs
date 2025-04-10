@@ -1,10 +1,23 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class Build : MonoBehaviour
 {
     public List<Vector2> offsets = new();
+
+    [SerializeField] GameObject placeHolder;
+    [SerializeField] GameObject finalObject;
+
+    public UnityEvent pickedEvent = new();
+
+    public bool chosen = false;
+
+    private void Start()
+    {
+        Place(false);
+    }
 
     public bool ContainsPos(Vector2 pos)
     {
@@ -14,6 +27,18 @@ public class Build : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void Place(bool place)
+    {
+        placeHolder.SetActive(!place);
+        finalObject.SetActive(place);
+    }
+
+    public void Pick()
+    {
+        chosen = true;
+        pickedEvent.Invoke();
     }
 
     public void RotateOffsets(float angle)

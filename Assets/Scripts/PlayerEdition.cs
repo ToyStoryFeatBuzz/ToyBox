@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Managers;
+using Toybox.InputSystem;
 using UnityEngine;
 
 public class PlayerEdition : MonoBehaviour
@@ -18,19 +19,28 @@ public class PlayerEdition : MonoBehaviour
 
     BuildsManager buildsManager;
 
+    PlayerMouse playerMouse;
+
+    PlayerInputManager playerInputManager;
+
     private void Start()
     {
         buildsManager = BuildsManager.Instance;
+        playerMouse = GetComponent<PlayerMouse>();
+        playerInputManager = GetComponent<PlayerInputManager>();
     }
 
     private void OnEnable()
     {
-        SetRandomObject();
+        //SetRandomObject();
+        if(!playerMouse) playerMouse = GetComponent<PlayerMouse>();
+        playerMouse.ActivateMouse(true);
     }
 
     private void OnDisable()
     {
         if(draggedObject != null) Destroy(draggedObject);
+        playerMouse.ActivateMouse(false);
     }
 
     public void SetRandomObject()
@@ -47,14 +57,35 @@ public class PlayerEdition : MonoBehaviour
 
     public void Place()
     {
-        if (!placeable) return;
+        if (draggedObject)
+        {
+            if (buildsManager.selecting) return;
 
-        placeable = false;
+            placeable = buildsManager.CanPlace(draggedObject.GetComponent<Build>());
 
-        buildsManager.AddObject(draggedObject.GetComponent<Build>());
+            if (!placeable) return;
 
-        draggedObject = null;
-        SetRandomObject();
+            placeable = false;
+
+            buildsManager.AddObject(draggedObject.GetComponent<Build>());
+
+            draggedObject = null;
+            //SetRandomObject();
+        }
+        else
+        {
+            Collider2D hit = Physics2D.OverlapCircle(mousePos, .1f);
+            if (hit && hit.transform && hit.transform.GetComponentInParent<Build>())
+            {
+                Build obj = hit.transform.GetComponentInParent<Build>();
+
+                if (obj.chosen) return;
+
+                obj.Pick();
+                draggedObject = obj.gameObject;
+                placeable = buildsManager.CanPlace(draggedObject.GetComponent<Build>());
+            }
+        }
     }
 
     public void Rotate(float angle)
@@ -67,9 +98,9 @@ public class PlayerEdition : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H)) { Rotate(90f); }
+        if (playerInputManager.GridMoveDir.magnitude > 0) playerMouse.Move(playerInputManager.GridMoveDir);
 
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); // To change
+        mousePos = playerMouse.Click();
 
         if (draggedObject == null) return;
 

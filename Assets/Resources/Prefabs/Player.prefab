@@ -222,6 +222,9 @@ MonoBehaviour:
   _wallJumpVector: {x: 4.43, y: 1.25}
   _canWallJumpOnSameWall: 0
   _gravity: 4
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
   _groundOffset: {x: 0, y: -0.5}
   _groundCheckSize: {x: 0.88, y: 0.1}
   _leftWallOffset: {x: -0.55, y: 0}

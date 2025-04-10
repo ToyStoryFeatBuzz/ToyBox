@@ -150,7 +150,6 @@ GameObject:
   - component: {fileID: 2219177158285935213}
   - component: {fileID: 4553232036101575163}
   - component: {fileID: 6142821605091891028}
-  - component: {fileID: 9033454812297373436}
   m_Layer: 5
   m_Name: Cadre
   m_TagString: Untagged
@@ -258,22 +257,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4553232036101575163}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &9033454812297373436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4254168754710938654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 495495e873dcb0247bfdc361ec26d1d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _devInfo: {fileID: 0}
-  _name: {fileID: 4453053388434878499}
-  _image: {fileID: 4553232036101575163}
+      m_Calls:
+      - m_Target: {fileID: 7184785084334966985}
+        m_TargetAssemblyTypeName: Toybox.Menu.ScDevButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4808697970161384875
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5921528676444632847}
+  - component: {fileID: 7184785084334966985}
   m_Layer: 5
   m_Name: DevButton
   m_TagString: Untagged
@@ -311,3 +308,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 180}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7184785084334966985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4808697970161384875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495495e873dcb0247bfdc361ec26d1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _devInfo: {fileID: 11400000, guid: 7c4b84259901c7b43af89fdf3d7cebbb, type: 2}
+  _name: {fileID: 4453053388434878499}
+  _image: {fileID: 4553232036101575163}

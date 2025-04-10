@@ -12,7 +12,7 @@ namespace Toybox.Menu{
         [SerializeField] Image _image;
 
         private void Start() {
-            _name.text = _devInfo.Name + "/n" + _devInfo.Surname;
+            _name.text = _devInfo.Name + "<br>" + _devInfo.Surname;
             _image.sprite = _devInfo.Avatar;
         }
 

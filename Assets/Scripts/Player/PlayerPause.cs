@@ -1,6 +1,6 @@
-﻿using Managers;
-using UnityEngine;
+﻿using UnityEngine;
 using Toybox.InputSystem;
+using ToyBox.Managers;
 
 namespace ToyBox.Player {
     public class PlayerPause : MonoBehaviour {

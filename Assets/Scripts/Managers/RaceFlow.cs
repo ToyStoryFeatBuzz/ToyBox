@@ -8,8 +8,9 @@ namespace ToyBox.Managers {
     public class RaceFlow : MonoBehaviour
     {
         [SerializeField] Transform _startTransform;
-        
-        GameModeManager _gameModeManager => GameModeManager.Instance;
+        [SerializeField] Transform _winnersBox;
+
+        GameModeManager _gameModeManager;
         PlayerManager _playerManager;
     
         int _finishedPlayers;
@@ -17,6 +18,7 @@ namespace ToyBox.Managers {
         
         
         void Start() {
+            _gameModeManager = GameModeManager.Instance;
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
             _gameModeManager.OnRaceStart += RaceStart;
         }
@@ -29,6 +31,7 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<PlayerMovement>().IsDead = false;
             }
             _raceStarted = true;
+            _finishedPlayers = 0;
         }
     
         private void OnTriggerEnter2D(Collider2D collision)
@@ -36,14 +39,15 @@ namespace ToyBox.Managers {
             if (collision.gameObject.TryGetComponent(out PlayerMovement playerMovement))
             {
                 _finishedPlayers++;
-                playerMovement.enabled = false;
+                
+                playerMovement.gameObject.transform.position = _winnersBox.position;
             }
         }
     
         void Update() {
             if (!_raceStarted) return;
             if (GetAlivePlayers().Count == _finishedPlayers) {
-                _gameModeManager.OnRaceEnd.Invoke();
+                _gameModeManager.OnRaceEnd?.Invoke();
                 Debug.Log("Race ends");
                 _raceStarted = false;
             }

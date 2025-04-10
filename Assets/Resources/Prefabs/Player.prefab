@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5595235915548993446}
   - component: {fileID: -4477026410386236028}
   - component: {fileID: -1157256760377602241}
+  - component: {fileID: 6494250637933963715}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -181,6 +182,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1be6c408-55b9-4a9f-8573-1352625e1e3a
     m_ActionName: 'Construct/Place[/Mouse/leftButton,/SwitchProControllerHID/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816963325045871209}
+        m_TargetAssemblyTypeName: Toybox.InputSystem.PlayerInputManager, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4bd154be-cee3-4142-97e2-0d7a3f34d3e0
+    m_ActionName: 'Race/Pause[/Keyboard/escape,/XInputControllerWindows/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 816963325045871209}
+        m_TargetAssemblyTypeName: Toybox.InputSystem.PlayerInputManager, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 87a8dbdc-d245-4549-8d01-72f2d94f0d8c
+    m_ActionName: 'Construct/Pause[/Keyboard/escape,/XInputControllerWindows/start]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Race
@@ -301,3 +334,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6494250637933963715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0217f3b0ba264538b9519593e211deac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

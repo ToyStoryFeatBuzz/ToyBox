@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Toybox.InputSystem {
@@ -23,12 +22,14 @@ namespace Toybox.InputSystem {
 
         private void Start() {
             MenuInput = GetComponent<PlayerInput>();
+            
         }
 
         public void OnNavigate(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnNavigateEvent, ctx);
 
         public void OnAny(InputAction.CallbackContext ctx) {
             IsLastInputMouse = ctx.action.activeControl.device.name == "Mouse";
+            Debug.Log("Gay");
         }
 
         public void OnMouseMove(InputAction.CallbackContext ctx) {

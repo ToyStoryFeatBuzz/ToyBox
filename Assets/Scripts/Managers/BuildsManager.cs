@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Managers
+namespace ToyBox.Managers
 {
     public class BuildsManager : MonoBehaviour
     {

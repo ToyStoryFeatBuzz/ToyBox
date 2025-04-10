@@ -9,9 +9,10 @@ public class PlayerMouse : MonoBehaviour
 
     [SerializeField] float mouseSensivity;
 
-    private void Start()
+    private void Awake()
     {
-        mouseBody = Instantiate(mouseBodyPrefab);
+        if(!mouseBody)
+            mouseBody = Instantiate(mouseBodyPrefab);
         ResetMousePos();
         mouseBody.position = mousePos;
         ActivateMouse(false);
@@ -35,7 +36,13 @@ public class PlayerMouse : MonoBehaviour
 
     public void ActivateMouse(bool activation)
     {
-        mouseBody?.gameObject.SetActive(activation);
+        if (!mouseBody)
+        {
+            mouseBody = Instantiate(mouseBodyPrefab);
+            ResetMousePos();
+            mouseBody.position = mousePos;
+        }
+        mouseBody?.gameObject?.SetActive(activation);
         Cursor.visible = !activation;
     }
 }

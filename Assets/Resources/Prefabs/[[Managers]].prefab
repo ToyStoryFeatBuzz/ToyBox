@@ -31,8 +31,64 @@ Transform:
   m_Children:
   - {fileID: 314551740108125448}
   - {fileID: 1501681826371969218}
+  - {fileID: 1835809022316041452}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4341195576530034977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835809022316041452}
+  - component: {fileID: 1032124592938465243}
+  m_Layer: 0
+  m_Name: BuildsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1835809022316041452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4341195576530034977}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1734128982179708709}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032124592938465243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4341195576530034977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9780cee249b3ec247929572d36bfbcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btndemerde: {fileID: 0}
+  playerManager: {fileID: 3197488185280598623}
+  objectsPrefabs:
+  - {fileID: 5475432701753714441, guid: 51ff7ae38a5800842adf447b16815a53, type: 3}
+  - {fileID: 6407882722982570177, guid: 7bb7e85a29fadd74ca83b90d7f4bf9ca, type: 3}
+  - {fileID: 5667357639506699088, guid: a115587b82d1e0644b72085da10d5ec5, type: 3}
+  objects: []
+  objectsBox: {fileID: 0}
+  topRight: {fileID: 0}
+  bottomLeft: {fileID: 0}
+  selecting: 0
 --- !u!1 &6799419880746509414
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,3 +345,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b030ca7e10da4eca88b5b7e662001791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildsManager: {fileID: 1032124592938465243}

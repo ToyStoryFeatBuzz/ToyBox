@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Managers;
+using ToyBox.Managers;
 using Toybox.InputSystem;
 using UnityEngine;
 
@@ -21,13 +21,17 @@ public class PlayerEdition : MonoBehaviour
 
     PlayerMouse playerMouse;
 
-    PlayerInputManager playerInputManager;
+    PlayerInputSystem playerInputManager;
 
     private void Start()
     {
         buildsManager = BuildsManager.Instance;
         playerMouse = GetComponent<PlayerMouse>();
-        playerInputManager = GetComponent<PlayerInputManager>();
+        playerInputManager = GetComponent<PlayerInputSystem>();
+
+        playerInputManager.OnPlaceEvent.Canceled += Place;
+        playerInputManager.OnRotateRightEvent.Performed += ()=>{ Rotate(90); };
+        playerInputManager.OnRotateLeftEvent.Performed += ()=>{ Rotate(-90); };
     }
 
     private void OnEnable()
@@ -70,6 +74,7 @@ public class PlayerEdition : MonoBehaviour
             buildsManager.AddObject(draggedObject.GetComponent<Build>());
 
             draggedObject = null;
+            enabled = false;
             //SetRandomObject();
         }
         else

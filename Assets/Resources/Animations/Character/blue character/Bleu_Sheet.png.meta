@@ -1,0 +1,1742 @@
+fileFormatVersion: 2
+guid: 0af2903311f02f0498baa32eb47435ec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7806869000533227289
+    second: Bleu_Sheet_0
+  - first:
+      213: -1479375415036132595
+    second: Bleu_Sheet_1
+  - first:
+      213: 6927304879977558854
+    second: Bleu_Sheet_2
+  - first:
+      213: -330137569325727338
+    second: Bleu_Sheet_3
+  - first:
+      213: 4097937952457748030
+    second: Bleu_Sheet_4
+  - first:
+      213: -2358980088070265441
+    second: Bleu_Sheet_5
+  - first:
+      213: 1840016732492070847
+    second: Bleu_Sheet_6
+  - first:
+      213: 2228749542125417798
+    second: Bleu_Sheet_7
+  - first:
+      213: 9126512210745234228
+    second: Bleu_Sheet_8
+  - first:
+      213: -4097930615779531503
+    second: Bleu_Sheet_9
+  - first:
+      213: 386288258964807302
+    second: Bleu_Sheet_10
+  - first:
+      213: -8300134336715530200
+    second: Bleu_Sheet_11
+  - first:
+      213: -7423533786029328060
+    second: Bleu_Sheet_12
+  - first:
+      213: 431406233363767951
+    second: Bleu_Sheet_13
+  - first:
+      213: 7588866835820459566
+    second: Bleu_Sheet_14
+  - first:
+      213: 2809680855535716957
+    second: Bleu_Sheet_15
+  - first:
+      213: 2752878009035857597
+    second: Bleu_Sheet_16
+  - first:
+      213: 6682954908499922070
+    second: Bleu_Sheet_17
+  - first:
+      213: 1706312631408341854
+    second: Bleu_Sheet_18
+  - first:
+      213: 8571069564305001551
+    second: Bleu_Sheet_19
+  - first:
+      213: 7632062194554046658
+    second: Bleu_Sheet_20
+  - first:
+      213: 5859016238144292347
+    second: Bleu_Sheet_21
+  - first:
+      213: -321721679426628190
+    second: Bleu_Sheet_22
+  - first:
+      213: 7599481755689362790
+    second: Bleu_Sheet_23
+  - first:
+      213: 4503602399312616064
+    second: Bleu_Sheet_24
+  - first:
+      213: 1365261681398303256
+    second: Bleu_Sheet_25
+  - first:
+      213: 5727611638108528831
+    second: Bleu_Sheet_26
+  - first:
+      213: -4724070589639073257
+    second: Bleu_Sheet_27
+  - first:
+      213: 2365695033502248694
+    second: Bleu_Sheet_28
+  - first:
+      213: -8003066328125662836
+    second: Bleu_Sheet_29
+  - first:
+      213: -8769733700433189788
+    second: Bleu_Sheet_30
+  - first:
+      213: 751460787097556034
+    second: Bleu_Sheet_31
+  - first:
+      213: -7952554495598154379
+    second: Bleu_Sheet_32
+  - first:
+      213: -2477490542924432921
+    second: Bleu_Sheet_33
+  - first:
+      213: -2284888539474412384
+    second: Bleu_Sheet_34
+  - first:
+      213: -4207624194767467759
+    second: Bleu_Sheet_35
+  - first:
+      213: 2324175889681535492
+    second: Bleu_Sheet_36
+  - first:
+      213: -5999245036082270512
+    second: Bleu_Sheet_37
+  - first:
+      213: -2851566981583954141
+    second: Bleu_Sheet_38
+  - first:
+      213: -8507482053051377152
+    second: Bleu_Sheet_39
+  - first:
+      213: 631828256456194819
+    second: Bleu_Sheet_40
+  - first:
+      213: 1076872118383679295
+    second: Bleu_Sheet_41
+  - first:
+      213: 4169683962744583928
+    second: Bleu_Sheet_42
+  - first:
+      213: 7196285915106353378
+    second: Bleu_Sheet_43
+  - first:
+      213: 374302995338517894
+    second: Bleu_Sheet_44
+  - first:
+      213: -1789625914373604038
+    second: Bleu_Sheet_45
+  - first:
+      213: -1044303498918604813
+    second: Bleu_Sheet_46
+  - first:
+      213: 6100026450432068998
+    second: Bleu_Sheet_47
+  - first:
+      213: -1582976382645550348
+    second: Bleu_Sheet_48
+  - first:
+      213: -4329542627168568932
+    second: Bleu_Sheet_49
+  - first:
+      213: -2402108545647308858
+    second: Bleu_Sheet_50
+  - first:
+      213: -76891918475726897
+    second: Bleu_Sheet_51
+  - first:
+      213: -8264526293082173475
+    second: Bleu_Sheet_52
+  - first:
+      213: -3947625960197953807
+    second: Bleu_Sheet_53
+  - first:
+      213: 8517688699864967891
+    second: Bleu_Sheet_54
+  - first:
+      213: -7114549922783215660
+    second: Bleu_Sheet_55
+  - first:
+      213: 6634069171209750485
+    second: Bleu_Sheet_56
+  - first:
+      213: 2598469190426698493
+    second: Bleu_Sheet_57
+  - first:
+      213: 3117192104837523077
+    second: Bleu_Sheet_58
+  - first:
+      213: 4415956988620578753
+    second: Bleu_Sheet_59
+  - first:
+      213: 7954362064997898094
+    second: Bleu_Sheet_60
+  - first:
+      213: -3538697996840522477
+    second: Bleu_Sheet_61
+  - first:
+      213: 6158619870521179886
+    second: Bleu_Sheet_62
+  - first:
+      213: 761692039962003020
+    second: Bleu_Sheet_63
+  - first:
+      213: 4586339084024039871
+    second: Bleu_Sheet_64
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bleu_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 2111
+        width: 255
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8453fa10e68a390800000000000000
+      internalID: -7806869000533227289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 2113
+        width: 221
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d034359e5e3387be0800000000000000
+      internalID: -1479375415036132595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 2112
+        width: 205
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64374edf51bb22060800000000000000
+      internalID: 6927304879977558854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 2110
+        width: 181
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 691445d31ad1b6bf0800000000000000
+      internalID: -330137569325727338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2111
+        width: 209
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ee5df1bdcced830800000000000000
+      internalID: 4097937952457748030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2707
+        y: 2132
+        width: 230
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f952a5abb18334fd0800000000000000
+      internalID: -2358980088070265441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 2111
+        width: 252
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbff6f8287d098910800000000000000
+      internalID: 1840016732492070847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3733
+        y: 2113
+        width: 217
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64533bf66eb1eee10800000000000000
+      internalID: 2228749542125417798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 2112
+        width: 201
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4331cb75082e7ae70800000000000000
+      internalID: 9126512210745234228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4754
+        y: 2110
+        width: 186
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115634411d93127c0800000000000000
+      internalID: -4097930615779531503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5266
+        y: 2111
+        width: 213
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e5088ff1f5c5500800000000000000
+      internalID: 386288258964807302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5778
+        y: 2132
+        width: 231
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8206c08fbcfffcc80800000000000000
+      internalID: -8300134336715530200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 6266
+        y: 2111
+        width: 255
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4497c996a5f4af890800000000000000
+      internalID: -7423533786029328060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1595
+        width: 173
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82698dfea9acf500800000000000000
+      internalID: 431406233363767951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1595
+        width: 180
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2632dcfd22115960800000000000000
+      internalID: 7588866835820459566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1595
+        width: 185
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a0c6e0addfdf620800000000000000
+      internalID: 2809680855535716957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 1595
+        width: 187
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe119eb6ff243620800000000000000
+      internalID: 2752878009035857597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 1595
+        width: 186
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c471bd410aebc50800000000000000
+      internalID: 6682954908499922070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2722
+        y: 1595
+        width: 180
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e533bde3c4a0ea710800000000000000
+      internalID: 1706312631408341854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1595
+        width: 174
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ccf857b5e82f670800000000000000
+      internalID: 8571069564305001551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3745
+        y: 1595
+        width: 181
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8051a21288ae960800000000000000
+      internalID: 7632062194554046658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 1595
+        width: 187
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf506d7e9386f4150800000000000000
+      internalID: 5859016238144292347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 4761
+        y: 1595
+        width: 188
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5db3d46d3098bf0800000000000000
+      internalID: -321721679426628190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5274
+        y: 1595
+        width: 186
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6652dec9468c67960800000000000000
+      internalID: 7599481755689362790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 5792
+        y: 1595
+        width: 180
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a10a46582008e30800000000000000
+      internalID: 4503602399312616064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 6311
+        y: 1595
+        width: 173
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ac239044262f210800000000000000
+      internalID: 1365261681398303256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 1083
+        width: 189
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb02adc40709c7f40800000000000000
+      internalID: 5727611638108528831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 1110
+        width: 180
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71261b2f3dab07eb0800000000000000
+      internalID: -4724070589639073257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 1130
+        width: 174
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6feaec65913a4d020800000000000000
+      internalID: 2365695033502248694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 1126
+        width: 178
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c891e2e93956fe090800000000000000
+      internalID: -8003066328125662836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46468ead9a5ab4680800000000000000
+      internalID: -8769733700433189788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2724
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244d59dba99bd6a00800000000000000
+      internalID: 751460787097556034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57dafe812d9d2a190800000000000000
+      internalID: -7952554495598154379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9799e3a7f2e9dd0800000000000000
+      internalID: -2477490542924432921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ac344daaf17a40e0800000000000000
+      internalID: -2284888539474412384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 4772
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11bcb8a76148b95c0800000000000000
+      internalID: -4207624194767467759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 5284
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 402defb58a1214020800000000000000
+      internalID: 2324175889681535492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 5796
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de6acfcc666ebca0800000000000000
+      internalID: -5999245036082270512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 6308
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f947140f23d68d0800000000000000
+      internalID: -2851566981583954141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 615
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a9cd6b52a5fe980800000000000000
+      internalID: -8507482053051377152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 616
+        width: 186
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b3021a374b4c800800000000000000
+      internalID: 631828256456194819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 620
+        width: 191
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3718c47c71d1fe00800000000000000
+      internalID: 1076872118383679295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 617
+        width: 216
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6b801e871bdd930800000000000000
+      internalID: 4169683962744583928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0af0889e75ed360800000000000000
+      internalID: 7196285915106353378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d5483579ac13500800000000000000
+      internalID: 374302995338517894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 3221
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d7de476b8f927e0800000000000000
+      internalID: -1789625914373604038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 3733
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff424d2083e181f0800000000000000
+      internalID: -1044303498918604813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 4245
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d8d72ccb5a7a450800000000000000
+      internalID: 6100026450432068998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 4757
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f24490fd53280ae0800000000000000
+      internalID: -1582976382645550348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99b4b36bef5ae3c0800000000000000
+      internalID: -4329542627168568932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 5781
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf03c0310ff9aed0800000000000000
+      internalID: -2402108545647308858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 6293
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcfe7212533deeef0800000000000000
+      internalID: -76891918475726897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 103
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf06ffaf118e4d80800000000000000
+      internalID: -8264526293082173475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 71
+        width: 211
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f66a48ca173739c0800000000000000
+      internalID: -3947625960197953807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 59
+        width: 212
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da6fce6eb8e43670800000000000000
+      internalID: 8517688699864967891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 56
+        width: 207
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df39bb2a8a044d90800000000000000
+      internalID: -7114549922783215660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 57
+        width: 194
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7c35d23c2f01c50800000000000000
+      internalID: 6634069171209750485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 58
+        width: 176
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df22e2f16fd9f0420800000000000000
+      internalID: 2598469190426698493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 59
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5862e7924bd724b20800000000000000
+      internalID: 3117192104837523077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 3752
+        y: 59
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf12220c71a84d30800000000000000
+      internalID: 4415956988620578753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 4264
+        y: 59
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e67da037722936e60800000000000000
+      internalID: 7954362064997898094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 4776
+        y: 59
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d2fe2bbe404eec0800000000000000
+      internalID: -3538697996840522477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 5288
+        y: 59
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeeb3197420d77550800000000000000
+      internalID: 6158619870521179886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 5800
+        y: 59
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c468d2eefd2129a00800000000000000
+      internalID: 761692039962003020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bleu_Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 6312
+        y: 59
+        width: 173
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb94eb2f813f5af30800000000000000
+      internalID: 4586339084024039871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

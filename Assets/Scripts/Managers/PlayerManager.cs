@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using ToyBox.Player;
 
-namespace Managers {
+namespace ToyBox.Managers {
     public class PlayerManager : MonoBehaviour {
         public List<StPlayer> Players = new();
 

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
-namespace Managers {
+namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         public static GameModeManager Instance { get; private set; }
 

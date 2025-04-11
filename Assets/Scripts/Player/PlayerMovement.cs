@@ -8,7 +8,6 @@ namespace ToyBox.Player
     public class PlayerMovement : MonoBehaviour
     { 
         #region SERIALIZED VARIABLES
-        public bool IsDead;
         [Header("Movement variables")]
         [SerializeField] float _acceleration;
         [SerializeField] float _deceleration;
@@ -53,7 +52,7 @@ namespace ToyBox.Player
 
         private void FixedUpdate()
         {
-            if (!IsDead) {
+            if (!_inputSystem.IsDead) {
                 _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse); //Makes the player move in the direction of the input
                 _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed); //Clamps the speed to the max speed
 
@@ -99,7 +98,7 @@ namespace ToyBox.Player
                 _isGrounded = false;
                 _performGroundCheck = false;
             }
-            else if ((_remainJump != 0 && _isGrounded) && !IsDead) // If you jump while on the ground/ in the air
+            else if ((_remainJump != 0 && _isGrounded) && !_inputSystem.IsDead) // If you jump while on the ground/ in the air
             {
                 _rb.gravityScale = 1;
                 _rb.linearVelocityY = 0;
@@ -124,15 +123,6 @@ namespace ToyBox.Player
             _performGroundCheck = true;
             _rb.gravityScale = _gravity;
         }
-
-        //Not used see PlayerKiller.cs
-        //private void OnCollisionEnter2D(Collision2D collision)
-        //{
-        //    if (collision.gameObject.CompareTag("KillObject"))
-        //    {
-        //        IsDead = true;
-        //    }
-        //}
 
         public void ApplyKnockBack(Vector2 knockBackVector) // Used for obstacles that knockbacks you
         {

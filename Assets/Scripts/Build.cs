@@ -15,6 +15,8 @@ public class Build : MonoBehaviour
     public bool erase = false;
 
     public bool chosen = false;
+    
+    
 
     private void Start()
     {

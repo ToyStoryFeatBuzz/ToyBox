@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace Toybox.Menu  {
+namespace ToyBox.Menu  {
     public class VideoSettings : MonoBehaviour {
        [SerializeField] TMP_Dropdown _resolutionDropdown;
        [SerializeField] TMP_Dropdown _displayDropdown;

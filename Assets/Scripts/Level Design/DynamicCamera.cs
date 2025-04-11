@@ -4,6 +4,7 @@ using System.Linq;
 using ToyBox.Managers;
 using ToyBox.Player;
 using UnityEngine;
+using static ToyBox.Enums.EPlayerState;
 
 namespace ToyBox.LevelDesign {
     public class DynamicCamera : MonoBehaviour {
@@ -12,7 +13,7 @@ namespace ToyBox.LevelDesign {
         [SerializeField] private float _maxCamSize = 50;
         [SerializeField] private float _camMovementSpeed = 1;
         [SerializeField] private float _camZoomSpeed = 1;
-        [SerializeField] private PlayerManager _playerManager;
+        PlayerManager _playerManager => PlayerManager.Instance;
 
         private Camera _mainCam;
         private Vector3 _centerPlayerPos = Vector3.zero;
@@ -22,7 +23,9 @@ namespace ToyBox.LevelDesign {
         public Transform EditorMapCenter;
         public float EditorCamZoom;
         public Action ActualModeFunction;
-
+        
+        List<Managers.Player> _alivePlayers = new();
+        
         //Debug
         //[SerializeField] private List<Transform> _cameraObjects=new List<Transform>();
         void Start() {
@@ -33,25 +36,27 @@ namespace ToyBox.LevelDesign {
 
         void Update() {
             ActualModeFunction.Invoke();
+            _alivePlayers = _playerManager.GetAlivePlayers();
         }
 
         public void RaceMode() {
             //if (_cameraObjects.Count > 0) 
             if (_playerManager.Players.Count > 0) {
-                List<StPlayer> alivePlayers = GetAlivePlayers();
                 _centerPlayerPos = Vector3.zero;
                 _camSize = 0;
                 //foreach (Transform player in _cameraObjects)
-                foreach (StPlayer player in alivePlayers) {
+                foreach (Managers.Player player in _alivePlayers) {
                     //_centerPlayerPos += player.transform.position;
                     _centerPlayerPos += player.PlayerObject.transform.position;
                 }
 
+                if (_alivePlayers.Count > 0) {
+                    _centerPlayerPos /= _alivePlayers.Count;
+                }
                 //_centerPlayerPos/=_cameraObjects.Count;
-                _centerPlayerPos /= alivePlayers.Count;
 
                 //foreach (Transform player in _cameraObjects)
-                foreach (StPlayer player in alivePlayers) {
+                foreach (Managers.Player player in _alivePlayers) {
                     //float distance = Vector3.Distance(player.transform.position, _centerPlayerPos);
                     float distance = Vector3.Distance(player.PlayerObject.transform.position, _centerPlayerPos);
                     if (_camSize < distance * _camSizeMultiplier) {
@@ -84,17 +89,7 @@ namespace ToyBox.LevelDesign {
 
         }
 
-        private List<StPlayer> GetAlivePlayers() {
-            List<StPlayer> alivePlayers = new List<StPlayer>();
 
-            foreach (StPlayer player in _playerManager.Players) {
-                if (player.PlayerObject.GetComponent<PlayerMovement>().IsDead != true) {
-                    alivePlayers.Add(player);
-                }
-            }
-
-            return alivePlayers;
-        }
     }
 
 }

@@ -295,10 +295,10 @@ TextureImporter:
       name: Bleu_Sheet_0
       rect:
         serializedVersion: 2
-        x: 122
-        y: 2111
-        width: 255
-        height: 345
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,10 +317,10 @@ TextureImporter:
       name: Bleu_Sheet_1
       rect:
         serializedVersion: 2
-        x: 659
-        y: 2113
-        width: 221
-        height: 312
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +339,10 @@ TextureImporter:
       name: Bleu_Sheet_2
       rect:
         serializedVersion: 2
-        x: 1169
-        y: 2112
-        width: 205
-        height: 314
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,10 +361,10 @@ TextureImporter:
       name: Bleu_Sheet_3
       rect:
         serializedVersion: 2
-        x: 1684
-        y: 2110
-        width: 181
-        height: 331
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +383,10 @@ TextureImporter:
       name: Bleu_Sheet_4
       rect:
         serializedVersion: 2
-        x: 2196
-        y: 2111
-        width: 209
-        height: 333
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -405,10 +405,10 @@ TextureImporter:
       name: Bleu_Sheet_5
       rect:
         serializedVersion: 2
-        x: 2707
-        y: 2132
-        width: 230
-        height: 317
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -427,10 +427,10 @@ TextureImporter:
       name: Bleu_Sheet_6
       rect:
         serializedVersion: 2
-        x: 3195
-        y: 2111
-        width: 252
-        height: 345
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -449,10 +449,10 @@ TextureImporter:
       name: Bleu_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3733
-        y: 2113
-        width: 217
-        height: 312
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -471,10 +471,10 @@ TextureImporter:
       name: Bleu_Sheet_8
       rect:
         serializedVersion: 2
-        x: 4243
-        y: 2112
-        width: 201
-        height: 314
+        x: 4096
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,10 +493,10 @@ TextureImporter:
       name: Bleu_Sheet_9
       rect:
         serializedVersion: 2
-        x: 4754
-        y: 2110
-        width: 186
-        height: 331
+        x: 4608
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,10 +515,10 @@ TextureImporter:
       name: Bleu_Sheet_10
       rect:
         serializedVersion: 2
-        x: 5266
-        y: 2111
-        width: 213
-        height: 333
+        x: 5120
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: Bleu_Sheet_11
       rect:
         serializedVersion: 2
-        x: 5778
-        y: 2132
-        width: 231
-        height: 317
+        x: 5632
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -559,10 +559,10 @@ TextureImporter:
       name: Bleu_Sheet_12
       rect:
         serializedVersion: 2
-        x: 6266
-        y: 2111
-        width: 255
-        height: 345
+        x: 6144
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -581,10 +581,10 @@ TextureImporter:
       name: Bleu_Sheet_13
       rect:
         serializedVersion: 2
-        x: 167
-        y: 1595
-        width: 173
-        height: 348
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -603,10 +603,10 @@ TextureImporter:
       name: Bleu_Sheet_14
       rect:
         serializedVersion: 2
-        x: 672
-        y: 1595
-        width: 180
-        height: 348
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -625,10 +625,10 @@ TextureImporter:
       name: Bleu_Sheet_15
       rect:
         serializedVersion: 2
-        x: 1179
-        y: 1595
-        width: 185
-        height: 347
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -647,10 +647,10 @@ TextureImporter:
       name: Bleu_Sheet_16
       rect:
         serializedVersion: 2
-        x: 1690
-        y: 1595
-        width: 187
-        height: 347
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -669,10 +669,10 @@ TextureImporter:
       name: Bleu_Sheet_17
       rect:
         serializedVersion: 2
-        x: 2204
-        y: 1595
-        width: 186
-        height: 346
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,10 +691,10 @@ TextureImporter:
       name: Bleu_Sheet_18
       rect:
         serializedVersion: 2
-        x: 2722
-        y: 1595
-        width: 180
-        height: 346
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -713,10 +713,10 @@ TextureImporter:
       name: Bleu_Sheet_19
       rect:
         serializedVersion: 2
-        x: 3240
-        y: 1595
-        width: 174
-        height: 346
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,10 +735,10 @@ TextureImporter:
       name: Bleu_Sheet_20
       rect:
         serializedVersion: 2
-        x: 3745
-        y: 1595
-        width: 181
-        height: 346
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -757,10 +757,10 @@ TextureImporter:
       name: Bleu_Sheet_21
       rect:
         serializedVersion: 2
-        x: 4251
-        y: 1595
-        width: 187
-        height: 346
+        x: 4096
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -779,10 +779,10 @@ TextureImporter:
       name: Bleu_Sheet_22
       rect:
         serializedVersion: 2
-        x: 4761
-        y: 1595
-        width: 188
-        height: 347
+        x: 4608
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -801,10 +801,10 @@ TextureImporter:
       name: Bleu_Sheet_23
       rect:
         serializedVersion: 2
-        x: 5274
-        y: 1595
-        width: 186
-        height: 347
+        x: 5120
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -823,10 +823,10 @@ TextureImporter:
       name: Bleu_Sheet_24
       rect:
         serializedVersion: 2
-        x: 5792
-        y: 1595
-        width: 180
-        height: 348
+        x: 5632
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -845,10 +845,10 @@ TextureImporter:
       name: Bleu_Sheet_25
       rect:
         serializedVersion: 2
-        x: 6311
-        y: 1595
-        width: 173
-        height: 348
+        x: 6144
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -867,10 +867,10 @@ TextureImporter:
       name: Bleu_Sheet_26
       rect:
         serializedVersion: 2
-        x: 174
-        y: 1083
-        width: 189
-        height: 327
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -889,10 +889,10 @@ TextureImporter:
       name: Bleu_Sheet_27
       rect:
         serializedVersion: 2
-        x: 691
-        y: 1110
-        width: 180
-        height: 338
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -911,10 +911,10 @@ TextureImporter:
       name: Bleu_Sheet_28
       rect:
         serializedVersion: 2
-        x: 1204
-        y: 1130
-        width: 174
-        height: 357
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -933,10 +933,10 @@ TextureImporter:
       name: Bleu_Sheet_29
       rect:
         serializedVersion: 2
-        x: 1706
-        y: 1126
-        width: 178
-        height: 361
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,10 +955,10 @@ TextureImporter:
       name: Bleu_Sheet_30
       rect:
         serializedVersion: 2
-        x: 2212
-        y: 1127
-        width: 183
-        height: 357
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -977,10 +977,10 @@ TextureImporter:
       name: Bleu_Sheet_31
       rect:
         serializedVersion: 2
-        x: 2724
-        y: 1127
-        width: 183
-        height: 357
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -999,10 +999,10 @@ TextureImporter:
       name: Bleu_Sheet_32
       rect:
         serializedVersion: 2
-        x: 3236
-        y: 1127
-        width: 183
-        height: 357
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1021,10 +1021,10 @@ TextureImporter:
       name: Bleu_Sheet_33
       rect:
         serializedVersion: 2
-        x: 3748
-        y: 1127
-        width: 183
-        height: 357
+        x: 3584
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1043,10 +1043,10 @@ TextureImporter:
       name: Bleu_Sheet_34
       rect:
         serializedVersion: 2
-        x: 4260
-        y: 1127
-        width: 183
-        height: 357
+        x: 4096
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1065,10 +1065,10 @@ TextureImporter:
       name: Bleu_Sheet_35
       rect:
         serializedVersion: 2
-        x: 4772
-        y: 1127
-        width: 183
-        height: 357
+        x: 4608
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1087,10 +1087,10 @@ TextureImporter:
       name: Bleu_Sheet_36
       rect:
         serializedVersion: 2
-        x: 5284
-        y: 1127
-        width: 183
-        height: 357
+        x: 5120
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1109,10 +1109,10 @@ TextureImporter:
       name: Bleu_Sheet_37
       rect:
         serializedVersion: 2
-        x: 5796
-        y: 1127
-        width: 183
-        height: 357
+        x: 5632
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1131,10 +1131,10 @@ TextureImporter:
       name: Bleu_Sheet_38
       rect:
         serializedVersion: 2
-        x: 6308
-        y: 1127
-        width: 183
-        height: 357
+        x: 6144
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1153,10 +1153,10 @@ TextureImporter:
       name: Bleu_Sheet_39
       rect:
         serializedVersion: 2
-        x: 164
-        y: 615
-        width: 183
-        height: 357
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1175,10 +1175,10 @@ TextureImporter:
       name: Bleu_Sheet_40
       rect:
         serializedVersion: 2
-        x: 674
-        y: 616
-        width: 186
-        height: 360
+        x: 512
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1197,10 +1197,10 @@ TextureImporter:
       name: Bleu_Sheet_41
       rect:
         serializedVersion: 2
-        x: 1184
-        y: 620
-        width: 191
-        height: 359
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1219,10 +1219,10 @@ TextureImporter:
       name: Bleu_Sheet_42
       rect:
         serializedVersion: 2
-        x: 1687
-        y: 617
-        width: 216
-        height: 363
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1241,10 +1241,10 @@ TextureImporter:
       name: Bleu_Sheet_43
       rect:
         serializedVersion: 2
-        x: 2197
-        y: 615
-        width: 227
-        height: 364
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1263,10 +1263,10 @@ TextureImporter:
       name: Bleu_Sheet_44
       rect:
         serializedVersion: 2
-        x: 2709
-        y: 615
-        width: 227
-        height: 364
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1285,10 +1285,10 @@ TextureImporter:
       name: Bleu_Sheet_45
       rect:
         serializedVersion: 2
-        x: 3221
-        y: 615
-        width: 227
-        height: 364
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1307,10 +1307,10 @@ TextureImporter:
       name: Bleu_Sheet_46
       rect:
         serializedVersion: 2
-        x: 3733
-        y: 615
-        width: 227
-        height: 364
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1329,10 +1329,10 @@ TextureImporter:
       name: Bleu_Sheet_47
       rect:
         serializedVersion: 2
-        x: 4245
-        y: 615
-        width: 227
-        height: 364
+        x: 4096
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1351,10 +1351,10 @@ TextureImporter:
       name: Bleu_Sheet_48
       rect:
         serializedVersion: 2
-        x: 4757
-        y: 615
-        width: 227
-        height: 364
+        x: 4608
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1373,10 +1373,10 @@ TextureImporter:
       name: Bleu_Sheet_49
       rect:
         serializedVersion: 2
-        x: 5269
-        y: 615
-        width: 227
-        height: 364
+        x: 5120
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1395,10 +1395,10 @@ TextureImporter:
       name: Bleu_Sheet_50
       rect:
         serializedVersion: 2
-        x: 5781
-        y: 615
-        width: 227
-        height: 364
+        x: 5632
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1417,10 +1417,10 @@ TextureImporter:
       name: Bleu_Sheet_51
       rect:
         serializedVersion: 2
-        x: 6293
-        y: 615
-        width: 227
-        height: 364
+        x: 6144
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1439,10 +1439,10 @@ TextureImporter:
       name: Bleu_Sheet_52
       rect:
         serializedVersion: 2
-        x: 149
-        y: 103
-        width: 227
-        height: 364
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1461,10 +1461,10 @@ TextureImporter:
       name: Bleu_Sheet_53
       rect:
         serializedVersion: 2
-        x: 693
-        y: 71
-        width: 211
-        height: 336
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1483,10 +1483,10 @@ TextureImporter:
       name: Bleu_Sheet_54
       rect:
         serializedVersion: 2
-        x: 1217
-        y: 59
-        width: 212
-        height: 274
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1505,10 +1505,10 @@ TextureImporter:
       name: Bleu_Sheet_55
       rect:
         serializedVersion: 2
-        x: 1724
-        y: 56
-        width: 207
-        height: 291
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1527,10 +1527,10 @@ TextureImporter:
       name: Bleu_Sheet_56
       rect:
         serializedVersion: 2
-        x: 2226
-        y: 57
-        width: 194
-        height: 319
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1549,10 +1549,10 @@ TextureImporter:
       name: Bleu_Sheet_57
       rect:
         serializedVersion: 2
-        x: 2731
-        y: 58
-        width: 176
-        height: 340
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1571,10 +1571,10 @@ TextureImporter:
       name: Bleu_Sheet_58
       rect:
         serializedVersion: 2
-        x: 3240
-        y: 59
-        width: 173
-        height: 347
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1593,10 +1593,10 @@ TextureImporter:
       name: Bleu_Sheet_59
       rect:
         serializedVersion: 2
-        x: 3752
-        y: 59
-        width: 173
-        height: 347
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1615,10 +1615,10 @@ TextureImporter:
       name: Bleu_Sheet_60
       rect:
         serializedVersion: 2
-        x: 4264
-        y: 59
-        width: 173
-        height: 347
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1637,10 +1637,10 @@ TextureImporter:
       name: Bleu_Sheet_61
       rect:
         serializedVersion: 2
-        x: 4776
-        y: 59
-        width: 173
-        height: 347
+        x: 4608
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1659,10 +1659,10 @@ TextureImporter:
       name: Bleu_Sheet_62
       rect:
         serializedVersion: 2
-        x: 5288
-        y: 59
-        width: 173
-        height: 347
+        x: 5120
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1681,10 +1681,10 @@ TextureImporter:
       name: Bleu_Sheet_63
       rect:
         serializedVersion: 2
-        x: 5800
-        y: 59
-        width: 173
-        height: 347
+        x: 5632
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1703,10 +1703,10 @@ TextureImporter:
       name: Bleu_Sheet_64
       rect:
         serializedVersion: 2
-        x: 6312
-        y: 59
-        width: 173
-        height: 347
+        x: 6144
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1725,7 +1725,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1026aced08a07894bbee7c1e0673994a
     internalID: 0
     vertices: []
     indices: 
@@ -1734,7 +1734,72 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bleu_Sheet_0: -7806869000533227289
+      Bleu_Sheet_1: -1479375415036132595
+      Bleu_Sheet_10: 386288258964807302
+      Bleu_Sheet_11: -8300134336715530200
+      Bleu_Sheet_12: -7423533786029328060
+      Bleu_Sheet_13: 431406233363767951
+      Bleu_Sheet_14: 7588866835820459566
+      Bleu_Sheet_15: 2809680855535716957
+      Bleu_Sheet_16: 2752878009035857597
+      Bleu_Sheet_17: 6682954908499922070
+      Bleu_Sheet_18: 1706312631408341854
+      Bleu_Sheet_19: 8571069564305001551
+      Bleu_Sheet_2: 6927304879977558854
+      Bleu_Sheet_20: 7632062194554046658
+      Bleu_Sheet_21: 5859016238144292347
+      Bleu_Sheet_22: -321721679426628190
+      Bleu_Sheet_23: 7599481755689362790
+      Bleu_Sheet_24: 4503602399312616064
+      Bleu_Sheet_25: 1365261681398303256
+      Bleu_Sheet_26: 5727611638108528831
+      Bleu_Sheet_27: -4724070589639073257
+      Bleu_Sheet_28: 2365695033502248694
+      Bleu_Sheet_29: -8003066328125662836
+      Bleu_Sheet_3: -330137569325727338
+      Bleu_Sheet_30: -8769733700433189788
+      Bleu_Sheet_31: 751460787097556034
+      Bleu_Sheet_32: -7952554495598154379
+      Bleu_Sheet_33: -2477490542924432921
+      Bleu_Sheet_34: -2284888539474412384
+      Bleu_Sheet_35: -4207624194767467759
+      Bleu_Sheet_36: 2324175889681535492
+      Bleu_Sheet_37: -5999245036082270512
+      Bleu_Sheet_38: -2851566981583954141
+      Bleu_Sheet_39: -8507482053051377152
+      Bleu_Sheet_4: 4097937952457748030
+      Bleu_Sheet_40: 631828256456194819
+      Bleu_Sheet_41: 1076872118383679295
+      Bleu_Sheet_42: 4169683962744583928
+      Bleu_Sheet_43: 7196285915106353378
+      Bleu_Sheet_44: 374302995338517894
+      Bleu_Sheet_45: -1789625914373604038
+      Bleu_Sheet_46: -1044303498918604813
+      Bleu_Sheet_47: 6100026450432068998
+      Bleu_Sheet_48: -1582976382645550348
+      Bleu_Sheet_49: -4329542627168568932
+      Bleu_Sheet_5: -2358980088070265441
+      Bleu_Sheet_50: -2402108545647308858
+      Bleu_Sheet_51: -76891918475726897
+      Bleu_Sheet_52: -8264526293082173475
+      Bleu_Sheet_53: -3947625960197953807
+      Bleu_Sheet_54: 8517688699864967891
+      Bleu_Sheet_55: -7114549922783215660
+      Bleu_Sheet_56: 6634069171209750485
+      Bleu_Sheet_57: 2598469190426698493
+      Bleu_Sheet_58: 3117192104837523077
+      Bleu_Sheet_59: 4415956988620578753
+      Bleu_Sheet_6: 1840016732492070847
+      Bleu_Sheet_60: 7954362064997898094
+      Bleu_Sheet_61: -3538697996840522477
+      Bleu_Sheet_62: 6158619870521179886
+      Bleu_Sheet_63: 761692039962003020
+      Bleu_Sheet_64: 4586339084024039871
+      Bleu_Sheet_7: 2228749542125417798
+      Bleu_Sheet_8: 9126512210745234228
+      Bleu_Sheet_9: -4097930615779531503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

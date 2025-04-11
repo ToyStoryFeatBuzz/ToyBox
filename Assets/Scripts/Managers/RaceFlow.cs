@@ -1,13 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using NUnit.Framework.Constraints;
 using ToyBox.InputSystem;
-using ToyBox.Player;
 using UnityEngine;
 using static ToyBox.Enums;
 using Random = UnityEngine.Random;
 
 namespace ToyBox.Managers {
+    
     public class RaceFlow : MonoBehaviour
     {
         [SerializeField] Transform _startTransform;

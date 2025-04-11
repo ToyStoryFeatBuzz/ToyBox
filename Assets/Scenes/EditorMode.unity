@@ -1475,6 +1475,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 965559377940951561, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      propertyPath: buttons
+      value: 
+      objectReference: {fileID: 1664627902}
     - target: {fileID: 1032124592938465243, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: topRight
       value: 

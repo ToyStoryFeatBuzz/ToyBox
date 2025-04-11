@@ -42,19 +42,29 @@ namespace ToyBox.Managers
 
         public void AddObject(Build build)
         {
-            build.Place(true);
+            
 
             if (build.erase)
             {
-                foreach (Build b in objects)
+                for (int i = 0; i < objects.Count; i++)
                 {
-                    foreach (var offset in build.offsets)
+                    Build b = objects[i];
+                    bool toDelete = false;
+
+                    foreach (var offset in b.offsets)
                     {
-                        if (build.ContainsPos((Vector2)build.transform.position + offset))
+                        if (build.ContainsPos((Vector2)b.transform.position + offset))
                         {
-                            objects.Remove(b);
-                            Destroy(b.gameObject);
+                            toDelete = true;
+                            break;
                         }
+                    }
+
+                    if(toDelete)
+                    {
+                        objects.RemoveAt(i);
+                        Destroy(b.gameObject);
+                        i--;
                     }
                 }
 
@@ -62,7 +72,7 @@ namespace ToyBox.Managers
 
                 return;
             }
-
+            build.Place(true);
             objects.Add(build);
         }
 

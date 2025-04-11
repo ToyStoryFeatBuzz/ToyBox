@@ -1,60 +1,104 @@
 using System;
-using Toybox.InputSystem;
+using ToyBox.InputSystem;
 using UnityEngine;
+using static ToyBox.Enums;
 
 namespace ToyBox.Player
 {
     public class PlayerMovement : MonoBehaviour
-    {
+    { 
+        #region SERIALIZED VARIABLES
+        [Header("Movement variables")]
         [SerializeField] float _acceleration;
         [SerializeField] float _deceleration;
         [SerializeField] float _maxSpeed;
+        [Header("Jump variables")]
         [SerializeField] float _jumpForce;
         [SerializeField] int _maxJump;
         [SerializeField] int _remainJump;
+        [SerializeField] Vector2 _wallJumpVector;
+        [SerializeField] bool _canWallJumpOnSameWall;
         [SerializeField] float _gravity;
-
+        [SerializeField] LayerMask _groundLayer;
+        [Space(10)]
+        [Header("OverlapBox offsets")]
+        [SerializeField] Vector2 _groundOffset;
+        [SerializeField] Vector2 _groundCheckSize;
+        [Space(5)]
+        [SerializeField] Vector2 _leftWallOffset;
+        [SerializeField] Vector2 _leftWallCheckSize;
+        [Space(5)]
+        [SerializeField] Vector2 _rightWallOffset;
+        [SerializeField] Vector2 _rightWallCheckSize;
+        #endregion
+        
+        EWallJumpDirection _wallJumpDirection = EWallJumpDirection.None;
+        
         bool _isGrounded;
         bool _performGroundCheck;
-        PlayerInputManager _inputManager;
+        PlayerInputSystem _inputSystem;
         Rigidbody2D _rb;
-
+        
         
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
-            _inputManager = GetComponent<PlayerInputManager>();
-            _inputManager.JumpEvent.Started += OnJump;
-            _inputManager.JumpEvent.Canceled += OnJumpCancel;
-            _inputManager.JumpEvent.Performed += OnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
+            _inputSystem = GetComponent<PlayerInputSystem>();
+            _inputSystem.OnJumpEvent.Started += OnJump;
+            _inputSystem.OnJumpEvent.Canceled += OnJumpCancel;
+            _inputSystem.OnJumpEvent.Performed += OnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
             _remainJump = _maxJump;
         }
 
         private void FixedUpdate()
         {
-            _rb.AddForceX(_acceleration * _inputManager.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse);
-            _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed);
-            
+            if (!_inputSystem.IsDead) {
+                _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse); //Makes the player move in the direction of the input
+                _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed); //Clamps the speed to the max speed
 
-            if (_inputManager.MoveValue == 0)
-            {
-                _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
-            }
-            
-            if (_rb.IsTouchingLayers(LayerMask.GetMask("Ground")) && _performGroundCheck)
-            {
-                _isGrounded = true;
-                _remainJump = _maxJump;
-            }
-            else
-            {
-                _isGrounded = false;
+
+                if (_inputSystem.MoveValue == 0) {
+                    _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player
+                }
+
+                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_groundLayer) && _performGroundCheck) // Ground check
+                {
+                    _isGrounded = true;
+                    _remainJump = _maxJump;
+                    _wallJumpDirection = EWallJumpDirection.None;
+                }
+                else
+                {
+                    _isGrounded = false;
+                }
             }
         }
 
         private void OnJump()
         {
-            if (_remainJump != 0 || _isGrounded)
+            if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
+                    _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
+            {
+                _wallJumpDirection = EWallJumpDirection.Left;
+                _rb.gravityScale = 1;
+                _rb.linearVelocity = Vector2.zero;
+                _rb.AddForce(_wallJumpVector*_jumpForce, ForceMode2D.Impulse);
+                _remainJump = 1;
+                _isGrounded = false;
+                _performGroundCheck = false;
+            }
+            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0,
+                         _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
+            {
+                _wallJumpDirection = EWallJumpDirection.Right;
+                _rb.gravityScale = 1;
+                _rb.linearVelocity = Vector2.zero;
+                _rb.AddForce(new Vector2(-_wallJumpVector.x,_wallJumpVector.y) * _jumpForce, ForceMode2D.Impulse);
+                _remainJump = 1;
+                _isGrounded = false;
+                _performGroundCheck = false;
+            }
+            else if ((_remainJump != 0 && _isGrounded) && !_inputSystem.IsDead) // If you jump while on the ground/ in the air
             {
                 _rb.gravityScale = 1;
                 _rb.linearVelocityY = 0;
@@ -63,12 +107,40 @@ namespace ToyBox.Player
                 _isGrounded = false;
                 _performGroundCheck = false; //Little hack to make sure the ground check does not trigger on the first frame after jumping, to prevent triple jumps
             }
+            else if (_remainJump != 0) // If you jump after being in the air without jumping (i.e a jump pad)
+            {
+                _rb.gravityScale = 1;
+                _rb.linearVelocityY = 0;
+                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
+                _remainJump = 0;
+                _isGrounded = false;
+                _performGroundCheck = false;
+            }
         }
 
-        private void OnJumpCancel()
+        private void OnJumpCancel() //Gets automatically called if the player releases the jump input or holds it too long
         {
             _performGroundCheck = true;
             _rb.gravityScale = _gravity;
         }
+
+        public void ApplyKnockBack(Vector2 knockBackVector) // Used for obstacles that knockbacks you
+        {
+            _rb.linearVelocity = Vector2.zero;
+            _rb.AddForce(knockBackVector, ForceMode2D.Impulse);
+        }
+
+        void OnDrawGizmosSelected() //To show the overlap boxes in the editor
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(transform.position+(Vector3)_groundOffset, _groundCheckSize);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireCube(new Vector2(transform.position.x+_leftWallOffset.x,transform.position.y+_leftWallOffset.y), _leftWallCheckSize);
+            Gizmos.DrawWireCube(new Vector2(transform.position.x+_rightWallOffset.x,transform.position.y+_rightWallOffset.y), _rightWallCheckSize);
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, transform.position+(Vector3)_wallJumpVector);
+        }
     }
+
+
 }

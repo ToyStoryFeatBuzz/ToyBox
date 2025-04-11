@@ -1,4 +1,5 @@
 ﻿using System;
+using ToyBox.Player;
 using UnityEngine;
 
 namespace ToyBox.Managers {
@@ -30,6 +31,7 @@ namespace ToyBox.Managers {
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
+                player.PlayerObject.GetComponent<PlayerMovement>().enabled = true;
             }
             OnRaceStart?.Invoke();
         }
@@ -38,6 +40,7 @@ namespace ToyBox.Managers {
             buildsManager.Shuffle(0);
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
+                player.PlayerObject.GetComponent<PlayerMovement>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }
         }

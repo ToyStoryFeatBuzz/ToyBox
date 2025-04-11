@@ -1424,16 +1424,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1882867460}
     - target: {fileID: 1032124592938465243, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      propertyPath: objectsStruct.Array.data[0]._curve.m_Curve.Array.data[2].value
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032124592938465243, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: objectsStruct.Array.data[0]._curve.m_Curve.Array.data[1].inSlope
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1032124592938465243, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: objectsStruct.Array.data[0]._curve.m_Curve.Array.data[2].inSlope
-      value: 0.71428573
+      value: 2.857143
       objectReference: {fileID: 0}
     - target: {fileID: 1032124592938465243, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: objectsStruct.Array.data[0]._curve.m_Curve.Array.data[1].outSlope
-      value: 0.71428573
+      value: 2.857143
       objectReference: {fileID: 0}
     - target: {fileID: 1032124592938465243, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: objectsStruct.Array.data[0]._curve.m_Curve.Array.data[1].tangentMode

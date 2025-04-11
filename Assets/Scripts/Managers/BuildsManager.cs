@@ -8,8 +8,6 @@ namespace ToyBox.Managers
     {
         public static BuildsManager Instance { get; private set; }
 
-        public GameObject btndemerde;
-
         public PlayerManager playerManager;
 
         [SerializeField] List<GameObject> objectsPrefabs = new();
@@ -40,10 +38,8 @@ namespace ToyBox.Managers
             }
         }
 
-        public void AddObject(Build build)
-        {
+        public void AddObject(Build build) {
             
-
             if (build.erase)
             {
                 for (int i = 0; i < objects.Count; i++)
@@ -79,7 +75,6 @@ namespace ToyBox.Managers
         public void Shuffle(int amount)
         {
             selecting = true;
-            btndemerde.SetActive(false);
             amount = playerManager.Players.Count + 3;
 
             objectsBox.SetActive(true);
@@ -108,8 +103,7 @@ namespace ToyBox.Managers
                 }
 
                 objectsList.Clear();
-
-                btndemerde.SetActive(true);
+                
                 selecting = false;
             }
         }

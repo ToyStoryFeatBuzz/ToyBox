@@ -18,10 +18,10 @@ namespace ToyBox.Managers {
             }
         }
         
-        void StartPause(StPlayer pausedPlayer) {
+        void StartPause(Player pausedPlayer) {
             Time.timeScale = 0f;
             _playerManager.PlayerInputManager.enabled = false;
-            foreach (StPlayer player in _playerManager.Players) {
+            foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.enabled = false;
             }
             _menuInput.enabled = true;
@@ -35,7 +35,7 @@ namespace ToyBox.Managers {
 
         public void EndPause() {
             _menuInput.enabled = false;
-            foreach (StPlayer player in _playerManager.Players) {
+            foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.enabled = true;
             }
             _playerManager.PlayerInputManager.enabled = true;

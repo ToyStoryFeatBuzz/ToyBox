@@ -22,11 +22,12 @@ namespace ToyBox.Managers {
         }
 
         private void Start() {
+            StartRaceMode();
             OnRaceEnd += StartConstructMode;
         }
         
         public void StartRaceMode() {
-            foreach (StPlayer player in _playerManager.Players) {
+            foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
             }
@@ -35,7 +36,7 @@ namespace ToyBox.Managers {
 
         public void StartConstructMode() {
             buildsManager.Shuffle(0);
-            foreach (StPlayer player in _playerManager.Players) {
+            foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }

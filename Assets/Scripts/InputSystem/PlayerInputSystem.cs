@@ -46,6 +46,9 @@ namespace ToyBox.InputSystem {
             gameObject.transform.position = new Vector2(-999, -999); //Send the dead out of the map to avoid clutter on the race
         }
 
+        public void SetWin() {
+            _playerManager.SetPlayerState(gameObject, Finished);
+        }
     }
     
     

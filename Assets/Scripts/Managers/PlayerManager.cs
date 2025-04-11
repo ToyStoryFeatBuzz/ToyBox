@@ -9,7 +9,7 @@ using static ToyBox.Enums;
 
 namespace ToyBox.Managers {
     public class PlayerManager : MonoBehaviour {
-        public List<StPlayer> Players = new();
+        public List<Player> Players = new();
 
         public static PlayerManager Instance;
         
@@ -36,19 +36,19 @@ namespace ToyBox.Managers {
             player.gameObject.name = name;
             PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();
             
-            Players.Add(new StPlayer
-                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats });
+            Players.Add(new Player
+                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
         }
 
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {
             if (change != InputDeviceChange.Disconnected) return;
-            foreach (StPlayer player in Players.Where(_player => _player.Device == device)) {
+            foreach (Player player in Players.Where(_player => _player.Device == device)) {
                 RemovePlayer(player);
                 break;
             }
         }
 
-        void RemovePlayer(StPlayer player) {
+        void RemovePlayer(Player player) {
             Players.Remove(player);
             RefreshPlayerName();
             if (player.PlayerObject != null) {
@@ -56,18 +56,16 @@ namespace ToyBox.Managers {
             }
         }
 
-        public StPlayer GetPlayer(GameObject playerGameObject) {
-            StPlayer stPlayer = new();
-            
-            foreach (StPlayer player  in Players.Where(_player => _player.PlayerObject == playerGameObject)) {
-                stPlayer = player;
+        public Player GetPlayer(GameObject playerGameObject) {
+            foreach (Player player  in Players.Where(_player => _player.PlayerObject == playerGameObject)) {
+                return player;
             }
-            return stPlayer;
+            return null;
         }
 
         private void RefreshPlayerName() {
             for (int i = 0; i < Players.Count; i++) {
-                StPlayer player = Players[i];
+                Player player = Players[i];
                 player.Name = $"Player {i + 1}";
                 Players[i].PlayerObject.name = player.Name;
                 Players[i] = player;
@@ -75,16 +73,22 @@ namespace ToyBox.Managers {
         }
         
         public void SetPlayerState(GameObject player, EPlayerState state) {
-            StPlayer stPlayer = GetPlayer(player);
-            stPlayer.PlayerState = state;
+            SetPlayerState(GetPlayer(player), state);
         }
 
-        public void SetPlayerState(StPlayer player, EPlayerState state) => player.PlayerState = state;
+        public void SetPlayerState(Player player, EPlayerState state) {
+            player.PlayerState = state;
+        }
+
+
+        public List<Player> GetAlivePlayers() {
+            return Players.Where(_player => _player.PlayerState == EPlayerState.Alive).ToList();
+        }
         
     }
 
     [Serializable]
-    public struct StPlayer {
+    public class Player {
         public string Name;
         public PlayerInput PlayerInput;
         public GameObject PlayerObject;

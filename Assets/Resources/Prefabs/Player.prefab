@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 6494250637933963715}
   - component: {fileID: 8047551363141542177}
   - component: {fileID: -5627916806147649405}
+  - component: {fileID: -450549269470407984}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -594,6 +595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveValue: 0
   GridMoveDir: {x: 0, y: 0}
+  IsDead: 0
 --- !u!114 &5595235915548993446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ea0364597bc7d43a81949287410a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDead: 0
   _acceleration: 200
   _deceleration: 10
   _maxSpeed: 20
@@ -743,3 +744,16 @@ MonoBehaviour:
   mouseBody: {fileID: 0}
   mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
   mouseSensivity: 0.03
+--- !u!114 &-450549269470407984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f50fa6de91aaa48b187d0dbe4a4c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MatchScores: 

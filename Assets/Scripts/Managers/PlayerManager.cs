@@ -50,7 +50,7 @@ namespace ToyBox.Managers {
 
         void RemovePlayer(StPlayer player) {
             Players.Remove(player);
-            RefreshPlayers();
+            RefreshPlayerName();
             if (player.PlayerObject != null) {
                 Destroy(player.PlayerObject);
             }
@@ -65,7 +65,7 @@ namespace ToyBox.Managers {
             return stPlayer;
         }
 
-        private void RefreshPlayers() {
+        private void RefreshPlayerName() {
             for (int i = 0; i < Players.Count; i++) {
                 StPlayer player = Players[i];
                 player.Name = $"Player {i + 1}";
@@ -73,6 +73,14 @@ namespace ToyBox.Managers {
                 Players[i] = player;
             }
         }
+        
+        public void SetPlayerState(GameObject player, EPlayerState state) {
+            StPlayer stPlayer = GetPlayer(player);
+            stPlayer.PlayerState = state;
+        }
+
+        public void SetPlayerState(StPlayer player, EPlayerState state) => player.PlayerState = state;
+        
     }
 
     [Serializable]

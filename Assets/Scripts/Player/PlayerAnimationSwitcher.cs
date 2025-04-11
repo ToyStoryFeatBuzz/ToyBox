@@ -24,13 +24,13 @@ public class PlayerAnimationSwitcher : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (MathF.Abs(_rigidbody2D.velocity.x) < stillMovingThreshold)
+        if (MathF.Abs(_rigidbody2D.linearVelocity.x) < stillMovingThreshold)
         {
             ChangeAnimatorState(animatorStatesEnum.idle);
         }
         else
         {
-            if (_rigidbody2D.velocity.x > 0)
+            if (_rigidbody2D.linearVelocity.x > 0)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
@@ -39,6 +39,18 @@ public class PlayerAnimationSwitcher : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
             ChangeAnimatorState(animatorStatesEnum.IsWalking); //not to stay here
+        }
+
+        if (MathF.Abs(_rigidbody2D.linearVelocity.y) > stillMovingThreshold)
+        {
+            if (_rigidbody2D.linearVelocity.y > 0)
+            {
+                ChangeAnimatorState(animatorStatesEnum.IsRising);
+            }
+            else
+            {
+                ChangeAnimatorState(animatorStatesEnum.IsFalling);
+            }
         }
     }
 
@@ -65,9 +77,7 @@ public class PlayerAnimationSwitcher : MonoBehaviour
         IsJumping,
         IsFalling,
         IsRising,
-        IsLanding,
         IsWalking,
-        ReachedApex,
         OnWall,
         GetTheCount,
         idle,

@@ -1,5 +1,4 @@
 using Managers;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -17,7 +16,7 @@ public class LeaderBoard : MonoBehaviour
     public List<GameObject> fillBars;
     public List<TextMeshProUGUI> textSlots;
 
-    private Dictionary<string, int> _dictPlayer;
+    public Dictionary<string, int> _dictPlayer;
 
     private void Start()
     {
@@ -28,7 +27,7 @@ public class LeaderBoard : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             ShowLeaderBoard();
         }
@@ -62,7 +61,6 @@ public class LeaderBoard : MonoBehaviour
 
                 // Activer le parent (slot complet)
                 parent.gameObject.SetActive(true);
-
                 fillBars[i].GetComponent<Image>().fillAmount = score / 100f;
                 textSlots[i].text = name;
             }
@@ -86,8 +84,23 @@ public class LeaderBoard : MonoBehaviour
             if (!_dictPlayer.ContainsKey(player.Name))
             {
                 _dictPlayer.Add(player.Name, Random.Range(1, 100));
+                SimulateMatchScores(player);  // Simule des scores de match
             }
         }
+    }
+
+    public void SimulateMatchScores(StPlayer player)
+    {
+        // Générer des scores de match aléatoires pour ce joueur
+        List<int> matchScores = new List<int>();
+        int numMatches = Random.Range(1, 10); // Nombre de matchs aléatoires (par exemple entre 5 et 15 matchs)
+
+        for (int i = 0; i < numMatches; i++)
+        {
+            matchScores.Add(Random.Range(1, 10)); // Scores de matchs entre 10 et 50
+        }
+
+        player.PlayerStats.MatchScores = matchScores;
     }
 
     public List<(string name, int score)> GetSortedPlayers()

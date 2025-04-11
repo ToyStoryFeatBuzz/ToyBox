@@ -9,11 +9,9 @@ namespace ToyBox.Managers
     {
         public static BuildsManager Instance { get; private set; }
 
-        public GameObject btndemerde;
-
         public PlayerManager playerManager;
 
-        [SerializeField] List<GameObject> objectsPrefabs = new();
+        [SerializeField] List<PlaceableStruct> objectsStruct = new();
 
         public List<Build> objects = new();
 
@@ -23,6 +21,7 @@ namespace ToyBox.Managers
         [SerializeField] Transform bottomLeft;
 
         int picked = 0;
+        int turnNumber = 0;
         List<Build> objectsList = new();
 
         public bool selecting = false;
@@ -43,10 +42,8 @@ namespace ToyBox.Managers
             }
         }
 
-        public void AddObject(Build build)
-        {
+        public void AddObject(Build build) {
             
-
             if (build.erase)
             {
                 for (int i = 0; i < objects.Count; i++)
@@ -82,16 +79,38 @@ namespace ToyBox.Managers
 
         public void Shuffle(int amount)
         {
+            if (turnNumber <= 10)
+            {
+                turnNumber++;
+            }
             selecting = true;
-            btndemerde.SetActive(false);
             amount = playerManager.Players.Count + 3;
 
             objectsBox.SetActive(true);
 
             for (int i = 0; i < amount; i++)
             {
-                GameObject go = Instantiate(objectsPrefabs[Random.Range(0, objectsPrefabs.Count)], new(Random.Range(bottomLeft.position.x, topRight.position.x), Random.Range(bottomLeft.position.y, topRight.position.y)), Quaternion.identity);
+                float probability = 0;
+                GameObject chosenObject = objectsStruct[0]._objectPrefab;
+                for (int j = 0; j < objectsStruct.Count; j++)
+                {
+
+                    float objectProbability = Random.Range(0, objectsStruct.Count*.1f)*objectsStruct[j]._curve.Evaluate(turnNumber*.1f);
+                    if (probability <= objectProbability)
+                    {
+                       
+                        
+                        probability = objectProbability;
+                        chosenObject = objectsStruct[j]._objectPrefab;
+                    }
+                    Debug.Log($"Object : {objectsStruct[j]._objectPrefab.name} with probability : {objectProbability}");
+
+                }
+                
+                
+                GameObject go = Instantiate(chosenObject, new(Random.Range(bottomLeft.position.x, topRight.position.x), Random.Range(bottomLeft.position.y, topRight.position.y)), Quaternion.identity);
                 Build b = go.GetComponent<Build>();
+                
                 objectsList.Add(b);
                 b.pickedEvent.AddListener(ObjectPicked);
             }
@@ -112,8 +131,7 @@ namespace ToyBox.Managers
                 }
 
                 objectsList.Clear();
-
-                btndemerde.SetActive(true);
+                
                 selecting = false;
             }
         }
@@ -133,5 +151,12 @@ namespace ToyBox.Managers
 
             return true;
         }
+    }
+    [System.Serializable]
+    public struct PlaceableStruct
+    {
+        public GameObject _objectPrefab;
+        public AnimationCurve _curve;
+
     }
 }

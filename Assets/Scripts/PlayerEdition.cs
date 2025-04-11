@@ -65,13 +65,15 @@ public class PlayerEdition : MonoBehaviour
         {
             if (buildsManager.selecting) return;
 
-            placeable = buildsManager.CanPlace(draggedObject.GetComponent<Build>());
+            Build b = draggedObject.GetComponent<Build>();
 
-            if (!placeable) return;
+            placeable = buildsManager.CanPlace(b);
+
+            if (!placeable && !b.erase) return;
 
             placeable = false;
 
-            buildsManager.AddObject(draggedObject.GetComponent<Build>());
+            buildsManager.AddObject(b);
 
             draggedObject = null;
             enabled = false;

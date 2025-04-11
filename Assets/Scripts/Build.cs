@@ -12,6 +12,8 @@ public class Build : MonoBehaviour
 
     public UnityEvent pickedEvent = new();
 
+    public bool erase = false;
+
     public bool chosen = false;
 
     private void Start()

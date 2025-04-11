@@ -18,7 +18,14 @@ namespace ToyBox.Managers {
 
         public Action OnRaceStart;
         public Action OnRaceEnd;
-        
+
+        public GameObject buttons;
+
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.H)) buttons.SetActive(!buttons.activeInHierarchy);
+        }
+
         private void Awake() {
             if (Instance == null) {
                 Instance = this;

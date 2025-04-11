@@ -1,13 +1,13 @@
 using System;
-using Toybox.InputSystem;
+using ToyBox.InputSystem;
 using UnityEngine;
+using static ToyBox.Enums;
 
 namespace ToyBox.Player
 {
     public class PlayerMovement : MonoBehaviour
     { 
         #region SERIALIZED VARIABLES
-        public bool IsDead;
         [Header("Movement variables")]
         [SerializeField] float _acceleration;
         [SerializeField] float _deceleration;
@@ -36,36 +36,32 @@ namespace ToyBox.Player
         
         bool _isGrounded;
         bool _performGroundCheck;
-        PlayerInputManager _inputManager;
+        PlayerInputSystem _inputSystem;
         Rigidbody2D _rb;
         
         
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
-            _inputManager = GetComponent<PlayerInputManager>();
-            _inputManager.OnJumpEvent.Started += OnOnJump;
-            _inputManager.OnJumpEvent.Canceled += OnOnJumpCancel;
-            _inputManager.OnJumpEvent.Performed += OnOnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
+            _inputSystem = GetComponent<PlayerInputSystem>();
+            _inputSystem.OnJumpEvent.Started += OnJump;
+            _inputSystem.OnJumpEvent.Canceled += OnJumpCancel;
+            _inputSystem.OnJumpEvent.Performed += OnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
             _remainJump = _maxJump;
         }
 
         private void FixedUpdate()
         {
-            if (!IsDead)
-            {
+            if (!_inputSystem.IsDead) {
+                _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse); //Makes the player move in the direction of the input
+                _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed); //Clamps the speed to the max speed
 
 
-                _rb.AddForceX(_acceleration * _inputManager.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse);
-                _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed);
-
-
-                if (_inputManager.MoveValue == 0)
-                {
-                    _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
+                if (_inputSystem.MoveValue == 0) {
+                    _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player
                 }
 
-                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_groundLayer) && _performGroundCheck)
+                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_groundLayer) && _performGroundCheck) // Ground check
                 {
                     _isGrounded = true;
                     _remainJump = _maxJump;
@@ -78,10 +74,10 @@ namespace ToyBox.Player
             }
         }
 
-        private void OnOnJump()
+        private void OnJump()
         {
             if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
-                    _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall))
+                    _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
             {
                 _wallJumpDirection = EWallJumpDirection.Left;
                 _rb.gravityScale = 1;
@@ -102,7 +98,7 @@ namespace ToyBox.Player
                 _isGrounded = false;
                 _performGroundCheck = false;
             }
-            else if ((_remainJump != 0 && _isGrounded) && !IsDead)
+            else if ((_remainJump != 0 && _isGrounded) && !_inputSystem.IsDead) // If you jump while on the ground/ in the air
             {
                 _rb.gravityScale = 1;
                 _rb.linearVelocityY = 0;
@@ -111,7 +107,7 @@ namespace ToyBox.Player
                 _isGrounded = false;
                 _performGroundCheck = false; //Little hack to make sure the ground check does not trigger on the first frame after jumping, to prevent triple jumps
             }
-            else if (_remainJump != 0)
+            else if (_remainJump != 0) // If you jump after being in the air without jumping (i.e a jump pad)
             {
                 _rb.gravityScale = 1;
                 _rb.linearVelocityY = 0;
@@ -122,22 +118,13 @@ namespace ToyBox.Player
             }
         }
 
-        private void OnOnJumpCancel()
+        private void OnJumpCancel() //Gets automatically called if the player releases the jump input or holds it too long
         {
             _performGroundCheck = true;
             _rb.gravityScale = _gravity;
         }
 
-        //Not used see PlayerKiller.cs
-        //private void OnCollisionEnter2D(Collision2D collision)
-        //{
-        //    if (collision.gameObject.CompareTag("KillObject"))
-        //    {
-        //        IsDead = true;
-        //    }
-        //}
-
-        public void ApplyKnockBack(Vector2 knockBackVector)
+        public void ApplyKnockBack(Vector2 knockBackVector) // Used for obstacles that knockbacks you
         {
             _rb.linearVelocity = Vector2.zero;
             _rb.AddForce(knockBackVector, ForceMode2D.Impulse);
@@ -155,10 +142,5 @@ namespace ToyBox.Player
         }
     }
 
-    enum EWallJumpDirection
-    {
-        Left,
-        Right,
-        None
-    }
+
 }

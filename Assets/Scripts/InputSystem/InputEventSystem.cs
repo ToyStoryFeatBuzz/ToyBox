@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine.InputSystem;
 
-namespace Toybox.InputSystem {
+namespace ToyBox.InputSystem {
     public static class InputEventSystem {
         public static void InvokeInputEvent(StInputEvent inputEvent, InputAction.CallbackContext ctx) {
             if (ctx.started) {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-namespace Toybox.Menu {
+namespace ToyBox.Menu {
     public class AudioSettings : MonoBehaviour {
         [Header("~~~~~~ General ~~~~~~")] 
         [SerializeField] private StVolumeSlider _generalVolume;

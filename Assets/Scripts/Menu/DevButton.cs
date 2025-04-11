@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Toybox.Menu{
+namespace ToyBox.Menu{
     public class ScDevButton : MonoBehaviour {
 
         [SerializeField] private SoDevInfo _devInfo;

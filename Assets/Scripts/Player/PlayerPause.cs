@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
-using Toybox.InputSystem;
+using ToyBox.InputSystem;
 using ToyBox.Managers;
 
 namespace ToyBox.Player {
     public class PlayerPause : MonoBehaviour {
-        GameModeManager _gameModeManager => GameModeManager.Instance;
+        PauseManager _pauseManager => PauseManager.Instance;
         
         private void Start() {
             GetComponent<PlayerInputSystem>().OnPauseEvent.Started += StartPause;
         }
         
         void StartPause() {
-            _gameModeManager.StartPause(transform.root.gameObject);
+            _pauseManager.StartPause(transform.root.gameObject);
         }
         
     }

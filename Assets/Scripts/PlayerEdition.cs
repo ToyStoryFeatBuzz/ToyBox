@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using ToyBox.Managers;
-using Toybox.InputSystem;
+using ToyBox.InputSystem;
 using UnityEngine;
 
 public class PlayerEdition : MonoBehaviour

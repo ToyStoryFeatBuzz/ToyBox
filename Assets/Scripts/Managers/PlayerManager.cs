@@ -5,13 +5,28 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using ToyBox.Player;
+using static ToyBox.Enums;
 
 namespace ToyBox.Managers {
     public class PlayerManager : MonoBehaviour {
         public List<StPlayer> Players = new();
 
+        public static PlayerManager Instance;
+        
+        public PlayerInputManager PlayerInputManager;
+        
+        private void Awake() {
+            if (Instance == null) {
+                Instance = this;
+                DontDestroyOnLoad(transform.root);
+            } else {
+                Destroy(gameObject);
+            }
+        }
+        
         private void Start() {
-            InputSystem.onDeviceChange += OnDeviceChange;
+            UnityEngine.InputSystem.InputSystem.onDeviceChange += OnDeviceChange;
+            PlayerInputManager = GetComponent<PlayerInputManager>();
         }
 
         public void AddPlayer(PlayerInput player) {
@@ -33,12 +48,21 @@ namespace ToyBox.Managers {
             }
         }
 
-        public void RemovePlayer(StPlayer player) {
+        void RemovePlayer(StPlayer player) {
             Players.Remove(player);
             RefreshPlayers();
             if (player.PlayerObject != null) {
                 Destroy(player.PlayerObject);
             }
+        }
+
+        public StPlayer GetPlayer(GameObject playerGameObject) {
+            StPlayer stPlayer = new();
+            
+            foreach (StPlayer player  in Players.Where(_player => _player.PlayerObject == playerGameObject)) {
+                stPlayer = player;
+            }
+            return stPlayer;
         }
 
         private void RefreshPlayers() {
@@ -58,5 +82,6 @@ namespace ToyBox.Managers {
         public GameObject PlayerObject;
         public InputDevice Device;
         public PlayerStats PlayerStats;
+        public EPlayerState PlayerState;
     }
 }

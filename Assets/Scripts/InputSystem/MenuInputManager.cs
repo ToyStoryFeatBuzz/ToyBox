@@ -1,16 +1,20 @@
 ﻿using ToyBox.Managers;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
+using UnityEngine.Serialization;
 
-namespace Toybox.InputSystem {
+namespace ToyBox.InputSystem {
     public class MenuInputManager: MonoBehaviour {
         public static MenuInputManager Instance { get; private set; }
 
         public StInputEvent OnNavigateEvent;
 
         public bool IsLastInputMouse;
-
-        public PlayerInput MenuInput;
+        
+        
+        
+        
         
         private void Awake() {
             if (Instance == null) {
@@ -19,11 +23,6 @@ namespace Toybox.InputSystem {
             } else {
                 Destroy(gameObject);
             }
-        }
-
-        private void Start() {
-            MenuInput = GetComponent<PlayerInput>();
-            
         }
 
         public void OnNavigate(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnNavigateEvent, ctx);
@@ -36,6 +35,8 @@ namespace Toybox.InputSystem {
             IsLastInputMouse = true;
         }
         
-        public void ReleasePause(InputAction.CallbackContext ctx) => GameModeManager.Instance.EndPause();
+        public void ReleasePause(InputAction.CallbackContext ctx) => PauseManager.Instance.EndPause();
+        
+        
     }
 }

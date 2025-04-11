@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Toybox.InputSystem;
+using ToyBox.InputSystem;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Toybox.Menu {
+namespace ToyBox.Menu {
     [RequireComponent(typeof(ScrollRect))]
     public class AutoScrollRect : MonoBehaviour {
 

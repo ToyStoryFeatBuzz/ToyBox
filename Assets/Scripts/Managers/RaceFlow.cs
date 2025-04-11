@@ -47,8 +47,8 @@ namespace ToyBox.Managers {
         void Update() {
             if (!_raceStarted) return;
             if (GetAlivePlayers().Count == _finishedPlayers) {
-                _gameModeManager.OnRaceEnd?.Invoke();
                 Debug.Log("Race ends");
+                _gameModeManager.OnRaceEnd?.Invoke();
                 _raceStarted = false;
             }
         }

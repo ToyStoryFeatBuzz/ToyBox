@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Toybox.InputSystem {
+namespace ToyBox.InputSystem {
     public class PlayerInputSystem : MonoBehaviour {
         public StInputEvent OnJumpEvent;
          

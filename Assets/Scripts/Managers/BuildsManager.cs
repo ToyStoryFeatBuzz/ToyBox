@@ -15,26 +15,23 @@ namespace ToyBox.Managers
 
         PlayerManager _playerManager => PlayerManager.Instance;
 
-        [FormerlySerializedAs("objectsStruct")] [SerializeField] List<StPlaceable> _objectsStruct = new();
+        [SerializeField] List<StPlaceable> _objectsStruct = new();
 
-        [FormerlySerializedAs("objects")] public List<BuildObject> Objects = new();
+        public List<BuildObject> Objects = new();
 
-        [Header("ChooseBox")]
-        [FormerlySerializedAs("objectsBox")] [SerializeField] GameObject _objectsBox;
-        [FormerlySerializedAs("topRight")] [SerializeField] Transform _topRight;
-        [FormerlySerializedAs("bottomLeft")] [SerializeField] Transform _bottomLeft;
+        ChooseBox _chooseBox => ChooseBox.Instance;
 
-        int _picked = 0;
-        int _turnNumber = 0;
+        int _picked;
+        int _turnNumber;
         List<BuildObject> _objectsList = new();
-
-        public bool selecting = false;
+        
+        public bool IsSelecting;
 
         public Action OnObjectPlaced;
 
         private void Awake()
         {
-            _objectsBox.SetActive(false);
+            _chooseBox.gameObject.SetActive(false);
             if (Instance == null)
             {
                 Instance = this;
@@ -79,6 +76,8 @@ namespace ToyBox.Managers
             Objects.Add(build);
             OnObjectPlaced?.Invoke();
         }
+        
+
 
         public void Shuffle(int amount)
         {
@@ -86,10 +85,10 @@ namespace ToyBox.Managers
             {
                 _turnNumber++;
             }
-            selecting = true;
+            IsSelecting = true;
             amount = _playerManager.Players.Count + 3;
 
-            _objectsBox.SetActive(true);
+            _chooseBox.gameObject.SetActive(true);
 
             for (int i = 0; i < amount; i++)
             {
@@ -109,7 +108,7 @@ namespace ToyBox.Managers
                 }
                 
                 
-                GameObject go = Instantiate(chosenObject, new(Random.Range(_bottomLeft.position.x, _topRight.position.x), Random.Range(_bottomLeft.position.y, _topRight.position.y)), Quaternion.identity);
+                GameObject go = Instantiate(chosenObject, new(Random.Range(_chooseBox.BL.position.x, _chooseBox.TR.position.x), Random.Range(_chooseBox.BL.position.y, _chooseBox.TR.position.y)), Quaternion.identity, _chooseBox.transform);
                 BuildObject b = go.GetComponent<BuildObject>();
                 
                 _objectsList.Add(b);
@@ -117,13 +116,22 @@ namespace ToyBox.Managers
             }
         }
 
-        public void ObjectPicked()
-        {
+        public void ObjectPicked() {
             _picked++;
-            if (_picked != _playerManager.Players.Count) {
-                return;
+            if (_picked == _playerManager.Players.Count) {
+                _chooseBox.gameObject.SetActive(false);
+
+                _picked = 0;
+
+                foreach (BuildObject b in _objectsList.Where(b => !b.IsChosen)) {
+                    Destroy(b.gameObject);
+                }
+
+                _objectsList.Clear();
+                
+                IsSelecting = false;
             }
-            _objectsBox.SetActive(false);
+            _chooseBox.gameObject.SetActive(false);
 
             _picked = 0;
 
@@ -133,18 +141,18 @@ namespace ToyBox.Managers
 
             _objectsList.Clear();
                 
-            selecting = false;
+            IsSelecting = false;
         }
 
         public bool CanPlace(BuildObject testedBuild) {
             return !(from build in Objects from offset in build.Offsets where testedBuild.ContainsPos((Vector2)build.transform.position + offset) select build).Any();
         }
     }
-    [System.Serializable]
-    public struct StPlaceable
-    {
-        [FormerlySerializedAs("_objectPrefab")] public GameObject ObjectPrefab;
-        [FormerlySerializedAs("_curve")] public AnimationCurve Curve;
+    
+    [Serializable]
+    public struct StPlaceable {
+        public GameObject ObjectPrefab;
+        public AnimationCurve Curve;
 
     }
 }

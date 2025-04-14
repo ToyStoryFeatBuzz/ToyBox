@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543596609378991958}
   - component: {fileID: 386465445128530374}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 4083096359644405167}
   - component: {fileID: 6788537397822485826}
   - component: {fileID: 2702098671872348041}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 7886803445371573834}
   - component: {fileID: 528582004930571680}
   - component: {fileID: 2261336558944040318}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: NameTag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 6494250637933963715}
   - component: {fileID: 8047551363141542177}
   - component: {fileID: -5627916806147649405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -594,6 +594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveValue: 0
   GridMoveDir: {x: 0, y: 0}
+  IsDead: 0
 --- !u!114 &5595235915548993446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ea0364597bc7d43a81949287410a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsDead: 0
   _acceleration: 200
   _deceleration: 10
   _maxSpeed: 20
@@ -742,4 +742,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseBody: {fileID: 0}
   mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  mouseSensivity: 0.03
+  mouseSensivity: 0.015

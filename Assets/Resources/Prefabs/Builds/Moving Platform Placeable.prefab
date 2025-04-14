@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8339638364061574198}
   - component: {fileID: 691527102448160344}
   - component: {fileID: 8572530960396155561}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7353181134291682179}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: A pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3762886149727563864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: B pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7343817193933266285}
   - component: {fileID: 2183426416368730479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlaceHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8269524861326286391}
   - component: {fileID: 4103030101495045109}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 594751260216193570}
   - component: {fileID: 4665785391225600246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving Platform Placeable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1454431658136919547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}

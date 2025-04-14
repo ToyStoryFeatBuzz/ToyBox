@@ -18,11 +18,24 @@ namespace ToyBox.Managers {
     
         int _finishedPlayers;
         bool _raceStarted;
-        
-        
+
+        public static RaceFlow Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
+
         void Start() {
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
+            print("&&&&" + (_gameModeManager != null));
             _gameModeManager.OnRaceStart += RaceStart;
+
+            foreach (Player player in _playerManager.Players)
+            {
+                player.PlayerObject.transform.position = new Vector2(_startTransform.position.x + Random.Range(-2, 2), _startTransform.position.y); //Randomizing the start position for now
+            }
         }
     
         private void RaceStart() {
@@ -44,8 +57,10 @@ namespace ToyBox.Managers {
         }
     
         void Update() {
+            print(_raceStarted);
             if (!_raceStarted) return;
             if (_playerManager.GetAlivePlayers().Count == 0) {
+                print("a");
                 _gameModeManager.OnRaceEnd?.Invoke();
                 _raceStarted = false;
             }

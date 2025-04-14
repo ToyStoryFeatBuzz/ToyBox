@@ -40,6 +40,7 @@ public class Build : MonoBehaviour
     public void Pick()
     {
         chosen = true;
+        transform.parent = null;
         pickedEvent.Invoke();
     }
 

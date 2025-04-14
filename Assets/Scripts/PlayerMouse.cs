@@ -14,13 +14,14 @@ public class PlayerMouse : MonoBehaviour
         if(!mouseBody)
             mouseBody = Instantiate(mouseBodyPrefab);
         ResetMousePos();
-        mouseBody.position = mousePos;
+        mouseBody.localPosition = mousePos;
         ActivateMouse(false);
+        mouseBody.parent = Camera.main.transform;
     }
 
     private void ResetMousePos()
     {
-        mousePos = Camera.main.transform.position;
+        mousePos = Vector2.zero;
     }
 
     public void Move(Vector2 movement)

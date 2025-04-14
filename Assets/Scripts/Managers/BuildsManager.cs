@@ -14,10 +14,6 @@ namespace ToyBox.Managers
 
         public List<Build> objects = new();
 
-        [Header("ChooseBox")]
-        [SerializeField] GameObject objectsBox;
-        [SerializeField] Transform topRight;
-        [SerializeField] Transform bottomLeft;
 
         int picked = 0;
         int turnNumber = 0;
@@ -27,7 +23,6 @@ namespace ToyBox.Managers
 
         private void Awake()
         {
-            objectsBox.SetActive(false);
             if (Instance == null)
             {
                 Instance = this;
@@ -66,11 +61,20 @@ namespace ToyBox.Managers
                 }
 
                 Destroy(build.gameObject);
-
-                return;
             }
-            build.Place(true);
-            objects.Add(build);
+            else
+            {
+                build.Place(true);
+                objects.Add(build);
+            }
+
+            if (playerManager.DoesAllPlayersFinishedBuilding())
+            {
+                print("1");
+                GameModeManager.Instance.StartCountDown(3.5f);
+            }
+
+            print("2");
         }
 
         public void Shuffle(int amount)
@@ -82,7 +86,7 @@ namespace ToyBox.Managers
             selecting = true;
             amount = playerManager.Players.Count + 3;
 
-            objectsBox.SetActive(true);
+            ChooseBox.Instance.gameObject.SetActive(true);
 
             for (int i = 0; i < amount; i++)
             {
@@ -103,8 +107,9 @@ namespace ToyBox.Managers
 
                 }
                 
+
                 
-                GameObject go = Instantiate(chosenObject, new(Random.Range(bottomLeft.position.x, topRight.position.x), Random.Range(bottomLeft.position.y, topRight.position.y)), Quaternion.identity);
+                GameObject go = Instantiate(chosenObject, new(Random.Range(ChooseBox.Instance.BL.position.x, ChooseBox.Instance.TR.position.x), Random.Range(ChooseBox.Instance.BL.position.y, ChooseBox.Instance.TR.position.y)), Quaternion.identity, ChooseBox.Instance.transform);
                 Build b = go.GetComponent<Build>();
                 
                 objectsList.Add(b);
@@ -117,7 +122,7 @@ namespace ToyBox.Managers
             picked++;
             if (picked == playerManager.Players.Count)
             {
-                objectsBox.SetActive(false);
+                ChooseBox.Instance.gameObject.SetActive(false);
 
                 picked = 0;
 

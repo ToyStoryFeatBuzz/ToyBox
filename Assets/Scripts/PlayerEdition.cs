@@ -34,6 +34,11 @@ public class PlayerEdition : MonoBehaviour
         playerInputManager.OnRotateLeftEvent.Performed += ()=>{ Rotate(-90); };
     }
 
+    public bool IsPlacing()
+    {
+        return draggedObject != null;
+    }
+
     private void OnEnable()
     {
         //SetRandomObject();
@@ -73,9 +78,11 @@ public class PlayerEdition : MonoBehaviour
 
             placeable = false;
 
+            draggedObject = null;
+
             buildsManager.AddObject(b);
 
-            draggedObject = null;
+            
             enabled = false;
             //SetRandomObject();
         }

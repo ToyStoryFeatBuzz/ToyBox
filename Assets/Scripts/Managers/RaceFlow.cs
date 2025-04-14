@@ -1,11 +1,13 @@
-using NUnit.Framework.Constraints;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using ToyBox.InputSystem;
+using ToyBox.Player;
 using UnityEngine;
 using static ToyBox.Enums;
 using Random = UnityEngine.Random;
 
 namespace ToyBox.Managers {
-    
     public class RaceFlow : MonoBehaviour
     {
         [SerializeField] Transform _startTransform;
@@ -13,7 +15,6 @@ namespace ToyBox.Managers {
 
         GameModeManager _gameModeManager => GameModeManager.Instance;
         PlayerManager _playerManager;
-        Leaderboard.Leaderboard _leaderboard;
     
         int _finishedPlayers;
         bool _raceStarted;
@@ -34,16 +35,13 @@ namespace ToyBox.Managers {
             _finishedPlayers = 0;
         }
     
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.TryGetComponent(out PlayerInputSystem player)) {
-                _finishedPlayers++;
-                player.gameObject.transform.position = _winnersBox.position;
-                player.SetWin();
+        private void OnTriggerEnter2D(Collider2D collision) {
+            if (!collision.gameObject.TryGetComponent(out PlayerEnd player)) {
+                return;
             }
-
-            Player winner =_playerManager.GetPlayer(collision.gameObject);
-            winner.Score++;
+            _finishedPlayers++;
+            player.gameObject.transform.position = _winnersBox.position;
+            player.SetWin();
         }
     
         void Update() {

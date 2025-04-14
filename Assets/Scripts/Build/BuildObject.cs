@@ -37,6 +37,7 @@ namespace ToyBox.Build {
 
         public void Pick() {
             IsChosen = true;
+            transform.parent = null;
             OnPickedEvent.Invoke();
         }
 

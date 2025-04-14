@@ -1,7 +1,6 @@
 using ToyBox.Managers;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static ToyBox.Enums.EPlayerState;
 
 namespace ToyBox.InputSystem {
     public class PlayerInputSystem : MonoBehaviour {
@@ -17,10 +16,6 @@ namespace ToyBox.InputSystem {
         public Vector2 GridMoveDir;
 
         public StInputEvent OnPauseEvent;
-
-        public bool IsDead;
-        
-        PlayerManager _playerManager => PlayerManager.Instance;
 
         public void OnJump(InputAction.CallbackContext ctx) => InputEventSystem.InvokeInputEvent(OnJumpEvent, ctx);
 
@@ -40,15 +35,7 @@ namespace ToyBox.InputSystem {
             InputEventSystem.InvokeInputEvent(OnGridMoveEvent, ctx);
         }
 
-        public void SetDeath() {
-            _playerManager.SetPlayerState(gameObject, Dead);
-            IsDead = true;
-            gameObject.transform.position = new Vector2(-999, -999); //Send the dead out of the map to avoid clutter on the race
-        }
 
-        public void SetWin() {
-            _playerManager.SetPlayerState(gameObject, Finished);
-        }
     }
     
     

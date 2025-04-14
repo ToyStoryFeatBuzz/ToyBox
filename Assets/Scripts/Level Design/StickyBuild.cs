@@ -8,7 +8,11 @@ public class StickyBuild : MonoBehaviour {
     
     public List<Vector2> GluePoints = new();
 
-    private List<Build> gluedObjects = new();
+    private List<Build> _gluedObjects = new();
+
+    Vector2 _originalPosition;
+
+    [SerializeField] GameObject _movingBlock;
     
     BuildsManager _buildsManager => BuildsManager.Instance;
 
@@ -19,22 +23,45 @@ public class StickyBuild : MonoBehaviour {
 
     void CheckAroundForGluedItems()
     {
-        Debug.Log("Checking for glued objects");
-        foreach (Build block in _buildsManager.objects)
+        _originalPosition = transform.position;
+        var globalGluePoints = GluePoints.Select(gp => _originalPosition + gp).ToHashSet();
+
+        foreach (var block in _buildsManager.objects.Where(b => !_gluedObjects.Contains(b)))
         {
-            foreach (Vector2 offset in block.offsets)
+            Vector2 blockPos = (Vector2)block.transform.position;
+
+            if (block.offsets.Any(offset => globalGluePoints.Contains(blockPos + offset)))
             {
-                foreach (Vector2 glueSpot in GluePoints)
-                {
-                    if ((Vector2)block.transform.position + offset == (Vector2)transform.position+glueSpot && !gluedObjects.Contains(block)) //Checks if object is in range of any glue spot AND is not already glued to the block
-                    {
-                        Debug.Log("Sticky");
-                        gluedObjects.Add(block);
-                        block.gameObject.transform.parent = gameObject.transform; //Change the glued block's parent to be the sticky block
-                    }
-                }
+                Debug.Log("Sticky");
+                _gluedObjects.Add(block);
+                _movingBlock.transform.position = _originalPosition;
+                block.gameObject.transform.parent = _movingBlock.transform;
             }
         }
+
     }
+    
+    
+    //void CheckAroundForGluedItems()
+    //{
+    //    _originalPosition = transform.position;
+    //    Debug.Log("Checking for glued objects");
+    //    foreach (Build block in _buildsManager.objects)
+    //    {
+    //        foreach (Vector2 offset in block.offsets)
+    //        {
+    //            foreach (Vector2 glueSpot in GluePoints)
+    //            {
+    //                if ((Vector2)block.transform.position + offset == _originalPosition+glueSpot && !_gluedObjects.Contains(block)) //Checks if object is in range of any glue spot AND is not already glued to the block
+    //                {
+    //                    Debug.Log("Sticky");
+    //                    _gluedObjects.Add(block);
+    //                    _movingBlock.transform.position = _originalPosition;
+    //                    block.gameObject.transform.parent = _movingBlock.transform; //Change the glued block's parent to be the sticky block
+    //                }
+    //            }
+    //        }
+    //    }
+    //}
     
 }

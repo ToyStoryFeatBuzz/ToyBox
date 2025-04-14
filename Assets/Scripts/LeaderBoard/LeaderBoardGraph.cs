@@ -1,45 +1,74 @@
 ﻿using ToyBox.Managers;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
-using System.Linq;
-namespace ToyBox.Leaderboard {
-    public class LeaderBoardGraph : MonoBehaviour {
-        [Header("References")]
-        [SerializeField] private LeaderBoard leaderBoard;
-        [SerializeField] private PlayerManager playerManager;
+using UnityEngine.Serialization;
+
+namespace ToyBox.Leaderboard
+{
+    public class LeaderBoardGraph : MonoBehaviour
+    {
+        #region References
+
         
+        [Header("References")]
+        [SerializeField] private Leaderboard _leaderBoard;
+        [SerializeField] private PlayerManager _playerManager;
+
+        #endregion
+
+        #region UI Elements
+
+        [FormerlySerializedAs("panelEndGameUI")]
         [Header("UI Elements")]
-        public GameObject panelEndGameUI;
-        public List<TextMeshProUGUI> textName;
-        public List<TextMeshProUGUI> textPoints;
-        public List<LineRenderer> lineRenderers;
+        [SerializeField] private GameObject _panelEndGameUI;
+        [SerializeField] private List<TextMeshProUGUI> _textName;
+        [SerializeField] private List<TextMeshProUGUI> _textPoints;
+        [SerializeField] private List<LineRenderer> _lineRenderers;
+
+        #endregion
+
+        #region Graph Settings
         
         [Header("Graph Settings")]
-        public List<Color> playerColors = new List<Color>
+        [SerializeField] private List<Color> _playerColors = new List<Color>
         {
             Color.red,
             Color.blue,
             Color.green,
             Color.yellow,
-            new Color(1, 0, 1),    // rose
-            new Color(0.5f, 0, 0.5f), // violet
-            new Color(1, 0.5f, 0)    // orange
+            new Color(1f, 0f, 1f),        // rose
+            new Color(0.5f, 0f, 0.5f),    // violet
+            new Color(1f, 0.5f, 0f)       // orange
         };
 
-        [Header("Positioning")]
-        [SerializeField] private Vector3 graphOrigin = new Vector3(-5f, -2f, 0f);
-        [SerializeField] private float lineWidth = 0.15f;
+        #endregion
 
+        #region Positioning
+        
+        [Header("Positioning")]
+        [SerializeField] private Vector3 _graphOrigin = new Vector3(-5f, -2f, 0f);
+        [SerializeField] private float _lineWidth = 0.15f;
+
+        #endregion
+
+        #region Graph Limits
+
+        
         [Header("Graph Limits")]
-        [SerializeField] private float maxGraphWidth = 10f;
-        [SerializeField] private float maxGraphHeight = 5f;
-        [SerializeField] private float xMargin = 1f;
-        [SerializeField] private float yMargin = 0.5f;
+        [SerializeField] private float _maxGraphWidth = 10f;
+        [SerializeField] private float _maxGraphHeight = 5f;
+        [SerializeField] private float _xMargin = 1f;
+        [SerializeField] private float _yMargin = 0.5f;
+
+        #endregion
+
+        #region Unity Methods
 
         private void Start()
         {
-            panelEndGameUI.SetActive(false);
+            _panelEndGameUI.SetActive(false);
             InitializeLineRenderers();
         }
 
@@ -51,106 +80,109 @@ namespace ToyBox.Leaderboard {
             }
         }
 
+        #endregion
+
+        #region Initialization
+
         private void InitializeLineRenderers()
         {
-            foreach (var lr in lineRenderers)
+            foreach (var lr in _lineRenderers)
             {
-                lr.startWidth = lineWidth;
-                lr.endWidth = lineWidth;
+                lr.startWidth = _lineWidth;
+                lr.endWidth = _lineWidth;
                 lr.positionCount = 0;
             }
         }
 
+        #endregion
+
+        #region LeaderBoard Display
+
         public void UpdateLeaderBoard()
         {
-            panelEndGameUI.SetActive(true);
-            var sortedPlayers = leaderBoard.GetSortedPlayers();
+            _panelEndGameUI.SetActive(true);
+            var sortedPlayers = _leaderBoard.GetSortedPlayers();
 
-            // Update text displays
-            for (int i = 0; i < textPoints.Count && i < textName.Count; i++)
+            // Met à jour les textes (nom + score)
+            for (int i = 0; i < _textPoints.Count && i < _textName.Count; i++)
             {
-                Transform parent = textPoints[i].transform.parent;
+                Transform parent = _textPoints[i].transform.parent;
                 parent.gameObject.SetActive(i < sortedPlayers.Count);
-                
+
                 if (i < sortedPlayers.Count)
                 {
                     var (name, score) = sortedPlayers[i];
-                    textPoints[i].text = score.ToString();
-                    textName[i].text = name;
+                    _textPoints[i].text = score.ToString();
+                    _textName[i].text = name;
                 }
             }
 
-            // Calculate maximum values
-            int maxScore = Mathf.Max(1, sortedPlayers.Max(p => p.Item2)); // Au moins 1 pour éviter la division par 0
-            int maxMatches = playerManager.Players.Max(p => p.PlayerStats?.MatchScores.Count ?? 0);
+            // Détermine les valeurs max
+            int maxScore = Mathf.Max(1, sortedPlayers.Max(p => p.Item2));
+            int maxMatches = _playerManager.Players.Max(p => p.PlayerStats?.MatchScores.Count ?? 0);
 
-            // Draw score lines
-            for (int i = 0; i < sortedPlayers.Count && i < lineRenderers.Count; i++)
+            // Trace les courbes
+            for (int i = 0; i < sortedPlayers.Count && i < _lineRenderers.Count; i++)
             {
                 DrawPlayerLine(i, sortedPlayers[i].Item1, maxScore, maxMatches);
             }
         }
-        
+
+        #endregion
+
+        #region Drawing
+
         private void DrawPlayerLine(int playerIndex, string playerName, int maxScore, int maxMatches)
         {
-            var player = playerManager.Players.FirstOrDefault(p => p.Name == playerName);
-            if (player.Name == null || string.IsNullOrEmpty(player.Name)) return;
+            var player = _playerManager.Players.FirstOrDefault(p => p.Name == playerName);
+            if (player == null || string.IsNullOrEmpty(player.Name)) return;
 
             var stats = player.PlayerStats;
-            if (stats == null || stats.MatchScores.Count == 0) return;
+            if (stats == null || stats.MatchScores == null || stats.MatchScores.Count == 0) return;
 
-            List<int> matchScores = stats.MatchScores;
+            List<int> matchScores = new List<int>(stats.MatchScores);
 
-            // Pad with last score if needed
+            // Complète avec le dernier score si besoin
             while (matchScores.Count < maxMatches)
             {
                 matchScores.Add(matchScores.Count > 0 ? matchScores.Last() : 0);
             }
 
-            LineRenderer lr = lineRenderers[playerIndex];
+            LineRenderer lr = _lineRenderers[playerIndex];
             lr.positionCount = matchScores.Count + 1; // +1 pour le point de départ
 
-            // Set line color
-            Color playerColor = playerColors[playerIndex % playerColors.Count];
+            // Couleur de la ligne
+            Color playerColor = _playerColors[playerIndex % _playerColors.Count];
             lr.startColor = lr.endColor = playerColor;
 
             Vector3[] positions = new Vector3[matchScores.Count + 1];
-            
-            // Calculate spacing and scaling with limits
-            float availableWidth = maxGraphWidth - 2 * xMargin;
-            float availableHeight = maxGraphHeight - 2 * yMargin;
-            
-            // Calcul du pas en fonction du nombre de points (moins 1 car on compte le point de départ)
+
+            float availableWidth = _maxGraphWidth - 2 * _xMargin;
+            float availableHeight = _maxGraphHeight - 2 * _yMargin;
+
             float xStep = matchScores.Count > 0 ? availableWidth / matchScores.Count : 0;
             float yScaleFactor = availableHeight / maxScore;
 
-            // Point de départ (index 0) - toujours à Y=0 + marge
-            positions[0] = graphOrigin + new Vector3(xMargin, yMargin, 0);
-            
-            // Points des scores (commencent à index 1)
+            // Point de départ
+            positions[0] = _graphOrigin + new Vector3(_xMargin, _yMargin, 0);
+
+            // Points des scores
             int cumulativeScore = 0;
             for (int i = 0; i < matchScores.Count; i++)
             {
                 cumulativeScore += matchScores[i];
-                float xPos = xMargin + ((i + 1) * xStep); // +1 pour décaler après le point de départ
-                float yPos = yMargin + (cumulativeScore * yScaleFactor);
-                
-                // Clamp positions within graph bounds
-                xPos = Mathf.Clamp(xPos, xMargin, maxGraphWidth - xMargin);
-                yPos = Mathf.Clamp(yPos, yMargin, maxGraphHeight - yMargin);
-                
-                positions[i + 1] = graphOrigin + new Vector3(xPos, yPos, 0);
+                float xPos = _xMargin + ((i + 1) * xStep);
+                float yPos = _yMargin + (cumulativeScore * yScaleFactor);
+
+                xPos = Mathf.Clamp(xPos, _xMargin, _maxGraphWidth - _xMargin);
+                yPos = Mathf.Clamp(yPos, _yMargin, _maxGraphHeight - _yMargin);
+
+                positions[i + 1] = _graphOrigin + new Vector3(xPos, yPos, 0);
             }
-            
+
             lr.SetPositions(positions);
-            
-            // Debug log
-            Debug.Log($"Line for {playerName} (maxScore: {maxScore}, matches: {matchScores.Count})");
-            Debug.Log($"Dimensions: {availableWidth}w x {availableHeight}h, XStep: {xStep}");
-            for (int i = 0; i < positions.Length; i++)
-            {
-                Debug.Log($"Index {i}: X={positions[i].x.ToString("F1")}, Y={positions[i].y.ToString("F1")}");
-            }
-        } 
+        }
+
+        #endregion
     }
 }

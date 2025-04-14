@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1392519755658593346}
   - component: {fileID: 4070217949657480009}
   - component: {fileID: 2221651694348737289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9092295338484877035}
   - component: {fileID: 6750589542975697919}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Build1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 2756331879761313153}
   - component: {fileID: 2782683834710691182}
   - component: {fileID: 9150880461116547201}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3773042345277463104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlaceHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1744577835045331772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}

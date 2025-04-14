@@ -9,6 +9,11 @@ public class PlayerMouse : MonoBehaviour
 
     [SerializeField] float mouseSensivity;
 
+    float maxX;
+    float maxY;
+
+    Camera cam;
+
     private void Awake()
     {
         if(!mouseBody)
@@ -16,7 +21,18 @@ public class PlayerMouse : MonoBehaviour
         ResetMousePos();
         mouseBody.localPosition = mousePos;
         ActivateMouse(false);
-        mouseBody.parent = Camera.main.transform;
+        cam = Camera.main;
+        mouseBody.parent = cam.transform;
+
+    }
+
+
+    private void SetMaxPos()
+    {
+        if(!cam) cam = Camera.main;
+
+        maxX = cam.orthographicSize * cam.aspect;
+        maxY = cam.orthographicSize;
     }
 
     private void ResetMousePos()
@@ -26,8 +42,12 @@ public class PlayerMouse : MonoBehaviour
 
     public void Move(Vector2 movement)
     {
+        SetMaxPos();
+
+        Vector2 camPos = cam.transform.position;
         mousePos += movement * mouseSensivity;
-        mouseBody.position = mousePos;
+        mousePos.Set(Mathf.Clamp(mousePos.x, -maxX, maxX), Mathf.Clamp(mousePos.y, -maxY, maxY));
+        mouseBody.position = camPos + mousePos;
     }
 
     public Vector2 Click()

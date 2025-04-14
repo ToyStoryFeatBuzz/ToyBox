@@ -1,4 +1,5 @@
 ﻿using ToyBox.Managers;
+using ToyBox.Menu;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
@@ -11,10 +12,6 @@ namespace ToyBox.InputSystem {
         public StInputEvent OnNavigateEvent;
 
         public bool IsLastInputMouse;
-        
-        
-        
-        
         
         private void Awake() {
             if (Instance == null) {

@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 namespace ToyBox.Leaderboard {
     
     public class LeaderBoard : MonoBehaviour {
-        [SerializeField] private PlayerManager playerManager;
+        PlayerManager playerManager => PlayerManager.Instance;
         public GameObject panelMatchUI;
 
         [Header("UI Match")]

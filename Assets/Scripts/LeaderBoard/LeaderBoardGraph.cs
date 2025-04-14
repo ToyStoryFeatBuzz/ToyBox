@@ -100,9 +100,9 @@ namespace ToyBox.Leaderboard
 
         public void UpdateLeaderBoard()
         {
-            leaderBoard.CheckPlayer();
-            panelEndGameUI.SetActive(true);
-            var sortedPlayers = leaderBoard.GetSortedPlayers();
+            _leaderBoard.CheckPlayers();
+            _panelEndGameUI.SetActive(true);
+            var sortedPlayers = _leaderBoard.GetSortedPlayers();
 
             // Met à jour les textes (nom + score)
             for (int i = 0; i < _textPoints.Count && i < _textName.Count; i++)

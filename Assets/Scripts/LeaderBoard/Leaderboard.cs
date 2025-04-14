@@ -34,7 +34,7 @@ namespace ToyBox.Leaderboard
             }
             if (Input.GetKeyDown(KeyCode.C))
             {
-                CheckPlayer();
+                CheckPlayers();
             }
         }
 
@@ -87,9 +87,9 @@ namespace ToyBox.Leaderboard
             {
                 if (!_playerScoreDict.ContainsKey(player.Name))
                 {
-                    _dictPlayer.Add(player.Name, Random.Range(1, 100));
+                    _playerScoreDict.Add(player.Name, Random.Range(1, 100));
                     SimulateMatchScores(player);  // Simule des scores de match
-                    Debug.Log($"Player {player.Name} has {_dictPlayer[player.Name]} points.");
+                    Debug.Log($"Player {player.Name} has {_playerScoreDict[player.Name]} points.");
                 }
             }
         }

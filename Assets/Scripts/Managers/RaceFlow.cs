@@ -13,6 +13,7 @@ namespace ToyBox.Managers {
 
         GameModeManager _gameModeManager => GameModeManager.Instance;
         PlayerManager _playerManager;
+        Leaderboard.Leaderboard _leaderboard;
     
         int _finishedPlayers;
         bool _raceStarted;
@@ -20,6 +21,7 @@ namespace ToyBox.Managers {
         
         void Start() {
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
+            _leaderboard = _gameModeManager.transform.GetChild(3).gameObject.GetComponent<Leaderboard.Leaderboard>();
             _gameModeManager.OnRaceStart += RaceStart;
         }
     
@@ -39,6 +41,9 @@ namespace ToyBox.Managers {
                 player.gameObject.transform.position = _winnersBox.position;
                 player.SetWin();
             }
+
+            Player winner =_playerManager.GetPlayer(collision.gameObject);
+            winner.Score++;
         }
     
         void Update() {

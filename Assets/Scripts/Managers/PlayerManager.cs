@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using ToyBox.Player;
 using static ToyBox.Enums;
+using ToyBox.Build;
 
 namespace ToyBox.Managers {
     public class PlayerManager : MonoBehaviour {

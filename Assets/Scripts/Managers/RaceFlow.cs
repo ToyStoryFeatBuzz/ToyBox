@@ -27,7 +27,7 @@ namespace ToyBox.Managers {
 
         void Start() {
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
-            _leaderboard = _gameModeManager.transform.GetChild(3).gameObject.GetComponent<Leaderboard.Leaderboard>();
+            _leaderboard = _gameModeManager.GetComponentInChildren<Leaderboard.Leaderboard>();
             _gameModeManager.OnRaceStart += RaceStart;
 
             foreach (Player player in _playerManager.Players)

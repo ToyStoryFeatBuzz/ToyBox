@@ -74,7 +74,7 @@ namespace ToyBox.Leaderboard
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 UpdateLeaderBoard();
             }
@@ -100,6 +100,7 @@ namespace ToyBox.Leaderboard
 
         public void UpdateLeaderBoard()
         {
+            _leaderBoard.CheckPlayers();
             _panelEndGameUI.SetActive(true);
             var sortedPlayers = _leaderBoard.GetSortedPlayers();
 

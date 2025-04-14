@@ -743,7 +743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseBody: {fileID: 0}
   mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  mouseSensivity: 0.03
+  mouseSensivity: 0.015
 --- !u!114 &-450549269470407984
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,8 +6,7 @@ using static ToyBox.Enums;
 
 namespace ToyBox.Player
 {
-    public class PlayerMovement : MonoBehaviour
-    { 
+    public class PlayerMovement : MonoBehaviour { 
         #region SERIALIZED VARIABLES
         [Header("Movement variables")]
         [SerializeField] float _acceleration;
@@ -41,39 +40,41 @@ namespace ToyBox.Player
         bool _performGroundCheck;
         PlayerInputSystem _inputSystem;
         Rigidbody2D _rb;
+        private PlayerEnd _playerEnd;
         
         
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
             _inputSystem = GetComponent<PlayerInputSystem>();
+            _playerEnd = GetComponent<PlayerEnd>();
             _inputSystem.OnJumpEvent.Started += OnJump;
             _inputSystem.OnJumpEvent.Canceled += OnJumpCancel;
             _inputSystem.OnJumpEvent.Performed += OnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
             _remainJump = _maxJump;
         }
 
-        private void FixedUpdate()
-        {
-            if (!_inputSystem.IsDead) {
-                _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse); //Makes the player move in the direction of the input
-                _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed); //Clamps the speed to the max speed
+        private void FixedUpdate() {
+            if (_playerEnd.IsDead) {
+                return;
+            }
+            
+            _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse); //Makes the player move in the direction of the input
+            _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed); //Clamps the speed to the max speed
 
+            if (_inputSystem.MoveValue == 0) {
+                _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player
+            }
 
-                if (_inputSystem.MoveValue == 0) {
-                    _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player
-                }
-
-                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_platformLayer) && _performGroundCheck) // Ground check
-                {
-                    _isGrounded = true;
-                    _remainJump = _maxJump;
-                    _wallJumpDirection = EWallJumpDirection.None;
-                }
-                else
-                {
-                    _isGrounded = false;
-                }
+            if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_platformLayer) && _performGroundCheck) // Ground check
+            {
+                _isGrounded = true;
+                _remainJump = _maxJump;
+                _wallJumpDirection = EWallJumpDirection.None;
+            }
+            else
+            {
+                _isGrounded = false;
             }
         }
 

@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ToyBox.Build;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 
 namespace ToyBox.Managers
@@ -13,13 +15,12 @@ namespace ToyBox.Managers
 
         PlayerManager _playerManager => PlayerManager.Instance;
 
-        [FormerlySerializedAs("objectsStruct")] [SerializeField] List<PlaceableStruct> _4objectsStruct = new();
+        [FormerlySerializedAs("objectsStruct")] [SerializeField] List<StPlaceable> _objectsStruct = new();
 
         [FormerlySerializedAs("objects")] public List<BuildObject> Objects = new();
 
-        [FormerlySerializedAs("objectsBox")]
         [Header("ChooseBox")]
-        [SerializeField] GameObject _objectsBox;
+        [FormerlySerializedAs("objectsBox")] [SerializeField] GameObject _objectsBox;
         [FormerlySerializedAs("topRight")] [SerializeField] Transform _topRight;
         [FormerlySerializedAs("bottomLeft")] [SerializeField] Transform _bottomLeft;
 
@@ -28,6 +29,8 @@ namespace ToyBox.Managers
         List<BuildObject> _objectsList = new();
 
         public bool selecting = false;
+
+        public Action OnObjectPlaced;
 
         private void Awake()
         {
@@ -74,6 +77,7 @@ namespace ToyBox.Managers
             }
             build.Place(true);
             Objects.Add(build);
+            OnObjectPlaced?.Invoke();
         }
 
         public void Shuffle(int amount)
@@ -90,17 +94,17 @@ namespace ToyBox.Managers
             for (int i = 0; i < amount; i++)
             {
                 float probability = 0;
-                GameObject chosenObject = _4objectsStruct[0]._objectPrefab;
-                for (int j = 0; j < _4objectsStruct.Count; j++)
+                GameObject chosenObject = _objectsStruct[0].ObjectPrefab;
+                for (int j = 0; j < _objectsStruct.Count; j++)
                 {
 
-                    float objectProbability = Random.Range(0, _4objectsStruct.Count*.1f)*_4objectsStruct[j]._curve.Evaluate(_turnNumber*.1f);
+                    float objectProbability = Random.Range(0, _objectsStruct.Count*.1f)*_objectsStruct[j].Curve.Evaluate(_turnNumber*.1f);
                     if (probability <= objectProbability)
                     {
                         probability = objectProbability;
-                        chosenObject = _4objectsStruct[j]._objectPrefab;
+                        chosenObject = _objectsStruct[j].ObjectPrefab;
                     }
-                    Debug.Log($"Object : {_4objectsStruct[j]._objectPrefab.name} with probability : {objectProbability}");
+                    Debug.Log($"Object : {_objectsStruct[j].ObjectPrefab.name} with probability : {objectProbability}");
 
                 }
                 
@@ -137,10 +141,10 @@ namespace ToyBox.Managers
         }
     }
     [System.Serializable]
-    public struct PlaceableStruct
+    public struct StPlaceable
     {
-        public GameObject _objectPrefab;
-        public AnimationCurve _curve;
+        [FormerlySerializedAs("_objectPrefab")] public GameObject ObjectPrefab;
+        [FormerlySerializedAs("_curve")] public AnimationCurve Curve;
 
     }
 }

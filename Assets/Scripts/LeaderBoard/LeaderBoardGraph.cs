@@ -63,6 +63,7 @@ namespace ToyBox.Leaderboard {
 
         public void UpdateLeaderBoard()
         {
+            leaderBoard.CheckPlayer();
             panelEndGameUI.SetActive(true);
             var sortedPlayers = leaderBoard.GetSortedPlayers();
 

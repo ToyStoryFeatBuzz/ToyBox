@@ -5,137 +5,138 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace ToyBox.Build {
-    public class PlayerEdition : MonoBehaviour {
-        GameObject _draggedObject = null;
+    public class PlayerEdition : MonoBehaviour
+    {
+        GameObject draggedObject = null;
 
-        [FormerlySerializedAs("doesSnap")] [SerializeField] bool _doesSnap;
-        [FormerlySerializedAs("snapInterval")] [SerializeField] float _snapInterval;
+        [SerializeField] bool doesSnap;
+        [SerializeField] float snapInterval;
 
-        Vector2 _mousePos;
+        Vector2 mousePos;
 
-        [FormerlySerializedAs("objectsPrefabs")] [SerializeField] List<GameObject> _objectsPrefabs = new();
+        [SerializeField] List<GameObject> objectsPrefabs = new();
 
-        Vector2 _lastDifferentPos = Vector2.zero;
-        bool _isPlaceable = false;
+        Vector2 lastDifferentPos = Vector2.zero;
+        bool placeable = false;
 
-        BuildsManager _buildsManager => BuildsManager.Instance;
+        BuildsManager buildsManager;
 
-        PlayerMouse _playerMouse;
+        PlayerMouse playerMouse;
 
-        PlayerInputSystem _playerInputManager;
+        PlayerInputSystem playerInputManager;
 
-        private void Start() {
-            _playerMouse = GetComponent<PlayerMouse>();
-            _playerInputManager = GetComponent<PlayerInputSystem>();
+        private void Start()
+        {
+            buildsManager = BuildsManager.Instance;
+            playerMouse = GetComponent<PlayerMouse>();
+            playerInputManager = GetComponent<PlayerInputSystem>();
 
-            _playerInputManager.OnPlaceEvent.Canceled += Place;
-            _playerInputManager.OnRotateRightEvent.Performed += ()=>{ Rotate(90); };
-            _playerInputManager.OnRotateLeftEvent.Performed += ()=>{ Rotate(-90); };
+            playerInputManager.OnPlaceEvent.Canceled += Place;
+            playerInputManager.OnRotateRightEvent.Performed += () => { Rotate(90); };
+            playerInputManager.OnRotateLeftEvent.Performed += () => { Rotate(-90); };
+        }
+
+        public bool IsPlacing()
+        {
+            return draggedObject != null;
         }
 
         private void OnEnable()
         {
             //SetRandomObject();
-            if (!_playerMouse) {
-                _playerMouse = GetComponent<PlayerMouse>();
-            }
-            _playerMouse.ActivateMouse(true);
+            if (!playerMouse) playerMouse = GetComponent<PlayerMouse>();
+            playerMouse.ActivateMouse(true);
         }
 
         private void OnDisable()
         {
-            if (_draggedObject != null) {
-                Destroy(_draggedObject);
-            }
-            _playerMouse.ActivateMouse(false);
+            if (draggedObject != null) Destroy(draggedObject);
+            playerMouse.ActivateMouse(false);
         }
 
         public void SetRandomObject()
         {
-            SelectObject(_objectsPrefabs[Random.Range(0, _objectsPrefabs.Count)]);
+            SelectObject(objectsPrefabs[Random.Range(0, objectsPrefabs.Count)]);
         }
 
         public void SelectObject(GameObject go)
         {
-            if(_draggedObject != null) Destroy(_draggedObject);
+            if (draggedObject != null) Destroy(draggedObject);
 
-            _draggedObject = Instantiate(go);
+            draggedObject = Instantiate(go);
         }
 
         public void Place()
         {
-            if (_draggedObject)
+            if (draggedObject)
             {
-                if (_buildsManager.selecting) return;
+                if (buildsManager.selecting) return;
 
-                BuildObject buildObject = _draggedObject.GetComponent<BuildObject>();
+                BuildObject b = draggedObject.GetComponent<BuildObject>();
 
-                _isPlaceable = _buildsManager.CanPlace(buildObject);
+                placeable = buildsManager.CanPlace(b);
 
-                if (!_isPlaceable && !buildObject.DoErase) return;
+                if (!placeable && !b.DoErase) return;
 
-                _isPlaceable = false;
+                placeable = false;
 
-                _buildsManager.AddObject(buildObject);
+                draggedObject = null;
 
-                _draggedObject = null;
+                buildsManager.AddObject(b);
+
+
                 enabled = false;
                 //SetRandomObject();
             }
             else
             {
-                Collider2D hit = Physics2D.OverlapCircle(_mousePos, .1f);
-                if (!hit || !hit.transform || !hit.transform.GetComponentInParent<BuildObject>()) {
-                    return;
+                Collider2D hit = Physics2D.OverlapCircle(mousePos, .1f);
+                if (hit && hit.transform && hit.transform.GetComponentInParent<BuildObject>())
+                {
+                    BuildObject obj = hit.transform.GetComponentInParent<BuildObject>();
+
+                    if (obj.IsChosen) return;
+
+                    obj.Pick();
+                    draggedObject = obj.gameObject;
+                    placeable = buildsManager.CanPlace(draggedObject.GetComponent<BuildObject>());
                 }
-                BuildObject obj = hit.transform.GetComponentInParent<BuildObject>();
-
-                if (obj.IsChosen) return;
-
-                obj.Pick();
-                _draggedObject = obj.gameObject;
-                _isPlaceable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
             }
         }
 
         public void Rotate(float angle)
         {
-            if (!_draggedObject) {
-                return;
-            }
-            _draggedObject.transform.eulerAngles = new(0, 0, _draggedObject.transform.eulerAngles.z + angle);
-            _draggedObject.GetComponent<BuildObject>().RotateOffsets(angle);
-            _isPlaceable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
+            if (!draggedObject) return;
+            draggedObject.transform.eulerAngles = new(0, 0, draggedObject.transform.eulerAngles.z + angle);
+            draggedObject.GetComponent<BuildObject>().RotateOffsets(angle);
+            placeable = buildsManager.CanPlace(draggedObject.GetComponent<BuildObject>());
         }
 
         private void Update()
         {
-            if (_playerInputManager.GridMoveDir.magnitude > 0) {
-                _playerMouse.Move(_playerInputManager.GridMoveDir);
-            }
+            if (playerInputManager.GridMoveDir.magnitude > 0) playerMouse.Move(playerInputManager.GridMoveDir);
 
-            _mousePos = _playerMouse.Click();
+            mousePos = playerMouse.Click();
 
-            if (_draggedObject == null) {
-                return;
-            }
+            if (draggedObject == null) return;
 
-            Vector2 targetPos = _mousePos + (Vector2.one * _snapInterval / 2f);
+            Vector2 targetPos = mousePos + (Vector2.one * snapInterval / 2f);
 
-            if (_doesSnap)
+            if (doesSnap)
             {
-                int x = Mathf.FloorToInt(targetPos.x / _snapInterval);
-                int y = Mathf.FloorToInt(targetPos.y / _snapInterval);
-                targetPos.Set(x * _snapInterval, y * _snapInterval);
+                int x = Mathf.FloorToInt(targetPos.x / snapInterval);
+                int y = Mathf.FloorToInt(targetPos.y / snapInterval);
+                targetPos.Set(x * snapInterval, y * snapInterval);
             }
 
-            _draggedObject.transform.position = targetPos;
+            draggedObject.transform.position = targetPos;
 
-            if (_lastDifferentPos == targetPos) {
-                return;
+            if (lastDifferentPos != targetPos)
+            {
+                placeable = buildsManager.CanPlace(draggedObject.GetComponent<BuildObject>());
+                lastDifferentPos = targetPos;
             }
-            _isPlaceable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
-            _lastDifferentPos = targetPos;
         }
     }
+
 }

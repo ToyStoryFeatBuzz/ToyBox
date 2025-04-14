@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using ToyBox.Build;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 
@@ -28,6 +29,8 @@ namespace ToyBox.Managers
         List<BuildObject> _objectsList = new();
 
         public bool selecting = false;
+
+        public UnityEvent ObjectPlaced;
 
         private void Awake()
         {
@@ -74,6 +77,7 @@ namespace ToyBox.Managers
             }
             build.Place(true);
             Objects.Add(build);
+            ObjectPlaced.Invoke();
         }
 
         public void Shuffle(int amount)

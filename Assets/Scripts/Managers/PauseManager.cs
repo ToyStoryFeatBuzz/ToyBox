@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
@@ -17,7 +18,11 @@ namespace ToyBox.Managers {
                 Destroy(gameObject);
             }
         }
-        
+
+        private void Start() {
+            _menuInput = GetComponent<PlayerInput>();
+        }
+
         void StartPause(Player pausedPlayer) {
             Time.timeScale = 0f;
             _playerManager.PlayerInputManager.enabled = false;

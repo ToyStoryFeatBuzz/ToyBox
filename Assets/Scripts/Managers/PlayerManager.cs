@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using ToyBox.Player;
 using static ToyBox.Enums;
+using ToyBox.Build;
 
 namespace ToyBox.Managers {
     public class PlayerManager : MonoBehaviour {
@@ -27,6 +28,30 @@ namespace ToyBox.Managers {
         private void Start() {
             UnityEngine.InputSystem.InputSystem.onDeviceChange += OnDeviceChange;
             PlayerInputManager = GetComponent<PlayerInputManager>();
+            SetNewPlayersEntries(true);
+        }
+
+        public void SetNewPlayersEntries(bool possibility)
+        {
+            PlayerInputManager.enabled = possibility;
+        }
+
+        public void SetPlayersMovements(bool activation)
+        {
+            foreach (var player in Players)
+            {
+                player.PlayerInput.enabled = activation;
+            }
+        }
+
+        public bool DoesAllPlayersFinishedBuilding()
+        {
+            foreach (var player in Players)
+            {
+                if (player.PlayerObject.GetComponent<PlayerEdition>().IsPlacing()) return false;
+            }
+
+            return true;
         }
 
         public void AddPlayer(PlayerInput player) {
@@ -38,6 +63,8 @@ namespace ToyBox.Managers {
             
             Players.Add(new Player
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
+
+            player.transform.parent = transform;
         }
 
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {

@@ -1,5 +1,7 @@
 ﻿using System;
 using ToyBox.Build;
+using System.Collections;
+using TMPro;
 using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -15,6 +17,8 @@ namespace ToyBox.Managers {
         public Action OnRaceStart;
         public Action OnRaceEnd;
 
+        public TextMeshProUGUI cdText;
+
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
@@ -25,8 +29,41 @@ namespace ToyBox.Managers {
         }
 
         private void Start() {
-            StartRaceMode();
+            //StartRaceMode();
             OnRaceEnd += StartConstructMode;
+        }
+
+        IEnumerator Countdown(float newTime)
+        {
+            float currentTime = newTime;
+
+            while (currentTime > 0)
+            {
+                cdText.text = (Mathf.RoundToInt(currentTime)).ToString();
+
+                yield return new WaitForSeconds(0.1f);
+                currentTime -= 0.1f;
+            }
+
+            cdText.text = "";
+            OnCountdownFinished();
+        }
+
+        public void StartCountDown(float newTime)
+        {
+            _playerManager.SetPlayersMovements(false);
+            StartCoroutine(Countdown(newTime));
+
+            foreach (Player player in _playerManager.Players)
+            {
+                player.PlayerObject.GetComponent<Rigidbody2D>().linearVelocity.Set(0, 0);
+            }
+        }
+
+        private void OnCountdownFinished()
+        {
+            _playerManager.SetPlayersMovements(true);
+            StartRaceMode();
         }
         
         public void StartRaceMode() {

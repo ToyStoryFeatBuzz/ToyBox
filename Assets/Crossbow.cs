@@ -1,4 +1,3 @@
-using System;
 using ToyBox.Managers;
 using ToyBox.Player;
 using UnityEngine;
@@ -7,8 +6,16 @@ public class Crossbow : MonoBehaviour
 {
     [SerializeField] float _range;
     [SerializeField] GameObject _boltPrefab;
-    bool _shot;
+    [SerializeField] bool _shot;
 
+    void Start()
+    {
+        GameModeManager.Instance.OnRaceStart += () =>
+        {
+            _shot = false;
+        };
+    }
+    
     void Update()
     {
         
@@ -16,13 +23,18 @@ public class Crossbow : MonoBehaviour
         {
             return;
         }
+        
+        RaycastHit2D[] hitList = Physics2D.RaycastAll(transform.position, transform.up, _range);
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, _range);
-        if (!hit) return; 
-        if (hit.collider.gameObject.TryGetComponent(out PlayerMovement player))
+        foreach (RaycastHit2D hit in hitList)
         {
-            Shoot();
+            if (hit.collider.gameObject.TryGetComponent(out PlayerMovement player))
+            {
+                Debug.Log("Hit Player");
+                Shoot();
+            }
         }
+        
     }
 
     void Shoot()

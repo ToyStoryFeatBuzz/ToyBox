@@ -32,6 +32,10 @@ namespace ToyBox.Leaderboard
             {
                 ShowLeaderboard();
             }
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                CheckPlayers();
+            }
         }
 
         public void ShowLeaderboard()
@@ -84,7 +88,8 @@ namespace ToyBox.Leaderboard
                 if (!_playerScoreDict.ContainsKey(player.Name))
                 {
                     _playerScoreDict.Add(player.Name, Random.Range(1, 100));
-                    SimulateMatchScores(player);
+                    SimulateMatchScores(player);  // Simule des scores de match
+                    Debug.Log($"Player {player.Name} has {_playerScoreDict[player.Name]} points.");
                 }
             }
         }

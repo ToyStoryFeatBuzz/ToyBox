@@ -90,6 +90,7 @@ namespace ToyBox.Managers {
     [Serializable]
     public class Player {
         public string Name;
+        public int Score;
         public PlayerInput PlayerInput;
         public GameObject PlayerObject;
         public InputDevice Device;

@@ -43,7 +43,6 @@ namespace ToyBox.Build {
 
         private void OnEnable()
         {
-            //SetRandomObject();
             if (!playerMouse) playerMouse = GetComponent<PlayerMouse>();
             playerMouse.ActivateMouse(true);
         }
@@ -54,21 +53,21 @@ namespace ToyBox.Build {
             playerMouse.ActivateMouse(false);
         }
 
-        public void SetRandomObject()
+        public void SetRandomObject() // Deprecated
         {
             SelectObject(objectsPrefabs[Random.Range(0, objectsPrefabs.Count)]);
         }
 
-        public void SelectObject(GameObject go)
+        public void SelectObject(GameObject go) // Select new object and drag it
         {
             if (draggedObject != null) Destroy(draggedObject);
 
             draggedObject = Instantiate(go);
         }
 
-        public void Place()
+        public void Place() // When LMB is pressed
         {
-            if (draggedObject)
+            if (draggedObject) // Place object if exist
             {
                 if (buildsManager.selecting) return;
 
@@ -88,7 +87,7 @@ namespace ToyBox.Build {
                 enabled = false;
                 //SetRandomObject();
             }
-            else
+            else // Try to get nearest object in the choosing box
             {
                 Collider2D hit = Physics2D.OverlapCircle(mousePos, .1f);
                 if (hit && hit.transform && hit.transform.GetComponentInParent<BuildObject>())

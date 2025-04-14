@@ -27,7 +27,7 @@ public class PlayerMouse : MonoBehaviour
     }
 
 
-    private void SetMaxPos()
+    private void SetMaxPos() // Set limits for the cursor
     {
         if(!cam) cam = Camera.main;
 
@@ -40,7 +40,7 @@ public class PlayerMouse : MonoBehaviour
         mousePos = Vector2.zero;
     }
 
-    public void Move(Vector2 movement)
+    public void Move(Vector2 movement) // Move the cursor according to the mouse/joystick movement
     {
         SetMaxPos();
 
@@ -55,9 +55,9 @@ public class PlayerMouse : MonoBehaviour
         return mousePos;
     }
 
-    public void ActivateMouse(bool activation)
+    public void ActivateMouse(bool activation) 
     {
-        if (!mouseBody)
+        if (!mouseBody) // Create the cursor if not existing
         {
             mouseBody = Instantiate(mouseBodyPrefab);
             ResetMousePos();

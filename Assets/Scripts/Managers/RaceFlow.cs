@@ -34,13 +34,13 @@ namespace ToyBox.Managers {
             _finishedPlayers = 0;
         }
     
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.TryGetComponent(out PlayerInputSystem player)) {
-                _finishedPlayers++;
-                player.gameObject.transform.position = _winnersBox.position;
-                player.SetWin();
+        private void OnTriggerEnter2D(Collider2D collision) {
+            if (!collision.gameObject.TryGetComponent(out PlayerEnd player)) {
+                return;
             }
+            _finishedPlayers++;
+            player.gameObject.transform.position = _winnersBox.position;
+            player.SetWin();
         }
     
         void Update() {

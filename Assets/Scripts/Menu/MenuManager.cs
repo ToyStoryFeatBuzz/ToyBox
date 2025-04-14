@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ToyBox.Menu {
-    public class MainMenuScript : MonoBehaviour {
+    public class MenuManager : MonoBehaviour {
 
         public void PlayGame() {
-            // Fill in later
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         public void OpenMenu(GameObject menu) {
@@ -13,10 +14,6 @@ namespace ToyBox.Menu {
 
         public void CloseMenu(GameObject menu) {
             menu.SetActive(false);
-        }
-
-        public void OpenWebsite(string url) {
-            Application.OpenURL(url);
         }
 
         public void QuitGame() {

@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 8047551363141542177}
   - component: {fileID: -5627916806147649405}
   - component: {fileID: -450549269470407984}
+  - component: {fileID: 3940297918288691315}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -595,7 +596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveValue: 0
   GridMoveDir: {x: 0, y: 0}
-  IsDead: 0
 --- !u!114 &5595235915548993446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,9 +741,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0819b7f60dc0a214cb9fdaa3d5b5ba85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseBody: {fileID: 0}
-  mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  mouseSensivity: 0.015
+  _mouseBody: {fileID: 0}
+  _mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
+  _mouseSensitivity: 0.015
 --- !u!114 &-450549269470407984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,3 +757,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MatchScores: 
+--- !u!114 &3940297918288691315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a990d01ba3734734859d1a7ddbd6fc6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDead: 0

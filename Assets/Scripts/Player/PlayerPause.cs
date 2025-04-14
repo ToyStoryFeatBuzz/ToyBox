@@ -11,7 +11,7 @@ namespace ToyBox.Player {
         }
         
         void StartPause() {
-            _pauseManager.StartPause(transform.root.gameObject);
+            _pauseManager.StartPause(gameObject);
         }
         
     }

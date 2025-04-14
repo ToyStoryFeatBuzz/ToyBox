@@ -1,12 +1,14 @@
 ﻿using System;
+using ToyBox.Build;
 using ToyBox.Player;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         public static GameModeManager Instance { get; private set; }
 
-        public BuildsManager buildsManager;
+        [FormerlySerializedAs("buildsManager")] public BuildsManager _buildsManager;
 
         private PlayerManager _playerManager => PlayerManager.Instance;
 
@@ -37,7 +39,7 @@ namespace ToyBox.Managers {
         }
 
         public void StartConstructMode() {
-            buildsManager.Shuffle(0);
+            _buildsManager.Shuffle(0);
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
                 player.PlayerObject.GetComponent<PlayerMovement>().enabled = false;

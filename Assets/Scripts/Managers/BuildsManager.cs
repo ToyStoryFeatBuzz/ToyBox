@@ -1,6 +1,9 @@
 using System.Collections.Generic;
+using System.Linq;
+using ToyBox.Build;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 
 namespace ToyBox.Managers
@@ -9,20 +12,21 @@ namespace ToyBox.Managers
     {
         public static BuildsManager Instance { get; private set; }
 
-        public PlayerManager playerManager;
+        PlayerManager _playerManager => PlayerManager.Instance;
 
-        [SerializeField] List<PlaceableStruct> objectsStruct = new();
+        [FormerlySerializedAs("objectsStruct")] [SerializeField] List<PlaceableStruct> _4objectsStruct = new();
 
-        public List<Build> objects = new();
+        [FormerlySerializedAs("objects")] public List<BuildObject> Objects = new();
 
+        [FormerlySerializedAs("objectsBox")]
         [Header("ChooseBox")]
-        [SerializeField] GameObject objectsBox;
-        [SerializeField] Transform topRight;
-        [SerializeField] Transform bottomLeft;
+        [SerializeField] GameObject _objectsBox;
+        [FormerlySerializedAs("topRight")] [SerializeField] Transform _topRight;
+        [FormerlySerializedAs("bottomLeft")] [SerializeField] Transform _bottomLeft;
 
-        int picked = 0;
-        int turnNumber = 0;
-        List<Build> objectsList = new();
+        int _picked = 0;
+        int _turnNumber = 0;
+        List<BuildObject> _objectsList = new();
 
         public bool selecting = false;
 
@@ -30,7 +34,7 @@ namespace ToyBox.Managers
 
         private void Awake()
         {
-            objectsBox.SetActive(false);
+            _objectsBox.SetActive(false);
             if (Instance == null)
             {
                 Instance = this;
@@ -42,30 +46,29 @@ namespace ToyBox.Managers
             }
         }
 
-        public void AddObject(Build build) {
+        public void AddObject(BuildObject build) {
             
-            if (build.erase)
+            if (build.DoErase)
             {
-                for (int i = 0; i < objects.Count; i++)
+                for (int i = 0; i < Objects.Count; i++)
                 {
-                    Build b = objects[i];
+                    BuildObject buildObject = Objects[i];
                     bool toDelete = false;
 
-                    foreach (var offset in b.offsets)
-                    {
-                        if (build.ContainsPos((Vector2)b.transform.position + offset))
-                        {
-                            toDelete = true;
-                            break;
+                    foreach (Vector2 offset in buildObject.Offsets) {
+                        if (!build.ContainsPos((Vector2)buildObject.transform.position + offset)) {
+                            continue;
                         }
+                        toDelete = true;
+                        break;
                     }
 
-                    if(toDelete)
-                    {
-                        objects.RemoveAt(i);
-                        Destroy(b.gameObject);
-                        i--;
+                    if (!toDelete) {
+                        continue;
                     }
+                    Objects.RemoveAt(i);
+                    Destroy(buildObject.gameObject);
+                    i--;
                 }
 
                 Destroy(build.gameObject);
@@ -73,83 +76,69 @@ namespace ToyBox.Managers
                 return;
             }
             build.Place(true);
-            objects.Add(build);
+            
             ObjectPlaced.Invoke();
+            Objects.Add(build);
         }
 
         public void Shuffle(int amount)
         {
-            if (turnNumber <= 10)
+            if (_turnNumber <= 10)
             {
-                turnNumber++;
+                _turnNumber++;
             }
             selecting = true;
-            amount = playerManager.Players.Count + 3;
+            amount = _playerManager.Players.Count + 3;
 
-            objectsBox.SetActive(true);
+            _objectsBox.SetActive(true);
 
             for (int i = 0; i < amount; i++)
             {
                 float probability = 0;
-                GameObject chosenObject = objectsStruct[0]._objectPrefab;
-                for (int j = 0; j < objectsStruct.Count; j++)
+                GameObject chosenObject = _4objectsStruct[0]._objectPrefab;
+                for (int j = 0; j < _4objectsStruct.Count; j++)
                 {
 
-                    float objectProbability = Random.Range(0, objectsStruct.Count*.1f)*objectsStruct[j]._curve.Evaluate(turnNumber*.1f);
+                    float objectProbability = Random.Range(0, _4objectsStruct.Count*.1f)*_4objectsStruct[j]._curve.Evaluate(_turnNumber*.1f);
                     if (probability <= objectProbability)
                     {
-                       
-                        
                         probability = objectProbability;
-                        chosenObject = objectsStruct[j]._objectPrefab;
+                        chosenObject = _4objectsStruct[j]._objectPrefab;
                     }
-                    Debug.Log($"Object : {objectsStruct[j]._objectPrefab.name} with probability : {objectProbability}");
+                    Debug.Log($"Object : {_4objectsStruct[j]._objectPrefab.name} with probability : {objectProbability}");
 
                 }
                 
                 
-                GameObject go = Instantiate(chosenObject, new(Random.Range(bottomLeft.position.x, topRight.position.x), Random.Range(bottomLeft.position.y, topRight.position.y)), Quaternion.identity);
-                Build b = go.GetComponent<Build>();
+                GameObject go = Instantiate(chosenObject, new(Random.Range(_bottomLeft.position.x, _topRight.position.x), Random.Range(_bottomLeft.position.y, _topRight.position.y)), Quaternion.identity);
+                BuildObject b = go.GetComponent<BuildObject>();
                 
-                objectsList.Add(b);
-                b.pickedEvent.AddListener(ObjectPicked);
+                _objectsList.Add(b);
+                b.OnPickedEvent.AddListener(ObjectPicked);
             }
         }
 
         public void ObjectPicked()
         {
-            picked++;
-            if (picked == playerManager.Players.Count)
-            {
-                objectsBox.SetActive(false);
-
-                picked = 0;
-
-                foreach (Build b in objectsList)
-                {
-                    if(!b.chosen) Destroy(b.gameObject);
-                }
-
-                objectsList.Clear();
-                
-                selecting = false;
+            _picked++;
+            if (_picked != _playerManager.Players.Count) {
+                return;
             }
+            _objectsBox.SetActive(false);
+
+            _picked = 0;
+
+            foreach (BuildObject buildObject in _objectsList.Where(b => !b.IsChosen)) {
+                Destroy(buildObject.gameObject);
+            }
+
+            _objectsList.Clear();
+                
+            selecting = false;
         }
 
-        public bool CanPlace(Build testedBuild)
-        {
-            foreach (Build build in objects)
-            {
-                foreach (var offset in build.offsets)
-                {
-                    if (testedBuild.ContainsPos((Vector2)build.transform.position + offset))
-                    {
-                        return false;
-                    }
-                }
-            }
-
-            return true;
+        public bool CanPlace(BuildObject testedBuild) {
+            return !(from build in Objects from offset in build.Offsets where testedBuild.ContainsPos((Vector2)build.transform.position + offset) select build).Any();
         }
     }
     [System.Serializable]

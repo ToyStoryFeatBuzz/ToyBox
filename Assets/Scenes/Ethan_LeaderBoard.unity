@@ -2209,16 +2209,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0549b74137449ea00745b5c073def2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManager: {fileID: 1284504811}
-  panelMatchUI: {fileID: 1105859484}
-  fillBars:
+  PanelMatchUI: {fileID: 1105859484}
+  FillBars:
   - {fileID: 1065019423}
   - {fileID: 67016062}
   - {fileID: 1399479079}
   - {fileID: 1048274470}
   - {fileID: 349375757}
   - {fileID: 555165019}
-  textSlots:
+  TextSlots:
   - {fileID: 1175479795}
   - {fileID: 489650024}
   - {fileID: 1387301738}
@@ -2252,31 +2251,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a09514da7b49d2b17cd59a3f20b177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leaderBoard: {fileID: 305496720}
-  playerManager: {fileID: 1284504811}
-  panelEndGameUI: {fileID: 806991541}
-  textName:
+  _leaderBoard: {fileID: 305496720}
+  _playerManager: {fileID: 1284504811}
+  _panelEndGameUI: {fileID: 806991541}
+  _textName:
   - {fileID: 1336793666}
   - {fileID: 944621997}
   - {fileID: 2032934757}
   - {fileID: 1924973750}
   - {fileID: 793006275}
   - {fileID: 1295940963}
-  textPoints:
+  _textPoints:
   - {fileID: 1493948904}
   - {fileID: 91150891}
   - {fileID: 1097562721}
   - {fileID: 1645445481}
   - {fileID: 1566804931}
   - {fileID: 1282357253}
-  lineRenderers:
+  _lineRenderers:
   - {fileID: 25603284}
   - {fileID: 198180964}
   - {fileID: 1511523097}
   - {fileID: 1192885358}
   - {fileID: 531248558}
   - {fileID: 1892952504}
-  playerColors:
+  _playerColors:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 1, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
@@ -2284,12 +2283,12 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 1, a: 1}
   - {r: 0.5, g: 0, b: 0.5, a: 1}
   - {r: 1, g: 0.5, b: 0, a: 1}
-  graphOrigin: {x: -8.3, y: -4.8, z: 0}
-  lineWidth: 0.15
-  maxGraphWidth: 14.7
-  maxGraphHeight: 10
-  xMargin: 1
-  yMargin: 0.5
+  _graphOrigin: {x: -8.3, y: -4.8, z: 0}
+  _lineWidth: 0.15
+  _maxGraphWidth: 14.5
+  _maxGraphHeight: 9
+  _xMargin: 1
+  _yMargin: 1
 --- !u!1 &318372490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5518,7 +5517,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009542202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

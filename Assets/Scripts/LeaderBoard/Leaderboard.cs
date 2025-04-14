@@ -5,29 +5,32 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-namespace ToyBox.Leaderboard {
-    
-    public class LeaderBoard : MonoBehaviour {
-        PlayerManager playerManager => PlayerManager.Instance;
-        public GameObject panelMatchUI;
+
+namespace ToyBox.Leaderboard
+{
+    public class Leaderboard : MonoBehaviour
+    {
+        private PlayerManager _playerManager => PlayerManager.Instance;
 
         [Header("UI Match")]
-        public List<GameObject> fillBars;
-        public List<TextMeshProUGUI> textSlots;
+        public GameObject PanelMatchUI;
+        public List<GameObject> FillBars;
+        public List<TextMeshProUGUI> TextSlots;
 
-        public Dictionary<string, int> _dictPlayer;
+        private Dictionary<string, int> _playerScoreDict;
 
-        private void Start() {
-            HideLeaderBoard();
-            _dictPlayer = new();
-            CheckPlayer();
+        private void Start()
+        {
+            HideLeaderboard();
+            _playerScoreDict = new();
+            CheckPlayers();
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.O))
             {
-                ShowLeaderBoard();
+                ShowLeaderboard();
             }
             if (Input.GetKeyDown(KeyCode.C))
             {
@@ -35,36 +38,35 @@ namespace ToyBox.Leaderboard {
             }
         }
 
-        public void ShowLeaderBoard()
+        public void ShowLeaderboard()
         {
-            UpdateLeaderBoard();
-            panelMatchUI.SetActive(true);
+            UpdateLeaderboard();
+            PanelMatchUI.SetActive(true);
         }
 
-        public void HideLeaderBoard()
+        public void HideLeaderboard()
         {
-            panelMatchUI.SetActive(false);
+            PanelMatchUI.SetActive(false);
         }
 
-        public void UpdateLeaderBoard()
+        public void UpdateLeaderboard()
         {
-            CheckPlayer();
+            CheckPlayers();
 
-            var sortedList = GetSortedPlayers();
+            var sortedPlayers = GetSortedPlayers();
 
-            for (int i = 0; i < fillBars.Count && i < textSlots.Count; i++)
+            for (int i = 0; i < FillBars.Count && i < TextSlots.Count; i++)
             {
-                Transform parent = fillBars[i].transform.parent;
+                Transform parent = FillBars[i].transform.parent;
 
-                if (i < sortedList.Count)
+                if (i < sortedPlayers.Count)
                 {
-                    var (name, score) = sortedList[i];
-                    Debug.Log($"AFTER SORTING Nom : {name} Points : {score}");
+                    var (playerName, score) = sortedPlayers[i];
+                    Debug.Log($"AFTER SORTING Name: {playerName}, Score: {score}");
 
-                    // Activer le parent (slot complet)
                     parent.gameObject.SetActive(true);
-                    fillBars[i].GetComponent<Image>().fillAmount = score / 100f;
-                    textSlots[i].text = name;
+                    FillBars[i].GetComponent<Image>().fillAmount = score / 100f;
+                    TextSlots[i].text = playerName;
                 }
                 else
                 {
@@ -73,17 +75,17 @@ namespace ToyBox.Leaderboard {
             }
         }
 
-        public void CheckPlayer()
+        public void CheckPlayers()
         {
-            if (playerManager.Players.Count < 1)
+            if (_playerManager.Players.Count < 1)
             {
-                Debug.Log("Pas de joueur");
+                Debug.Log("No players found");
                 return;
             }
 
-            foreach (Managers.Player player in playerManager.Players)
+            foreach (Managers.Player player in _playerManager.Players)
             {
-                if (!_dictPlayer.ContainsKey(player.Name))
+                if (!_playerScoreDict.ContainsKey(player.Name))
                 {
                     _dictPlayer.Add(player.Name, Random.Range(1, 100));
                     SimulateMatchScores(player);  // Simule des scores de match
@@ -94,13 +96,12 @@ namespace ToyBox.Leaderboard {
 
         public void SimulateMatchScores(Managers.Player player)
         {
-            // Générer des scores de match aléatoires pour ce joueur
-            List<int> matchScores = new List<int>();
-            int numMatches = Random.Range(1, 10); // Nombre de matchs aléatoires (par exemple entre 5 et 15 matchs)
+            List<int> matchScores = new();
+            int matchCount = Random.Range(1, 10);
 
-            for (int i = 0; i < numMatches; i++)
+            for (int i = 0; i < matchCount; i++)
             {
-                matchScores.Add(Random.Range(1, 10)); // Scores de matchs entre 10 et 50
+                matchScores.Add(Random.Range(1, 10));
             }
 
             player.PlayerStats.MatchScores = matchScores;
@@ -108,17 +109,17 @@ namespace ToyBox.Leaderboard {
 
         public List<(string name, int score)> GetSortedPlayers()
         {
-            var list = new List<(string name, int score)>();
+            var playerList = new List<(string name, int score)>();
 
-            foreach (var player in playerManager.Players)
+            foreach (var player in _playerManager.Players)
             {
-                if (_dictPlayer.ContainsKey(player.Name))
+                if (_playerScoreDict.ContainsKey(player.Name))
                 {
-                    list.Add((player.Name, _dictPlayer[player.Name]));
+                    playerList.Add((player.Name, _playerScoreDict[player.Name]));
                 }
             }
 
-            return list.OrderByDescending(x => x.score).ToList();
+            return playerList.OrderByDescending(x => x.score).ToList();
         }
     }
 }

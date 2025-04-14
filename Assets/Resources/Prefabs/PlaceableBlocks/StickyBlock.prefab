@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8217598776087221653}
   - component: {fileID: 4210667463586575579}
-  - component: {fileID: 7405594245698925642}
+  - component: {fileID: 5688057558878990295}
   m_Layer: 0
   m_Name: StickyBlock
   m_TagString: Untagged
@@ -430,16 +430,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc36c60438ddd6f43955c11f9f740d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsets:
-  - {x: 0, y: 0}
-  placeHolder: {fileID: 2124906238196938799}
-  finalObject: {fileID: 4367905885419002627}
-  pickedEvent:
+  Offsets: []
+  _placeHolder: {fileID: 2124906238196938799}
+  _finalObject: {fileID: 4367905885419002627}
+  OnPickedEvent:
     m_PersistentCalls:
       m_Calls: []
-  erase: 0
-  chosen: 0
---- !u!114 &7405594245698925642
+  DoErase: 0
+  IsChosen: 0
+--- !u!114 &5688057558878990295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -452,10 +451,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GluePoints:
-  - {x: 0, y: 1}
-  - {x: 0, y: -1}
   - {x: 1, y: 0}
   - {x: -1, y: 0}
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
   _movingBlock: {fileID: 1564043538600963129}
 --- !u!1 &5189615948245309992
 GameObject:

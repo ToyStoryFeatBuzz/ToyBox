@@ -267,15 +267,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc36c60438ddd6f43955c11f9f740d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsets:
+  Offsets:
   - {x: 0, y: 0}
-  placeHolder: {fileID: 6926392770668493985}
-  finalObject: {fileID: 8551811787068717250}
-  pickedEvent:
+  _placeHolder: {fileID: 6926392770668493985}
+  _finalObject: {fileID: 8551811787068717250}
+  OnPickedEvent:
     m_PersistentCalls:
       m_Calls: []
-  erase: 0
-  chosen: 0
+  DoErase: 0
+  IsChosen: 0
 --- !u!1 &6500630030234741135
 GameObject:
   m_ObjectHideFlags: 0

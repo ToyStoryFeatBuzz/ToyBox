@@ -76,9 +76,8 @@ namespace ToyBox.Managers
                 return;
             }
             build.Place(true);
-            
-            ObjectPlaced.Invoke();
             Objects.Add(build);
+            ObjectPlaced.Invoke();
         }
 
         public void Shuffle(int amount)

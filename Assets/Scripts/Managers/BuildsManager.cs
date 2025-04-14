@@ -18,11 +18,6 @@ namespace ToyBox.Managers
 
         [FormerlySerializedAs("objects")] public List<BuildObject> Objects = new();
 
-        [FormerlySerializedAs("objectsBox")]
-        [Header("ChooseBox")]
-        [SerializeField] GameObject _objectsBox;
-        [FormerlySerializedAs("topRight")] [SerializeField] Transform _topRight;
-        [FormerlySerializedAs("bottomLeft")] [SerializeField] Transform _bottomLeft;
 
         int _picked = 0;
         int _turnNumber = 0;
@@ -34,7 +29,6 @@ namespace ToyBox.Managers
 
         private void Awake()
         {
-            _objectsBox.SetActive(false);
             if (Instance == null)
             {
                 Instance = this;
@@ -72,12 +66,19 @@ namespace ToyBox.Managers
                 }
 
                 Destroy(build.gameObject);
-
-                return;
             }
-            build.Place(true);
-            Objects.Add(build);
-            ObjectPlaced.Invoke();
+            else
+            {
+                build.Place(true);
+                Objects.Add(build);
+                ObjectPlaced.Invoke();
+            }
+
+            if (_playerManager.DoesAllPlayersFinishedBuilding())
+            {
+                GameModeManager.Instance.StartCountDown(3.5f);
+            }
+
         }
 
         public void Shuffle(int amount)
@@ -89,7 +90,7 @@ namespace ToyBox.Managers
             selecting = true;
             amount = _playerManager.Players.Count + 3;
 
-            _objectsBox.SetActive(true);
+            ChooseBox.Instance.gameObject.SetActive(true);
 
             for (int i = 0; i < amount; i++)
             {
@@ -108,10 +109,9 @@ namespace ToyBox.Managers
 
                 }
                 
-                
-                GameObject go = Instantiate(chosenObject, new(Random.Range(_bottomLeft.position.x, _topRight.position.x), Random.Range(_bottomLeft.position.y, _topRight.position.y)), Quaternion.identity);
+                GameObject go = Instantiate(chosenObject, new(Random.Range(ChooseBox.Instance.BL.position.x, ChooseBox.Instance.TR.position.x), Random.Range(ChooseBox.Instance.BL.position.y, ChooseBox.Instance.TR.position.y)), Quaternion.identity, ChooseBox.Instance.transform);
                 BuildObject b = go.GetComponent<BuildObject>();
-                
+
                 _objectsList.Add(b);
                 b.OnPickedEvent.AddListener(ObjectPicked);
             }
@@ -120,10 +120,22 @@ namespace ToyBox.Managers
         public void ObjectPicked()
         {
             _picked++;
-            if (_picked != _playerManager.Players.Count) {
-                return;
+            if (_picked == _playerManager.Players.Count)
+            {
+                ChooseBox.Instance.gameObject.SetActive(false);
+
+                _picked = 0;
+
+                foreach (BuildObject b in _objectsList)
+                {
+                    if(!b.IsChosen) Destroy(b.gameObject);
+                }
+
+                _objectsList.Clear();
+                
+                selecting = false;
             }
-            _objectsBox.SetActive(false);
+            ChooseBox.Instance.gameObject.SetActive(false);
 
             _picked = 0;
 

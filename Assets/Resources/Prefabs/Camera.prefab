@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4327459644112730032}
+  - component: {fileID: 4271177144290780637}
   m_Layer: 0
   m_Name: ChooseBox
   m_TagString: Untagged
@@ -35,6 +36,20 @@ Transform:
   - {fileID: 135916259629656567}
   m_Father: {fileID: 3120329028088417592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4271177144290780637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757059909934452881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b059d049bf9b229479d0ee4493d3295b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TR: {fileID: 135916259629656567}
+  BL: {fileID: 7743383268879716298}
 --- !u!1 &1322207101502094880
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,9 +204,8 @@ MonoBehaviour:
   _camSizeMultiplier: 1.1
   _minCamSize: 4
   _maxCamSize: 20
-  _camMovementSpeed: 1
-  _camZoomSpeed: 1
-  _playerManager: {fileID: 0}
+  _camMovementSpeed: 4
+  _camZoomSpeed: 4
   EditorMapCenter: {fileID: 0}
   EditorCamZoom: 0
 --- !u!1 &5283379503010145321

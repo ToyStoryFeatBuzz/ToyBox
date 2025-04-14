@@ -34,10 +34,6 @@ namespace ToyBox.InputSystem {
             GridMoveDir = ctx.ReadValue<Vector2>();
             InputEventSystem.InvokeInputEvent(OnGridMoveEvent, ctx);
         }
-
-
     }
-    
-    
 }
 

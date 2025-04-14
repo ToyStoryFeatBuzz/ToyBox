@@ -22,18 +22,18 @@ namespace ToyBox.Build
         void Start()
         {
             _buildsManager = BuildsManager.Instance;
-            _buildsManager.ObjectPlaced.AddListener(CheckAroundForGluedItems);
+            _buildsManager.OnObjectPlaced += CheckAroundForGluedItems;
         }
 
         void CheckAroundForGluedItems()
         {
             Debug.Log("Checking Around For Glued Items");
             _originalPosition = transform.position;
-            var globalGluePoints = GluePoints.Select(gp => _originalPosition + gp).ToHashSet();
+            HashSet<Vector2> globalGluePoints = GluePoints.Select(gp => _originalPosition + gp).ToHashSet();
 
-            foreach (var block in _buildsManager.Objects.Where(b => !_gluedObjects.Contains(b)))
+            foreach (BuildObject block in _buildsManager.Objects.Where(b => !_gluedObjects.Contains(b)))
             {
-                Vector2 blockPos = (Vector2)block.transform.position;
+                Vector2 blockPos = block.transform.position;
 
                 if (block.Offsets.Any(offset => globalGluePoints.Contains(blockPos + offset)))
                 {
@@ -45,28 +45,5 @@ namespace ToyBox.Build
             }
 
         }
-        
-        //void CheckAroundForGluedItems()
-        //{
-        //    _originalPosition = transform.position;
-        //    Debug.Log("Checking for glued objects");
-        //    foreach (BuildObject block in _buildsManager.Objects)
-        //    {
-        //        foreach (Vector2 offset in block.Offsets)
-        //        {
-        //            foreach (Vector2 glueSpot in GluePoints)
-        //            {
-        //                if ((Vector2)block.transform.position + offset == _originalPosition+glueSpot && !_gluedObjects.Contains(block)) //Checks if object is in range of any glue spot AND is not already glued to the block
-        //                {
-        //                    Debug.Log("Sticky");
-        //                    _gluedObjects.Add(block);
-        //                    _movingBlock.transform.position = _originalPosition;
-        //                    block.gameObject.transform.parent = _movingBlock.transform; //Change the glued block's parent to be the sticky block
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
     }
 }

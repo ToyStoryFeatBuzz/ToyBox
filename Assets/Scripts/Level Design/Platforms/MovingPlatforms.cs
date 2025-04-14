@@ -7,8 +7,8 @@ public class MovingPlatforms : MonoBehaviour,IMoveable
 
     [SerializeField] private Transform _posA;
     [SerializeField] private Transform _posB;
-    public Transform posA { get=>_posA; }
-    public Transform posB { get=>_posB; }
+    public Transform PosA { get=>_posA; }
+    public Transform PosB { get=>_posB; }
     
     [SerializeField] private bool _slerp;
     
@@ -35,7 +35,7 @@ public class MovingPlatforms : MonoBehaviour,IMoveable
     public void Movement()
     {
         _timer += Time.deltaTime*_direction*_speed;
-        transform.position=_interpolationMovement.Invoke(posA.position, posB.position, _timer);
+        transform.position=_interpolationMovement.Invoke(PosA.position, PosB.position, _timer);
         if (_timer>.90f)
         {
             _direction = -1;

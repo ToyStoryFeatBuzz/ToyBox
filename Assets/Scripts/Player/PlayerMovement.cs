@@ -1,6 +1,7 @@
 using System;
 using ToyBox.InputSystem;
 using UnityEngine;
+using UnityEngine.Serialization;
 using static ToyBox.Enums;
 
 namespace ToyBox.Player
@@ -12,6 +13,7 @@ namespace ToyBox.Player
         [SerializeField] float _acceleration;
         [SerializeField] float _deceleration;
         [SerializeField] float _maxSpeed;
+        
         [Header("Jump variables")]
         [SerializeField] float _jumpForce;
         [SerializeField] int _maxJump;
@@ -19,7 +21,8 @@ namespace ToyBox.Player
         [SerializeField] Vector2 _wallJumpVector;
         [SerializeField] bool _canWallJumpOnSameWall;
         [SerializeField] float _gravity;
-        [SerializeField] LayerMask _groundLayer;
+        [SerializeField] LayerMask _platformLayer;
+        
         [Space(10)]
         [Header("OverlapBox offsets")]
         [SerializeField] Vector2 _groundOffset;
@@ -61,7 +64,7 @@ namespace ToyBox.Player
                     _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player
                 }
 
-                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_groundLayer) && _performGroundCheck) // Ground check
+                if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_platformLayer) && _performGroundCheck) // Ground check
                 {
                     _isGrounded = true;
                     _remainJump = _maxJump;
@@ -77,45 +80,38 @@ namespace ToyBox.Player
         private void OnJump()
         {
             if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
-                    _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
+                    _platformLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
             {
                 _wallJumpDirection = EWallJumpDirection.Left;
-                _rb.gravityScale = 1;
-                _rb.linearVelocity = Vector2.zero;
-                _rb.AddForce(_wallJumpVector*_jumpForce, ForceMode2D.Impulse);
-                _remainJump = 1;
-                _isGrounded = false;
-                _performGroundCheck = false;
+                Jump(_wallJumpVector*_jumpForce);
             }
-            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0,
-                         _groundLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
+            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0, _platformLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
                 _wallJumpDirection = EWallJumpDirection.Right;
-                _rb.gravityScale = 1;
-                _rb.linearVelocity = Vector2.zero;
-                _rb.AddForce(new Vector2(-_wallJumpVector.x,_wallJumpVector.y) * _jumpForce, ForceMode2D.Impulse);
-                _remainJump = 1;
-                _isGrounded = false;
-                _performGroundCheck = false;
+                Jump(new Vector2(-_wallJumpVector.x,_wallJumpVector.y) * _jumpForce);
             }
-            else if ((_remainJump != 0 && _isGrounded) && !_inputSystem.IsDead) // If you jump while on the ground/ in the air
-            {
-                _rb.gravityScale = 1;
-                _rb.linearVelocityY = 0;
-                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
-                _remainJump--;
-                _isGrounded = false;
-                _performGroundCheck = false; //Little hack to make sure the ground check does not trigger on the first frame after jumping, to prevent triple jumps
+            else if (_remainJump >  0) {
+                // If you jump after being in the air without jumping (i.e a jump pad)
+                Jump(_jumpForce);
             }
-            else if (_remainJump != 0) // If you jump after being in the air without jumping (i.e a jump pad)
-            {
-                _rb.gravityScale = 1;
-                _rb.linearVelocityY = 0;
-                _rb.AddForceY(_jumpForce, ForceMode2D.Impulse);
-                _remainJump = 0;
-                _isGrounded = false;
-                _performGroundCheck = false;
-            }
+        }
+
+        void Jump(float jumpValue) {
+            _rb.gravityScale = 1;
+            _rb.linearVelocityY = 0;
+            _rb.AddForceY(jumpValue, ForceMode2D.Impulse);
+            _remainJump--;
+            _isGrounded = false;
+            _performGroundCheck = false;
+        }
+        
+        void Jump(Vector2 jumpValue) {
+            _rb.gravityScale = 1;
+            _rb.linearVelocityY = 0;
+            _rb.AddForce(jumpValue, ForceMode2D.Impulse);
+            _remainJump -- ;
+            _isGrounded = false;
+            _performGroundCheck = false;
         }
 
         private void OnJumpCancel() //Gets automatically called if the player releases the jump input or holds it too long

@@ -5,8 +5,8 @@ using UnityEngine.PlayerLoop;
 
 public interface IMoveable
 {
-    public Transform posA { get; }
-    public Transform posB { get; }
+    public Transform PosA { get; }
+    public Transform PosB { get; }
 
     public void Movement();
 

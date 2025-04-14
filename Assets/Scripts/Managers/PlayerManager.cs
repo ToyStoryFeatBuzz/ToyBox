@@ -66,7 +66,7 @@ namespace ToyBox.Managers {
         private void RefreshPlayerName() {
             for (int i = 0; i < Players.Count; i++) {
                 Player player = Players[i];
-                player.Name = $"Player {i + 1}";
+                player.Name = $"Player {i + 1}"; 
                 Players[i].PlayerObject.name = player.Name;
                 Players[i] = player;
             }

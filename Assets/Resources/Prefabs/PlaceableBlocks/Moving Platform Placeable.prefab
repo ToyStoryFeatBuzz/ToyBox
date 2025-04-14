@@ -425,27 +425,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc36c60438ddd6f43955c11f9f740d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsets:
-  - {x: 0, y: 0}
-  placeHolder: {fileID: 3600561835050632551}
-  finalObject: {fileID: 8019100398271138894}
-  pickedEvent:
+  Offsets: []
+  _placeHolder: {fileID: 3600561835050632551}
+  _finalObject: {fileID: 8019100398271138894}
+  OnPickedEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8019100398271138894}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   erase: 0
-  chosen: 0
+  IsChosen: 0
 --- !u!1 &8019100398271138894
 GameObject:
   m_ObjectHideFlags: 0

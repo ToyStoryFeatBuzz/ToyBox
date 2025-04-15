@@ -12,9 +12,11 @@ namespace ToyBox.Player {
         public List<int> MatchScores = new();
         public string Name;
         private ScoreManager _scoreManager => ScoreManager.Instance;
-
-
-
+        
+        private void Start() {
+            Name = gameObject.name;
+        }
+        
         public void AddScore(int amount) {
             Score += amount;
             AddScoreToList(Score);

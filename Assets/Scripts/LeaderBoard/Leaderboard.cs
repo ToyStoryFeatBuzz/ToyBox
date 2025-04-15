@@ -79,21 +79,22 @@ namespace ToyBox.Leaderboard
 
         public void CheckPlayers()
         {
-            if (_playerManager.Players.Count < 1)
-            {
-                Debug.Log("No players found");
-                return;
-            }
-
-            foreach (Managers.Player player in _playerManager.Players)
-            {
-                if (!_playerScoreDict.ContainsKey(player.Name))
-                {
-                    _playerScoreDict.Add(player.Name, Random.Range(1, 100));
-                    SimulateMatchScores(player);  // Simule des scores de match
-                    Debug.Log($"Player {player.Name} has {_playerScoreDict[player.Name]} points.");
-                }
-            }
+            _scoreManager.PlayerScores = _playerScoreDict;
+            // if (_playerManager.Players.Count < 1)
+            // {
+            //     Debug.Log("No players found");
+            //     return;
+            // }
+            //
+            // foreach (Managers.Player player in _playerManager.Players)
+            // {
+            //     if (!_playerScoreDict.ContainsKey(player.Name))
+            //     {
+            //         _playerScoreDict.Add(player.Name, Random.Range(1, 100));
+            //         SimulateMatchScores(player);  // Simule des scores de match
+            //         Debug.Log($"Player {player.Name} has {_playerScoreDict[player.Name]} points.");
+            //     }
+            // }
         }
 
         public void SimulateMatchScores(Managers.Player player)

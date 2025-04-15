@@ -5494,6 +5494,10 @@ PrefabInstance:
       value: Camera
       objectReference: {fileID: 0}
     - target: {fileID: 2571666641935513930, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: _minCamSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2571666641935513930, guid: 887377dfea42b3a4693a83b383567078, type: 3}
       propertyPath: _playerManager
       value: 
       objectReference: {fileID: 1284504811}
@@ -6727,6 +6731,10 @@ PrefabInstance:
     - target: {fileID: 2147784405478698552, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: m_Name
       value: '[[Managers]]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341195576530034977, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

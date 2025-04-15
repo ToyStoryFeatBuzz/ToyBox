@@ -57,6 +57,7 @@ namespace ToyBox.Managers {
             
             Players.Add(new Player
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
+            playerStats.name = name;
 
             player.transform.parent = transform;
         }

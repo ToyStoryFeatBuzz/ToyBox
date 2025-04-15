@@ -7,12 +7,12 @@ namespace ToyBox.Build {
     public class BuildObject : MonoBehaviour {
         public List<Vector2> Offsets = new();
 
-        [FormerlySerializedAs("placeHolder")] [SerializeField] GameObject _placeHolder;
-        [FormerlySerializedAs("finalObject")] [SerializeField] GameObject _finalObject;
+        [SerializeField] GameObject _placeHolder;
+        [SerializeField] GameObject _finalObject;
 
         [FormerlySerializedAs("pickedEvent")] public UnityEvent OnPickedEvent = new();
 
-        [FormerlySerializedAs("erase")] public bool DoErase = false;
+        public bool DoErase = false;
 
         [FormerlySerializedAs("chosen")] public bool IsChosen = false;
 

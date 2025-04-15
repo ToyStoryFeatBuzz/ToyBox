@@ -3,7 +3,7 @@ using ToyBox.InputSystem;
 using ToyBox.Player;
 using UnityEngine;
 
-namespace Toybox.Obstacles {
+namespace ToyBox.Obstacles {
     public class Mine : MonoBehaviour {
         [SerializeField] float _explosionRange;
 

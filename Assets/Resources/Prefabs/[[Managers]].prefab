@@ -79,12 +79,109 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9780cee249b3ec247929572d36bfbcb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectsStruct: []
+  _objectsStruct:
+  - ObjectPrefab: {fileID: 5475432701753714441, guid: 51ff7ae38a5800842adf447b16815a53, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 6407882722982570177, guid: 7bb7e85a29fadd74ca83b90d7f4bf9ca, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 5667357639506699088, guid: a115587b82d1e0644b72085da10d5ec5, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 6646100214048588130, guid: de77e87b121b8844f87c7a1ec57758c4, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   Objects: []
-  _objectsBox: {fileID: 0}
-  _topRight: {fileID: 0}
-  _bottomLeft: {fileID: 0}
-  selecting: 0
+  IsSelecting: 0
 --- !u!1 &4879392185249584979
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5615d10625d54c129e8ef4a88554f0d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _menuManager: {fileID: 0}
 --- !u!1 &8616433520341010374
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Players: []
-  PlayerInputManager: {fileID: 0}
+  PlayerInputManager: {fileID: 6355520917006203822}
 --- !u!114 &965559377940951561
 MonoBehaviour:
   m_ObjectHideFlags: 0

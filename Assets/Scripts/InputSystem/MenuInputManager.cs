@@ -1,9 +1,6 @@
 ﻿using ToyBox.Managers;
-using ToyBox.Menu;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.Users;
-using UnityEngine.Serialization;
 
 namespace ToyBox.InputSystem {
     public class MenuInputManager: MonoBehaviour {
@@ -16,9 +13,6 @@ namespace ToyBox.InputSystem {
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
-                DontDestroyOnLoad(transform.root);
-            } else {
-                Destroy(gameObject);
             }
         }
 

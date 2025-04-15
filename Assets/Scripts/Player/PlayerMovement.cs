@@ -17,6 +17,7 @@ namespace ToyBox.Player
         [SerializeField] float _jumpForce;
         [SerializeField] int _maxJump;
         [SerializeField] int _remainJump;
+        [Space(5)]
         [SerializeField] Vector2 _wallJumpVector;
         [SerializeField] bool _canWallJumpOnSameWall;
         [SerializeField] float _gravity;
@@ -80,11 +81,13 @@ namespace ToyBox.Player
 
         private void OnJump()
         {
+            if (_playerEnd.IsDead) return;
             if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
                     _platformLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
             {
                 _wallJumpDirection = EWallJumpDirection.Left;
                 Jump(_wallJumpVector*_jumpForce);
+                
             }
             else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0, _platformLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
@@ -110,7 +113,7 @@ namespace ToyBox.Player
             _rb.gravityScale = 1;
             _rb.linearVelocityY = 0;
             _rb.AddForce(jumpValue, ForceMode2D.Impulse);
-            _remainJump -- ;
+            _remainJump = 1;
             _isGrounded = false;
             _performGroundCheck = false;
         }

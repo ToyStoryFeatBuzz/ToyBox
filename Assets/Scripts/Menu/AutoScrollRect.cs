@@ -10,7 +10,7 @@ namespace ToyBox.Menu {
 
         [SerializeField] private float _scrollSpeed = 10f;
         private ScrollRect _scrollRect;
-        List<Selectable> _selectables = new();
+        List<SelectableNavigation> _selectables = new();
 
         [SerializeField] Vector2 _newScrollPosition = Vector2.up;
 
@@ -58,8 +58,8 @@ namespace ToyBox.Menu {
         private void ScrollToSelected(bool isInstant) {
             int selectedID = -1;
 
-            Selectable selectedItem = EventSystem.current.currentSelectedGameObject
-                ? EventSystem.current.currentSelectedGameObject.GetComponent<Selectable>()
+            SelectableNavigation selectedItem = EventSystem.current.currentSelectedGameObject
+                ? EventSystem.current.currentSelectedGameObject.GetComponent<SelectableNavigation>()
                 : null;
 
             if (selectedItem) {

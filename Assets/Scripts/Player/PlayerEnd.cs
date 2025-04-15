@@ -1,13 +1,19 @@
-﻿using ToyBox.Managers;
+﻿using System;
+using ToyBox.Managers;
 using UnityEngine;
 using static ToyBox.Enums;
 
 namespace ToyBox.Player {
     public class PlayerEnd : MonoBehaviour {
         public bool IsDead;
-        
+        private PlayerStats _playerStats;
         PlayerManager _playerManager => PlayerManager.Instance;
-        
+
+        private void Start()
+        {
+            _playerStats = GetComponent<PlayerStats>();
+        }
+
         public void SetDeath() {
             _playerManager.SetPlayerState(gameObject, EPlayerState.Dead);
             IsDead = true;
@@ -16,6 +22,7 @@ namespace ToyBox.Player {
 
         public void SetWin() {
             _playerManager.SetPlayerState(gameObject, EPlayerState.Finished);
+            _playerStats.AddScore(1);
         }
     }
 }

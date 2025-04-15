@@ -6,7 +6,7 @@ public class PlayerAnimationSwitcher : MonoBehaviour
 {
     private Animator _animator;
     private PlayerMovement _playerMovement;
-    private Rigidbody2D _rigidbody2D;
+    [SerializeField] Rigidbody2D _rigidbody2D;
     
     [SerializeField] private float stillMovingThreshold; //minimal speed for the player to be considered moving
     
@@ -14,7 +14,7 @@ public class PlayerAnimationSwitcher : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _playerMovement = GetComponent<PlayerMovement>();
-        _rigidbody2D = GetComponent<Rigidbody2D>();
+        //_rigidbody2D = GetComponent<Rigidbody2D>();
     }
     
     void Update()

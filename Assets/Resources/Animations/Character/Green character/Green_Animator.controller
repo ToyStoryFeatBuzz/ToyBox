@@ -68,7 +68,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.06910321
+  m_TransitionDuration: 0.003082186
   m_TransitionOffset: 0
   m_ExitTime: 0.5413841
   m_HasExitTime: 0
@@ -83,7 +83,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue_walkAnim
+  m_Name: walkAnim
   m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
@@ -99,7 +99,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a337b8fbc3a5d7d428fe77936b717ed9, type: 2}
+  m_Motion: {fileID: 7400000, guid: 67dbc48b040f6814980a32431e0bf565, type: 2}
   m_Tag: 
   m_SpeedParameter: WalkAnimSpeedMult
   m_MirrorParameter: 
@@ -124,7 +124,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.48780048
+  m_ExitTime: 9.698977e-10
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -162,7 +162,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue_fallAnim
+  m_Name: fallAnim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -179,7 +179,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d5a3684df197b774c8cf952eaa2dee0d, type: 2}
+  m_Motion: {fileID: 7400000, guid: 780b6af479c55a24b8c153e6222dd4a9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -317,7 +317,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New_Blue_Animator
+  m_Name: Green_Animator
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsWalking
@@ -423,7 +423,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue_landingAnimation
+  m_Name: landingAnimation
   m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
@@ -439,7 +439,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7827fb78bf229614bbf4c401f3f667dc, type: 2}
+  m_Motion: {fileID: 7400000, guid: fce8dae97127e52429231dc11fae3790, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -502,7 +502,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue_riseAnim
+  m_Name: riseAnim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -516,7 +516,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 3b888f5cdcbb00b4d99494be3090ba05, type: 2}
+  m_Motion: {fileID: 7400000, guid: e2a7b60c93ad8a84f9d548da40e4ea6f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -554,7 +554,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue_beginToJumpAnim
+  m_Name: beginToJumpAnim
   m_Speed: 5
   m_CycleOffset: 0
   m_Transitions:
@@ -568,7 +568,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9200448837160474d87cc0c35aea99dd, type: 2}
+  m_Motion: {fileID: 7400000, guid: 69c28101f50c5c7459bfa48bd5dea4dd, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -595,7 +595,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8d3b7ac590ee5be46b3da1c9cd92aeb2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5163c239e4caab74294a211729058a8b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -674,7 +674,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8d3b7ac590ee5be46b3da1c9cd92aeb2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5163c239e4caab74294a211729058a8b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -845,7 +845,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue_jumpMiddleAnim
+  m_Name: jumpMiddleAnim
   m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
@@ -861,7 +861,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 98ca8c0d3f9aef944bb156dc98d32d8b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4093e6a03428f7244a7f1ebbd9381767, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -874,7 +874,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blue_idleAnim
+  m_Name: idleAnim
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -889,7 +889,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 67e6aaf98f7c35a4abe091f4584d96b7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2178a126a834a7a448b51657d6b692ba, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

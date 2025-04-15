@@ -19,6 +19,7 @@ namespace ToyBox.Player {
             Score += amount;
             AddScoreToList(Score);
             _scoreManager.AddScoreDic(Name,Score);
+            Debug.Log(Name + " added score: " + Score);
         }
         
         public void RemoveScore(int amount) {

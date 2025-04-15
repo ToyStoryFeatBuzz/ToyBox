@@ -40,7 +40,6 @@ namespace ToyBox.Build {
         }
 
         private void OnEnable() {
-            //SetRandomObject();
             if (!_playerMouse) {
                 _playerMouse = GetComponent<PlayerMouse>();
             }
@@ -52,19 +51,21 @@ namespace ToyBox.Build {
             _playerMouse.ActivateMouse(false);
         }
 
-        public void SetRandomObject() {
+        public void SetRandomObject() // Deprecated
+        {
             SelectObject(_objectsPrefabs[Random.Range(0, _objectsPrefabs.Count)]);
         }
 
-        public void SelectObject(GameObject go) {
+        public void SelectObject(GameObject go) // Select new object and drag it
+        {
             if (_draggedObject != null) Destroy(_draggedObject);
 
             _draggedObject = Instantiate(go);
         }
 
-        public void Place()
+        public void Place() // When LMB is pressed
         {
-            if (_draggedObject)
+            if (_draggedObject) // Place object if exist
             {
                 if (_buildsManager.IsSelecting) return;
 
@@ -84,7 +85,7 @@ namespace ToyBox.Build {
                 enabled = false;
                 //SetRandomObject();
             }
-            else
+            else // Try to get nearest object in the choosing box
             {
                 Collider2D hit = Physics2D.OverlapCircle(_mousePos, .1f);
                 if (hit && hit.transform && hit.transform.GetComponentInParent<BuildObject>())
@@ -100,7 +101,7 @@ namespace ToyBox.Build {
             }
         }
 
-        public void Rotate(float angle)
+        public void Rotate(float angle) // Rotate object and spread to offsets
         {
             if (!_draggedObject) return;
             _draggedObject.transform.eulerAngles = new(0, 0, _draggedObject.transform.eulerAngles.z + angle);
@@ -110,7 +111,7 @@ namespace ToyBox.Build {
 
         private void Update()
         {
-            if (_playerInputManager.GridMoveDir.magnitude > 0) _playerMouse.Move(_playerInputManager.GridMoveDir);
+            if (_playerInputManager.GridMoveDir.magnitude > 0) _playerMouse.Move(_playerInputManager.GridMoveDir); // Apply Mouse/Joystick movements to cursor
 
             _mousePos = _playerMouse.Click();
 
@@ -118,7 +119,7 @@ namespace ToyBox.Build {
 
             Vector2 targetPos = _mousePos + (Vector2.one * _snapInterval / 2f);
 
-            if (_doesSnap)
+            if (_doesSnap) // Snap cursor to grid
             {
                 int x = Mathf.FloorToInt(targetPos.x / _snapInterval);
                 int y = Mathf.FloorToInt(targetPos.y / _snapInterval);
@@ -127,8 +128,10 @@ namespace ToyBox.Build {
 
             _draggedObject.transform.position = targetPos;
 
-            if (_lastDifferentPos == targetPos) {
-                return;
+            if (_lastDifferentPos != targetPos) // If a movement is detected, refresh ability to place
+            {
+                _placeable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
+                _lastDifferentPos = targetPos;
             }
             _placeable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
             _lastDifferentPos = targetPos;

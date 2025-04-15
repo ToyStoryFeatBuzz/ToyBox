@@ -49,6 +49,22 @@ namespace ToyBox.Managers {
                 _gameModeManager.OnRaceEnd?.Invoke();
                 _raceStarted = false;
             }
+
+            List<(string player, Transform t, float score)> pls = new();
+
+            foreach (Player player in _playerManager.Players)
+            {
+                pls.Add((player.Name, player.PlayerObject.transform, MapPath.Instance.GetPlayerPositionOnPath(player.PlayerObject.transform)));
+            }
+
+            string a = "RANK  ===  ";
+
+            foreach (var p in pls)
+            {
+                a += p.player + " : " + p.score + " ||| ";
+            }
+
+            print(a);
         }
     }
 

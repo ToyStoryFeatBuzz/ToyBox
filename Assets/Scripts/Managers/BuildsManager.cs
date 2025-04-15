@@ -31,7 +31,7 @@ namespace ToyBox.Managers
 
         private void Awake()
         {
-            _chooseBox.gameObject.SetActive(false);
+            _chooseBox?.gameObject.SetActive(false);
             if (Instance == null)
             {
                 Instance = this;
@@ -74,7 +74,7 @@ namespace ToyBox.Managers
             {
                 build.Place(true);
                 Objects.Add(build);
-                OnObjectPlaced.Invoke();
+                OnObjectPlaced?.Invoke();
             }
 
             if (_playerManager.DoesAllPlayersFinishedBuilding()) // Start Race countdown if all players placed their objects

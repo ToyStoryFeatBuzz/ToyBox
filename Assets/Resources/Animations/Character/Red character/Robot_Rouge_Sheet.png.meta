@@ -1,202 +1,205 @@
 fileFormatVersion: 2
-guid: 3189b6ef9f978054aa4b817fcc76bb76
+guid: ccb68aef945644b4092ee6ec6977218f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4629277468525559024
-    second: Buzz_Sheet_0
+      213: -7323446567281503722
+    second: Robot_Rouge_Sheet_0
   - first:
-      213: -9139481532183551164
-    second: Buzz_Sheet_1
+      213: -2698972337266139634
+    second: Robot_Rouge_Sheet_1
   - first:
-      213: 4502138429144293082
-    second: Buzz_Sheet_2
+      213: -6368420009930026012
+    second: Robot_Rouge_Sheet_2
   - first:
-      213: 9006914566831617098
-    second: Buzz_Sheet_3
+      213: 3478451462767976444
+    second: Robot_Rouge_Sheet_3
   - first:
-      213: -5572562644644084712
-    second: Buzz_Sheet_4
+      213: -8607070461766735127
+    second: Robot_Rouge_Sheet_4
   - first:
-      213: -7903720817402176644
-    second: Buzz_Sheet_5
+      213: -6302632731444543472
+    second: Robot_Rouge_Sheet_5
   - first:
-      213: 1407910803992006904
-    second: Buzz_Sheet_6
+      213: -8057600215924854242
+    second: Robot_Rouge_Sheet_6
   - first:
-      213: -6160504756864076757
-    second: Buzz_Sheet_7
+      213: 7890157665865285755
+    second: Robot_Rouge_Sheet_7
   - first:
-      213: -655901643239046508
-    second: Buzz_Sheet_8
+      213: -4007683601123244287
+    second: Robot_Rouge_Sheet_8
   - first:
-      213: 1339910538233403828
-    second: Buzz_Sheet_9
+      213: 4868406847089235015
+    second: Robot_Rouge_Sheet_9
   - first:
-      213: 7956625271753611958
-    second: Buzz_Sheet_10
+      213: -172751834951127445
+    second: Robot_Rouge_Sheet_10
   - first:
-      213: 4602672193308089757
-    second: Buzz_Sheet_11
+      213: -4217468004954563432
+    second: Robot_Rouge_Sheet_11
   - first:
-      213: 2039602714785102977
-    second: Buzz_Sheet_12
+      213: -6765941688774801040
+    second: Robot_Rouge_Sheet_12
   - first:
-      213: 2535213816679461099
-    second: Buzz_Sheet_13
+      213: 1707046546570702463
+    second: Robot_Rouge_Sheet_13
   - first:
-      213: -3687249957945787263
-    second: Buzz_Sheet_14
+      213: 8024393609101970484
+    second: Robot_Rouge_Sheet_14
   - first:
-      213: -1980385442227845248
-    second: Buzz_Sheet_15
+      213: 7927579793612037578
+    second: Robot_Rouge_Sheet_15
   - first:
-      213: 7060908949812215277
-    second: Buzz_Sheet_16
+      213: 5485558393658366471
+    second: Robot_Rouge_Sheet_16
   - first:
-      213: -5445153713906438888
-    second: Buzz_Sheet_17
+      213: 8549998864504138880
+    second: Robot_Rouge_Sheet_17
   - first:
-      213: -3786489665482691859
-    second: Buzz_Sheet_18
+      213: -8580483937991871269
+    second: Robot_Rouge_Sheet_18
   - first:
-      213: -1767959218535933814
-    second: Buzz_Sheet_19
+      213: -4378930842655298068
+    second: Robot_Rouge_Sheet_19
   - first:
-      213: 8305517480733653967
-    second: Buzz_Sheet_20
+      213: -4825774164665865506
+    second: Robot_Rouge_Sheet_20
   - first:
-      213: 7949283024934680569
-    second: Buzz_Sheet_21
+      213: 6269987495879957896
+    second: Robot_Rouge_Sheet_21
   - first:
-      213: -3053822108880512064
-    second: Buzz_Sheet_22
+      213: 6219998672688038835
+    second: Robot_Rouge_Sheet_22
   - first:
-      213: 455516755240174768
-    second: Buzz_Sheet_23
+      213: 527856442793431676
+    second: Robot_Rouge_Sheet_23
   - first:
-      213: -4885088807139406310
-    second: Buzz_Sheet_24
+      213: -2643708838607511493
+    second: Robot_Rouge_Sheet_24
   - first:
-      213: -2129185375680395552
-    second: Buzz_Sheet_25
+      213: -1250275243127915586
+    second: Robot_Rouge_Sheet_25
   - first:
-      213: -1376817805055246546
-    second: Buzz_Sheet_26
+      213: 7131310609460126659
+    second: Robot_Rouge_Sheet_26
   - first:
-      213: 7955016824970481791
-    second: Buzz_Sheet_27
+      213: 8642529985746588758
+    second: Robot_Rouge_Sheet_27
   - first:
-      213: -6564738512220995817
-    second: Buzz_Sheet_28
+      213: 6640293758026120035
+    second: Robot_Rouge_Sheet_28
   - first:
-      213: 3106256774681761215
-    second: Buzz_Sheet_29
+      213: -5309883744210939757
+    second: Robot_Rouge_Sheet_29
   - first:
-      213: -6804053917468776399
-    second: Buzz_Sheet_30
+      213: -3390427178309679967
+    second: Robot_Rouge_Sheet_30
   - first:
-      213: 7815458899673664029
-    second: Buzz_Sheet_31
+      213: -6788873354542210676
+    second: Robot_Rouge_Sheet_31
   - first:
-      213: -7871673141766107105
-    second: Buzz_Sheet_32
+      213: 5266092687584689212
+    second: Robot_Rouge_Sheet_32
   - first:
-      213: 2091247071088450952
-    second: Buzz_Sheet_33
+      213: 7304634751039780444
+    second: Robot_Rouge_Sheet_33
   - first:
-      213: -1517621230750226327
-    second: Buzz_Sheet_34
+      213: 4462236273354340605
+    second: Robot_Rouge_Sheet_34
   - first:
-      213: 2684962535467240437
-    second: Buzz_Sheet_35
+      213: 2102317762161782267
+    second: Robot_Rouge_Sheet_35
   - first:
-      213: -3148635075386013992
-    second: Buzz_Sheet_36
+      213: -1955315333339429788
+    second: Robot_Rouge_Sheet_36
   - first:
-      213: 7087147573717995178
-    second: Buzz_Sheet_37
+      213: 5966279133043179015
+    second: Robot_Rouge_Sheet_37
   - first:
-      213: 4725252787002130378
-    second: Buzz_Sheet_38
+      213: -4102977609981491225
+    second: Robot_Rouge_Sheet_38
   - first:
-      213: 3550612343220771422
-    second: Buzz_Sheet_39
+      213: 3761444316575677631
+    second: Robot_Rouge_Sheet_39
   - first:
-      213: -933120387321651403
-    second: Buzz_Sheet_40
+      213: 2067050142265538005
+    second: Robot_Rouge_Sheet_40
   - first:
-      213: 7502031135077658297
-    second: Buzz_Sheet_41
+      213: -2608082673193958498
+    second: Robot_Rouge_Sheet_41
   - first:
-      213: 5796522269858205883
-    second: Buzz_Sheet_42
+      213: -7609043274077690653
+    second: Robot_Rouge_Sheet_42
   - first:
-      213: -4454097717471949716
-    second: Buzz_Sheet_43
+      213: 8091377023096208177
+    second: Robot_Rouge_Sheet_43
   - first:
-      213: -4799522618347243214
-    second: Buzz_Sheet_44
+      213: 4940968045260250492
+    second: Robot_Rouge_Sheet_44
   - first:
-      213: -6170327700644431766
-    second: Buzz_Sheet_45
+      213: -8229645578284909610
+    second: Robot_Rouge_Sheet_45
   - first:
-      213: 1915561713032755693
-    second: Buzz_Sheet_46
+      213: 3890246791860278582
+    second: Robot_Rouge_Sheet_46
   - first:
-      213: 5129691285982296524
-    second: Buzz_Sheet_47
+      213: 6966717072942372935
+    second: Robot_Rouge_Sheet_47
   - first:
-      213: -6103805251945888397
-    second: Buzz_Sheet_48
+      213: 4493783893560006955
+    second: Robot_Rouge_Sheet_48
   - first:
-      213: -5852702059089718126
-    second: Buzz_Sheet_49
+      213: -4245349590245314059
+    second: Robot_Rouge_Sheet_49
   - first:
-      213: 6447790375024030644
-    second: Buzz_Sheet_50
+      213: -5527134441158415508
+    second: Robot_Rouge_Sheet_50
   - first:
-      213: 3287065305304628165
-    second: Buzz_Sheet_51
+      213: -7361668240467182591
+    second: Robot_Rouge_Sheet_51
   - first:
-      213: -8885405663430052468
-    second: Buzz_Sheet_52
+      213: -1452136405730907878
+    second: Robot_Rouge_Sheet_52
   - first:
-      213: 6891319949711050710
-    second: Buzz_Sheet_53
+      213: 8426681327098036627
+    second: Robot_Rouge_Sheet_53
   - first:
-      213: 4609762806695182026
-    second: Buzz_Sheet_54
+      213: -7154815158531385885
+    second: Robot_Rouge_Sheet_54
   - first:
-      213: 2041325789884327177
-    second: Buzz_Sheet_55
+      213: -9214630492420096535
+    second: Robot_Rouge_Sheet_55
   - first:
-      213: -2904564656831039752
-    second: Buzz_Sheet_56
+      213: -7058907881774813342
+    second: Robot_Rouge_Sheet_56
   - first:
-      213: -4767817545331237304
-    second: Buzz_Sheet_57
+      213: 5638117292888284705
+    second: Robot_Rouge_Sheet_57
   - first:
-      213: 6289811114677612160
-    second: Buzz_Sheet_58
+      213: 1106124108964848751
+    second: Robot_Rouge_Sheet_58
   - first:
-      213: -3921926592757303749
-    second: Buzz_Sheet_59
+      213: -2660133299466844100
+    second: Robot_Rouge_Sheet_59
   - first:
-      213: 8850151394541575758
-    second: Buzz_Sheet_60
+      213: 9030864644776756939
+    second: Robot_Rouge_Sheet_60
   - first:
-      213: 4278255258057079087
-    second: Buzz_Sheet_61
+      213: 3232166194019005652
+    second: Robot_Rouge_Sheet_61
   - first:
-      213: 9089326787557246657
-    second: Buzz_Sheet_62
+      213: -2001830295759564796
+    second: Robot_Rouge_Sheet_62
   - first:
-      213: 2450300052080930605
-    second: Buzz_Sheet_63
+      213: 8170964994739460119
+    second: Robot_Rouge_Sheet_63
   - first:
-      213: 851837852394638412
-    second: Buzz_Sheet_64
+      213: -8161952296247207191
+    second: Robot_Rouge_Sheet_64
+  - first:
+      213: -6234711792766627219
+    second: Robot_Rouge_Sheet_65
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -318,1431 +321,1453 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Buzz_Sheet_0
+      name: Robot_Rouge_Sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2048
-        width: 512
-        height: 512
+        x: 122
+        y: 2623
+        width: 255
+        height: 345
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a099d7377677c624d900b1f15b4eea34
-      internalID: -783539911
+      spriteID: 612d1a9f524ed5a90800000000000000
+      internalID: -7323446567281503722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_1
+      name: Robot_Rouge_Sheet_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 2048
-        width: 512
-        height: 512
+        x: 659
+        y: 2625
+        width: 221
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6c447812f4da7ff47b2a2370f5f4b5e9
-      internalID: 1824685677
+      spriteID: e0e55a285f25b8ad0800000000000000
+      internalID: -2698972337266139634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_2
+      name: Robot_Rouge_Sheet_2
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 2048
-        width: 512
-        height: 512
+        x: 1169
+        y: 2624
+        width: 205
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ba95e88377abfb743aa49a186a48d313
-      internalID: -1390967495
+      spriteID: 4e391a70eb3de97a0800000000000000
+      internalID: -6368420009930026012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_3
+      name: Robot_Rouge_Sheet_3
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 2048
-        width: 512
-        height: 512
+        x: 1684
+        y: 2622
+        width: 181
+        height: 331
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0b5691c5ef0cfa9468a101ba3736f921
-      internalID: -1060597501
+      spriteID: cff19befc21f54030800000000000000
+      internalID: 3478451462767976444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_4
+      name: Robot_Rouge_Sheet_4
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 2048
-        width: 512
-        height: 512
+        x: 2196
+        y: 2623
+        width: 209
+        height: 333
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dabb7e4dec29f2248a2e44830db5521a
-      internalID: 1740343047
+      spriteID: 9eae2a9640b8d8880800000000000000
+      internalID: -8607070461766735127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_5
+      name: Robot_Rouge_Sheet_5
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 2048
-        width: 512
-        height: 512
+        x: 2707
+        y: 2644
+        width: 230
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 97ac70ea81c8dc143937a3baf7f18aaa
-      internalID: 83242109
+      spriteID: 0108f7c6cec8888a0800000000000000
+      internalID: -6302632731444543472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_6
+      name: Robot_Rouge_Sheet_6
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 2048
-        width: 512
-        height: 512
+        x: 3195
+        y: 2623
+        width: 252
+        height: 345
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3325596a0c25a4b4f8992c21ab901a7c
-      internalID: -345502930
+      spriteID: e1230bb6b47ad2090800000000000000
+      internalID: -8057600215924854242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_7
+      name: Robot_Rouge_Sheet_7
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 2048
-        width: 512
-        height: 512
+        x: 3733
+        y: 2625
+        width: 217
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 61bbf5de357dcbd4294f43bb8bc90147
-      internalID: 658607751
+      spriteID: b70c9bfd7987f7d60800000000000000
+      internalID: 7890157665865285755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_8
+      name: Robot_Rouge_Sheet_8
       rect:
         serializedVersion: 2
-        x: 4096
-        y: 2048
-        width: 512
-        height: 512
+        x: 4243
+        y: 2624
+        width: 201
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3d58f92a125a72343a5d2e025901ef97
-      internalID: -162833524
+      spriteID: 10704e69ff8d168c0800000000000000
+      internalID: -4007683601123244287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_9
+      name: Robot_Rouge_Sheet_9
       rect:
         serializedVersion: 2
-        x: 4608
-        y: 2048
-        width: 512
-        height: 512
+        x: 4754
+        y: 2622
+        width: 186
+        height: 331
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ce5965fa02917244ebc6a815e149363d
-      internalID: -1726563724
+      spriteID: 74455d6cb3e009340800000000000000
+      internalID: 4868406847089235015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_10
+      name: Robot_Rouge_Sheet_10
       rect:
         serializedVersion: 2
-        x: 5120
-        y: 2048
-        width: 512
-        height: 512
+        x: 5266
+        y: 2623
+        width: 213
+        height: 333
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4ab53d8fcfa4c0642b3a6caa49831021
-      internalID: -47641242
+      spriteID: b6ee0731f134a9df0800000000000000
+      internalID: -172751834951127445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_11
+      name: Robot_Rouge_Sheet_11
       rect:
         serializedVersion: 2
-        x: 5632
-        y: 2048
-        width: 512
-        height: 512
+        x: 5778
+        y: 2644
+        width: 231
+        height: 317
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 525057db7b814db438771b02f6a3f0ea
-      internalID: -1078353834
+      spriteID: 89c9b11d13b8875c0800000000000000
+      internalID: -4217468004954563432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_12
+      name: Robot_Rouge_Sheet_12
       rect:
         serializedVersion: 2
-        x: 6144
-        y: 2048
-        width: 512
-        height: 512
+        x: 6266
+        y: 2623
+        width: 255
+        height: 345
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9764ba7bf58cf254d82246a252f78f89
-      internalID: 347083926
+      spriteID: 079429da1eb8a12a0800000000000000
+      internalID: -6765941688774801040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_13
+      name: Robot_Rouge_Sheet_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1536
-        width: 512
-        height: 512
+        x: 156
+        y: 2107
+        width: 184
+        height: 348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 17ff5b2cac0a91a419ba5c61786a1cc0
-      internalID: -1201185195
+      spriteID: f7e676f2ac5a0b710800000000000000
+      internalID: 1707046546570702463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_14
+      name: Robot_Rouge_Sheet_14
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1536
-        width: 512
-        height: 512
+        x: 665
+        y: 2107
+        width: 187
+        height: 348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a78ab26acf8284e4c9531e45035e4bc7
-      internalID: -1134909742
+      spriteID: 43c0070f87f5c5f60800000000000000
+      internalID: 8024393609101970484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_15
+      name: Robot_Rouge_Sheet_15
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1536
-        width: 512
-        height: 512
+        x: 1177
+        y: 2107
+        width: 187
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2771a41a71d1ec849b7abb0695912ef4
-      internalID: 994049625
+      spriteID: acd5fc6f1db640e60800000000000000
+      internalID: 7927579793612037578
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_16
+      name: Robot_Rouge_Sheet_16
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1536
-        width: 512
-        height: 512
+        x: 1694
+        y: 2107
+        width: 183
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fe10d5e8136647049af1138fe865adf3
-      internalID: -549302039
+      spriteID: 70a5ba89b4e902c40800000000000000
+      internalID: 5485558393658366471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_17
+      name: Robot_Rouge_Sheet_17
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1536
-        width: 512
-        height: 512
+        x: 2214
+        y: 2107
+        width: 176
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6d50527660a356749a50db05ba3a315a
-      internalID: -1166225098
+      spriteID: 08c23ccdaa2b7a670800000000000000
+      internalID: 8549998864504138880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_18
+      name: Robot_Rouge_Sheet_18
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 1536
-        width: 512
-        height: 512
+        x: 2725
+        y: 2107
+        width: 177
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c8d3e36bd5277264aae8a3c1f6491ca7
-      internalID: -559278636
+      spriteID: bd4bc0bd15ffbe880800000000000000
+      internalID: -8580483937991871269
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_19
+      name: Robot_Rouge_Sheet_19
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 1536
-        width: 512
-        height: 512
+        x: 3230
+        y: 2107
+        width: 184
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1d7e35a84c0d1f4439ee15f8913488bd
-      internalID: 813832199
+      spriteID: ced67836999ea33c0800000000000000
+      internalID: -4378930842655298068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_20
+      name: Robot_Rouge_Sheet_20
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 1536
-        width: 512
-        height: 512
+        x: 3739
+        y: 2107
+        width: 187
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 33c7b6cf1788a3e4981363020aff15d3
-      internalID: 1621895515
+      spriteID: eda65dc17f7670db0800000000000000
+      internalID: -4825774164665865506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_21
+      name: Robot_Rouge_Sheet_21
       rect:
         serializedVersion: 2
-        x: 4096
-        y: 1536
-        width: 512
-        height: 512
+        x: 4251
+        y: 2107
+        width: 187
+        height: 346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e247d8209efaafd4c9e44c2d55df6186
-      internalID: -529955786
+      spriteID: 88dd01e5868730750800000000000000
+      internalID: 6269987495879957896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_22
+      name: Robot_Rouge_Sheet_22
       rect:
         serializedVersion: 2
-        x: 4608
-        y: 1536
-        width: 512
-        height: 512
+        x: 4766
+        y: 2107
+        width: 183
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2bf54b1366e747141a239f3b0b776cc3
-      internalID: 1594059529
+      spriteID: 3b3c8fc76dfd15650800000000000000
+      internalID: 6219998672688038835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_23
+      name: Robot_Rouge_Sheet_23
       rect:
         serializedVersion: 2
-        x: 5120
-        y: 1536
-        width: 512
-        height: 512
+        x: 5285
+        y: 2107
+        width: 175
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d63f70a7dbf2bbb4e88735fe6793f328
-      internalID: -396683052
+      spriteID: c729a1553a2535700800000000000000
+      internalID: 527856442793431676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_24
+      name: Robot_Rouge_Sheet_24
       rect:
         serializedVersion: 2
-        x: 5632
-        y: 1536
-        width: 512
-        height: 512
+        x: 5796
+        y: 2107
+        width: 176
+        height: 348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 091f3d96e17fce64c8ae4ff00fc581f9
-      internalID: -30524734
+      spriteID: b302d3971d8af4bd0800000000000000
+      internalID: -2643708838607511493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_25
+      name: Robot_Rouge_Sheet_25
       rect:
         serializedVersion: 2
-        x: 6144
-        y: 1536
-        width: 512
-        height: 512
+        x: 6300
+        y: 2107
+        width: 184
+        height: 348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e2fc1ee6ef9c5bf4b83768329571a907
-      internalID: 860580862
+      spriteID: ebb35e56a4126aee0800000000000000
+      internalID: -1250275243127915586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_26
+      name: Robot_Rouge_Sheet_26
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1024
-        width: 512
-        height: 512
+        x: 162
+        y: 1595
+        width: 201
+        height: 327
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5327aa90abd94884e93ba515826273e7
-      internalID: 124461941
+      spriteID: 3c368db473187f260800000000000000
+      internalID: 7131310609460126659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_27
+      name: Robot_Rouge_Sheet_27
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 512
+        x: 679
+        y: 1622
+        width: 192
+        height: 338
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 458f2405cb3b70142b2a5581fa5d6f47
-      internalID: 1316313485
+      spriteID: 65456116b3f60f770800000000000000
+      internalID: 8642529985746588758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_28
+      name: Robot_Rouge_Sheet_28
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
-        width: 512
-        height: 512
+        x: 1195
+        y: 1642
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f1f54666c3742464c93aaa362362bd2b
-      internalID: 1223520705
+      spriteID: 36bf36bbdff072c50800000000000000
+      internalID: 6640293758026120035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_29
+      name: Robot_Rouge_Sheet_29
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1024
-        width: 512
-        height: 512
+        x: 1705
+        y: 1638
+        width: 179
+        height: 361
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3056e66673492ac458f987c1f18ba293
-      internalID: 1691846990
+      spriteID: 3909fab1ed08f46b0800000000000000
+      internalID: -5309883744210939757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_30
+      name: Robot_Rouge_Sheet_30
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 512
-        height: 512
+        x: 2212
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ed71d58540aba1e498cb78bd0aeae64a
-      internalID: -1008010089
+      spriteID: 1a48500d178c2f0d0800000000000000
+      internalID: -3390427178309679967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_31
+      name: Robot_Rouge_Sheet_31
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 1024
-        width: 512
-        height: 512
+        x: 2724
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a92a4f03a63ceab4495edc2032835c68
-      internalID: -952161921
+      spriteID: c81a56d27a319c1a0800000000000000
+      internalID: -6788873354542210676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_32
+      name: Robot_Rouge_Sheet_32
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 1024
-        width: 512
-        height: 512
+        x: 3236
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6e2fe1aa96ab4144bae49aae0084902e
-      internalID: 1173291120
+      spriteID: c3c74cdf56be41940800000000000000
+      internalID: 5266092687584689212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_33
+      name: Robot_Rouge_Sheet_33
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 1024
-        width: 512
-        height: 512
+        x: 3748
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ce14e9270bc760549905b285f30a6000
-      internalID: 403931710
+      spriteID: c5633bdba964f5560800000000000000
+      internalID: 7304634751039780444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_34
+      name: Robot_Rouge_Sheet_34
       rect:
         serializedVersion: 2
-        x: 4096
-        y: 1024
-        width: 512
-        height: 512
+        x: 4260
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f6c698b9b570efb44b00c1473914d213
-      internalID: -1057111505
+      spriteID: df8f529af3c0ded30800000000000000
+      internalID: 4462236273354340605
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_35
+      name: Robot_Rouge_Sheet_35
       rect:
         serializedVersion: 2
-        x: 4608
-        y: 1024
-        width: 512
-        height: 512
+        x: 4772
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0d652a16890cbf145a66b04d9c16216b
-      internalID: 824008224
+      spriteID: bfda5aabddeec2d10800000000000000
+      internalID: 2102317762161782267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_36
+      name: Robot_Rouge_Sheet_36
       rect:
         serializedVersion: 2
-        x: 5120
-        y: 1024
-        width: 512
-        height: 512
+        x: 5284
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 44980ee20dc24774cac4a5cfab0309e6
-      internalID: 487687202
+      spriteID: 464cd6460135dd4e0800000000000000
+      internalID: -1955315333339429788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_37
+      name: Robot_Rouge_Sheet_37
       rect:
         serializedVersion: 2
-        x: 5632
-        y: 1024
-        width: 512
-        height: 512
+        x: 5796
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c62c5d4eb2165fa4d8bd98fb3a955774
-      internalID: -1332515187
+      spriteID: 70e3dd3c24b7cc250800000000000000
+      internalID: 5966279133043179015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_38
+      name: Robot_Rouge_Sheet_38
       rect:
         serializedVersion: 2
-        x: 6144
-        y: 1024
-        width: 512
-        height: 512
+        x: 6308
+        y: 1639
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 67d17d53ce2bbe240afb1aa6bb5fcf78
-      internalID: 2039895161
+      spriteID: 7e70cab2a9b4f07c0800000000000000
+      internalID: -4102977609981491225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_39
+      name: Robot_Rouge_Sheet_39
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
+        x: 164
+        y: 1127
+        width: 183
+        height: 357
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1455b17d0870a8d4dbfc19c7e5478256
-      internalID: 585288346
+      spriteID: fbcb7eb4da5533430800000000000000
+      internalID: 3761444316575677631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_40
+      name: Robot_Rouge_Sheet_40
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
+        x: 674
+        y: 1128
+        width: 186
+        height: 360
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 810f158c6db016d4bbc44fdd1d11a599
-      internalID: 483449496
+      spriteID: 5d578a61723afac10800000000000000
+      internalID: 2067050142265538005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_41
+      name: Robot_Rouge_Sheet_41
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
+        x: 1184
+        y: 1132
+        width: 191
+        height: 359
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a09a95747df20d04d8dc8c879000c543
-      internalID: 1811407269
+      spriteID: e934c6f70aa3ecbd0800000000000000
+      internalID: -2608082673193958498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_42
+      name: Robot_Rouge_Sheet_42
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
+        x: 1687
+        y: 1129
+        width: 216
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bb4039318773dda4b9094118bc4406a9
-      internalID: 205327371
+      spriteID: 3e42608e47f376690800000000000000
+      internalID: -7609043274077690653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_43
+      name: Robot_Rouge_Sheet_43
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 512
-        height: 512
+        x: 2197
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 57f09d06870c88c4ea244a1d241ba811
-      internalID: -312264355
+      spriteID: 13b386558885a4070800000000000000
+      internalID: 8091377023096208177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_44
+      name: Robot_Rouge_Sheet_44
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 512
-        width: 512
-        height: 512
+        x: 2709
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 801c9c348b742be4599cadbb40b4dc51
-      internalID: -739909691
+      spriteID: c7d1b404248d19440800000000000000
+      internalID: 4940968045260250492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_45
+      name: Robot_Rouge_Sheet_45
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 512
-        width: 512
-        height: 512
+        x: 3221
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 22427acf219be9b4493bd532d961c555
-      internalID: 780575729
+      spriteID: 6dbb6f6f2fc6acd80800000000000000
+      internalID: -8229645578284909610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_46
+      name: Robot_Rouge_Sheet_46
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 512
-        width: 512
-        height: 512
+        x: 3733
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: af35c53460796444a8bda008a499308e
-      internalID: -1200253540
+      spriteID: 6355f6588deecf530800000000000000
+      internalID: 3890246791860278582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_47
+      name: Robot_Rouge_Sheet_47
       rect:
         serializedVersion: 2
-        x: 4096
-        y: 512
-        width: 512
-        height: 512
+        x: 4245
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 12e25f8c1757e0d48b36edbebbf70e9a
-      internalID: 341310399
+      spriteID: 748116f3440cea060800000000000000
+      internalID: 6966717072942372935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_48
+      name: Robot_Rouge_Sheet_48
       rect:
         serializedVersion: 2
-        x: 4608
-        y: 512
-        width: 512
-        height: 512
+        x: 4757
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 81b5845a0f073494c9642a0b49d6d90e
-      internalID: 601976496
+      spriteID: b29140164a02d5e30800000000000000
+      internalID: 4493783893560006955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_49
+      name: Robot_Rouge_Sheet_49
       rect:
         serializedVersion: 2
-        x: 5120
-        y: 512
-        width: 512
-        height: 512
+        x: 5269
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 035a028907ae4ac4c9604a9628376dea
-      internalID: 1600271214
+      spriteID: 5f1f31e5a0d7515c0800000000000000
+      internalID: -4245349590245314059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_50
+      name: Robot_Rouge_Sheet_50
       rect:
         serializedVersion: 2
-        x: 5632
-        y: 512
-        width: 512
-        height: 512
+        x: 5781
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 98f8daaa5baef6c41af7d3cda095eafb
-      internalID: 177092199
+      spriteID: c6bece0828cab43b0800000000000000
+      internalID: -5527134441158415508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_51
+      name: Robot_Rouge_Sheet_51
       rect:
         serializedVersion: 2
-        x: 6144
-        y: 512
-        width: 512
-        height: 512
+        x: 6293
+        y: 1127
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6ca5a1e5babe3f74ea8d198a6d7f89ee
-      internalID: 1891882069
+      spriteID: 10cbda43db916d990800000000000000
+      internalID: -7361668240467182591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_52
+      name: Robot_Rouge_Sheet_52
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
+        x: 149
+        y: 615
+        width: 227
+        height: 364
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 45578b884594d9947a57ac06b240d7be
-      internalID: 595799968
+      spriteID: a192ffaf1a9f8dbe0800000000000000
+      internalID: -1452136405730907878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_53
+      name: Robot_Rouge_Sheet_53
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
-        width: 512
-        height: 512
+        x: 690
+        y: 583
+        width: 214
+        height: 336
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 41eceadbfcdd5964db285b7ddbaba769
-      internalID: 1827416695
+      spriteID: 3918811450691f470800000000000000
+      internalID: 8426681327098036627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_54
+      name: Robot_Rouge_Sheet_54
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
+        x: 1207
+        y: 571
+        width: 222
+        height: 274
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b8d43b0c188fe224ea8c4699d3013c02
-      internalID: 1435833861
+      spriteID: 3e5182a658df4bc90800000000000000
+      internalID: -7154815158531385885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_55
+      name: Robot_Rouge_Sheet_55
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 512
-        height: 512
+        x: 1713
+        y: 568
+        width: 218
+        height: 291
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c897a502459ff5b4cb737490a2d1a6fe
-      internalID: -1741200082
+      spriteID: 9ed31da636e0f1080800000000000000
+      internalID: -9214630492420096535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_56
+      name: Robot_Rouge_Sheet_56
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 512
-        height: 512
+        x: 2215
+        y: 569
+        width: 205
+        height: 319
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a59fa0d79a9e4164587768a4ff0ed0b8
-      internalID: 1667026509
+      spriteID: 26f6b946ea8b90e90800000000000000
+      internalID: -7058907881774813342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_57
+      name: Robot_Rouge_Sheet_57
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 0
-        width: 512
-        height: 512
+        x: 2719
+        y: 570
+        width: 188
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9588c89ddb1a5594f83c5dfea3dde025
-      internalID: -1509907119
+      spriteID: 12ed79c4ecd9e3e40800000000000000
+      internalID: 5638117292888284705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_58
+      name: Robot_Rouge_Sheet_58
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 512
-        height: 512
+        x: 3229
+        y: 571
+        width: 184
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 77877b0c77f5de1438ed008bdcaccda8
-      internalID: -1900449970
+      spriteID: f646850440eb95f00800000000000000
+      internalID: 1106124108964848751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_59
+      name: Robot_Rouge_Sheet_59
       rect:
         serializedVersion: 2
-        x: 3584
-        y: 0
-        width: 512
-        height: 512
+        x: 3741
+        y: 571
+        width: 184
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c5923d8b373b74f4fba1fe97924c1ca3
-      internalID: 1502149205
+      spriteID: c38471eabde451bd0800000000000000
+      internalID: -2660133299466844100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_60
+      name: Robot_Rouge_Sheet_60
       rect:
         serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 512
-        height: 512
+        x: 4253
+        y: 571
+        width: 184
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b64ec85ce0578794093f264ea4f3fe47
-      internalID: -606490733
+      spriteID: bc68d8efb83145d70800000000000000
+      internalID: 9030864644776756939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_61
+      name: Robot_Rouge_Sheet_61
       rect:
         serializedVersion: 2
-        x: 4608
-        y: 0
-        width: 512
-        height: 512
+        x: 4765
+        y: 571
+        width: 184
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5b10f860089c31a469f5c255a1e8a858
-      internalID: -2037656587
+      spriteID: 4d477895706fadc20800000000000000
+      internalID: 3232166194019005652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_62
+      name: Robot_Rouge_Sheet_62
       rect:
         serializedVersion: 2
-        x: 5120
-        y: 0
-        width: 512
-        height: 512
+        x: 5277
+        y: 571
+        width: 184
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: be3f3dcd6fc8ab84bb71467341a11ecb
-      internalID: 1542119154
+      spriteID: 400d2a0c3f11834e0800000000000000
+      internalID: -2001830295759564796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_63
+      name: Robot_Rouge_Sheet_63
       rect:
         serializedVersion: 2
-        x: 5632
-        y: 0
-        width: 512
-        height: 512
+        x: 5789
+        y: 571
+        width: 184
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f440346d2dc51e2439109d165a103f1f
-      internalID: -2121915885
+      spriteID: 718d89ffe59156170800000000000000
+      internalID: 8170964994739460119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buzz_Sheet_64
+      name: Robot_Rouge_Sheet_64
       rect:
         serializedVersion: 2
-        x: 6144
-        y: 0
-        width: 512
-        height: 512
+        x: 6301
+        y: 571
+        width: 184
+        height: 347
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 94fb27afe12f31645924453c69f19f4d
-      internalID: -1045050268
+      spriteID: 9ea508461abeabe80800000000000000
+      internalID: -8161952296247207191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 57
+        width: 263
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62d43b48aad979a0800000000000000
+      internalID: -6234711792766627219
       vertices: []
       indices: 
       edges: []
@@ -1751,7 +1776,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d15dce5ae88e87c44b5a216ddc55e330
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -1761,71 +1786,72 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Buzz_Sheet_0: -783539911
-      Buzz_Sheet_1: 1824685677
-      Buzz_Sheet_10: -47641242
-      Buzz_Sheet_11: -1078353834
-      Buzz_Sheet_12: 347083926
-      Buzz_Sheet_13: -1201185195
-      Buzz_Sheet_14: -1134909742
-      Buzz_Sheet_15: 994049625
-      Buzz_Sheet_16: -549302039
-      Buzz_Sheet_17: -1166225098
-      Buzz_Sheet_18: -559278636
-      Buzz_Sheet_19: 813832199
-      Buzz_Sheet_2: -1390967495
-      Buzz_Sheet_20: 1621895515
-      Buzz_Sheet_21: -529955786
-      Buzz_Sheet_22: 1594059529
-      Buzz_Sheet_23: -396683052
-      Buzz_Sheet_24: -30524734
-      Buzz_Sheet_25: 860580862
-      Buzz_Sheet_26: 124461941
-      Buzz_Sheet_27: 1316313485
-      Buzz_Sheet_28: 1223520705
-      Buzz_Sheet_29: 1691846990
-      Buzz_Sheet_3: -1060597501
-      Buzz_Sheet_30: -1008010089
-      Buzz_Sheet_31: -952161921
-      Buzz_Sheet_32: 1173291120
-      Buzz_Sheet_33: 403931710
-      Buzz_Sheet_34: -1057111505
-      Buzz_Sheet_35: 824008224
-      Buzz_Sheet_36: 487687202
-      Buzz_Sheet_37: -1332515187
-      Buzz_Sheet_38: 2039895161
-      Buzz_Sheet_39: 585288346
-      Buzz_Sheet_4: 1740343047
-      Buzz_Sheet_40: 483449496
-      Buzz_Sheet_41: 1811407269
-      Buzz_Sheet_42: 205327371
-      Buzz_Sheet_43: -312264355
-      Buzz_Sheet_44: -739909691
-      Buzz_Sheet_45: 780575729
-      Buzz_Sheet_46: -1200253540
-      Buzz_Sheet_47: 341310399
-      Buzz_Sheet_48: 601976496
-      Buzz_Sheet_49: 1600271214
-      Buzz_Sheet_5: 83242109
-      Buzz_Sheet_50: 177092199
-      Buzz_Sheet_51: 1891882069
-      Buzz_Sheet_52: 595799968
-      Buzz_Sheet_53: 1827416695
-      Buzz_Sheet_54: 1435833861
-      Buzz_Sheet_55: -1741200082
-      Buzz_Sheet_56: 1667026509
-      Buzz_Sheet_57: -1509907119
-      Buzz_Sheet_58: -1900449970
-      Buzz_Sheet_59: 1502149205
-      Buzz_Sheet_6: -345502930
-      Buzz_Sheet_60: -606490733
-      Buzz_Sheet_61: -2037656587
-      Buzz_Sheet_62: 1542119154
-      Buzz_Sheet_63: -2121915885
-      Buzz_Sheet_64: -1045050268
-      Buzz_Sheet_7: 658607751
-      Buzz_Sheet_8: -162833524
-      Buzz_Sheet_9: -1726563724
+      Robot_Rouge_Sheet_0: -7323446567281503722
+      Robot_Rouge_Sheet_1: -2698972337266139634
+      Robot_Rouge_Sheet_10: -172751834951127445
+      Robot_Rouge_Sheet_11: -4217468004954563432
+      Robot_Rouge_Sheet_12: -6765941688774801040
+      Robot_Rouge_Sheet_13: 1707046546570702463
+      Robot_Rouge_Sheet_14: 8024393609101970484
+      Robot_Rouge_Sheet_15: 7927579793612037578
+      Robot_Rouge_Sheet_16: 5485558393658366471
+      Robot_Rouge_Sheet_17: 8549998864504138880
+      Robot_Rouge_Sheet_18: -8580483937991871269
+      Robot_Rouge_Sheet_19: -4378930842655298068
+      Robot_Rouge_Sheet_2: -6368420009930026012
+      Robot_Rouge_Sheet_20: -4825774164665865506
+      Robot_Rouge_Sheet_21: 6269987495879957896
+      Robot_Rouge_Sheet_22: 6219998672688038835
+      Robot_Rouge_Sheet_23: 527856442793431676
+      Robot_Rouge_Sheet_24: -2643708838607511493
+      Robot_Rouge_Sheet_25: -1250275243127915586
+      Robot_Rouge_Sheet_26: 7131310609460126659
+      Robot_Rouge_Sheet_27: 8642529985746588758
+      Robot_Rouge_Sheet_28: 6640293758026120035
+      Robot_Rouge_Sheet_29: -5309883744210939757
+      Robot_Rouge_Sheet_3: 3478451462767976444
+      Robot_Rouge_Sheet_30: -3390427178309679967
+      Robot_Rouge_Sheet_31: -6788873354542210676
+      Robot_Rouge_Sheet_32: 5266092687584689212
+      Robot_Rouge_Sheet_33: 7304634751039780444
+      Robot_Rouge_Sheet_34: 4462236273354340605
+      Robot_Rouge_Sheet_35: 2102317762161782267
+      Robot_Rouge_Sheet_36: -1955315333339429788
+      Robot_Rouge_Sheet_37: 5966279133043179015
+      Robot_Rouge_Sheet_38: -4102977609981491225
+      Robot_Rouge_Sheet_39: 3761444316575677631
+      Robot_Rouge_Sheet_4: -8607070461766735127
+      Robot_Rouge_Sheet_40: 2067050142265538005
+      Robot_Rouge_Sheet_41: -2608082673193958498
+      Robot_Rouge_Sheet_42: -7609043274077690653
+      Robot_Rouge_Sheet_43: 8091377023096208177
+      Robot_Rouge_Sheet_44: 4940968045260250492
+      Robot_Rouge_Sheet_45: -8229645578284909610
+      Robot_Rouge_Sheet_46: 3890246791860278582
+      Robot_Rouge_Sheet_47: 6966717072942372935
+      Robot_Rouge_Sheet_48: 4493783893560006955
+      Robot_Rouge_Sheet_49: -4245349590245314059
+      Robot_Rouge_Sheet_5: -6302632731444543472
+      Robot_Rouge_Sheet_50: -5527134441158415508
+      Robot_Rouge_Sheet_51: -7361668240467182591
+      Robot_Rouge_Sheet_52: -1452136405730907878
+      Robot_Rouge_Sheet_53: 8426681327098036627
+      Robot_Rouge_Sheet_54: -7154815158531385885
+      Robot_Rouge_Sheet_55: -9214630492420096535
+      Robot_Rouge_Sheet_56: -7058907881774813342
+      Robot_Rouge_Sheet_57: 5638117292888284705
+      Robot_Rouge_Sheet_58: 1106124108964848751
+      Robot_Rouge_Sheet_59: -2660133299466844100
+      Robot_Rouge_Sheet_6: -8057600215924854242
+      Robot_Rouge_Sheet_60: 9030864644776756939
+      Robot_Rouge_Sheet_61: 3232166194019005652
+      Robot_Rouge_Sheet_62: -2001830295759564796
+      Robot_Rouge_Sheet_63: 8170964994739460119
+      Robot_Rouge_Sheet_64: -8161952296247207191
+      Robot_Rouge_Sheet_65: -6234711792766627219
+      Robot_Rouge_Sheet_7: 7890157665865285755
+      Robot_Rouge_Sheet_8: -4007683601123244287
+      Robot_Rouge_Sheet_9: 4868406847089235015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

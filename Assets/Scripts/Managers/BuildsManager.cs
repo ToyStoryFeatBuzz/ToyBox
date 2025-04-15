@@ -40,9 +40,9 @@ namespace ToyBox.Managers
             }
         }
 
-        public void AddObject(BuildObject build) {
+        public void AddObject(BuildObject build) { // Called when player placed an object
             
-            if (build.DoErase)
+            if (build.DoErase) // Bombes that delete overed objects
             {
                 for (int i = 0; i < Objects.Count; i++)
                 {
@@ -67,21 +67,21 @@ namespace ToyBox.Managers
 
                 Destroy(build.gameObject);
             }
-            else
+            else // Place object on map
             {
                 build.Place(true);
                 Objects.Add(build);
                 ObjectPlaced.Invoke();
             }
 
-            if (_playerManager.DoesAllPlayersFinishedBuilding())
+            if (_playerManager.DoesAllPlayersFinishedBuilding()) // Start Race countdown if all players placed their objects
             {
                 GameModeManager.Instance.StartCountDown(3.5f);
             }
 
         }
 
-        public void Shuffle(int amount)
+        public void Shuffle(int amount) // Create and place items in the choosing box
         {
             if (_turnNumber <= 10)
             {
@@ -117,10 +117,10 @@ namespace ToyBox.Managers
             }
         }
 
-        public void ObjectPicked()
+        public void ObjectPicked() // Called when a player picked an object
         {
             _picked++;
-            if (_picked == _playerManager.Players.Count)
+            if (_picked == _playerManager.Players.Count) // Close choosing box when everyone has picked
             {
                 ChooseBox.Instance.gameObject.SetActive(false);
 
@@ -139,7 +139,7 @@ namespace ToyBox.Managers
 
             _picked = 0;
 
-            foreach (BuildObject buildObject in _objectsList.Where(b => !b.IsChosen)) {
+            foreach (BuildObject buildObject in _objectsList.Where(b => !b.IsChosen)) { // Destroy non-picked objects
                 Destroy(buildObject.gameObject);
             }
 
@@ -148,7 +148,7 @@ namespace ToyBox.Managers
             selecting = false;
         }
 
-        public bool CanPlace(BuildObject testedBuild) {
+        public bool CanPlace(BuildObject testedBuild) { // Tells if testedBuild can be placed and does not collid with already placed objects
             return !(from build in Objects from offset in build.Offsets where testedBuild.ContainsPos((Vector2)build.transform.position + offset) select build).Any();
         }
     }

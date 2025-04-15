@@ -103,7 +103,7 @@ namespace ToyBox.Build {
             }
         }
 
-        public void Rotate(float angle)
+        public void Rotate(float angle) // Rotate object and spread to offsets
         {
             if (!draggedObject) return;
             draggedObject.transform.eulerAngles = new(0, 0, draggedObject.transform.eulerAngles.z + angle);
@@ -113,15 +113,15 @@ namespace ToyBox.Build {
 
         private void Update()
         {
-            if (playerInputManager.GridMoveDir.magnitude > 0) playerMouse.Move(playerInputManager.GridMoveDir);
+            if (playerInputManager.GridMoveDir.magnitude > 0) playerMouse.Move(playerInputManager.GridMoveDir); // Apply Mouse/Joystick movements to cursor
 
             mousePos = playerMouse.Click();
 
             if (draggedObject == null) return;
 
-            Vector2 targetPos = mousePos + (Vector2.one * snapInterval / 2f);
+            Vector2 targetPos = mousePos + (Vector2.one * snapInterval / 2f); 
 
-            if (doesSnap)
+            if (doesSnap) // Snap cursor to grid
             {
                 int x = Mathf.FloorToInt(targetPos.x / snapInterval);
                 int y = Mathf.FloorToInt(targetPos.y / snapInterval);
@@ -130,7 +130,7 @@ namespace ToyBox.Build {
 
             draggedObject.transform.position = targetPos;
 
-            if (lastDifferentPos != targetPos)
+            if (lastDifferentPos != targetPos) // If a movement is detected, refresh ability to place
             {
                 placeable = buildsManager.CanPlace(draggedObject.GetComponent<BuildObject>());
                 lastDifferentPos = targetPos;

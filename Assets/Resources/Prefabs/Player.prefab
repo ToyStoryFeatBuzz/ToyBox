@@ -611,10 +611,10 @@ MonoBehaviour:
   _acceleration: 200
   _deceleration: 10
   _maxSpeed: 20
-  _jumpForce: 10
+  _jumpForce: 13
   _maxJump: 2
   _remainJump: 2
-  _wallJumpVector: {x: 5, y: 1}
+  _wallJumpVector: {x: 3, y: 1.5}
   _canWallJumpOnSameWall: 1
   _gravity: 6
   _platformLayer:

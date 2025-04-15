@@ -6,8 +6,6 @@ using UnityEngine;
 namespace ToyBox.Managers {
     public class ScoreManager : MonoBehaviour
     {
-       //private PlayerManager playerManager;
-       //private PlayerStats playerStats;
        public Dictionary<string, int> PlayerScores;
        public static ScoreManager Instance;
        
@@ -22,8 +20,6 @@ namespace ToyBox.Managers {
 
        private void Start()
        {
-           //playerManager = GetComponent<PlayerManager>();
-           //playerStats = GetComponent<PlayerStats>();
            PlayerScores = new();
        }
 

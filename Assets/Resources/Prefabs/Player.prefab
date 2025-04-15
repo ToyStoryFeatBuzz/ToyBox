@@ -677,8 +677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b5e3ee8ecee6e469a77fca5dfab432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _doesSnap: 0
-  _snapInterval: 0
+  _doesSnap: 1
+  _snapInterval: 1
   _objectsPrefabs: []
 --- !u!114 &-5627916806147649405
 MonoBehaviour:

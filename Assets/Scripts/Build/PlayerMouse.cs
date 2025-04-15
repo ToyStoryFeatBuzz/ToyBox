@@ -14,12 +14,27 @@ namespace ToyBox.Build {
         [FormerlySerializedAs("mouseSensivity")] [SerializeField]
         float _mouseSensitivity;
 
+        float maxX;
+        float maxY;
+
+        Camera cam;
+
         private void Awake() {
             if (!_mouseBody)
                 _mouseBody = Instantiate(_mouseBodyPrefab);
             ResetMousePos();
             _mouseBody.position = _mousePos;
             ActivateMouse(false);
+            cam = Camera.main;
+            _mouseBody.parent = cam.transform;
+        }
+
+        private void SetMaxPos()
+        {
+            if (!cam) cam = Camera.main;
+
+            maxX = cam.orthographicSize * cam.aspect;
+            maxY = cam.orthographicSize;
         }
 
         private void ResetMousePos() {
@@ -27,8 +42,12 @@ namespace ToyBox.Build {
         }
 
         public void Move(Vector2 movement) {
+            SetMaxPos();
+
+            Vector2 camPos = cam.transform.position;
             _mousePos += movement * _mouseSensitivity;
-            _mouseBody.position = _mousePos;
+            _mousePos.Set(Mathf.Clamp(_mousePos.x, -maxX, maxX), Mathf.Clamp(_mousePos.y, -maxY, maxY));
+            _mouseBody.position = camPos + _mousePos;
         }
 
         public Vector2 Click() {

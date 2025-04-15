@@ -41,11 +41,12 @@ namespace ToyBox.Managers {
                 player.PlayerInput.enabled = activation;
             }
         }
-        
-        /*public bool DoesAllPlayersFinishedBuilding() {
+
+        public bool DoesAllPlayersFinishedBuilding()
+        {
             return Players.All(player => !player.PlayerObject.GetComponent<PlayerEdition>().IsPlacing());
-        }*/
-        
+        }
+
 
         public void AddPlayer(PlayerInput player) {
             string name = "Player " + (Players.Count + 1);

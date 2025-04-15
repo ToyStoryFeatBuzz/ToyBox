@@ -16,9 +16,6 @@ namespace ToyBox.InputSystem {
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
-                DontDestroyOnLoad(transform.root);
-            } else {
-                Destroy(gameObject);
             }
         }
 

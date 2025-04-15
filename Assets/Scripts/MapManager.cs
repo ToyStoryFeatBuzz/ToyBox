@@ -1,33 +1,32 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using ToyBox.Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MapManager : MonoBehaviour
 {
-    public List<Map> mapList = new();
+    public List<Map> MapList = new();
 
-    public PlayerManager playerManager;
+    PlayerManager _playerManager => PlayerManager.Instance;
 
-    public GameModeManager gameModeManager;
+    GameModeManager _gameModeManager => GameModeManager.Instance;
 
     private void Start()
     {
-        foreach (var map in mapList)
+        foreach (Map map in MapList)
         {
-            map.playerOnMapEvent.AddListener(MapTriggered);
+            map.OnPlayerOnMapEvent +=MapTriggered;
         }
     }
 
-    public void MapTriggered()
-    {
-        foreach (var map in mapList)
-        {
-            if(map.GetPlayersOn() > 0)
-            {
-                playerManager.SetNewPlayersEntries(false);
-                var op = SceneManager.LoadSceneAsync(map.sceneName);
+    public void MapTriggered() {
+        foreach (Map map in MapList.Where(map => map.GetPlayersOn() > 0)) {
+            _playerManager.SetNewPlayersEntries(false);
+            AsyncOperation op = SceneManager.LoadSceneAsync(map.SceneName);
+            if (op != null) {
                 op.completed += OnCompleted;
             }
         }
@@ -35,7 +34,7 @@ public class MapManager : MonoBehaviour
 
     private void OnCompleted(AsyncOperation operation)
     {
-        print("dfhkufh  "+ (gameModeManager != null));
-        gameModeManager.StartCountDown(3.5f);
+        print("GameManager is "+ (_gameModeManager != null));
+        _gameModeManager.StartCountDown(3.5f);
     }
 }

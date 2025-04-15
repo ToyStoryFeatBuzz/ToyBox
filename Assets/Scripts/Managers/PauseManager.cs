@@ -1,5 +1,4 @@
-﻿using System;
-using ToyBox.Menu;
+﻿using ToyBox.Menu;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
@@ -12,11 +11,12 @@ namespace ToyBox.Managers {
         
         public static PauseManager Instance { get; private set; }
         
-        [SerializeField] private MenuManager _menuManager;
+        private MenuManager _menuManager => MenuManager.Instance;
         
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                DontDestroyOnLoad(transform.root);
             } else {
                 Destroy(gameObject);
             }
@@ -27,6 +27,9 @@ namespace ToyBox.Managers {
         }
 
         void StartPause(Player pausedPlayer) {
+            if (!_menuManager) {
+                return;
+            }
             Time.timeScale = 0f;
             _playerManager.PlayerInputManager.enabled = false;
             foreach (Player player in _playerManager.Players) {

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bd6c2ccb3851e014ab68eb190d8bed04
+guid: 64c27f3e44faa8c45a27fc82ed3048fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9177771590594223754
-    second: Boutton_Croix_0
+      213: -5517322781559946619
+    second: Boutton_Croix_Blanc_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boutton_Croix_0
+      name: Boutton_Croix_Blanc_0
       rect:
         serializedVersion: 2
         x: 49
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 671a5f04d5102a080800000000000000
-      internalID: -9177771590594223754
+      spriteID: 58203f589288e63b0800000000000000
+      internalID: -5517322781559946619
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boutton_Croix_0: -9177771590594223754
+      Boutton_Croix_Blanc_0: -5517322781559946619
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,10 +6,8 @@ namespace ToyBox.Menu {
         public static SelectableManager Instance;
 
         public Selectable CurrentSelectable;
-        
-        public int SelectableHooveredCount;
 
-        public bool IsSelectableHoovered => SelectableHooveredCount > 0;
+        public bool IsHoovering;
         
         private void Awake() {
             if (Instance == null) {

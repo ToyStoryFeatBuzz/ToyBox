@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,7 +6,7 @@ public class MapPath : MonoBehaviour
 {
     public static MapPath Instance;
 
-
+    public float totalLength {  get; private set; }
 
     public List<Vector2> points = new List<Vector2>()
     {
@@ -18,7 +19,12 @@ public class MapPath : MonoBehaviour
         Instance = this;
     }
 
-    public float GetPlayerPositionOnPath(Transform obj)
+    private void Start()
+    {
+        totalLength = GetTotalLength();
+    }
+
+    public float GetPlayerPositionOnPath(Transform obj) // Get the progression from the start according to the Map Path
     {
         if (points.Count < 2) return 0f;
 
@@ -48,12 +54,29 @@ public class MapPath : MonoBehaviour
                 advancement += Vector2.SqrMagnitude(points[i - 1] - points[i]);
             }
         }
-        
 
         return advancement + progressOnEndLine;
     }
 
-    private Vector2 NearestPointOnFiniteLine(Vector2 start, Vector2 end, Vector2 pnt)
+    public float GetPlayerAdvancement(Transform obj) // Progression between 0 and 1 on the Map
+    {
+        float dist = GetPlayerPositionOnPath(obj);
+
+        return dist / totalLength;
+    }
+
+    private float GetTotalLength()
+    {
+        float total = 0f;
+        for (int i = 1; i < points.Count; i++)
+        {
+            total += Vector2.SqrMagnitude(points[i - 1] - points[i]);
+        }
+
+        return total;
+    }
+
+    private Vector2 NearestPointOnFiniteLine(Vector2 start, Vector2 end, Vector2 pnt) // Get a line and snap a position to it
     {
         var line = (end - start);
         var len = line.magnitude;

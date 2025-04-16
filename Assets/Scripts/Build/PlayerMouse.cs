@@ -29,6 +29,7 @@ namespace ToyBox.Build {
             _mouseBody.parent = cam.transform;
         }
 
+
         private void SetMaxPos()
         {
             if (!cam) cam = Camera.main;
@@ -36,6 +37,7 @@ namespace ToyBox.Build {
             maxX = cam.orthographicSize * cam.aspect;
             maxY = cam.orthographicSize;
         }
+
 
         private void ResetMousePos() {
             _mousePos = Camera.main.transform.position;

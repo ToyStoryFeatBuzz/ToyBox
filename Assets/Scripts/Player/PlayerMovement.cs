@@ -37,8 +37,11 @@ namespace ToyBox.Player
         
         EWallJumpDirection _wallJumpDirection = EWallJumpDirection.None;
         
-        bool _isGrounded;
-        bool _performGroundCheck;
+        public bool IsGrounded { get; private set; }
+        public bool CanWallJumpLeft { get; private set; }
+        public bool CanWallJumpRight { get; private set; }
+        
+        bool _performGroundCheck = true;
         PlayerInputSystem _inputSystem;
         Rigidbody2D _rb;
         private PlayerEnd _playerEnd;
@@ -69,27 +72,33 @@ namespace ToyBox.Player
 
             if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_platformLayer) && _performGroundCheck) // Ground check
             {
-                _isGrounded = true;
+                IsGrounded = true;
                 _remainJump = _maxJump;
                 _wallJumpDirection = EWallJumpDirection.None;
             }
             else
             {
-                _isGrounded = false;
+                IsGrounded = false;
             }
+
+            CanWallJumpLeft = Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
+                _platformLayer)&& !IsGrounded;
+            CanWallJumpRight = Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize,
+                0, _platformLayer) && !IsGrounded;
+
         }
 
         private void OnJump()
         {
             if (_playerEnd.IsDead) return;
             if (Physics2D.OverlapBox(transform.position + (Vector3)_leftWallOffset, _leftWallCheckSize, 0,
-                    _platformLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
+                    _platformLayer) && !IsGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
             {
                 _wallJumpDirection = EWallJumpDirection.Left;
                 Jump(_wallJumpVector*_jumpForce);
                 
             }
-            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0, _platformLayer) && !_isGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
+            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0, _platformLayer) && !IsGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
                 _wallJumpDirection = EWallJumpDirection.Right;
                 Jump(new Vector2(-_wallJumpVector.x,_wallJumpVector.y) * _jumpForce);
@@ -105,7 +114,7 @@ namespace ToyBox.Player
             _rb.linearVelocityY = 0;
             _rb.AddForceY(jumpValue, ForceMode2D.Impulse);
             _remainJump--;
-            _isGrounded = false;
+            IsGrounded = false;
             _performGroundCheck = false;
         }
         
@@ -114,7 +123,7 @@ namespace ToyBox.Player
             _rb.linearVelocityY = 0;
             _rb.AddForce(jumpValue, ForceMode2D.Impulse);
             _remainJump = 1;
-            _isGrounded = false;
+            IsGrounded = false;
             _performGroundCheck = false;
         }
 

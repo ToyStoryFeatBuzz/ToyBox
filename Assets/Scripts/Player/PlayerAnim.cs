@@ -7,13 +7,12 @@ public class SoPlayerAnim : MonoBehaviour
     [SerializeField] private float _isMovingThreshold; //Minimum speed at which the player is considered as moving
     
     Animator _animator;
-    Rigidbody2D _rigidbody;
+    [SerializeField] Rigidbody2D _rigidbody;
     PlayerInputSystem _playerInputSystem;
     void Start()
     {
         _playerInputSystem = GetComponent<PlayerInputSystem>();
         _animator = GetComponent<Animator>();
-        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()

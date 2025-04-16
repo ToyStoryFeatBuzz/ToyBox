@@ -1,4 +1,4 @@
-﻿using System;
+﻿using ToyBox.Menu;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
@@ -11,9 +11,12 @@ namespace ToyBox.Managers {
         
         public static PauseManager Instance { get; private set; }
         
+        private MenuManager _menuManager => MenuManager.Instance;
+        
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                DontDestroyOnLoad(transform.root);
             } else {
                 Destroy(gameObject);
             }
@@ -24,6 +27,9 @@ namespace ToyBox.Managers {
         }
 
         void StartPause(Player pausedPlayer) {
+            if (!_menuManager) {
+                return;
+            }
             Time.timeScale = 0f;
             _playerManager.PlayerInputManager.enabled = false;
             foreach (Player player in _playerManager.Players) {
@@ -31,7 +37,9 @@ namespace ToyBox.Managers {
             }
             _menuInput.enabled = true;
             _menuInput.user.UnpairDevices();
+            if (pausedPlayer.Device == null) return;
             InputUser.PerformPairingWithDevice(pausedPlayer.Device, _menuInput.user);
+            _menuManager.gameObject.SetActive(true);
         }
         
         public void StartPause(GameObject pausedPlayer) {
@@ -39,6 +47,7 @@ namespace ToyBox.Managers {
         }
 
         public void EndPause() {
+            _menuManager.gameObject.SetActive(false);
             _menuInput.enabled = false;
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.enabled = true;

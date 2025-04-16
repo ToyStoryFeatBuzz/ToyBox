@@ -36,23 +36,17 @@ namespace ToyBox.Managers {
             PlayerInputManager.enabled = possibility;
         }
 
-        public void SetPlayersMovements(bool activation)
-        {
-            foreach (var player in Players)
-            {
+        public void SetPlayersMovements(bool activation) {
+            foreach (Player player in Players) {
                 player.PlayerInput.enabled = activation;
             }
         }
 
         public bool DoesAllPlayersFinishedBuilding()
         {
-            foreach (var player in Players)
-            {
-                if (player.PlayerObject.GetComponent<PlayerEdition>().IsPlacing()) return false;
-            }
-
-            return true;
+            return Players.All(player => !player.PlayerObject.GetComponent<PlayerEdition>().IsPlacing());
         }
+
 
         public void AddPlayer(PlayerInput player) {
             string name = "Player " + (Players.Count + 1);
@@ -63,6 +57,7 @@ namespace ToyBox.Managers {
             
             Players.Add(new Player
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
+            playerStats.name = name;
 
             player.transform.parent = transform;
         }
@@ -84,10 +79,7 @@ namespace ToyBox.Managers {
         }
 
         public Player GetPlayer(GameObject playerGameObject) {
-            foreach (Player player  in Players.Where(_player => _player.PlayerObject == playerGameObject)) {
-                return player;
-            }
-            return null;
+            return Players.FirstOrDefault(_player => _player.PlayerObject == playerGameObject);
         }
 
         private void RefreshPlayerName() {

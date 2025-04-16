@@ -15,26 +15,23 @@ namespace ToyBox.Managers
 
         PlayerManager _playerManager => PlayerManager.Instance;
 
-        [FormerlySerializedAs("objectsStruct")] [SerializeField] List<StPlaceable> _objectsStruct = new();
+        [SerializeField] List<StPlaceable> _objectsStruct = new();
 
-        [FormerlySerializedAs("objects")] public List<BuildObject> Objects = new();
+        public List<BuildObject> Objects = new();
 
-        [Header("ChooseBox")]
-        [FormerlySerializedAs("objectsBox")] [SerializeField] GameObject _objectsBox;
-        [FormerlySerializedAs("topRight")] [SerializeField] Transform _topRight;
-        [FormerlySerializedAs("bottomLeft")] [SerializeField] Transform _bottomLeft;
+        ChooseBox _chooseBox => ChooseBox.Instance;
 
-        int _picked = 0;
-        int _turnNumber = 0;
+        int _picked;
+        int _turnNumber;
         List<BuildObject> _objectsList = new();
-
-        public bool selecting = false;
+        
+        public bool IsSelecting;
 
         public Action OnObjectPlaced;
 
         private void Awake()
         {
-            _objectsBox.SetActive(false);
+            _chooseBox?.gameObject.SetActive(false);
             if (Instance == null)
             {
                 Instance = this;
@@ -46,9 +43,9 @@ namespace ToyBox.Managers
             }
         }
 
-        public void AddObject(BuildObject build) {
+        public void AddObject(BuildObject build) { // Called when player placed an object
             
-            if (build.DoErase)
+            if (build.DoErase) // Bombes that delete overed objects
             {
                 for (int i = 0; i < Objects.Count; i++)
                 {
@@ -72,24 +69,35 @@ namespace ToyBox.Managers
                 }
 
                 Destroy(build.gameObject);
+            }
+            else // Place object on map
+            {
+                build.Place(true);
+                Objects.Add(build);
+                OnObjectPlaced?.Invoke();
+            }
 
-                return;
+            if (_playerManager.DoesAllPlayersFinishedBuilding()) // Start Race countdown if all players placed their objects
+            {
+                GameModeManager.Instance.StartCountDown(3.5f);
             }
             build.Place(true);
             Objects.Add(build);
             OnObjectPlaced?.Invoke();
         }
+        
 
-        public void Shuffle(int amount)
+
+        public void Shuffle(int amount) // Create and place items in the choosing box
         {
             if (_turnNumber <= 10)
             {
                 _turnNumber++;
             }
-            selecting = true;
+            IsSelecting = true;
             amount = _playerManager.Players.Count + 3;
 
-            _objectsBox.SetActive(true);
+            _chooseBox.gameObject.SetActive(true);
 
             for (int i = 0; i < amount; i++)
             {
@@ -109,7 +117,7 @@ namespace ToyBox.Managers
                 }
                 
                 
-                GameObject go = Instantiate(chosenObject, new(Random.Range(_bottomLeft.position.x, _topRight.position.x), Random.Range(_bottomLeft.position.y, _topRight.position.y)), Quaternion.identity);
+                GameObject go = Instantiate(chosenObject, new(Random.Range(_chooseBox.BL.position.x, _chooseBox.TR.position.x), Random.Range(_chooseBox.BL.position.y, _chooseBox.TR.position.y)), Quaternion.identity, _chooseBox.transform);
                 BuildObject b = go.GetComponent<BuildObject>();
                 
                 _objectsList.Add(b);
@@ -117,34 +125,45 @@ namespace ToyBox.Managers
             }
         }
 
-        public void ObjectPicked()
+        public void ObjectPicked() // Called when a player picked an object
         {
             _picked++;
-            if (_picked != _playerManager.Players.Count) {
-                return;
+            if (_picked == _playerManager.Players.Count) // Close choosing box when everyone has picked
+            {
+                _chooseBox.gameObject.SetActive(false);
+
+                _picked = 0;
+
+                foreach (BuildObject b in _objectsList.Where(b => !b.IsChosen)) {
+                    Destroy(b.gameObject);
+                }
+
+                _objectsList.Clear();
+                
+                IsSelecting = false;
             }
-            _objectsBox.SetActive(false);
+            _chooseBox.gameObject.SetActive(false);
 
             _picked = 0;
 
-            foreach (BuildObject buildObject in _objectsList.Where(b => !b.IsChosen)) {
+            foreach (BuildObject buildObject in _objectsList.Where(b => !b.IsChosen)) { // Destroy non-picked objects
                 Destroy(buildObject.gameObject);
             }
 
             _objectsList.Clear();
                 
-            selecting = false;
+            IsSelecting = false;
         }
 
-        public bool CanPlace(BuildObject testedBuild) {
+        public bool CanPlace(BuildObject testedBuild) { // Tells if testedBuild can be placed and does not collid with already placed objects
             return !(from build in Objects from offset in build.Offsets where testedBuild.ContainsPos((Vector2)build.transform.position + offset) select build).Any();
         }
     }
-    [System.Serializable]
-    public struct StPlaceable
-    {
-        [FormerlySerializedAs("_objectPrefab")] public GameObject ObjectPrefab;
-        [FormerlySerializedAs("_curve")] public AnimationCurve Curve;
+    
+    [Serializable]
+    public struct StPlaceable {
+        public GameObject ObjectPrefab;
+        public AnimationCurve Curve;
 
     }
 }

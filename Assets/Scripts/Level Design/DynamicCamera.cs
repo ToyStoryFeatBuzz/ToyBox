@@ -34,7 +34,7 @@ namespace ToyBox.LevelDesign {
             ActualModeFunction = RaceMode;
         }
 
-        void Update() {
+        void FixedUpdate() {
             ActualModeFunction.Invoke();
             _alivePlayers = _playerManager.GetAlivePlayers();
         }

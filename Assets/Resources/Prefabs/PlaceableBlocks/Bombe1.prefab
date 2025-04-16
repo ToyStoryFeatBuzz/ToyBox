@@ -644,23 +644,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc36c60438ddd6f43955c11f9f740d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsets:
+  Offsets:
   - {x: 0, y: 0}
-  - {x: 1, y: 0}
   - {x: 0, y: 1}
+  - {x: 1, y: 0}
   - {x: 1, y: 1}
   - {x: -1, y: 0}
   - {x: 0, y: -1}
   - {x: -1, y: -1}
-  - {x: -1, y: 1}
   - {x: 1, y: -1}
-  placeHolder: {fileID: 2647422227717274526}
-  finalObject: {fileID: 1322408929161232665}
-  pickedEvent:
+  - {x: -1, y: 1}
+  _placeHolder: {fileID: 2647422227717274526}
+  _finalObject: {fileID: 1322408929161232665}
+  OnPickedEvent:
     m_PersistentCalls:
       m_Calls: []
-  erase: 1
-  chosen: 0
+  DoErase: 1
+  IsChosen: 0
 --- !u!1 &7193836710808359727
 GameObject:
   m_ObjectHideFlags: 0

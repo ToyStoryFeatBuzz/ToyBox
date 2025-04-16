@@ -339,11 +339,12 @@ GameObject:
   - component: {fileID: 816963325045871209}
   - component: {fileID: 5595235915548993446}
   - component: {fileID: -4477026410386236028}
-  - component: {fileID: -1157256760377602241}
   - component: {fileID: 6494250637933963715}
   - component: {fileID: 8047551363141542177}
   - component: {fileID: -5627916806147649405}
   - component: {fileID: -450549269470407984}
+  - component: {fileID: 3940297918288691315}
+  - component: {fileID: 9213022253772650989}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -595,7 +596,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveValue: 0
   GridMoveDir: {x: 0, y: 0}
-  IsDead: 0
 --- !u!114 &5595235915548993446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,21 +611,21 @@ MonoBehaviour:
   _acceleration: 200
   _deceleration: 10
   _maxSpeed: 20
-  _jumpForce: 10
+  _jumpForce: 13
   _maxJump: 2
   _remainJump: 2
-  _wallJumpVector: {x: 4.43, y: 1.25}
+  _wallJumpVector: {x: 3, y: 1.5}
   _canWallJumpOnSameWall: 1
-  _gravity: 4
+  _gravity: 6
   _platformLayer:
     serializedVersion: 2
     m_Bits: 64
   _groundOffset: {x: 0, y: -0.5}
-  _groundCheckSize: {x: 0.88, y: 0.1}
+  _groundCheckSize: {x: 0.94, y: 0.1}
   _leftWallOffset: {x: -0.55, y: 0}
-  _leftWallCheckSize: {x: 0.27, y: 0.72}
+  _leftWallCheckSize: {x: 0.27, y: 0.97}
   _rightWallOffset: {x: 0.55, y: 0}
-  _rightWallCheckSize: {x: 0.27, y: 0.72}
+  _rightWallCheckSize: {x: 0.27, y: 0.97}
 --- !u!50 &-4477026410386236028
 Rigidbody2D:
   serializedVersion: 5
@@ -653,8 +653,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &-1157256760377602241
-BoxCollider2D:
+--- !u!114 &6494250637933963715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0217f3b0ba264538b9519593e211deac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8047551363141542177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16b5e3ee8ecee6e469a77fca5dfab432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _doesSnap: 1
+  _snapInterval: 1
+  _objectsPrefabs: []
+--- !u!114 &-5627916806147649405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0819b7f60dc0a214cb9fdaa3d5b5ba85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mouseBody: {fileID: 0}
+  _mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
+  _mouseSensitivity: 0.015
+--- !u!114 &-450549269470407984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f50fa6de91aaa48b187d0dbe4a4c36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MatchScores: 
+--- !u!114 &3940297918288691315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a990d01ba3734734859d1a7ddbd6fc6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDead: 0
+--- !u!70 &9213022253772650989
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -688,72 +756,5 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &6494250637933963715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5561266323775685023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0217f3b0ba264538b9519593e211deac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8047551363141542177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5561266323775685023}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16b5e3ee8ecee6e469a77fca5dfab432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doesSnap: 1
-  snapInterval: 1
-  objectsPrefabs:
-  - {fileID: 5475432701753714441, guid: 51ff7ae38a5800842adf447b16815a53, type: 3}
-  - {fileID: 6407882722982570177, guid: 7bb7e85a29fadd74ca83b90d7f4bf9ca, type: 3}
-  - {fileID: 5667357639506699088, guid: a115587b82d1e0644b72085da10d5ec5, type: 3}
---- !u!114 &-5627916806147649405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5561266323775685023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0819b7f60dc0a214cb9fdaa3d5b5ba85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseBody: {fileID: 0}
-  mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  mouseSensivity: 0.015
---- !u!114 &-450549269470407984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5561266323775685023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f50fa6de91aaa48b187d0dbe4a4c36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MatchScores: 
+  m_Direction: 0

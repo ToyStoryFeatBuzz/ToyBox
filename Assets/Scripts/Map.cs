@@ -1,31 +1,25 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Map : MonoBehaviour
 {
-    public string sceneName = "";
+    public string SceneName = "";
 
-    int playerOnMap = 0;
+    int _playerOnMap = 0;
 
-    public UnityEvent playerOnMapEvent = new();
+    public Action OnPlayerOnMapEvent;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            playerOnMap++;
-            playerOnMapEvent.Invoke();
-        }
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (!collision.gameObject.CompareTag("Player")) return;
+        _playerOnMap++;
+        OnPlayerOnMapEvent.Invoke();
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
-        {
-            playerOnMap--;
-            playerOnMapEvent.Invoke();
-        }
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (!collision.gameObject.CompareTag("Player")) return;
+        _playerOnMap--;
+        OnPlayerOnMapEvent.Invoke();
     }
 
-    public int GetPlayersOn() => playerOnMap;
+    public int GetPlayersOn() => _playerOnMap;
 }

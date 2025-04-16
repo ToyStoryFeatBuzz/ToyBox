@@ -27,6 +27,7 @@ public class NewPlayerAnimator : MonoBehaviour
         _playerInput.OnJumpEvent.Started += StartJumpAnim;
         _playerInput.OnJumpEvent.Canceled += CancelJumpAnim;
         _playerInput.OnJumpEvent.Performed += CancelJumpAnim;
+        _animator.SetBool("IsGrounded", true);
     }
 
     void Update()

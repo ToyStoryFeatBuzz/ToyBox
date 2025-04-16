@@ -40,7 +40,8 @@ namespace ToyBox.Player
         public bool IsGrounded { get; private set; }
         public bool CanWallJumpLeft { get; private set; }
         public bool CanWallJumpRight { get; private set; }
-        bool _performGroundCheck;
+        
+        bool _performGroundCheck = true;
         PlayerInputSystem _inputSystem;
         Rigidbody2D _rb;
         private PlayerEnd _playerEnd;

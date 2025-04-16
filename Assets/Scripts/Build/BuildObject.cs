@@ -60,5 +60,29 @@ namespace ToyBox.Build {
 
             Offsets = newOffsets;
         }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.blue;
+            float halfSize = (1f / 2f) - 0.02f;
+
+            foreach (Vector2 offSet1 in Offsets)
+            {
+                var offSet = offSet1 + (Vector2)transform.position;
+                Vector3 topLeft = new Vector3(offSet.x - halfSize, offSet.y + halfSize, 0f);
+                Vector3 topRight = new Vector3(offSet.x + halfSize, offSet.y + halfSize, 0f);
+                Vector3 bottomRight = new Vector3(offSet.x + halfSize, offSet.y - halfSize, 0f);
+                Vector3 bottomLeft = new Vector3(offSet.x - halfSize, offSet.y - halfSize, 0f);
+
+                Gizmos.DrawLine(topLeft, topRight);
+                Gizmos.DrawLine(topRight, bottomRight);
+                Gizmos.DrawLine(bottomRight, bottomLeft);
+                Gizmos.DrawLine(bottomLeft, topLeft);
+                Gizmos.DrawLine(bottomLeft, topRight);
+                Gizmos.DrawLine(topLeft, bottomRight);
+            }
+
+            
+        }
     }
 }

@@ -6,6 +6,16 @@ using ToyBox.Player;
 using UnityEngine;
 using static ToyBox.Enums.EPlayerState;
 
+
+// ---------------------------------------------------------------
+//
+//
+//             LEGACY => Use PlayerCamera instead
+//
+//
+// ---------------------------------------------------------------
+ 
+
 namespace ToyBox.LevelDesign {
     public class DynamicCamera : MonoBehaviour {
         [SerializeField] private float _camSizeMultiplier = 1.1f;

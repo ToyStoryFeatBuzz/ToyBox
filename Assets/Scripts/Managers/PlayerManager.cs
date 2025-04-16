@@ -38,7 +38,7 @@ namespace ToyBox.Managers {
 
         public void SetPlayersMovements(bool activation) {
             foreach (Player player in Players) {
-                player.PlayerInput.enabled = activation;
+                player.PlayerObject.GetComponent<PlayerEnd>().IsDead = activation;
             }
         }
 
@@ -49,11 +49,16 @@ namespace ToyBox.Managers {
 
 
         public void AddPlayer(PlayerInput player) {
+            if(Players.FirstOrDefault(_player => _player.PlayerInput == player) != null){
+                return;
+            }
+            Debug.Log("Player added");
             string name = "Player " + (Players.Count + 1);
             player.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = name;
             InputDevice device = player.user.pairedDevices.First();
             player.gameObject.name = name;
             PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();
+            
             
             Players.Add(new Player
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
@@ -108,7 +113,6 @@ namespace ToyBox.Managers {
     [Serializable]
     public class Player {
         public string Name;
-        public int Score;
         public PlayerInput PlayerInput;
         public GameObject PlayerObject;
         public InputDevice Device;

@@ -15,7 +15,7 @@ namespace ToyBox.Leaderboard
         [Header("References")]
         [SerializeField] private Leaderboard _leaderBoard;
         [SerializeField] private PlayerManager _playerManager;
-
+        
         #endregion
 
         #region UI Elements
@@ -23,6 +23,7 @@ namespace ToyBox.Leaderboard
         [FormerlySerializedAs("panelEndGameUI")]
         [Header("UI Elements")]
         [SerializeField] private GameObject _panelEndGameUI;
+        [SerializeField] private GameObject _panelGraphUI;
         [SerializeField] private List<TextMeshProUGUI> _textName;
         [SerializeField] private List<TextMeshProUGUI> _textPoints;
         [SerializeField] private List<LineRenderer> _lineRenderers;
@@ -69,6 +70,7 @@ namespace ToyBox.Leaderboard
         private void Start()
         {
             _panelEndGameUI.SetActive(false);
+            _panelGraphUI.SetActive(false);
             InitializeLineRenderers();
         }
 
@@ -102,6 +104,7 @@ namespace ToyBox.Leaderboard
         {
             _leaderBoard.CheckPlayers();
             _panelEndGameUI.SetActive(true);
+            _panelGraphUI.SetActive(true);
             var sortedPlayers = _leaderBoard.GetSortedPlayers();
 
             // Met à jour les textes (nom + score)

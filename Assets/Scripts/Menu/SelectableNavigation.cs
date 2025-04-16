@@ -15,14 +15,9 @@ namespace ToyBox.Menu {
         private void Start() {
             _selectable = GetComponent<Selectable>();
             _navigation.Init(_selectable);
-        }
-
-        private void Update() {
             _navigation.ApplyNavigation();
-            Debug.Log(_selectable.navigation.selectOnUp);
         }
-
-
+        
         public void OnPointerEnter(PointerEventData eventData) {
             if (!_selectable.enabled) return;
             _selectableManager.SelectableHooveredCount++;
@@ -54,10 +49,12 @@ namespace ToyBox.Menu {
 
         public void Init(Selectable selectable) {
             _selectable = selectable;
+            
         }
 
         public void ApplyNavigation() {
             Navigation navigation = _selectable.navigation;
+            navigation.mode = Navigation.Mode.Explicit;
             navigation.selectOnUp = Up;
             navigation.selectOnDown = Down;
             navigation.selectOnLeft = Left;

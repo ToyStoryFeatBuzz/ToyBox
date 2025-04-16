@@ -10,7 +10,7 @@ namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         public static GameModeManager Instance { get; private set; }
 
-        [FormerlySerializedAs("buildsManager")] public BuildsManager _buildsManager;
+        private BuildsManager _buildsManager;
 
         private PlayerManager _playerManager => PlayerManager.Instance;
 

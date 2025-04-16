@@ -112,7 +112,7 @@ namespace ToyBox.Managers
                         probability = objectProbability;
                         chosenObject = _objectsStruct[j].ObjectPrefab;
                     }
-                    Debug.Log($"Object : {_objectsStruct[j].ObjectPrefab.name} with probability : {objectProbability}");
+                    //Debug.Log($"Object : {_objectsStruct[j].ObjectPrefab.name} with probability : {objectProbability}");
 
                 }
                 

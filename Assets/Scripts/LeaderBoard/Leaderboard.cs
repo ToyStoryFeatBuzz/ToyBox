@@ -1,4 +1,5 @@
-﻿using ToyBox.Managers;
+﻿using System.Collections;
+using ToyBox.Managers;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -11,6 +12,7 @@ namespace ToyBox.Leaderboard
 {
     public class Leaderboard : MonoBehaviour
     {
+        [SerializeField] float _timeToShow = 3f;
         private PlayerManager _playerManager => PlayerManager.Instance;
 
         [Header("UI Match")]
@@ -20,9 +22,11 @@ namespace ToyBox.Leaderboard
 
         private Dictionary<string, int> _playerScoreDict;
         private ScoreManager _scoreManager => ScoreManager.Instance;
+        GameModeManager _gameModeManager => GameModeManager.Instance;
 
         private void Start()
         {
+            _gameModeManager.OnRaceEnd += ShowLeaderboard;
             HideLeaderboard();
             _playerScoreDict = _scoreManager.PlayerScores;
             CheckPlayers();
@@ -42,8 +46,17 @@ namespace ToyBox.Leaderboard
 
         public void ShowLeaderboard()
         {
+            _playerManager.SetNewPlayersEntries(false);
             UpdateLeaderboard();
             PanelMatchUI.SetActive(true);
+            StartCoroutine(ShowingLeaderboard());
+        }
+        
+        IEnumerator ShowingLeaderboard()
+        {
+            yield return new WaitForSeconds(_timeToShow);
+            HideLeaderboard();
+            _gameModeManager.OnLeaderboardFinish.Invoke();
         }
 
         public void HideLeaderboard()
@@ -67,7 +80,7 @@ namespace ToyBox.Leaderboard
                     Debug.Log($"AFTER SORTING Name: {playerName}, Score: {score}");
 
                     parent.gameObject.SetActive(true);
-                    FillBars[i].GetComponent<Image>().fillAmount = score / 100f;
+                    FillBars[i].GetComponent<Image>().fillAmount = score / 10f;
                     TextSlots[i].text = playerName;
                 }
                 else
@@ -79,34 +92,7 @@ namespace ToyBox.Leaderboard
 
         public void CheckPlayers()
         {
-            if (_playerManager.Players.Count < 1)
-            {
-                Debug.Log("No players found");
-                return;
-            }
-
-            foreach (Managers.Player player in _playerManager.Players)
-            {
-                if (!_playerScoreDict.ContainsKey(player.Name))
-                {
-                    _playerScoreDict.Add(player.Name, Random.Range(1, 100));
-                    SimulateMatchScores(player);  // Simule des scores de match
-                    Debug.Log($"Player {player.Name} has {_playerScoreDict[player.Name]} points.");
-                }
-            }
-        }
-
-        public void SimulateMatchScores(Managers.Player player)
-        {
-            List<int> matchScores = new();
-            int matchCount = Random.Range(1, 10);
-
-            for (int i = 0; i < matchCount; i++)
-            {
-                matchScores.Add(Random.Range(1, 10));
-            }
-
-            player.PlayerStats.MatchScores = matchScores;
+            _scoreManager.PlayerScores = _playerScoreDict;
         }
 
         public List<(string name, int score)> GetSortedPlayers()

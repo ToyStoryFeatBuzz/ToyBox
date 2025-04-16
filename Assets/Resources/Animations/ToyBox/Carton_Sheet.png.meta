@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: 7af85e47a7793a743ab6667df4e1dda4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5802473119827739470
+    second: Carton_Sheet_0
+  - first:
+      213: 2189494255935631235
+    second: Carton_Sheet_1
+  - first:
+      213: -1234510915281544371
+    second: Carton_Sheet_2
+  - first:
+      213: 8894041950547408347
+    second: Carton_Sheet_3
+  - first:
+      213: 8417840652436890398
+    second: Carton_Sheet_4
+  - first:
+      213: 4224749046365483710
+    second: Carton_Sheet_5
+  - first:
+      213: 1806246521820405384
+    second: Carton_Sheet_6
+  - first:
+      213: 7976771069822299162
+    second: Carton_Sheet_7
+  - first:
+      213: -8352317928946489852
+    second: Carton_Sheet_8
+  - first:
+      213: -2431677449371257373
+    second: Carton_Sheet_9
+  - first:
+      213: 6311632487186270719
+    second: Carton_Sheet_10
+  - first:
+      213: 1539184406789970742
+    second: Carton_Sheet_11
+  - first:
+      213: 8108230756083805725
+    second: Carton_Sheet_12
+  - first:
+      213: 6967077847670760272
+    second: Carton_Sheet_13
+  - first:
+      213: -643451381242825531
+    second: Carton_Sheet_14
+  - first:
+      213: 75331977338873526
+    second: Carton_Sheet_15
+  - first:
+      213: -4615067361609085330
+    second: Carton_Sheet_16
+  - first:
+      213: 439249693405256541
+    second: Carton_Sheet_17
+  - first:
+      213: -2052739129988143632
+    second: Carton_Sheet_18
+  - first:
+      213: -7836320328202717106
+    second: Carton_Sheet_19
+  - first:
+      213: -8919270180094840863
+    second: Carton_Sheet_20
+  - first:
+      213: -6559988559274182147
+    second: Carton_Sheet_21
+  - first:
+      213: 2114331092520956273
+    second: Carton_Sheet_22
+  - first:
+      213: -1682060503268257448
+    second: Carton_Sheet_23
+  - first:
+      213: -2927102059591150072
+    second: Carton_Sheet_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Carton_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4668
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ce60138f8569a498779f50e494ab10
+      internalID: 406866029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 4668
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6788591b5674a4194460679c0612fe
+      internalID: -169354744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 4668
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea74cdd6fee913a48889b8df5a8a8e81
+      internalID: 176852268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 4668
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3530ebcac90ec540b049507c0e82ab5
+      internalID: -1263251753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 6392
+        y: 4668
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f60b9575e99ebfb4382a0ca88d778f10
+      internalID: -1287854838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3501
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b25bb7ff00e3564c9f0f487728b0098
+      internalID: 59528876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 3501
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55120d99050db094d8ec4027998b9974
+      internalID: 572148761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 3501
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2f4f1ac85cdd94494514ef83ce5c8a
+      internalID: -1304548524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 3501
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23960ae0084b8442b605301206875b1
+      internalID: -737279894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 6392
+        y: 3501
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebc89ae3fb249e489416a7a8b8cdb87
+      internalID: 1160209501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2334
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c42f43d58b12da42820129ea74d6ed5
+      internalID: 1032664403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 2334
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c598e5cf32efc184a899fa3284a88dfa
+      internalID: 59137661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 2334
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420a722a8c175e943974bec58c926621
+      internalID: 1786476731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 2334
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e744a3d30cb4c5e45b7022b09dc257a9
+      internalID: -804374202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 6392
+        y: 2334
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d8480a8fdd51c4884334245b314908
+      internalID: -244160834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1167
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d773a34a9c8fa5646ab62bc060947086
+      internalID: -922408712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 1167
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50570f037921194b84b93532b3b78cf
+      internalID: 926269881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 1167
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8154c42afe9934f8073089c1b34701
+      internalID: -829148805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 1167
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d4395df3377f8b4fb2f29b012aa14cc
+      internalID: -890564961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 6392
+        y: 1167
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aae30dcdf800a4e8a247d8c1171e99
+      internalID: 624791894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c3595f77c8ec24998eeeb9441fd91b
+      internalID: -1683263685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 0
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33d5300233a37d4caeeea69b550ae4d
+      internalID: 306696793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 0
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46732ed2b7cf46841928bef2f649bbf4
+      internalID: -2064190363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 4794
+        y: 0
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d5f76a3c5b4ea4d8c2e45abca9c810
+      internalID: -1114147297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 6392
+        y: 0
+        width: 1598
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c4c5e25e3692a41acd9f1905679d29
+      internalID: -2025318002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: eee4ac9307879474ebf50080032f1f2c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Carton_Sheet_0: 406866029
+      Carton_Sheet_1: -169354744
+      Carton_Sheet_10: 1032664403
+      Carton_Sheet_11: 59137661
+      Carton_Sheet_12: 1786476731
+      Carton_Sheet_13: -804374202
+      Carton_Sheet_14: -244160834
+      Carton_Sheet_15: -922408712
+      Carton_Sheet_16: 926269881
+      Carton_Sheet_17: -829148805
+      Carton_Sheet_18: -890564961
+      Carton_Sheet_19: 624791894
+      Carton_Sheet_2: 176852268
+      Carton_Sheet_20: -1683263685
+      Carton_Sheet_21: 306696793
+      Carton_Sheet_22: -2064190363
+      Carton_Sheet_23: -1114147297
+      Carton_Sheet_24: -2025318002
+      Carton_Sheet_3: -1263251753
+      Carton_Sheet_4: -1287854838
+      Carton_Sheet_5: 59528876
+      Carton_Sheet_6: 572148761
+      Carton_Sheet_7: -1304548524
+      Carton_Sheet_8: -737279894
+      Carton_Sheet_9: 1160209501
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

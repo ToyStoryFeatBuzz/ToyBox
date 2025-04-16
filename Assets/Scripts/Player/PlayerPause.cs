@@ -5,7 +5,7 @@ using ToyBox.Managers;
 namespace ToyBox.Player {
     public class PlayerPause : MonoBehaviour {
         PauseManager _pauseManager => PauseManager.Instance;
-        private PlayerEnd _playerEnd;
+        PlayerEnd _playerEnd;
         private void Start() {
             GetComponent<PlayerInputSystem>().OnPauseEvent.Started += StartPause;
             _playerEnd = GetComponent<PlayerEnd>();

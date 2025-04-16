@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 44b54a12531f6c74eb2bad2b878e53f5
+guid: d05005d111bcfc94a9018d6424b867e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3323359508697691226
-    second: Portrait_Orange_0
+      213: -2430139965954429369
+    second: Menu_Slider_Plein_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Portrait_Orange_0
+      name: Menu_Slider_Plein_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 0
-        width: 496
-        height: 437
+        x: 65
+        y: 53
+        width: 2278
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a54b7d08dd1fe1e20800000000000000
-      internalID: 3323359508697691226
+      spriteID: 74e6ece8398664ed0800000000000000
+      internalID: -2430139965954429369
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Portrait_Orange_0: 3323359508697691226
+      Menu_Slider_Plein_0: -2430139965954429369
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

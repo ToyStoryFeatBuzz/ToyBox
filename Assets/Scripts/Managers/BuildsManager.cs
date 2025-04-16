@@ -31,7 +31,7 @@ namespace ToyBox.Managers
 
         private void Awake()
         {
-            _chooseBox.gameObject.SetActive(false);
+            _chooseBox?.gameObject.SetActive(false);
             if (Instance == null)
             {
                 Instance = this;

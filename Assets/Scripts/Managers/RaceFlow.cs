@@ -54,7 +54,7 @@ namespace ToyBox.Managers {
 
             foreach (Player player in _playerManager.Players)
             {
-                pls.Add((player.Name, player.PlayerObject.transform, MapPath.Instance.GetPlayerPositionOnPath(player.PlayerObject.transform)));
+                pls.Add((player.Name, player.PlayerObject.transform, MapPath.Instance.GetPlayerAdvancement(player.PlayerObject.transform)));
             }
 
             string a = "RANK  ===  ";

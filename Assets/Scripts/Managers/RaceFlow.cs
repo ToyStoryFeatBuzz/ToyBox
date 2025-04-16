@@ -14,17 +14,29 @@ namespace ToyBox.Managers {
         [SerializeField] Transform _winnersBox;
 
         GameModeManager _gameModeManager => GameModeManager.Instance;
+        MapPath _mapPath => MapPath.Instance;
         PlayerManager _playerManager;
     
         int _finishedPlayers;
         bool _raceStarted;
-        
+
+        public List<(string player, Transform t, float score)> playersOrder = new();
         
         void Start() {
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
             _gameModeManager.OnRaceStart += RaceStart;
+
+            foreach (Player player in _playerManager.Players)
+            {
+                playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
+            }
         }
-    
+
+        public List<(string player, Transform t, float score)> GetPlayersInOrder()
+        {
+            return playersOrder.OrderBy(p => p.score).ToList();
+        }
+
         private void RaceStart() {
             foreach (Player player in _playerManager.Players) {
                 player.PlayerObject.transform.position = new Vector2(_startTransform.position.x+Random.Range(-2,2), _startTransform.position.y); //Randomizing the start position for now
@@ -50,21 +62,15 @@ namespace ToyBox.Managers {
                 _raceStarted = false;
             }
 
-            List<(string player, Transform t, float score)> pls = new();
-
-            foreach (Player player in _playerManager.Players)
+            for (int i = 0; i < playersOrder.Count; i++)
             {
-                pls.Add((player.Name, player.PlayerObject.transform, MapPath.Instance.GetPlayerAdvancement(player.PlayerObject.transform)));
+                var p = playersOrder[i];
+
+                p.score = _mapPath.GetPlayerAdvancement(p.t);
+
+                playersOrder[i] = p;
             }
 
-            string a = "RANK  ===  ";
-
-            foreach (var p in pls)
-            {
-                a += p.player + " : " + p.score + " ||| ";
-            }
-
-            print(a);
         }
     }
 

@@ -5,6 +5,7 @@ using TMPro;
 using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.Serialization;
+using ToyBox.LevelDesign;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
@@ -16,6 +17,7 @@ namespace ToyBox.Managers {
 
         public Action OnRaceStart;
         public Action OnRaceEnd;
+        public Action OnBuildStart;
 
         public TextMeshProUGUI cdText;
 
@@ -82,6 +84,7 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<PlayerMovement>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }
+            OnBuildStart?.Invoke();
         }
     }
 }

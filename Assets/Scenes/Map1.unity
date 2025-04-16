@@ -341,6 +341,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+--- !u!114 &18093547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6053537949138320907, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+  m_PrefabInstance: {fileID: 18093546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d8f0c56e6460d4982fdbe8f5186671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &22567897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 166248132}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1083,7 +1094,7 @@ Transform:
   m_GameObject: {fileID: 166248131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.017619, y: 11.528819, z: -10.115332}
+  m_LocalPosition: {x: 26.6, y: 2.7, z: -10.115332}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5534,6 +5545,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5153082043022019535, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: _raceFlow
+      value: 
+      objectReference: {fileID: 18093547}
+    - target: {fileID: 5153082043022019535, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: EditorMapCenter
+      value: 
+      objectReference: {fileID: 166248132}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

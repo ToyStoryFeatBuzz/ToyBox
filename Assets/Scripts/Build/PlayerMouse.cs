@@ -54,7 +54,7 @@ namespace ToyBox.Build {
         }
 
         public Vector2 Click() {
-            return _mousePos;
+            return _mouseBody.position;
         }
 
         public void ActivateMouse(bool activation) {

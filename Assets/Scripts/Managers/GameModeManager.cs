@@ -10,12 +10,13 @@ namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         public static GameModeManager Instance { get; private set; }
 
-        private BuildsManager _buildsManager;
+        private BuildsManager _buildsManager => BuildsManager.Instance;
 
         private PlayerManager _playerManager => PlayerManager.Instance;
 
         public Action OnRaceStart;
         public Action OnRaceEnd;
+        public Action OnLeaderboardFinish;
 
         public TextMeshProUGUI cdText;
 
@@ -30,7 +31,15 @@ namespace ToyBox.Managers {
 
         private void Start() {
             //StartRaceMode();
-            OnRaceEnd += StartConstructMode;
+            OnLeaderboardFinish += StartConstructMode;
+        }
+        
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                OnCountdownFinished();
+            }
         }
 
         IEnumerator Countdown(float newTime)
@@ -39,7 +48,7 @@ namespace ToyBox.Managers {
 
             while (currentTime > 0)
             {
-                cdText.text = (Mathf.RoundToInt(currentTime)).ToString();
+                 cdText.text = (Mathf.RoundToInt(currentTime)).ToString();
 
                 yield return new WaitForSeconds(0.1f);
                 currentTime -= 0.1f;
@@ -62,16 +71,19 @@ namespace ToyBox.Managers {
 
         private void OnCountdownFinished()
         {
+            Debug.Log("Countdown finished");
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
         }
         
-        public void StartRaceMode() {
+        public void StartRaceMode()
+        {
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
             }
+            _playerManager.SetNewPlayersEntries(true);
             OnRaceStart?.Invoke();
         }
 

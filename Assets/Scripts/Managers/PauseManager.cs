@@ -24,6 +24,7 @@ namespace ToyBox.Managers {
 
         private void Start() {
             _menuInput = GetComponent<PlayerInput>();
+            Debug.Log(_menuInput);
         }
 
         void StartPause(Player pausedPlayer) {

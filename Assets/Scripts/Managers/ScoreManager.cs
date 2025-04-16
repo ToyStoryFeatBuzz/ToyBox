@@ -1,15 +1,12 @@
-using System;
 using System.Collections.Generic;
-using ToyBox.Player;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 namespace ToyBox.Managers {
     public class ScoreManager : MonoBehaviour
     {
         private PlayerManager _playerManager => PlayerManager.Instance;
         
-       public Dictionary<string, int> PlayerScores;
+       public Dictionary<string, int> PlayerScores = new();
        public static ScoreManager Instance;
        
        private void Awake() {
@@ -20,11 +17,6 @@ namespace ToyBox.Managers {
            {
                Destroy(gameObject);
            }
-       }
-
-       private void Start()
-       {
-           PlayerScores = new();
        }
 
        public void AddScoreDic(string playerName, int score)

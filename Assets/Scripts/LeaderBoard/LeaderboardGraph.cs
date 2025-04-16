@@ -2,32 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace ToyBox.Leaderboard
 {
-    public class LeaderBoardGraph : MonoBehaviour
+    public class LeaderboardGraph : MonoBehaviour
     {
         #region References
-
-        
         [Header("References")]
-        [SerializeField] private Leaderboard _leaderBoard;
-        [SerializeField] private PlayerManager _playerManager;
+        Leaderboard _leaderBoard;
+        PlayerManager _playerManager => PlayerManager.Instance;
+        private LeaderboardData _leaderboardData => LeaderboardData.Instance;
         
-        #endregion
-
-        #region UI Elements
-
-        [FormerlySerializedAs("panelEndGameUI")]
-        [Header("UI Elements")]
-        [SerializeField] private GameObject _panelEndGameUI;
-        [SerializeField] private GameObject _panelGraphUI;
-        [SerializeField] private List<TextMeshProUGUI> _textName;
-        [SerializeField] private List<TextMeshProUGUI> _textPoints;
-        [SerializeField] private List<LineRenderer> _lineRenderers;
-
         #endregion
 
         #region Graph Settings
@@ -67,19 +55,11 @@ namespace ToyBox.Leaderboard
 
         #region Unity Methods
 
-        private void Start()
-        {
-            _panelEndGameUI.SetActive(false);
-            _panelGraphUI.SetActive(false);
+        private void Start() {
+            _leaderBoard = GetComponent<Leaderboard>();
+            _leaderboardData.PanelEndGame.SetActive(false);
+            _leaderboardData.Graph.SetActive(false);
             InitializeLineRenderers();
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                UpdateLeaderBoard();
-            }
         }
 
         #endregion
@@ -88,11 +68,11 @@ namespace ToyBox.Leaderboard
 
         private void InitializeLineRenderers()
         {
-            foreach (var lr in _lineRenderers)
+            foreach (PlayerInfo playerInfo in _leaderboardData.PlayerInfos)
             {
-                lr.startWidth = _lineWidth;
-                lr.endWidth = _lineWidth;
-                lr.positionCount = 0;
+                playerInfo.LineRenderer.startWidth = _lineWidth;
+                playerInfo.LineRenderer.endWidth = _lineWidth;
+                playerInfo.LineRenderer.positionCount = 0;
             }
         }
 
@@ -103,22 +83,22 @@ namespace ToyBox.Leaderboard
         public void UpdateLeaderBoard()
         {
             _leaderBoard.CheckPlayers();
-            _panelEndGameUI.SetActive(true);
-            _panelGraphUI.SetActive(true);
-            var sortedPlayers = _leaderBoard.GetSortedPlayers();
+            _leaderboardData.PanelEndGame.SetActive(true);
+            _leaderboardData.Graph.SetActive(true);
+            List<(string name, int score)> sortedPlayers = _leaderBoard.GetSortedPlayers();
 
             // Met à jour les textes (nom + score)
-            for (int i = 0; i < _textPoints.Count && i < _textName.Count; i++)
+            for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
-                Transform parent = _textPoints[i].transform.parent;
+                Transform parent = _leaderboardData.PlayerInfos[i].TextPoints.transform.parent;
                 parent.gameObject.SetActive(i < sortedPlayers.Count);
 
-                if (i < sortedPlayers.Count)
-                {
-                    var (name, score) = sortedPlayers[i];
-                    _textPoints[i].text = score.ToString();
-                    _textName[i].text = name;
+                if (i >= sortedPlayers.Count) {
+                    continue;
                 }
+                (string name, int score) = sortedPlayers[i];
+                _leaderboardData.PlayerInfos[i].TextPoints.text = score.ToString();
+                _leaderboardData.PlayerInfos[i].TextName.text = name;
             }
 
             // Détermine les valeurs max
@@ -126,7 +106,7 @@ namespace ToyBox.Leaderboard
             int maxMatches = _playerManager.Players.Max(p => p.PlayerStats?.MatchScores.Count ?? 0);
 
             // Trace les courbes
-            for (int i = 0; i < sortedPlayers.Count && i < _lineRenderers.Count; i++)
+            for (int i = 0; i < sortedPlayers.Count && i < _leaderboardData.PlayerInfos.Count; i++)
             {
                 DrawPlayerLine(i, sortedPlayers[i].Item1, maxScore, maxMatches);
             }
@@ -138,11 +118,15 @@ namespace ToyBox.Leaderboard
 
         private void DrawPlayerLine(int playerIndex, string playerName, int maxScore, int maxMatches)
         {
-            var player = _playerManager.Players.FirstOrDefault(p => p.Name == playerName);
-            if (player == null || string.IsNullOrEmpty(player.Name)) return;
+            Managers.Player player = _playerManager.Players.FirstOrDefault(p => p.Name == playerName);
+            if (player == null || string.IsNullOrEmpty(player.Name)) {
+                return;
+            }
 
-            var stats = player.PlayerStats;
-            if (stats == null || stats.MatchScores == null || stats.MatchScores.Count == 0) return;
+            PlayerStats stats = player.PlayerStats;
+            if (stats == null || stats.MatchScores == null || stats.MatchScores.Count == 0) {
+                return;
+            }
 
             List<int> matchScores = new List<int>(stats.MatchScores);
 
@@ -152,7 +136,7 @@ namespace ToyBox.Leaderboard
                 matchScores.Add(matchScores.Count > 0 ? matchScores.Last() : 0);
             }
 
-            LineRenderer lr = _lineRenderers[playerIndex];
+            LineRenderer lr = _leaderboardData.PlayerInfos[playerIndex].LineRenderer;
             lr.positionCount = matchScores.Count + 1; // +1 pour le point de départ
 
             // Couleur de la ligne

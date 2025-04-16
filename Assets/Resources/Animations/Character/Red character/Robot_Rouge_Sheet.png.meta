@@ -1,0 +1,1859 @@
+fileFormatVersion: 2
+guid: ccb68aef945644b4092ee6ec6977218f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7323446567281503722
+    second: Robot_Rouge_Sheet_0
+  - first:
+      213: -2698972337266139634
+    second: Robot_Rouge_Sheet_1
+  - first:
+      213: -6368420009930026012
+    second: Robot_Rouge_Sheet_2
+  - first:
+      213: 3478451462767976444
+    second: Robot_Rouge_Sheet_3
+  - first:
+      213: -8607070461766735127
+    second: Robot_Rouge_Sheet_4
+  - first:
+      213: -6302632731444543472
+    second: Robot_Rouge_Sheet_5
+  - first:
+      213: -8057600215924854242
+    second: Robot_Rouge_Sheet_6
+  - first:
+      213: 7890157665865285755
+    second: Robot_Rouge_Sheet_7
+  - first:
+      213: -4007683601123244287
+    second: Robot_Rouge_Sheet_8
+  - first:
+      213: 4868406847089235015
+    second: Robot_Rouge_Sheet_9
+  - first:
+      213: -172751834951127445
+    second: Robot_Rouge_Sheet_10
+  - first:
+      213: -4217468004954563432
+    second: Robot_Rouge_Sheet_11
+  - first:
+      213: -6765941688774801040
+    second: Robot_Rouge_Sheet_12
+  - first:
+      213: 1707046546570702463
+    second: Robot_Rouge_Sheet_13
+  - first:
+      213: 8024393609101970484
+    second: Robot_Rouge_Sheet_14
+  - first:
+      213: 7927579793612037578
+    second: Robot_Rouge_Sheet_15
+  - first:
+      213: 5485558393658366471
+    second: Robot_Rouge_Sheet_16
+  - first:
+      213: 8549998864504138880
+    second: Robot_Rouge_Sheet_17
+  - first:
+      213: -8580483937991871269
+    second: Robot_Rouge_Sheet_18
+  - first:
+      213: -4378930842655298068
+    second: Robot_Rouge_Sheet_19
+  - first:
+      213: -4825774164665865506
+    second: Robot_Rouge_Sheet_20
+  - first:
+      213: 6269987495879957896
+    second: Robot_Rouge_Sheet_21
+  - first:
+      213: 6219998672688038835
+    second: Robot_Rouge_Sheet_22
+  - first:
+      213: 527856442793431676
+    second: Robot_Rouge_Sheet_23
+  - first:
+      213: -2643708838607511493
+    second: Robot_Rouge_Sheet_24
+  - first:
+      213: -1250275243127915586
+    second: Robot_Rouge_Sheet_25
+  - first:
+      213: 7131310609460126659
+    second: Robot_Rouge_Sheet_26
+  - first:
+      213: 8642529985746588758
+    second: Robot_Rouge_Sheet_27
+  - first:
+      213: 6640293758026120035
+    second: Robot_Rouge_Sheet_28
+  - first:
+      213: -5309883744210939757
+    second: Robot_Rouge_Sheet_29
+  - first:
+      213: -3390427178309679967
+    second: Robot_Rouge_Sheet_30
+  - first:
+      213: -6788873354542210676
+    second: Robot_Rouge_Sheet_31
+  - first:
+      213: 5266092687584689212
+    second: Robot_Rouge_Sheet_32
+  - first:
+      213: 7304634751039780444
+    second: Robot_Rouge_Sheet_33
+  - first:
+      213: 4462236273354340605
+    second: Robot_Rouge_Sheet_34
+  - first:
+      213: 2102317762161782267
+    second: Robot_Rouge_Sheet_35
+  - first:
+      213: -1955315333339429788
+    second: Robot_Rouge_Sheet_36
+  - first:
+      213: 5966279133043179015
+    second: Robot_Rouge_Sheet_37
+  - first:
+      213: -4102977609981491225
+    second: Robot_Rouge_Sheet_38
+  - first:
+      213: 3761444316575677631
+    second: Robot_Rouge_Sheet_39
+  - first:
+      213: 2067050142265538005
+    second: Robot_Rouge_Sheet_40
+  - first:
+      213: -2608082673193958498
+    second: Robot_Rouge_Sheet_41
+  - first:
+      213: -7609043274077690653
+    second: Robot_Rouge_Sheet_42
+  - first:
+      213: 8091377023096208177
+    second: Robot_Rouge_Sheet_43
+  - first:
+      213: 4940968045260250492
+    second: Robot_Rouge_Sheet_44
+  - first:
+      213: -8229645578284909610
+    second: Robot_Rouge_Sheet_45
+  - first:
+      213: 3890246791860278582
+    second: Robot_Rouge_Sheet_46
+  - first:
+      213: 6966717072942372935
+    second: Robot_Rouge_Sheet_47
+  - first:
+      213: 4493783893560006955
+    second: Robot_Rouge_Sheet_48
+  - first:
+      213: -4245349590245314059
+    second: Robot_Rouge_Sheet_49
+  - first:
+      213: -5527134441158415508
+    second: Robot_Rouge_Sheet_50
+  - first:
+      213: -7361668240467182591
+    second: Robot_Rouge_Sheet_51
+  - first:
+      213: -1452136405730907878
+    second: Robot_Rouge_Sheet_52
+  - first:
+      213: 8426681327098036627
+    second: Robot_Rouge_Sheet_53
+  - first:
+      213: -7154815158531385885
+    second: Robot_Rouge_Sheet_54
+  - first:
+      213: -9214630492420096535
+    second: Robot_Rouge_Sheet_55
+  - first:
+      213: -7058907881774813342
+    second: Robot_Rouge_Sheet_56
+  - first:
+      213: 5638117292888284705
+    second: Robot_Rouge_Sheet_57
+  - first:
+      213: 1106124108964848751
+    second: Robot_Rouge_Sheet_58
+  - first:
+      213: -2660133299466844100
+    second: Robot_Rouge_Sheet_59
+  - first:
+      213: 9030864644776756939
+    second: Robot_Rouge_Sheet_60
+  - first:
+      213: 3232166194019005652
+    second: Robot_Rouge_Sheet_61
+  - first:
+      213: -2001830295759564796
+    second: Robot_Rouge_Sheet_62
+  - first:
+      213: 8170964994739460119
+    second: Robot_Rouge_Sheet_63
+  - first:
+      213: -8161952296247207191
+    second: Robot_Rouge_Sheet_64
+  - first:
+      213: -6234711792766627219
+    second: Robot_Rouge_Sheet_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 2623
+        width: 255
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612d1a9f524ed5a90800000000000000
+      internalID: -7323446567281503722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 2625
+        width: 221
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e55a285f25b8ad0800000000000000
+      internalID: -2698972337266139634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 2624
+        width: 205
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e391a70eb3de97a0800000000000000
+      internalID: -6368420009930026012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 2622
+        width: 181
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff19befc21f54030800000000000000
+      internalID: 3478451462767976444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2623
+        width: 209
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eae2a9640b8d8880800000000000000
+      internalID: -8607070461766735127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2707
+        y: 2644
+        width: 230
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0108f7c6cec8888a0800000000000000
+      internalID: -6302632731444543472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 2623
+        width: 252
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1230bb6b47ad2090800000000000000
+      internalID: -8057600215924854242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3733
+        y: 2625
+        width: 217
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70c9bfd7987f7d60800000000000000
+      internalID: 7890157665865285755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 2624
+        width: 201
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10704e69ff8d168c0800000000000000
+      internalID: -4007683601123244287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4754
+        y: 2622
+        width: 186
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74455d6cb3e009340800000000000000
+      internalID: 4868406847089235015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 5266
+        y: 2623
+        width: 213
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ee0731f134a9df0800000000000000
+      internalID: -172751834951127445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 5778
+        y: 2644
+        width: 231
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c9b11d13b8875c0800000000000000
+      internalID: -4217468004954563432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 6266
+        y: 2623
+        width: 255
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079429da1eb8a12a0800000000000000
+      internalID: -6765941688774801040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 2107
+        width: 184
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e676f2ac5a0b710800000000000000
+      internalID: 1707046546570702463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 2107
+        width: 187
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c0070f87f5c5f60800000000000000
+      internalID: 8024393609101970484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 2107
+        width: 187
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd5fc6f1db640e60800000000000000
+      internalID: 7927579793612037578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 2107
+        width: 183
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a5ba89b4e902c40800000000000000
+      internalID: 5485558393658366471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 2107
+        width: 176
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08c23ccdaa2b7a670800000000000000
+      internalID: 8549998864504138880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 2725
+        y: 2107
+        width: 177
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4bc0bd15ffbe880800000000000000
+      internalID: -8580483937991871269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 3230
+        y: 2107
+        width: 184
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ced67836999ea33c0800000000000000
+      internalID: -4378930842655298068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 3739
+        y: 2107
+        width: 187
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda65dc17f7670db0800000000000000
+      internalID: -4825774164665865506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 2107
+        width: 187
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88dd01e5868730750800000000000000
+      internalID: 6269987495879957896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 4766
+        y: 2107
+        width: 183
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3c8fc76dfd15650800000000000000
+      internalID: 6219998672688038835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 5285
+        y: 2107
+        width: 175
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c729a1553a2535700800000000000000
+      internalID: 527856442793431676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 5796
+        y: 2107
+        width: 176
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b302d3971d8af4bd0800000000000000
+      internalID: -2643708838607511493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 2107
+        width: 184
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb35e56a4126aee0800000000000000
+      internalID: -1250275243127915586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 1595
+        width: 201
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c368db473187f260800000000000000
+      internalID: 7131310609460126659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 1622
+        width: 192
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65456116b3f60f770800000000000000
+      internalID: 8642529985746588758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 1642
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36bf36bbdff072c50800000000000000
+      internalID: 6640293758026120035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 1638
+        width: 179
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3909fab1ed08f46b0800000000000000
+      internalID: -5309883744210939757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a48500d178c2f0d0800000000000000
+      internalID: -3390427178309679967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 2724
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81a56d27a319c1a0800000000000000
+      internalID: -6788873354542210676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c74cdf56be41940800000000000000
+      internalID: 5266092687584689212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5633bdba964f5560800000000000000
+      internalID: 7304634751039780444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 4260
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8f529af3c0ded30800000000000000
+      internalID: 4462236273354340605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 4772
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfda5aabddeec2d10800000000000000
+      internalID: 2102317762161782267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 5284
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 464cd6460135dd4e0800000000000000
+      internalID: -1955315333339429788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 5796
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e3dd3c24b7cc250800000000000000
+      internalID: 5966279133043179015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 6308
+        y: 1639
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e70cab2a9b4f07c0800000000000000
+      internalID: -4102977609981491225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1127
+        width: 183
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcb7eb4da5533430800000000000000
+      internalID: 3761444316575677631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 1128
+        width: 186
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d578a61723afac10800000000000000
+      internalID: 2067050142265538005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1132
+        width: 191
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e934c6f70aa3ecbd0800000000000000
+      internalID: -2608082673193958498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1687
+        y: 1129
+        width: 216
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e42608e47f376690800000000000000
+      internalID: -7609043274077690653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b386558885a4070800000000000000
+      internalID: 8091377023096208177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d1b404248d19440800000000000000
+      internalID: 4940968045260250492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 3221
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbb6f6f2fc6acd80800000000000000
+      internalID: -8229645578284909610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 3733
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6355f6588deecf530800000000000000
+      internalID: 3890246791860278582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 4245
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748116f3440cea060800000000000000
+      internalID: 6966717072942372935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 4757
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29140164a02d5e30800000000000000
+      internalID: 4493783893560006955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 5269
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1f31e5a0d7515c0800000000000000
+      internalID: -4245349590245314059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 5781
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6bece0828cab43b0800000000000000
+      internalID: -5527134441158415508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 6293
+        y: 1127
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10cbda43db916d990800000000000000
+      internalID: -7361668240467182591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 615
+        width: 227
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a192ffaf1a9f8dbe0800000000000000
+      internalID: -1452136405730907878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 583
+        width: 214
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3918811450691f470800000000000000
+      internalID: 8426681327098036627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 571
+        width: 222
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e5182a658df4bc90800000000000000
+      internalID: -7154815158531385885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 568
+        width: 218
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed31da636e0f1080800000000000000
+      internalID: -9214630492420096535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 2215
+        y: 569
+        width: 205
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f6b946ea8b90e90800000000000000
+      internalID: -7058907881774813342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 570
+        width: 188
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ed79c4ecd9e3e40800000000000000
+      internalID: 5638117292888284705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 3229
+        y: 571
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f646850440eb95f00800000000000000
+      internalID: 1106124108964848751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 3741
+        y: 571
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38471eabde451bd0800000000000000
+      internalID: -2660133299466844100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 4253
+        y: 571
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc68d8efb83145d70800000000000000
+      internalID: 9030864644776756939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 4765
+        y: 571
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d477895706fadc20800000000000000
+      internalID: 3232166194019005652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 5277
+        y: 571
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400d2a0c3f11834e0800000000000000
+      internalID: -2001830295759564796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 5789
+        y: 571
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718d89ffe59156170800000000000000
+      internalID: 8170964994739460119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 6301
+        y: 571
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea508461abeabe80800000000000000
+      internalID: -8161952296247207191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robot_Rouge_Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 57
+        width: 263
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62d43b48aad979a0800000000000000
+      internalID: -6234711792766627219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Robot_Rouge_Sheet_0: -7323446567281503722
+      Robot_Rouge_Sheet_1: -2698972337266139634
+      Robot_Rouge_Sheet_10: -172751834951127445
+      Robot_Rouge_Sheet_11: -4217468004954563432
+      Robot_Rouge_Sheet_12: -6765941688774801040
+      Robot_Rouge_Sheet_13: 1707046546570702463
+      Robot_Rouge_Sheet_14: 8024393609101970484
+      Robot_Rouge_Sheet_15: 7927579793612037578
+      Robot_Rouge_Sheet_16: 5485558393658366471
+      Robot_Rouge_Sheet_17: 8549998864504138880
+      Robot_Rouge_Sheet_18: -8580483937991871269
+      Robot_Rouge_Sheet_19: -4378930842655298068
+      Robot_Rouge_Sheet_2: -6368420009930026012
+      Robot_Rouge_Sheet_20: -4825774164665865506
+      Robot_Rouge_Sheet_21: 6269987495879957896
+      Robot_Rouge_Sheet_22: 6219998672688038835
+      Robot_Rouge_Sheet_23: 527856442793431676
+      Robot_Rouge_Sheet_24: -2643708838607511493
+      Robot_Rouge_Sheet_25: -1250275243127915586
+      Robot_Rouge_Sheet_26: 7131310609460126659
+      Robot_Rouge_Sheet_27: 8642529985746588758
+      Robot_Rouge_Sheet_28: 6640293758026120035
+      Robot_Rouge_Sheet_29: -5309883744210939757
+      Robot_Rouge_Sheet_3: 3478451462767976444
+      Robot_Rouge_Sheet_30: -3390427178309679967
+      Robot_Rouge_Sheet_31: -6788873354542210676
+      Robot_Rouge_Sheet_32: 5266092687584689212
+      Robot_Rouge_Sheet_33: 7304634751039780444
+      Robot_Rouge_Sheet_34: 4462236273354340605
+      Robot_Rouge_Sheet_35: 2102317762161782267
+      Robot_Rouge_Sheet_36: -1955315333339429788
+      Robot_Rouge_Sheet_37: 5966279133043179015
+      Robot_Rouge_Sheet_38: -4102977609981491225
+      Robot_Rouge_Sheet_39: 3761444316575677631
+      Robot_Rouge_Sheet_4: -8607070461766735127
+      Robot_Rouge_Sheet_40: 2067050142265538005
+      Robot_Rouge_Sheet_41: -2608082673193958498
+      Robot_Rouge_Sheet_42: -7609043274077690653
+      Robot_Rouge_Sheet_43: 8091377023096208177
+      Robot_Rouge_Sheet_44: 4940968045260250492
+      Robot_Rouge_Sheet_45: -8229645578284909610
+      Robot_Rouge_Sheet_46: 3890246791860278582
+      Robot_Rouge_Sheet_47: 6966717072942372935
+      Robot_Rouge_Sheet_48: 4493783893560006955
+      Robot_Rouge_Sheet_49: -4245349590245314059
+      Robot_Rouge_Sheet_5: -6302632731444543472
+      Robot_Rouge_Sheet_50: -5527134441158415508
+      Robot_Rouge_Sheet_51: -7361668240467182591
+      Robot_Rouge_Sheet_52: -1452136405730907878
+      Robot_Rouge_Sheet_53: 8426681327098036627
+      Robot_Rouge_Sheet_54: -7154815158531385885
+      Robot_Rouge_Sheet_55: -9214630492420096535
+      Robot_Rouge_Sheet_56: -7058907881774813342
+      Robot_Rouge_Sheet_57: 5638117292888284705
+      Robot_Rouge_Sheet_58: 1106124108964848751
+      Robot_Rouge_Sheet_59: -2660133299466844100
+      Robot_Rouge_Sheet_6: -8057600215924854242
+      Robot_Rouge_Sheet_60: 9030864644776756939
+      Robot_Rouge_Sheet_61: 3232166194019005652
+      Robot_Rouge_Sheet_62: -2001830295759564796
+      Robot_Rouge_Sheet_63: 8170964994739460119
+      Robot_Rouge_Sheet_64: -8161952296247207191
+      Robot_Rouge_Sheet_65: -6234711792766627219
+      Robot_Rouge_Sheet_7: 7890157665865285755
+      Robot_Rouge_Sheet_8: -4007683601123244287
+      Robot_Rouge_Sheet_9: 4868406847089235015
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

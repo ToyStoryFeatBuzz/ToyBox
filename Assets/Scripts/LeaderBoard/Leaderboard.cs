@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -18,11 +19,12 @@ namespace ToyBox.Leaderboard
         public List<TextMeshProUGUI> TextSlots;
 
         private Dictionary<string, int> _playerScoreDict;
+        private ScoreManager _scoreManager => ScoreManager.Instance;
 
         private void Start()
         {
             HideLeaderboard();
-            _playerScoreDict = new();
+            _playerScoreDict = _scoreManager.PlayerScores;
             CheckPlayers();
         }
 

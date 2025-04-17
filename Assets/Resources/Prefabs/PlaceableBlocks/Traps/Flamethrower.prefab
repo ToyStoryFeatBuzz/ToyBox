@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7955997269193694491}
   - component: {fileID: 533531122310973809}
   - component: {fileID: 4085028862996516435}
-  - component: {fileID: 3712233200420297233}
+  - component: {fileID: 6245249823949126724}
   m_Layer: 0
   m_Name: Flamethrower
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _range: 10
   _projectile: {fileID: 389432329228692722, guid: 9f9e4938f06785143ae799c3b0ea401b, type: 3}
+  _projectileSpeed: 0
 --- !u!212 &4085028862996516435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92,8 +93,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 1, g: 0.6913729, b: 0.19339621, a: 1}
+  m_Sprite: {fileID: 3968886181643842617, guid: f657c673f9b862b45b6d5c08a00f133d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,8 +104,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &3712233200420297233
-PolygonCollider2D:
+--- !u!61 &6245249823949126724
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -141,18 +142,11 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.8828125}
+    oldSize: {x: 1.896, y: 0.86814123}
     newSize: {x: 1, y: 0.8828125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.25, y: 0.43359375}
-      - {x: -0.5, y: 0}
-      - {x: -0.25, y: -0.43359375}
-      - {x: 0.25, y: -0.43359375}
-      - {x: 0.5, y: 0}
-      - {x: 0.25, y: 0.43359375}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 1.896, y: 0.86814123}
+  m_EdgeRadius: 0

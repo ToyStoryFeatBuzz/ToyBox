@@ -1,31 +1,40 @@
 fileFormatVersion: 2
-guid: e8808cdea37d971408f6d4f6e7498e4e
+guid: dd04b1f50c45a044b93d78bfd20b7936
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4077152910786278393
-    second: Explosion_Sheet_0
+      213: -4557349521337277399
+    second: Pistolet_Sheet_0
   - first:
-      213: 923729816137902478
-    second: Explosion_Sheet_1
+      213: -8986931648791565409
+    second: Pistolet_Sheet_1
   - first:
-      213: -7848415120431781534
-    second: Explosion_Sheet_2
+      213: -4344521581251839496
+    second: Pistolet_Sheet_2
   - first:
-      213: -6823209688929726655
-    second: Explosion_Sheet_3
+      213: 1654474063495898677
+    second: Pistolet_Sheet_3
   - first:
-      213: -8796445240951167900
-    second: Explosion_Sheet_4
+      213: -8580874249234012702
+    second: Pistolet_Sheet_4
   - first:
-      213: -8095089962072924393
-    second: Explosion_Sheet_5
+      213: 675384315207009803
+    second: Pistolet_Sheet_5
   - first:
-      213: 8615753292584920712
-    second: Explosion_Sheet_6
+      213: -2002331493055906336
+    second: Pistolet_Sheet_6
   - first:
-      213: -5769011909663925511
-    second: Explosion_Sheet_7
+      213: -5255573647868470727
+    second: Pistolet_Sheet_7
+  - first:
+      213: 6648861330375189379
+    second: Pistolet_Sheet_8
+  - first:
+      213: -6056511937958557858
+    second: Pistolet_Sheet_9
+  - first:
+      213: -5341609338588363023
+    second: Pistolet_Sheet_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,7 +105,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,43 +126,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Explosion_Sheet_0
+      name: Pistolet_Sheet_0
       rect:
         serializedVersion: 2
-        x: 197
-        y: 194
-        width: 123
-        height: 120
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f3bd5e78f4f49830800000000000000
-      internalID: 4077152910786278393
+      spriteID: 924256791ca01c0c0800000000000000
+      internalID: -4557349521337277399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_1
+      name: Pistolet_Sheet_2
       rect:
         serializedVersion: 2
-        x: 604
-        y: 82
-        width: 343
-        height: 338
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +167,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e892657af5fb1dc00800000000000000
-      internalID: 923729816137902478
+      spriteID: 8f9377ed3a825b3c0800000000000000
+      internalID: -4344521581251839496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_2
+      name: Pistolet_Sheet_3
       rect:
         serializedVersion: 2
-        x: 1059
-        y: 22
-        width: 462
-        height: 454
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 269ebd8d704d41390800000000000000
-      internalID: -7848415120431781534
+      spriteID: 53625cc156fd5f610800000000000000
+      internalID: 1654474063495898677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_3
+      name: Pistolet_Sheet_5
       rect:
         serializedVersion: 2
-        x: 1583
-        y: 35
-        width: 436
-        height: 429
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +211,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14f075750f61f41a0800000000000000
-      internalID: -6823209688929726655
+      spriteID: b06c8c2d4727f5900800000000000000
+      internalID: 675384315207009803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_4
+      name: Pistolet_Sheet_6
       rect:
         serializedVersion: 2
-        x: 2126
-        y: 68
-        width: 371
-        height: 365
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +233,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4642eeea8afbce580800000000000000
-      internalID: -8796445240951167900
+      spriteID: 0ed33d9ad1a4634e0800000000000000
+      internalID: -2002331493055906336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_5
+      name: Pistolet_Sheet_7
       rect:
         serializedVersion: 2
-        x: 2681
-        y: 114
-        width: 282
-        height: 276
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,52 +255,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71f10d1b19678af80800000000000000
-      internalID: -8095089962072924393
+      spriteID: 93a55ebcc937017b0800000000000000
+      internalID: -5255573647868470727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_6
+      name: Pistolet_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3240
-        y: 163
-        width: 184
-        height: 181
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8862deca8fd419770800000000000000
-      internalID: 8615753292584920712
+      spriteID: b8fac8e78ada28246bf12bd891b49498
+      internalID: -8986931648791565409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_7
+      name: Pistolet_Sheet_4
       rect:
         serializedVersion: 2
-        x: 3794
-        y: 208
-        width: 95
-        height: 93
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9fadb73db3a50ffa0800000000000000
-      internalID: -5769011909663925511
+      spriteID: 531b3485ef0ba394cbb69dcb17f918e3
+      internalID: -8580874249234012702
       vertices: []
       indices: 
       edges: []
@@ -326,7 +309,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 266c077a4f3b440438fbc0386c68ea18
     internalID: 0
     vertices: []
     indices: 
@@ -336,14 +319,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Explosion_Sheet_0: 4077152910786278393
-      Explosion_Sheet_1: 923729816137902478
-      Explosion_Sheet_2: -7848415120431781534
-      Explosion_Sheet_3: -6823209688929726655
-      Explosion_Sheet_4: -8796445240951167900
-      Explosion_Sheet_5: -8095089962072924393
-      Explosion_Sheet_6: 8615753292584920712
-      Explosion_Sheet_7: -5769011909663925511
+      Pistolet_Sheet_0: -4557349521337277399
+      Pistolet_Sheet_1: -8986931648791565409
+      Pistolet_Sheet_2: -4344521581251839496
+      Pistolet_Sheet_3: 1654474063495898677
+      Pistolet_Sheet_4: -8580874249234012702
+      Pistolet_Sheet_5: 675384315207009803
+      Pistolet_Sheet_6: -2002331493055906336
+      Pistolet_Sheet_7: -5255573647868470727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

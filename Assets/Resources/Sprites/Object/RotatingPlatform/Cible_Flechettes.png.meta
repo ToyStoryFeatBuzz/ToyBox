@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: e8808cdea37d971408f6d4f6e7498e4e
+guid: 809b7c676d348c246b150b3535253ba8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4077152910786278393
-    second: Explosion_Sheet_0
+      213: 5715370119950265352
+    second: Cible_Flechettes_0
   - first:
-      213: 923729816137902478
-    second: Explosion_Sheet_1
+      213: -564153408373046881
+    second: Cible_Flechettes_1
   - first:
-      213: -7848415120431781534
-    second: Explosion_Sheet_2
+      213: 8213182351546094574
+    second: Cible_Flechettes_2
   - first:
-      213: -6823209688929726655
-    second: Explosion_Sheet_3
-  - first:
-      213: -8796445240951167900
-    second: Explosion_Sheet_4
-  - first:
-      213: -8095089962072924393
-    second: Explosion_Sheet_5
-  - first:
-      213: 8615753292584920712
-    second: Explosion_Sheet_6
-  - first:
-      213: -5769011909663925511
-    second: Explosion_Sheet_7
+      213: -5725463732271055374
+    second: Cible_Flechettes_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 250
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -147,13 +135,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Explosion_Sheet_0
+      name: Cible_Flechettes_0
       rect:
         serializedVersion: 2
-        x: 197
-        y: 194
-        width: 123
-        height: 120
+        x: 236
+        y: 382
+        width: 39
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f3bd5e78f4f49830800000000000000
-      internalID: 4077152910786278393
+      spriteID: 80c648fb7d2115f40800000000000000
+      internalID: 5715370119950265352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_1
+      name: Cible_Flechettes_1
       rect:
         serializedVersion: 2
-        x: 604
-        y: 82
-        width: 343
-        height: 338
+        x: 89
+        y: 236
+        width: 38
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +172,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e892657af5fb1dc00800000000000000
-      internalID: 923729816137902478
+      spriteID: f91491fc679bb28f0800000000000000
+      internalID: -564153408373046881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_2
+      name: Cible_Flechettes_2
       rect:
         serializedVersion: 2
-        x: 1059
-        y: 22
-        width: 462
-        height: 454
+        x: 380
+        y: 245
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 269ebd8d704d41390800000000000000
-      internalID: -7848415120431781534
+      spriteID: ee3996b55d51bf170800000000000000
+      internalID: 8213182351546094574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Explosion_Sheet_3
+      name: Cible_Flechettes_3
       rect:
         serializedVersion: 2
-        x: 1583
-        y: 35
-        width: 436
-        height: 429
+        x: 236
+        y: 91
+        width: 40
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,96 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14f075750f61f41a0800000000000000
-      internalID: -6823209688929726655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Explosion_Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 2126
-        y: 68
-        width: 371
-        height: 365
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4642eeea8afbce580800000000000000
-      internalID: -8796445240951167900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Explosion_Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 2681
-        y: 114
-        width: 282
-        height: 276
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71f10d1b19678af80800000000000000
-      internalID: -8095089962072924393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Explosion_Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 3240
-        y: 163
-        width: 184
-        height: 181
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8862deca8fd419770800000000000000
-      internalID: 8615753292584920712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Explosion_Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 3794
-        y: 208
-        width: 95
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fadb73db3a50ffa0800000000000000
-      internalID: -5769011909663925511
+      spriteID: 2fdf99ff1111b80b0800000000000000
+      internalID: -5725463732271055374
       vertices: []
       indices: 
       edges: []
@@ -336,14 +236,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Explosion_Sheet_0: 4077152910786278393
-      Explosion_Sheet_1: 923729816137902478
-      Explosion_Sheet_2: -7848415120431781534
-      Explosion_Sheet_3: -6823209688929726655
-      Explosion_Sheet_4: -8796445240951167900
-      Explosion_Sheet_5: -8095089962072924393
-      Explosion_Sheet_6: 8615753292584920712
-      Explosion_Sheet_7: -5769011909663925511
+      Cible_Flechettes_0: 5715370119950265352
+      Cible_Flechettes_1: -564153408373046881
+      Cible_Flechettes_2: 8213182351546094574
+      Cible_Flechettes_3: -5725463732271055374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -38,7 +38,7 @@ namespace ToyBox.Managers {
 
         public void SetPlayersMovements(bool activation) {
             foreach (Player player in Players) {
-                player.PlayerObject.GetComponent<PlayerEnd>().IsDead = activation;
+                player.PlayerObject.GetComponent<PlayerEnd>().IsDead = !activation;
             }
         }
 
@@ -106,6 +106,10 @@ namespace ToyBox.Managers {
 
         public List<Player> GetAlivePlayers() {
             return Players.Where(_player => _player.PlayerState == EPlayerState.Alive).ToList();
+        }
+
+        public int GetBestScore() {
+            return Players.Max(player => player.PlayerStats.Score);
         }
         
     }

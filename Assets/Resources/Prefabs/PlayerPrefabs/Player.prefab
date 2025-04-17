@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: -450549269470407984}
   - component: {fileID: 3940297918288691315}
   - component: {fileID: 9213022253772650989}
+  - component: {fileID: 5909298642474146104}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -694,7 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseBody: {fileID: 0}
   _mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  _mouseSensitivity: 0.015
+  _mouseSensitivity: 0.15
 --- !u!114 &-450549269470407984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,7 +708,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f50fa6de91aaa48b187d0dbe4a4c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Score>k__BackingField: 0
   MatchScores: 
+  Name: 
 --- !u!114 &3940297918288691315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,3 +761,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!114 &5909298642474146104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561266323775685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e0c4f4fe173024e9b011c09164c482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerId: 

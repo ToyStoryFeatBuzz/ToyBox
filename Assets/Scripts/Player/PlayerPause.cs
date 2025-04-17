@@ -15,7 +15,6 @@ namespace ToyBox.Player {
             if (_playerEnd.IsDead) {
                 return;
             }
-            Debug.Log("gros zizi");
             _pauseManager.StartPause(gameObject);
         }
         

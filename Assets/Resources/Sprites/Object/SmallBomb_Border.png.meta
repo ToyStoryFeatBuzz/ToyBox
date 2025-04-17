@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 809b7c676d348c246b150b3535253ba8
+guid: 501484b6ac35d754cad41248510bba5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5715370119950265352
-    second: Cible_Flechettes_0
-  - first:
-      213: -564153408373046881
-    second: Cible_Flechettes_1
-  - first:
-      213: 8213182351546094574
-    second: Cible_Flechettes_2
-  - first:
-      213: -5725463732271055374
-    second: Cible_Flechettes_3
+      213: 7573880306816587853
+    second: SmallBomb_Border_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 148
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cible_Flechettes_0
+      name: SmallBomb_Border_0
       rect:
         serializedVersion: 2
-        x: 236
-        y: 382
-        width: 39
-        height: 39
+        x: 170
+        y: 170
+        width: 172
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80c648fb7d2115f40800000000000000
-      internalID: 5715370119950265352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cible_Flechettes_1
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 236
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f91491fc679bb28f0800000000000000
-      internalID: -564153408373046881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cible_Flechettes_2
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 245
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ee3996b55d51bf170800000000000000
-      internalID: 8213182351546094574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Cible_Flechettes_3
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 91
-        width: 40
-        height: 39
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2fdf99ff1111b80b0800000000000000
-      internalID: -5725463732271055374
+      spriteID: d48112bc204db1960800000000000000
+      internalID: 7573880306816587853
       vertices: []
       indices: 
       edges: []
@@ -200,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cible_Flechettes_0: 5715370119950265352
-      Cible_Flechettes_1: -564153408373046881
-      Cible_Flechettes_2: 8213182351546094574
-      Cible_Flechettes_3: -5725463732271055374
+      SmallBomb_Border_0: 7573880306816587853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

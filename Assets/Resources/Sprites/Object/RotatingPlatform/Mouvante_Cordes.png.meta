@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mouvante_Cordes_0: 3013125659675492745
+      Mouvante_Cordes_1: -712415767548834376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

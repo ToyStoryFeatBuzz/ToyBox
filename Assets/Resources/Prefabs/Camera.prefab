@@ -62,7 +62,6 @@ GameObject:
   - component: {fileID: 6696371537082829100}
   - component: {fileID: 6468840379390300928}
   - component: {fileID: 1499869193993167370}
-  - component: {fileID: 2571666641935513930}
   - component: {fileID: 5153082043022019535}
   m_Layer: 0
   m_Name: Camera
@@ -190,25 +189,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &2571666641935513930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322207101502094880}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31758743f24309e479fe568feea16de3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _camSizeMultiplier: 1.1
-  _minCamSize: 4
-  _maxCamSize: 20
-  _camMovementSpeed: 4
-  _camZoomSpeed: 4
-  EditorMapCenter: {fileID: 0}
-  EditorCamZoom: 0
 --- !u!114 &5153082043022019535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,8 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camSizeMultiplier: 1.1
-  _minCamSize: 8
-  _maxCamSize: 15
+  _minCamSize: 12
+  _maxCamSize: 16
   _camMovementSpeed: 5
   _camZoomSpeed: 5
   EditorMapCenter: {fileID: 0}

@@ -1,42 +1,19 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ToyBox.Menu {
-    public class SelectableNavigation  : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler {
+    public class SelectableNavigation  : MonoBehaviour{
         [SerializeField] StNavigation _navigation;
-
-        private bool _isSelected;
-        private Selectable _selectable;
-
-        SelectableManager _selectableManager => SelectableManager.Instance;
+        
+        protected Selectable _selectable;
         
         private void Start() {
             _selectable = GetComponent<Selectable>();
             _navigation.Init(_selectable);
             _navigation.ApplyNavigation();
         }
-        
-        public void OnPointerEnter(PointerEventData eventData) {
-            if (!_selectable.enabled) return;
-            _selectableManager.SelectableHooveredCount++;
-            _selectable.Select();
-        }
-
-        public void OnPointerExit(PointerEventData eventData) {
-
-        }
-
-        public void OnSelect(BaseEventData eventData) {
-
-        }
-
-        public void OnDeselect(BaseEventData eventData) {
-
-        }
     }
-
     
     [Serializable]
     public struct StNavigation {

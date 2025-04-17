@@ -87,8 +87,7 @@ public class VoteManager : MonoBehaviour
 
         List<VoteZone> topZones = new List<VoteZone>();
         int highestVote = 0;
-
-        // On cherche les maps avec le plus de votes
+        
         foreach (var zone in VoteZones)
         {
             int count = zone.GetVoteCount();
@@ -104,8 +103,7 @@ public class VoteManager : MonoBehaviour
                 topZones.Add(zone);
             }
         }
-
-        // Choix aléatoire si égalité
+        
         if (topZones.Count > 0)
         {
             VoteZone winner;

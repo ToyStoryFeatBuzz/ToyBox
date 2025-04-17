@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: def83a6fe96b82a4a85bd7da8fc6ca37
+guid: a0eb6f57fe74b184594a80f8d1e8be59
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1150245518703573528
-    second: Bloc_Depart_0
+      213: -7652072110399752321
+    second: Ulti_0
+  - first:
+      213: 1164492067715932340
+    second: Ulti_1
+  - first:
+      213: 1762587551731106673
+    second: Ulti_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +132,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bloc_Depart_0
+      name: Ulti_0
       rect:
         serializedVersion: 2
-        x: 88
-        y: 88
-        width: 336
-        height: 336
+        x: 43
+        y: 121
+        width: 177
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +147,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81abfca743e76ff00800000000000000
-      internalID: 1150245518703573528
+      spriteID: f77f2ff35f06ec590800000000000000
+      internalID: -7652072110399752321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ulti_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 121
+        width: 177
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b0e7f7ad5b192010800000000000000
+      internalID: 1164492067715932340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ulti_2
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 121
+        width: 177
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 173457a2a08f57810800000000000000
+      internalID: 1762587551731106673
       vertices: []
       indices: 
       edges: []
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bloc_Depart_0: 1150245518703573528
+      Ulti_0: -7652072110399752321
+      Ulti_1: 1164492067715932340
+      Ulti_2: 1762587551731106673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

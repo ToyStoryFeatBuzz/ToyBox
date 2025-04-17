@@ -38,6 +38,7 @@ namespace ToyBox.Build {
         public void Pick() { // When chosen by player
             IsChosen = true;
             transform.parent = null;
+            transform.localScale = Vector3.one;
             OnPickedEvent.Invoke();
         }
 

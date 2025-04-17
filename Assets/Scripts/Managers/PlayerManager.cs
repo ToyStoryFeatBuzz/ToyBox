@@ -38,7 +38,7 @@ namespace ToyBox.Managers {
 
         public void SetPlayersMovements(bool activation) {
             foreach (Player player in Players) {
-                player.PlayerObject.GetComponent<PlayerEnd>().IsDead = activation;
+                player.PlayerObject.GetComponent<PlayerEnd>().IsDead = !activation;
             }
         }
 

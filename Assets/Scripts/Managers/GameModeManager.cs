@@ -40,10 +40,10 @@ namespace ToyBox.Managers {
 
         private void OpenLeaderBoard() {
             if (_playerManager.GetBestScore() < 10) {
-                OnLeaderboardStart.Invoke();
+                OnLeaderboardStart?.Invoke();
             }
             else {
-                OnLeaderboardGraphStart.Invoke();
+                OnLeaderboardGraphStart?.Invoke();
             }
         }
 

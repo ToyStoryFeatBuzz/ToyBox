@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 516fbb2edfb92594f8d0492781abf924
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7493485621279790271
+    second: TapisROulant_Sheet_0
+  - first:
+      213: -1042532544646499235
+    second: TapisROulant_Sheet_1
+  - first:
+      213: -7413396241857641713
+    second: TapisROulant_Sheet_2
+  - first:
+      213: -2110718713988291022
+    second: TapisROulant_Sheet_3
+  - first:
+      213: 2237498549454486502
+    second: TapisROulant_Sheet_4
+  - first:
+      213: 742516472322951093
+    second: TapisROulant_Sheet_5
+  - first:
+      213: 7687687785668274672
+    second: TapisROulant_Sheet_6
+  - first:
+      213: 2324596873847635068
+    second: TapisROulant_Sheet_7
+  - first:
+      213: 7498352997986968730
+    second: TapisROulant_Sheet_8
+  - first:
+      213: 1915965452335862794
+    second: TapisROulant_Sheet_9
+  - first:
+      213: -3866096530441211196
+    second: TapisROulant_Sheet_10
+  - first:
+      213: 981794287960375128
+    second: TapisROulant_Sheet_11
+  - first:
+      213: -6692110027704868437
+    second: TapisROulant_Sheet_12
+  - first:
+      213: 4536241379405072160
+    second: TapisROulant_Sheet_13
+  - first:
+      213: 8088800916350815321
+    second: TapisROulant_Sheet_14
+  - first:
+      213: -4451262910923050097
+    second: TapisROulant_Sheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 684
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb411e968753ef760800000000000000
+      internalID: 7493485621279790271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 684
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54bf899c2e2881f0800000000000000
+      internalID: -1042532544646499235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 684
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f030cd855635e1990800000000000000
+      internalID: -7413396241857641713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 684
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23665ff338835b2e0800000000000000
+      internalID: -2110718713988291022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 684
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ebbfa173113d0f10800000000000000
+      internalID: 2237498549454486502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 684
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b78fac2cc2fd4a00800000000000000
+      internalID: 742516472322951093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3086
+        y: 684
+        width: 475
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9edd85f4720ba60800000000000000
+      internalID: 7687687785668274672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 684
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7cfbaf5a80a24020800000000000000
+      internalID: 2324596873847635068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 172
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94af7dd2508f0860800000000000000
+      internalID: 7498352997986968730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 172
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04566c7d60e69a10800000000000000
+      internalID: 1915965452335862794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 172
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c27ea360bdd85ac0800000000000000
+      internalID: -3866096530441211196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 172
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85fb26004b800ad00800000000000000
+      internalID: 981794287960375128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 172
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba162d8d269d023a0800000000000000
+      internalID: -6692110027704868437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2583
+        y: 172
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0270ed22087f3fe30800000000000000
+      internalID: 4536241379405072160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 172
+        width: 475
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95cc1fdb391314070800000000000000
+      internalID: 8088800916350815321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TapisROulant_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 3607
+        y: 172
+        width: 474
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f837f8067ffe932c0800000000000000
+      internalID: -4451262910923050097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

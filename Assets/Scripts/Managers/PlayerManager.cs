@@ -16,6 +16,8 @@ namespace ToyBox.Managers {
         
         public PlayerInputManager PlayerInputManager;
         
+        [SerializeField] Transform _spawnPoint;
+        
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
@@ -64,6 +66,7 @@ namespace ToyBox.Managers {
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
 
             player.transform.parent = transform;
+            player.transform.position = _spawnPoint.position;
         }
 
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {

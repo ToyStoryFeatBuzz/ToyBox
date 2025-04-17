@@ -141,6 +141,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -509,7 +535,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TapisROulant_Sheet_0: 7493485621279790271
+      TapisROulant_Sheet_1: -1042532544646499235
+      TapisROulant_Sheet_10: -3866096530441211196
+      TapisROulant_Sheet_11: 981794287960375128
+      TapisROulant_Sheet_12: -6692110027704868437
+      TapisROulant_Sheet_13: 4536241379405072160
+      TapisROulant_Sheet_14: 8088800916350815321
+      TapisROulant_Sheet_15: -4451262910923050097
+      TapisROulant_Sheet_2: -7413396241857641713
+      TapisROulant_Sheet_3: -2110718713988291022
+      TapisROulant_Sheet_4: 2237498549454486502
+      TapisROulant_Sheet_5: 742516472322951093
+      TapisROulant_Sheet_6: 7687687785668274672
+      TapisROulant_Sheet_7: 2324596873847635068
+      TapisROulant_Sheet_8: 7498352997986968730
+      TapisROulant_Sheet_9: 1915965452335862794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

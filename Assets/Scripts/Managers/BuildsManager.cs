@@ -32,6 +32,7 @@ namespace ToyBox.Managers
         private void Awake()
         {
             _chooseBox?.gameObject.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
             if (Instance == null)
             {
                 Instance = this;

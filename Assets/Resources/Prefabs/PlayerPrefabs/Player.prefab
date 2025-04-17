@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseBody: {fileID: 0}
   _mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  _mouseSensitivity: 0.015
+  _mouseSensitivity: 0.15
 --- !u!114 &-450549269470407984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -707,7 +707,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f50fa6de91aaa48b187d0dbe4a4c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Score>k__BackingField: 0
   MatchScores: 
+  Name: 
 --- !u!114 &3940297918288691315
 MonoBehaviour:
   m_ObjectHideFlags: 0

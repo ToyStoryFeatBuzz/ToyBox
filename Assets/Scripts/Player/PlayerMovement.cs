@@ -60,6 +60,7 @@ namespace ToyBox.Player
 
         private void FixedUpdate() {
             if (_playerEnd.IsDead) {
+                _rb.linearVelocity = new Vector2(0, _rb.linearVelocityY) ;
                 return;
             }
             

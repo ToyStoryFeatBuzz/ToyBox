@@ -17,6 +17,8 @@ namespace ToyBox.Managers {
 
         public Action OnRaceStart;
         public Action OnRaceEnd;
+        public Action OnLeaderboardStart;
+        public Action OnLeaderboardGraphStart;
         public Action OnLeaderboardFinish;
         public Action OnBuildStart;
 
@@ -32,10 +34,19 @@ namespace ToyBox.Managers {
         }
 
         private void Start() {
-            //StartRaceMode();
+            OnRaceEnd += OpenLeaderBoard;
             OnLeaderboardFinish += StartConstructMode;
         }
-        
+
+        private void OpenLeaderBoard() {
+            if (_playerManager.GetBestScore() < 10) {
+                OnLeaderboardStart.Invoke();
+            }
+            else {
+                OnLeaderboardGraphStart.Invoke();
+            }
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.L))
@@ -98,5 +109,8 @@ namespace ToyBox.Managers {
             }
             OnBuildStart?.Invoke();
         }
+        
+        
+        
     }
 }

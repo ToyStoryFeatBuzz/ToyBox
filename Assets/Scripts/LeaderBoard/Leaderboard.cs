@@ -2,11 +2,7 @@
 using ToyBox.Managers;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
-using ToyBox.Player;
 using UnityEngine;
-using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace ToyBox.Leaderboard
 {
@@ -14,41 +10,25 @@ namespace ToyBox.Leaderboard
     {
         [SerializeField] float _timeToShow = 3f;
         private PlayerManager _playerManager => PlayerManager.Instance;
-
-        [Header("UI Match")]
-        public GameObject PanelMatchUI;
-        public List<GameObject> FillBars;
-        public List<TextMeshProUGUI> TextSlots;
-
-        private Dictionary<string, int> _playerScoreDict;
         private ScoreManager _scoreManager => ScoreManager.Instance;
         GameModeManager _gameModeManager => GameModeManager.Instance;
+        private LeaderboardData _leaderboardData => LeaderboardData.Instance;
+        
+        private Dictionary<string, int> _playerScoreDict;
 
         private void Start()
         {
-            _gameModeManager.OnRaceEnd += ShowLeaderboard;
+            _gameModeManager.OnLeaderboardStart += ShowLeaderboard;
             HideLeaderboard();
             _playerScoreDict = _scoreManager.PlayerScores;
             CheckPlayers();
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                ShowLeaderboard();
-            }
-            if (Input.GetKeyDown(KeyCode.C))
-            {
-                CheckPlayers();
-            }
         }
 
         public void ShowLeaderboard()
         {
             _playerManager.SetNewPlayersEntries(false);
             UpdateLeaderboard();
-            PanelMatchUI.SetActive(true);
+            _leaderboardData.PanelEndMatch.SetActive(true);
             StartCoroutine(ShowingLeaderboard());
         }
         
@@ -61,27 +41,27 @@ namespace ToyBox.Leaderboard
 
         public void HideLeaderboard()
         {
-            PanelMatchUI.SetActive(false);
+            _leaderboardData.PanelEndMatch.SetActive(false);
         }
 
         public void UpdateLeaderboard()
         {
             CheckPlayers();
 
-            var sortedPlayers = GetSortedPlayers();
+            List<(string name, int score)> sortedPlayers = GetSortedPlayers();
 
-            for (int i = 0; i < FillBars.Count && i < TextSlots.Count; i++)
+            for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
-                Transform parent = FillBars[i].transform.parent;
+                Transform parent = _leaderboardData.PlayerInfos[i].FillBar.transform.parent;
 
                 if (i < sortedPlayers.Count)
                 {
-                    var (playerName, score) = sortedPlayers[i];
+                    (string playerName, int score) = sortedPlayers[i];
                     Debug.Log($"AFTER SORTING Name: {playerName}, Score: {score}");
 
                     parent.gameObject.SetActive(true);
-                    FillBars[i].GetComponent<Image>().fillAmount = score / 10f;
-                    TextSlots[i].text = playerName;
+                    _leaderboardData.PlayerInfos[i].FillBar.fillAmount = score / 10f;
+                    _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
                 }
                 else
                 {
@@ -97,9 +77,9 @@ namespace ToyBox.Leaderboard
 
         public List<(string name, int score)> GetSortedPlayers()
         {
-            var playerList = new List<(string name, int score)>();
+            List<(string name, int score)> playerList = new List<(string name, int score)>();
 
-            foreach (var player in _playerManager.Players)
+            foreach (Managers.Player player in _playerManager.Players)
             {
                 if (_playerScoreDict.ContainsKey(player.Name))
                 {

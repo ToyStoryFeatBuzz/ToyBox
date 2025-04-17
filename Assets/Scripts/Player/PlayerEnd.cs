@@ -18,6 +18,7 @@ namespace ToyBox.Player {
             _playerManager.SetPlayerState(gameObject, EPlayerState.Dead);
             IsDead = true;
             gameObject.transform.position = new Vector2(-999, -999); //Send the dead out of the map to avoid clutter on the race
+            _playerStats.AddScore(0);
         }
 
         public void SetWin() {

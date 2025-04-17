@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using ToyBox.Player;
 using static ToyBox.Enums;
 using ToyBox.Build;
+using UnityEditor.Animations;
 
 namespace ToyBox.Managers {
     public class PlayerManager : MonoBehaviour {
@@ -15,6 +16,8 @@ namespace ToyBox.Managers {
         public static PlayerManager Instance;
         
         public PlayerInputManager PlayerInputManager;
+        public List<AnimatorController> AnimationClips;
+        private List<AnimatorController> Animators = new();
         
         private void Awake() {
             if (Instance == null) {
@@ -59,12 +62,18 @@ namespace ToyBox.Managers {
             player.gameObject.name = name;
             PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();
             
+            Animator animator = player.gameObject.GetComponentInChildren<Animator>();
+            if (animator != null && AnimationClips.Count >= Players.Count + 1) {
+                animator.runtimeAnimatorController = AnimationClips[Players.Count];
+            }
             
             Players.Add(new Player
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
 
             player.transform.parent = transform;
+            player.transform.localPosition = Vector3.zero;
         }
+        
 
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {
             if (change != InputDeviceChange.Disconnected) return;

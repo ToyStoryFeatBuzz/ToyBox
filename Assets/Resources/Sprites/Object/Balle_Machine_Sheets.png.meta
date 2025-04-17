@@ -220,7 +220,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -234,7 +234,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -286,10 +286,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2716
-        width: 474
-        height: 217
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,10 +308,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_1
       rect:
         serializedVersion: 2
-        x: 546
-        y: 2716
-        width: 474
-        height: 217
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,10 +330,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_2
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 2716
-        width: 472
-        height: 217
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_3
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 2716
-        width: 469
-        height: 217
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,10 +374,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_4
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 2716
-        width: 465
-        height: 217
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,10 +396,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_5
       rect:
         serializedVersion: 2
-        x: 2594
-        y: 2716
-        width: 460
-        height: 217
+        x: 2560
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,10 +418,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_6
       rect:
         serializedVersion: 2
-        x: 3106
-        y: 2716
-        width: 456
-        height: 217
+        x: 3072
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,10 +440,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_7
       rect:
         serializedVersion: 2
-        x: 3618
-        y: 2716
-        width: 456
-        height: 222
+        x: 3584
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_8
       rect:
         serializedVersion: 2
-        x: 4130
-        y: 2716
-        width: 456
-        height: 225
+        x: 4096
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +484,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_9
       rect:
         serializedVersion: 2
-        x: 4642
-        y: 2716
-        width: 456
-        height: 228
+        x: 4608
+        y: 2560
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,10 +506,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_10
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2204
-        width: 456
-        height: 229
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,10 +528,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_11
       rect:
         serializedVersion: 2
-        x: 546
-        y: 2204
-        width: 456
-        height: 230
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,10 +550,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_12
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 2204
-        width: 456
-        height: 232
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,10 +572,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_13
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 2204
-        width: 456
-        height: 233
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,10 +594,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_14
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 2204
-        width: 456
-        height: 232
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,10 +616,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_15
       rect:
         serializedVersion: 2
-        x: 2594
-        y: 2204
-        width: 456
-        height: 230
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,10 +638,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_16
       rect:
         serializedVersion: 2
-        x: 3106
-        y: 2204
-        width: 456
-        height: 226
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -660,10 +660,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_17
       rect:
         serializedVersion: 2
-        x: 3618
-        y: 2204
-        width: 456
-        height: 220
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,10 +682,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_18
       rect:
         serializedVersion: 2
-        x: 4130
-        y: 2204
-        width: 456
-        height: 217
+        x: 4096
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,10 +704,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_19
       rect:
         serializedVersion: 2
-        x: 4642
-        y: 2204
-        width: 456
-        height: 217
+        x: 4608
+        y: 2048
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -726,10 +726,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_20
       rect:
         serializedVersion: 2
-        x: 34
-        y: 1692
-        width: 456
-        height: 217
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,10 +748,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_21
       rect:
         serializedVersion: 2
-        x: 546
-        y: 1692
-        width: 456
-        height: 217
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,10 +770,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_22
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 1692
-        width: 456
-        height: 217
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -792,10 +792,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_23
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 1692
-        width: 456
-        height: 217
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -814,10 +814,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_24
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 1692
-        width: 456
-        height: 217
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -836,10 +836,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_25
       rect:
         serializedVersion: 2
-        x: 2594
-        y: 1692
-        width: 456
-        height: 217
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -858,10 +858,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_26
       rect:
         serializedVersion: 2
-        x: 3106
-        y: 1692
-        width: 456
-        height: 217
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -880,10 +880,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_27
       rect:
         serializedVersion: 2
-        x: 3613
-        y: 1803
-        width: 50
-        height: 48
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -902,10 +902,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_28
       rect:
         serializedVersion: 2
-        x: 3618
-        y: 1692
-        width: 456
-        height: 217
+        x: 4096
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,10 +924,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_29
       rect:
         serializedVersion: 2
-        x: 4115
-        y: 1692
-        width: 471
-        height: 217
+        x: 4608
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -946,10 +946,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_30
       rect:
         serializedVersion: 2
-        x: 4637
-        y: 1803
-        width: 50
-        height: 48
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -968,10 +968,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_31
       rect:
         serializedVersion: 2
-        x: 4642
-        y: 1692
-        width: 456
-        height: 217
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -990,10 +990,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_32
       rect:
         serializedVersion: 2
-        x: 34
-        y: 1180
-        width: 456
-        height: 217
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1012,10 +1012,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_33
       rect:
         serializedVersion: 2
-        x: 546
-        y: 1180
-        width: 456
-        height: 217
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1034,10 +1034,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_34
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 1180
-        width: 456
-        height: 217
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1056,10 +1056,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_35
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 1180
-        width: 456
-        height: 217
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1078,10 +1078,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_36
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 1180
-        width: 456
-        height: 217
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1100,10 +1100,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_37
       rect:
         serializedVersion: 2
-        x: 2594
-        y: 1180
-        width: 456
-        height: 217
+        x: 3584
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1122,10 +1122,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_38
       rect:
         serializedVersion: 2
-        x: 3106
-        y: 1180
-        width: 456
-        height: 217
+        x: 4096
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1144,10 +1144,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_39
       rect:
         serializedVersion: 2
-        x: 3618
-        y: 1180
-        width: 456
-        height: 217
+        x: 4608
+        y: 1024
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1166,10 +1166,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_40
       rect:
         serializedVersion: 2
-        x: 4130
-        y: 1180
-        width: 456
-        height: 217
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1188,10 +1188,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_41
       rect:
         serializedVersion: 2
-        x: 4642
-        y: 1180
-        width: 456
-        height: 217
+        x: 512
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1210,10 +1210,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_42
       rect:
         serializedVersion: 2
-        x: 34
-        y: 668
-        width: 456
-        height: 217
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1232,10 +1232,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_43
       rect:
         serializedVersion: 2
-        x: 546
-        y: 668
-        width: 456
-        height: 217
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1254,10 +1254,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_44
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 668
-        width: 456
-        height: 221
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1276,10 +1276,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_45
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 668
-        width: 456
-        height: 226
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1298,10 +1298,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_46
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 668
-        width: 456
-        height: 230
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1320,10 +1320,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_47
       rect:
         serializedVersion: 2
-        x: 2594
-        y: 668
-        width: 456
-        height: 232
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1342,10 +1342,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_48
       rect:
         serializedVersion: 2
-        x: 3106
-        y: 668
-        width: 456
-        height: 233
+        x: 4096
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1364,10 +1364,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_49
       rect:
         serializedVersion: 2
-        x: 3618
-        y: 668
-        width: 456
-        height: 233
+        x: 4608
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1386,10 +1386,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_50
       rect:
         serializedVersion: 2
-        x: 4130
-        y: 668
-        width: 456
-        height: 231
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1408,10 +1408,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_51
       rect:
         serializedVersion: 2
-        x: 4642
-        y: 668
-        width: 456
-        height: 230
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1430,10 +1430,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_52
       rect:
         serializedVersion: 2
-        x: 34
-        y: 156
-        width: 456
-        height: 228
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1452,10 +1452,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_53
       rect:
         serializedVersion: 2
-        x: 546
-        y: 156
-        width: 456
-        height: 226
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1474,10 +1474,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_54
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 156
-        width: 456
-        height: 223
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1496,10 +1496,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_55
       rect:
         serializedVersion: 2
-        x: 1570
-        y: 156
-        width: 456
-        height: 220
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1518,10 +1518,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_56
       rect:
         serializedVersion: 2
-        x: 2082
-        y: 156
-        width: 456
-        height: 217
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1540,10 +1540,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_57
       rect:
         serializedVersion: 2
-        x: 2594
-        y: 156
-        width: 462
-        height: 217
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1562,10 +1562,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_58
       rect:
         serializedVersion: 2
-        x: 3106
-        y: 156
-        width: 466
-        height: 217
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1584,10 +1584,10 @@ TextureImporter:
       name: Balle_Machine_Sheets_59
       rect:
         serializedVersion: 2
-        x: 3618
-        y: 156
-        width: 470
-        height: 217
+        x: 4608
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1602,55 +1602,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Balle_Machine_Sheets_60
-      rect:
-        serializedVersion: 2
-        x: 4130
-        y: 156
-        width: 472
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0bd8a9e3de8ee8c70800000000000000
-      internalID: 8975367213051186608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Balle_Machine_Sheets_61
-      rect:
-        serializedVersion: 2
-        x: 4642
-        y: 156
-        width: 474
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48f42109fe5ba5d80800000000000000
-      internalID: -8261090525938823292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9d62a9e7814a237449d64bce92cfa5b3
     internalID: 0
     vertices: []
     indices: 
@@ -1659,7 +1615,67 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Balle_Machine_Sheets_0: 3968886181643842617
+      Balle_Machine_Sheets_1: -5064549093114270514
+      Balle_Machine_Sheets_10: -5753976070130574010
+      Balle_Machine_Sheets_11: 1850662646349462580
+      Balle_Machine_Sheets_12: 2482456156004856841
+      Balle_Machine_Sheets_13: 1984951967802141139
+      Balle_Machine_Sheets_14: 3426428945191753987
+      Balle_Machine_Sheets_15: -460156481800453675
+      Balle_Machine_Sheets_16: -826373336893070215
+      Balle_Machine_Sheets_17: -4062943006213660187
+      Balle_Machine_Sheets_18: -3571989006300376859
+      Balle_Machine_Sheets_19: -2854404227620279316
+      Balle_Machine_Sheets_2: 3893171211036772709
+      Balle_Machine_Sheets_20: 10107665592269147
+      Balle_Machine_Sheets_21: -4856534937045572744
+      Balle_Machine_Sheets_22: -973782194093282245
+      Balle_Machine_Sheets_23: -7026097097037924875
+      Balle_Machine_Sheets_24: 2503790528837457193
+      Balle_Machine_Sheets_25: -5060149890261388838
+      Balle_Machine_Sheets_26: -272118858697067303
+      Balle_Machine_Sheets_27: 3990684278988320593
+      Balle_Machine_Sheets_28: -3127245079346572520
+      Balle_Machine_Sheets_29: -8171465725893079287
+      Balle_Machine_Sheets_3: 1702365264858806408
+      Balle_Machine_Sheets_30: -578844245276242898
+      Balle_Machine_Sheets_31: 2781809454868821757
+      Balle_Machine_Sheets_32: -3572942071994724235
+      Balle_Machine_Sheets_33: 8805681337784531300
+      Balle_Machine_Sheets_34: -4320871723898775188
+      Balle_Machine_Sheets_35: 1836245074837450719
+      Balle_Machine_Sheets_36: -3223912413091255413
+      Balle_Machine_Sheets_37: 8785922138429705244
+      Balle_Machine_Sheets_38: -8171417585524833807
+      Balle_Machine_Sheets_39: 5630508179240154167
+      Balle_Machine_Sheets_4: -7922431102580198954
+      Balle_Machine_Sheets_40: 1379047512535350788
+      Balle_Machine_Sheets_41: -7649627429593911338
+      Balle_Machine_Sheets_42: 5826272448100096170
+      Balle_Machine_Sheets_43: -21872482108253020
+      Balle_Machine_Sheets_44: -6125883057425836381
+      Balle_Machine_Sheets_45: 9138730297873844041
+      Balle_Machine_Sheets_46: -4349776086712096200
+      Balle_Machine_Sheets_47: 4192459279076645970
+      Balle_Machine_Sheets_48: -2682365509985415325
+      Balle_Machine_Sheets_49: -7912476674861507922
+      Balle_Machine_Sheets_5: -8195108617584147186
+      Balle_Machine_Sheets_50: 6203703448578209735
+      Balle_Machine_Sheets_51: -7128915445051803425
+      Balle_Machine_Sheets_52: -4189716148083385488
+      Balle_Machine_Sheets_53: 5837332458906614475
+      Balle_Machine_Sheets_54: -1147197655525844964
+      Balle_Machine_Sheets_55: -7265403153068741334
+      Balle_Machine_Sheets_56: -5045976846150712073
+      Balle_Machine_Sheets_57: -6279810245976674828
+      Balle_Machine_Sheets_58: 6337747392125648108
+      Balle_Machine_Sheets_59: -7460803851317211722
+      Balle_Machine_Sheets_6: 6202134693622798287
+      Balle_Machine_Sheets_7: 3170190047686480442
+      Balle_Machine_Sheets_8: 7230842028174622456
+      Balle_Machine_Sheets_9: 2793556018406015923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

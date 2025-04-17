@@ -119,12 +119,23 @@ public class VoteManager : MonoBehaviour
                 Debug.Log($"🎲 Égalité entre plusieurs maps. Map choisie au hasard : {winner.MapName} !");
             }
 
-            SceneManager.LoadSceneAsync(winner.MapName);
+            LoadMap(winner.MapName);
         }
         else
         {
             Debug.LogWarning("⚠️ Aucun vote reçu. Impossible de choisir une map.");
         }
+    }
+
+    private void LoadMap(string map) {
+        AsyncOperation op =SceneManager.LoadSceneAsync(map);
+        if (op != null) {
+            op.completed += StartRace;
+        }
+    }
+
+    void StartRace(AsyncOperation operation) {
+        GameModeManager.Instance.StartCountDown(3.5f);
     }
 
 }

@@ -20,6 +20,7 @@ namespace ToyBox.Leaderboard {
         [Header("Leaderboard Graph")] 
         public GameObject PanelEndGame;
         public GameObject Graph;
+        public GameObject Background;
         
         [Header("Both")] 
         public List<PlayerInfo> PlayerInfos;

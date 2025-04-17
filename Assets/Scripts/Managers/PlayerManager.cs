@@ -107,6 +107,10 @@ namespace ToyBox.Managers {
         public List<Player> GetAlivePlayers() {
             return Players.Where(_player => _player.PlayerState == EPlayerState.Alive).ToList();
         }
+
+        public int GetBestScore() {
+            return Players.Max(player => player.PlayerStats.Score);
+        }
         
     }
 

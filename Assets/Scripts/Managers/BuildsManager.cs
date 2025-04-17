@@ -142,17 +142,6 @@ namespace ToyBox.Managers
                 
                 IsSelecting = false;
             }
-            _chooseBox.gameObject.SetActive(false);
-
-            _picked = 0;
-
-            foreach (BuildObject buildObject in _objectsList.Where(b => !b.IsChosen)) { // Destroy non-picked objects
-                Destroy(buildObject.gameObject);
-            }
-
-            _objectsList.Clear();
-                
-            IsSelecting = false;
         }
 
         public bool CanPlace(BuildObject testedBuild) { // Tells if testedBuild can be placed and does not collid with already placed objects

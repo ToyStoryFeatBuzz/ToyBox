@@ -19,6 +19,8 @@ namespace ToyBox.Managers {
         public List<AnimatorController> AnimationClips;
         private List<AnimatorController> Animators = new();
         
+        [SerializeField] Transform _spawnPoint;
+        
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
@@ -71,7 +73,7 @@ namespace ToyBox.Managers {
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
 
             player.transform.parent = transform;
-            player.transform.localPosition = Vector3.zero;
+            player.transform.position = _spawnPoint.position;
         }
         
 

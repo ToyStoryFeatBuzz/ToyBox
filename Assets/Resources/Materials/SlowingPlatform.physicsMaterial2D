@@ -6,7 +6,7 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StickyPlatform
+  m_Name: SlowingPlatform
   serializedVersion: 2
   friction: 200
   bounciness: 0

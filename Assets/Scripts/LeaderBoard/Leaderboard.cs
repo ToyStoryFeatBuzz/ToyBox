@@ -13,7 +13,7 @@ namespace ToyBox.Leaderboard
         private PlayerManager _playerManager => PlayerManager.Instance;
         private ScoreManager _scoreManager => ScoreManager.Instance;
         GameModeManager _gameModeManager => GameModeManager.Instance;
-        [SerializeField] private LeaderboardData _leaderboardData => LeaderboardData.Instance;
+        private LeaderboardData _leaderboardData => LeaderboardData.Instance;
         
         
         

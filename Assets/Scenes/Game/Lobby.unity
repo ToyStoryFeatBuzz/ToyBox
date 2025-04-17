@@ -283,61 +283,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[[Managers]]'
       objectReference: {fileID: 0}
-    - target: {fileID: 2147784405478698552, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 6355520917006203822, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 4487653895152395575, guid: b47aa01219b1eb44eb3da7ed091da16b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
---- !u!1 &526608013
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 526608015}
-  - component: {fileID: 526608014}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &526608014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526608013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f4a11628608d3a439b96ed861e4859b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VoteZones:
-  - {fileID: 608984843}
---- !u!4 &526608015
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526608013}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &573410843
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db08981de06da142af5e17b0c499ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapName: Map1
+  MapName: Level1
 --- !u!1001 &726334051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -891,7 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db08981de06da142af5e17b0c499ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapName: Map1 test
+  MapName: Lobby
 --- !u!61 &1722936465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1051,4 +1005,3 @@ SceneRoots:
   - {fileID: 273700109}
   - {fileID: 783958647}
   - {fileID: 2090643620}
-  - {fileID: 526608015}

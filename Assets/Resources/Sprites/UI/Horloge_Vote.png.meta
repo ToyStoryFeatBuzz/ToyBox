@@ -1,0 +1,1703 @@
+fileFormatVersion: 2
+guid: c76084f8c84b4744a997f6fcb9b3e05a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -994677006732710489
+    second: Horloge_Vote_0
+  - first:
+      213: 4898774919537689050
+    second: Horloge_Vote_1
+  - first:
+      213: -239391983652039947
+    second: Horloge_Vote_2
+  - first:
+      213: 5821110458113554299
+    second: Horloge_Vote_3
+  - first:
+      213: 8918617846391453732
+    second: Horloge_Vote_4
+  - first:
+      213: -3355784131092497101
+    second: Horloge_Vote_5
+  - first:
+      213: 6707793053931732511
+    second: Horloge_Vote_6
+  - first:
+      213: -9137555353739940069
+    second: Horloge_Vote_7
+  - first:
+      213: -4164362850367929022
+    second: Horloge_Vote_8
+  - first:
+      213: 4318484956300667597
+    second: Horloge_Vote_9
+  - first:
+      213: -6452137582808531853
+    second: Horloge_Vote_10
+  - first:
+      213: -7819469687667036530
+    second: Horloge_Vote_11
+  - first:
+      213: -6368071415892039534
+    second: Horloge_Vote_12
+  - first:
+      213: -1638449745498733702
+    second: Horloge_Vote_13
+  - first:
+      213: -7246247806303718475
+    second: Horloge_Vote_14
+  - first:
+      213: 7765216381728014124
+    second: Horloge_Vote_15
+  - first:
+      213: 3408436937597132398
+    second: Horloge_Vote_16
+  - first:
+      213: -7741813496737805860
+    second: Horloge_Vote_17
+  - first:
+      213: -3935238678672253880
+    second: Horloge_Vote_18
+  - first:
+      213: -8906942464859808271
+    second: Horloge_Vote_19
+  - first:
+      213: -7241272383400544477
+    second: Horloge_Vote_20
+  - first:
+      213: -2517885431890020598
+    second: Horloge_Vote_21
+  - first:
+      213: -3248460272400170540
+    second: Horloge_Vote_22
+  - first:
+      213: -324973479340613596
+    second: Horloge_Vote_23
+  - first:
+      213: 7177123205306250937
+    second: Horloge_Vote_24
+  - first:
+      213: -5459609005495907086
+    second: Horloge_Vote_25
+  - first:
+      213: -6070314998502728879
+    second: Horloge_Vote_26
+  - first:
+      213: -7913418680497703618
+    second: Horloge_Vote_27
+  - first:
+      213: 9033436882397344919
+    second: Horloge_Vote_28
+  - first:
+      213: -8760345675114660263
+    second: Horloge_Vote_29
+  - first:
+      213: 3179050998355171552
+    second: Horloge_Vote_30
+  - first:
+      213: -464472348984069263
+    second: Horloge_Vote_31
+  - first:
+      213: 4228612733399778376
+    second: Horloge_Vote_32
+  - first:
+      213: 8478769451750154475
+    second: Horloge_Vote_33
+  - first:
+      213: 2015331540109740892
+    second: Horloge_Vote_34
+  - first:
+      213: 6476388190441452350
+    second: Horloge_Vote_35
+  - first:
+      213: -8693192237221405412
+    second: Horloge_Vote_36
+  - first:
+      213: -8494533380414748053
+    second: Horloge_Vote_37
+  - first:
+      213: -564551334033557268
+    second: Horloge_Vote_38
+  - first:
+      213: 6233856425837619062
+    second: Horloge_Vote_39
+  - first:
+      213: -5467259532559154379
+    second: Horloge_Vote_40
+  - first:
+      213: -5154188818757535478
+    second: Horloge_Vote_41
+  - first:
+      213: 452576857991177488
+    second: Horloge_Vote_42
+  - first:
+      213: -5007023868540936890
+    second: Horloge_Vote_43
+  - first:
+      213: -3402809198066605672
+    second: Horloge_Vote_44
+  - first:
+      213: -2930192690160072935
+    second: Horloge_Vote_45
+  - first:
+      213: 3695720410391266326
+    second: Horloge_Vote_46
+  - first:
+      213: -2057604713165358543
+    second: Horloge_Vote_47
+  - first:
+      213: 802472640053843978
+    second: Horloge_Vote_48
+  - first:
+      213: 8789587987089414908
+    second: Horloge_Vote_49
+  - first:
+      213: 4628649188546196873
+    second: Horloge_Vote_50
+  - first:
+      213: -345660486125835536
+    second: Horloge_Vote_51
+  - first:
+      213: -7841617066757382173
+    second: Horloge_Vote_52
+  - first:
+      213: -8400757804548709130
+    second: Horloge_Vote_53
+  - first:
+      213: -2474691354987918095
+    second: Horloge_Vote_54
+  - first:
+      213: -6021244519378559102
+    second: Horloge_Vote_55
+  - first:
+      213: -591670880315913772
+    second: Horloge_Vote_56
+  - first:
+      213: 2422120284530010314
+    second: Horloge_Vote_57
+  - first:
+      213: 1263908365829972389
+    second: Horloge_Vote_58
+  - first:
+      213: -2864810362492740707
+    second: Horloge_Vote_59
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Horloge_Vote_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ada27b48823232f0800000000000000
+      internalID: -994677006732710489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_1
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad103a1a5d1fbf340800000000000000
+      internalID: 4898774919537689050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_2
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2185c52428dacf0800000000000000
+      internalID: -239391983652039947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_3
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b777b2ebe1db8c050800000000000000
+      internalID: 5821110458113554299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_4
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4283f9dadab45cb70800000000000000
+      internalID: 8918617846391453732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_5
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33db65bcc1cdd61d0800000000000000
+      internalID: -3355784131092497101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_6
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1efe6e3e3ed61d50800000000000000
+      internalID: 6707793053931732511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_7
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 3622
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1facd091d1e03180800000000000000
+      internalID: -9137555353739940069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2458cf32d063536c0800000000000000
+      internalID: -4164362850367929022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_9
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca6b2cff275eeb30800000000000000
+      internalID: 4318484956300667597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_10
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37cffb6ad076576a0800000000000000
+      internalID: -6452137582808531853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_11
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8eeba69fb9ab7390800000000000000
+      internalID: -7819469687667036530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_12
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298af6769c010a7a0800000000000000
+      internalID: -6368071415892039534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_13
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a73083923ae0349e0800000000000000
+      internalID: -1638449745498733702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_14
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b330de2308207b90800000000000000
+      internalID: -7246247806303718475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_15
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 3110
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f31f4482793cb60800000000000000
+      internalID: 7765216381728014124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_16
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e1cc806533d4f20800000000000000
+      internalID: 3408436937597132398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_17
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd94e9184ad8f8490800000000000000
+      internalID: -7741813496737805860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_18
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84cdc5385493369c0800000000000000
+      internalID: -3935238678672253880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_19
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fd503be40f246480800000000000000
+      internalID: -8906942464859808271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_20
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32770991225d18b90800000000000000
+      internalID: -7241272383400544477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_21
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07701f3a8cae0dd0800000000000000
+      internalID: -2517885431890020598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_22
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d18e94e7962be2d0800000000000000
+      internalID: -3248460272400170540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_23
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 2598
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420ea72a7567d7bf0800000000000000
+      internalID: -324973479340613596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_24
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6fd7977834a9360800000000000000
+      internalID: 7177123205306250937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_25
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc84e629829b34b0800000000000000
+      internalID: -5459609005495907086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_26
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15bd487bba8e1cba0800000000000000
+      internalID: -6070314998502728879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_27
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e357efd13a3ed2290800000000000000
+      internalID: -7913418680497703618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_28
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 794b43cbbf63d5d70800000000000000
+      internalID: 9033436882397344919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_29
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e3925d5000d6680800000000000000
+      internalID: -8760345675114660263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_30
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e89fc72a024e1c20800000000000000
+      internalID: 3179050998355171552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_31
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 2086
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17330d60cdcdd89f0800000000000000
+      internalID: -464472348984069263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_32
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844ccfa70ec0faa30800000000000000
+      internalID: 4228612733399778376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_33
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be06008d4e3aaa570800000000000000
+      internalID: 8478769451750154475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_34
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bc1e8ab55e7fb10800000000000000
+      internalID: 2015331540109740892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_35
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e333cceeeb0c0e950800000000000000
+      internalID: 6476388190441452350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_36
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d1c3008b39b5780800000000000000
+      internalID: -8693192237221405412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_37
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a4eaf75ea5d1a80800000000000000
+      internalID: -8494533380414748053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_38
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8f4758d8f4a28f0800000000000000
+      internalID: -564551334033557268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_39
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 1574
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67766d2146b138650800000000000000
+      internalID: 6233856425837619062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_40
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53381f20c646024b0800000000000000
+      internalID: -5467259532559154379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_41
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09baa0d394a878b0800000000000000
+      internalID: -5154188818757535478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_42
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01560262140e74600800000000000000
+      internalID: 452576857991177488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_43
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d17b5e15a738ab0800000000000000
+      internalID: -5007023868540936890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_44
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 891eece201bc6c0d0800000000000000
+      internalID: -3402809198066605672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_45
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917009be54dd557d0800000000000000
+      internalID: -2930192690160072935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_46
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614488ae126d94330800000000000000
+      internalID: 3695720410391266326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_47
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 1062
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13afb9f3a6be173e0800000000000000
+      internalID: -2057604713165358543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_48
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a08116c4d94f22b00800000000000000
+      internalID: 802472640053843978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_49
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa518c74b3eaf970800000000000000
+      internalID: 8789587987089414908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_50
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9853231d9e34c3040800000000000000
+      internalID: 4628649188546196873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_51
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0faa4978e97f33bf0800000000000000
+      internalID: -345660486125835536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_52
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef194f03dafc2390800000000000000
+      internalID: -7841617066757382173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_53
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4a8cf29438a6b80800000000000000
+      internalID: -8400757804548709130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_54
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc0739f25128add0800000000000000
+      internalID: -2474691354987918095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_55
+      rect:
+        serializedVersion: 2
+        x: 3623
+        y: 550
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f5ca4f20e307ca0800000000000000
+      internalID: -6021244519378559102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_56
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 38
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9c3da1876f9c7f0800000000000000
+      internalID: -591670880315913772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_57
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 38
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8edaad0991d9120800000000000000
+      internalID: 2422120284530010314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_58
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 38
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1a0f556fd4a8110800000000000000
+      internalID: 1263908365829972389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horloge_Vote_59
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 38
+        width: 436
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b13ca57262e38d0800000000000000
+      internalID: -2864810362492740707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Horloge_Vote_0: -994677006732710489
+      Horloge_Vote_1: 4898774919537689050
+      Horloge_Vote_10: -6452137582808531853
+      Horloge_Vote_11: -7819469687667036530
+      Horloge_Vote_12: -6368071415892039534
+      Horloge_Vote_13: -1638449745498733702
+      Horloge_Vote_14: -7246247806303718475
+      Horloge_Vote_15: 7765216381728014124
+      Horloge_Vote_16: 3408436937597132398
+      Horloge_Vote_17: -7741813496737805860
+      Horloge_Vote_18: -3935238678672253880
+      Horloge_Vote_19: -8906942464859808271
+      Horloge_Vote_2: -239391983652039947
+      Horloge_Vote_20: -7241272383400544477
+      Horloge_Vote_21: -2517885431890020598
+      Horloge_Vote_22: -3248460272400170540
+      Horloge_Vote_23: -324973479340613596
+      Horloge_Vote_24: 7177123205306250937
+      Horloge_Vote_25: -5459609005495907086
+      Horloge_Vote_26: -6070314998502728879
+      Horloge_Vote_27: -7913418680497703618
+      Horloge_Vote_28: 9033436882397344919
+      Horloge_Vote_29: -8760345675114660263
+      Horloge_Vote_3: 5821110458113554299
+      Horloge_Vote_30: 3179050998355171552
+      Horloge_Vote_31: -464472348984069263
+      Horloge_Vote_32: 4228612733399778376
+      Horloge_Vote_33: 8478769451750154475
+      Horloge_Vote_34: 2015331540109740892
+      Horloge_Vote_35: 6476388190441452350
+      Horloge_Vote_36: -8693192237221405412
+      Horloge_Vote_37: -8494533380414748053
+      Horloge_Vote_38: -564551334033557268
+      Horloge_Vote_39: 6233856425837619062
+      Horloge_Vote_4: 8918617846391453732
+      Horloge_Vote_40: -5467259532559154379
+      Horloge_Vote_41: -5154188818757535478
+      Horloge_Vote_42: 452576857991177488
+      Horloge_Vote_43: -5007023868540936890
+      Horloge_Vote_44: -3402809198066605672
+      Horloge_Vote_45: -2930192690160072935
+      Horloge_Vote_46: 3695720410391266326
+      Horloge_Vote_47: -2057604713165358543
+      Horloge_Vote_48: 802472640053843978
+      Horloge_Vote_49: 8789587987089414908
+      Horloge_Vote_5: -3355784131092497101
+      Horloge_Vote_50: 4628649188546196873
+      Horloge_Vote_51: -345660486125835536
+      Horloge_Vote_52: -7841617066757382173
+      Horloge_Vote_53: -8400757804548709130
+      Horloge_Vote_54: -2474691354987918095
+      Horloge_Vote_55: -6021244519378559102
+      Horloge_Vote_56: -591670880315913772
+      Horloge_Vote_57: 2422120284530010314
+      Horloge_Vote_58: 1263908365829972389
+      Horloge_Vote_59: -2864810362492740707
+      Horloge_Vote_6: 6707793053931732511
+      Horloge_Vote_7: -9137555353739940069
+      Horloge_Vote_8: -4164362850367929022
+      Horloge_Vote_9: 4318484956300667597
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

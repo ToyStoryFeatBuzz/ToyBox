@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 2836554805390951470}
   - component: {fileID: 7072894404495675428}
   - component: {fileID: 867946578891329500}
-  - component: {fileID: 5218601281499067868}
+  - component: {fileID: 6454121358816606134}
   m_Layer: 0
   m_Name: LeaderBoardManager
   m_TagString: Untagged
@@ -318,6 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeToShow: 5
 --- !u!114 &867946578891329500
+
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,7 +339,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4879392185249584979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34a09514da7b49d2b17cd59a3f20b177, type: 3}
+  m_Script: {fileID: 11500000, guid: dc9f37fd6468b2a49afd2af7d749865f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _playerColors:

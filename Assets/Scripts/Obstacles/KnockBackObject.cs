@@ -5,18 +5,22 @@ using UnityEngine;
 namespace ToyBox.Obstacles {
     [RequireComponent(typeof(Collider2D))]
     public class KnockBackObject : MonoBehaviour {
-        [SerializeField] Vector2 knockBackDirection;
-        [SerializeField] float knockBackForce;
+        [SerializeField] Vector2 _knockBackDirection;
+        [SerializeField] float _knockBackForce;
+        [SerializeField] Animator _animator;
 
-        private void OnCollisionEnter2D(Collision2D collision) {
-            if ( collision.gameObject.TryGetComponent(out PlayerMovement playerMovement)) {
-                playerMovement.ApplyKnockBack(knockBackDirection.normalized * knockBackForce);
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.TryGetComponent(out PlayerMovement playerMovement)) {
+                
+                playerMovement.ApplyKnockBack(_knockBackDirection.normalized * _knockBackForce); 
+                _animator?.SetTrigger("Bounce");
             }
         }
-
+        
         void OnDrawGizmosSelected() {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawLine(transform.position, transform.position + (Vector3)knockBackDirection.normalized);
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)_knockBackDirection.normalized);
         }
     }
 }

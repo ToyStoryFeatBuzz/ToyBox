@@ -87,8 +87,7 @@ public class VoteManager : MonoBehaviour
 
         List<VoteZone> topZones = new List<VoteZone>();
         int highestVote = 0;
-
-        // On cherche les maps avec le plus de votes
+        
         foreach (var zone in VoteZones)
         {
             int count = zone.GetVoteCount();
@@ -104,8 +103,7 @@ public class VoteManager : MonoBehaviour
                 topZones.Add(zone);
             }
         }
-
-        // Choix aléatoire si égalité
+        
         if (topZones.Count > 0)
         {
             VoteZone winner;
@@ -121,12 +119,23 @@ public class VoteManager : MonoBehaviour
                 Debug.Log($"🎲 Égalité entre plusieurs maps. Map choisie au hasard : {winner.MapName} !");
             }
 
-            SceneManager.LoadSceneAsync(winner.MapName);
+            LoadMap(winner.MapName);
         }
         else
         {
             Debug.LogWarning("⚠️ Aucun vote reçu. Impossible de choisir une map.");
         }
+    }
+
+    private void LoadMap(string map) {
+        AsyncOperation op =SceneManager.LoadSceneAsync(map);
+        if (op != null) {
+            op.completed += StartRace;
+        }
+    }
+
+    void StartRace(AsyncOperation operation) {
+        GameModeManager.Instance.StartCountDown(3.5f);
     }
 
 }

@@ -6,7 +6,12 @@ public class PlayerVote : MonoBehaviour
 {
     public string PlayerId;
     private VoteZone _currentZone;
-    
+
+
+    private void Awake()
+    {
+        PlayerId = gameObject.name;
+    }
 
     public void EnterZone(VoteZone zone)
     {
@@ -14,10 +19,9 @@ public class PlayerVote : MonoBehaviour
         {
             _currentZone.RemoveVoter(PlayerId);
         }
-
+        //PlayerId = _playerManager.
         _currentZone = zone;
         _currentZone.AddVoter(PlayerId);
-        Debug.Log(_currentZone);
     }
 
     public void ExitZone(VoteZone zone)

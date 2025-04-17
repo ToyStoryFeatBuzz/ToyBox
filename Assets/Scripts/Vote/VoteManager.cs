@@ -80,12 +80,15 @@ public class VoteManager : MonoBehaviour
             TallyVotes();
         }
     }
-    
+
     public void TallyVotes()
     {
-        VoteZone winner = null;
+        _hasTallied = true;
+
+        List<VoteZone> topZones = new List<VoteZone>();
         int highestVote = 0;
 
+        // On cherche les maps avec le plus de votes
         foreach (var zone in VoteZones)
         {
             int count = zone.GetVoteCount();
@@ -93,15 +96,37 @@ public class VoteManager : MonoBehaviour
             if (count > highestVote)
             {
                 highestVote = count;
-                winner = zone;
+                topZones.Clear();
+                topZones.Add(zone);
+            }
+            else if (count == highestVote)
+            {
+                topZones.Add(zone);
             }
         }
 
-        if (winner != null)
+        // Choix aléatoire si égalité
+        if (topZones.Count > 0)
         {
-            AsyncOperation op = SceneManager.LoadSceneAsync(winner.MapName);
+            VoteZone winner;
+
+            if (topZones.Count == 1)
+            {
+                winner = topZones[0];
+                Debug.Log($"🏆 Map gagnante : {winner.MapName} avec {highestVote} votes !");
+            }
+            else
+            {
+                winner = topZones[Random.Range(0, topZones.Count)];
+                Debug.Log($"🎲 Égalité entre plusieurs maps. Map choisie au hasard : {winner.MapName} !");
+            }
+
+            SceneManager.LoadSceneAsync(winner.MapName);
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ Aucun vote reçu. Impossible de choisir une map.");
         }
     }
-    
-    
+
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using ToyBox.Managers;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +14,11 @@ namespace ToyBox.Leaderboard
         GameModeManager _gameModeManager => GameModeManager.Instance;
         private LeaderboardData _leaderboardData => LeaderboardData.Instance;
         
-        
-        
         private Dictionary<string, int> _playerScoreDict;
 
         private void Start()
         {
-            _gameModeManager.OnRaceEnd += ShowLeaderboard;
+            _gameModeManager.OnLeaderboardStart += ShowLeaderboard;
             HideLeaderboard();
             _playerScoreDict = _scoreManager.PlayerScores;
             CheckPlayers();

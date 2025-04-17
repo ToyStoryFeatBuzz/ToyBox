@@ -15,6 +15,8 @@ namespace ToyBox.Leaderboard
         Leaderboard _leaderBoard;
         PlayerManager _playerManager => PlayerManager.Instance;
         private LeaderboardData _leaderboardData => LeaderboardData.Instance;
+
+        private GameModeManager _gameModeManager => GameModeManager.Instance;
         
         #endregion
 
@@ -56,9 +58,11 @@ namespace ToyBox.Leaderboard
         #region Unity Methods
 
         private void Start() {
+            _gameModeManager.OnLeaderboardGraphStart += UpdateLeaderBoard;
             _leaderBoard = GetComponent<Leaderboard>();
             _leaderboardData.PanelEndGame.SetActive(false);
             _leaderboardData.Graph.SetActive(false);
+            _leaderboardData.Background.SetActive(false);
             InitializeLineRenderers();
         }
 
@@ -85,6 +89,7 @@ namespace ToyBox.Leaderboard
             _leaderBoard.CheckPlayers();
             _leaderboardData.PanelEndGame.SetActive(true);
             _leaderboardData.Graph.SetActive(true);
+            _leaderboardData.Background.SetActive(true);
             List<(string name, int score)> sortedPlayers = _leaderBoard.GetSortedPlayers();
 
             // Met à jour les textes (nom + score)
@@ -128,7 +133,7 @@ namespace ToyBox.Leaderboard
                 return;
             }
 
-            List<int> matchScores = new List<int>(stats.MatchScores);
+            List<int> matchScores = new (stats.MatchScores);
 
             // Complète avec le dernier score si besoin
             while (matchScores.Count < maxMatches)

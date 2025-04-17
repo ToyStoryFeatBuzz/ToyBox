@@ -20,8 +20,9 @@ namespace ToyBox.Build {
         Camera cam;
 
         private void Awake() {
-            if (!_mouseBody)
+            if (!_mouseBody) {
                 _mouseBody = Instantiate(_mouseBodyPrefab);
+            }
             ResetMousePos();
             _mouseBody.position = _mousePos;
             ActivateMouse(false);
@@ -32,7 +33,9 @@ namespace ToyBox.Build {
 
         private void SetMaxPos()
         {
-            if (!cam) cam = Camera.main;
+            if (!cam) {
+                cam = Camera.main;
+            }
 
             maxX = cam.orthographicSize * cam.aspect;
             maxY = cam.orthographicSize;

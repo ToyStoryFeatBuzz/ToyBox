@@ -7,6 +7,7 @@ public class Crossbow : MonoBehaviour
     [SerializeField] float _range;
     [SerializeField] GameObject _boltPrefab;
     [SerializeField] bool _shot;
+    [SerializeField] float _shotPower;
     Animator _animator;
 
     void Start()
@@ -43,9 +44,10 @@ public class Crossbow : MonoBehaviour
     {
         _shot = true;
         GameObject bolt = Instantiate(_boltPrefab, transform.position, Quaternion.identity);
-        bolt.GetComponent<Rigidbody2D>().AddForce(transform.up * 80f, ForceMode2D.Impulse);
+        bolt.transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w);
+        bolt.GetComponent<Rigidbody2D>().AddForce(transform.up * _shotPower, ForceMode2D.Impulse);
         _animator.SetTrigger("Shot");
-        Destroy(bolt, 2f);
+        Destroy(bolt, 1f);
     }
     
     void OnDrawGizmosSelected()

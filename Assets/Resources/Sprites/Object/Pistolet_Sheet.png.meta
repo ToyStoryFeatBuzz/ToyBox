@@ -133,10 +133,10 @@ TextureImporter:
       name: Pistolet_Sheet_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 136
-        width: 346
-        height: 240
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: Pistolet_Sheet_2
       rect:
         serializedVersion: 2
-        x: 577
-        y: 136
-        width: 363
-        height: 282
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,10 +177,10 @@ TextureImporter:
       name: Pistolet_Sheet_3
       rect:
         serializedVersion: 2
-        x: 1072
-        y: 136
-        width: 380
-        height: 278
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: Pistolet_Sheet_5
       rect:
         serializedVersion: 2
-        x: 1597
-        y: 136
-        width: 367
-        height: 268
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: Pistolet_Sheet_6
       rect:
         serializedVersion: 2
-        x: 2140
-        y: 136
-        width: 336
-        height: 256
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Pistolet_Sheet_7
       rect:
         serializedVersion: 2
-        x: 2648
-        y: 136
-        width: 342
-        height: 244
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,45 +262,45 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pistolet_Sheet_8
+      name: Pistolet_Sheet_1
       rect:
         serializedVersion: 2
-        x: 3158
-        y: 136
-        width: 344
-        height: 238
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38328dd1720854c50800000000000000
-      internalID: 6648861330375189379
+      spriteID: b8fac8e78ada28246bf12bd891b49498
+      internalID: -8986931648791565409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pistolet_Sheet_9
+      name: Pistolet_Sheet_4
       rect:
         serializedVersion: 2
-        x: 3668
-        y: 136
-        width: 346
-        height: 240
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e5741103b72f2fba0800000000000000
-      internalID: -6056511937958557858
+      spriteID: 531b3485ef0ba394cbb69dcb17f918e3
+      internalID: -8580874249234012702
       vertices: []
       indices: 
       edges: []
@@ -327,8 +327,6 @@ TextureImporter:
       Pistolet_Sheet_5: 675384315207009803
       Pistolet_Sheet_6: -2002331493055906336
       Pistolet_Sheet_7: -5255573647868470727
-      Pistolet_Sheet_8: 6648861330375189379
-      Pistolet_Sheet_9: -6056511937958557858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

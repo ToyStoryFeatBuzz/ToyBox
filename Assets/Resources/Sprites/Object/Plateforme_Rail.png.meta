@@ -79,7 +79,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -88,12 +88,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 250
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -475,7 +475,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Plateforme_Rail_0: -2581388910626241278
+      Plateforme_Rail_1: -291652918114371308
+      Plateforme_Rail_10: -5215542206642640107
+      Plateforme_Rail_11: 1315172155585232849
+      Plateforme_Rail_12: -2178945991260045912
+      Plateforme_Rail_13: 184749379367490730
+      Plateforme_Rail_14: -3571766753774723179
+      Plateforme_Rail_2: 3329331654961051462
+      Plateforme_Rail_3: 1553454081434112182
+      Plateforme_Rail_4: -5395567753734279223
+      Plateforme_Rail_5: -914894267140463103
+      Plateforme_Rail_6: -5543501348193693613
+      Plateforme_Rail_7: -3562325914939465798
+      Plateforme_Rail_8: -6881779788982806326
+      Plateforme_Rail_9: -2587718371590879582
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -283,10 +283,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[[Managers]]'
       objectReference: {fileID: 0}
-    - target: {fileID: 6355520917006203822, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: m_PlayerPrefab
-      value: 
-      objectReference: {fileID: 4487653895152395575, guid: b47aa01219b1eb44eb3da7ed091da16b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -994,6 +990,7 @@ MonoBehaviour:
   VoteZones:
   - {fileID: 608984843}
   - {fileID: 1722936464}
+  oneplayer: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

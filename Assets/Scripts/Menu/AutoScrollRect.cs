@@ -41,7 +41,6 @@ namespace ToyBox.Menu {
             Scroll();
 
             if (!_inputManager.IsLastInputMouse) {
-                Debug.Log(_newScrollPosition);
                 _scrollRect.normalizedPosition = Vector2.Lerp(_scrollRect.normalizedPosition, _newScrollPosition, Time.unscaledDeltaTime * _scrollSpeed);
             }
             else {

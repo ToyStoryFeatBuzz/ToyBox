@@ -283,26 +283,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[[Managers]]'
       objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _yMargin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _graphOrigin.x
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _graphOrigin.y
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _maxGraphWidth
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _maxGraphHeight
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

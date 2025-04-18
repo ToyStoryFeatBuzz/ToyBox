@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using ToyBox.Managers;
 using UnityEngine.SceneManagement;
@@ -13,7 +14,8 @@ public class VoteManager : MonoBehaviour
     private List<string> _votedPlayers = new List<string>();
     private bool _hasTallied = false;
     private Coroutine _countdownCoroutine;
-
+    public bool oneplayer =  false;
+    
     public void OnPlayerVoted(string playerId)
     {
         if (_votedPlayers.Contains(playerId)) return;
@@ -23,7 +25,7 @@ public class VoteManager : MonoBehaviour
 
         float majority = _playerManager.Players.Count / 2f;
 
-        if (!_hasTallied && _playerManager.Players.Count >= 2)
+        if (!_hasTallied && _playerManager.Players.Count >= 2 || !_hasTallied && oneplayer == true)
         {
             if (_votedPlayers.Count >= _playerManager.Players.Count)
             {

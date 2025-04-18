@@ -283,26 +283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[[Managers]]'
       objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _yMargin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _graphOrigin.x
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _graphOrigin.y
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _maxGraphWidth
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639602786272737210, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: _maxGraphHeight
-      value: 15
-      objectReference: {fileID: 0}
+    - target: {fileID: 6355520917006203822, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      propertyPath: m_PlayerPrefab
+      value: 
+      objectReference: {fileID: 4487653895152395575, guid: b47aa01219b1eb44eb3da7ed091da16b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -488,8 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db08981de06da142af5e17b0c499ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapName: Map1
-  _voteManager: {fileID: 2090643621}
+  MapName: Level1
 --- !u!1001 &726334051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,6 +545,18 @@ PrefabInstance:
       propertyPath: EditorMapCenter
       value: 
       objectReference: {fileID: 783958647}
+    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.59607846
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -732,6 +727,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1493323132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2109158388120320103, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+  m_PrefabInstance: {fileID: 726334051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8139428bb1be143a02b50bd6f93591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1714608121
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,8 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db08981de06da142af5e17b0c499ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapName: Level1
-  _voteManager: {fileID: 2090643621}
+  MapName: TestParallax
 --- !u!61 &1722936465
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1013,6 +1018,67 @@ MonoBehaviour:
   - {fileID: 608984843}
   - {fileID: 1722936464}
   oneplayer: 1
+--- !u!1001 &6009766112861163201
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3920587557658658919, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_Name
+      value: BackgroundLobby
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592601456050531872, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527164869167509848, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
+      propertyPath: parallaxCamera
+      value: 
+      objectReference: {fileID: 1493323132}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddc22e78e2b2b5040aacd31cb26aba32, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1024,3 +1090,4 @@ SceneRoots:
   - {fileID: 273700109}
   - {fileID: 783958647}
   - {fileID: 2090643620}
+  - {fileID: 6009766112861163201}

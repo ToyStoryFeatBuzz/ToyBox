@@ -445,7 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseBody: {fileID: 0}
   _mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  _mouseSensitivity: 0.015
+  _mouseSensitivity: 0.15
 --- !u!114 &6600526362747087022
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -83,9 +83,6 @@ namespace ToyBox.Managers
             {
                 GameModeManager.Instance.StartCountDown(3.5f);
             }
-            build.Place(true);
-            Objects.Add(build);
-            OnObjectPlaced?.Invoke();
         }
         
 

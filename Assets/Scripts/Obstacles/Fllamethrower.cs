@@ -1,37 +1,34 @@
+using ToyBox.Managers;
 using ToyBox.Player;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Fllamethrower : MonoBehaviour
 {
     [SerializeField] float _range;
     [SerializeField] GameObject _projectile;
-    
-    void Update()
-    {
-        RaycastHit2D[] hitList = Physics2D.RaycastAll(transform.position, transform.up, _range);
+    [SerializeField] Transform _nozzle;
+    [SerializeField] float _projectileSpeed;
+    [SerializeField] Animator _animator;
 
-        foreach (RaycastHit2D hit in hitList)
+    void Start()
+    {
+        GameModeManager.Instance.OnRaceStart += () =>
         {
-            if (hit.collider.gameObject.TryGetComponent(out PlayerMovement player))
-            {
-                Debug.Log("Hit Player");
-                Shoot();
-            }
-        }
+            _animator.SetBool("Active", true);
+        };
         
+        GameModeManager.Instance.OnRaceEnd += () =>
+        {
+            _animator.SetBool("Active", false);
+        };
     }
 
-    void Shoot()
+    public void Shoot()
     {
-        GameObject bolt = Instantiate(_projectile, transform.position, Quaternion.identity);
-        bolt.GetComponent<Rigidbody2D>().AddForce(transform.up * 40f, ForceMode2D.Impulse);
+        GameObject bolt = Instantiate(_projectile, _nozzle.position, Quaternion.identity);
+        bolt.GetComponent<Rigidbody2D>().AddForce(-transform.right * _projectileSpeed, ForceMode2D.Impulse);
         
-        Destroy(bolt, 0.2f);
-    }
-    
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawLine(transform.position, transform.position + transform.up * _range);
+        Destroy(bolt, 1f);
     }
 }

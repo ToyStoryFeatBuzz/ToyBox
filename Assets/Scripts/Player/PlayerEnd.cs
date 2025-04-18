@@ -23,7 +23,7 @@ namespace ToyBox.Player {
 
         public void SetWin() {
             _playerManager.SetPlayerState(gameObject, EPlayerState.Finished);
-            _playerStats.AddScore(1);
+            _playerStats.AddScore(5);
         }
     }
 }

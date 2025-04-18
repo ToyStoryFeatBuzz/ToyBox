@@ -10,7 +10,7 @@ namespace ToyBox.Menu {
 
         [SerializeField] private float _scrollSpeed = 10f;
         private ScrollRect _scrollRect;
-        List<SelectableNavigation> _selectables = new();
+        [SerializeField] List<Selectable> _scrollRectData = new();
 
         [SerializeField] Vector2 _newScrollPosition = Vector2.up;
 
@@ -22,7 +22,7 @@ namespace ToyBox.Menu {
 
         private void OnEnable() {
             if (_scrollRect != null) {
-                _scrollRect.content.GetComponentsInChildren(_selectables);
+                _scrollRect.content.GetComponentsInChildren(_scrollRectData);
             }
         }
 
@@ -30,8 +30,9 @@ namespace ToyBox.Menu {
             _inputManager.OnNavigateEvent.Started += Scroll;
 
             if (_scrollRect != null) {
-                _scrollRect.content.GetComponentsInChildren(_selectables);
+                _scrollRect.content.GetComponentsInChildren(_scrollRectData);
             }
+            Debug.Log("Pieak");
 
             ScrollToSelected(true);
         }
@@ -40,16 +41,17 @@ namespace ToyBox.Menu {
             Scroll();
 
             if (!_inputManager.IsLastInputMouse) {
-                _scrollRect.normalizedPosition = Vector2.Lerp(_scrollRect.normalizedPosition, _newScrollPosition,
-                    Time.unscaledDeltaTime * _scrollSpeed);
+                Debug.Log(_newScrollPosition);
+                _scrollRect.normalizedPosition = Vector2.Lerp(_scrollRect.normalizedPosition, _newScrollPosition, Time.unscaledDeltaTime * _scrollSpeed);
             }
             else {
                 _newScrollPosition = _scrollRect.normalizedPosition;
+                
             }
         }
 
         private void Scroll() {
-            if (_selectables.Count > 0) {
+            if (_scrollRectData.Count > 0) {
                 ScrollToSelected(false);
             }
         }
@@ -58,22 +60,20 @@ namespace ToyBox.Menu {
         private void ScrollToSelected(bool isInstant) {
             int selectedID = -1;
 
-            SelectableNavigation selectedItem = EventSystem.current.currentSelectedGameObject
-                ? EventSystem.current.currentSelectedGameObject.GetComponent<SelectableNavigation>()
-                : null;
+            Selectable selectedItem = EventSystem.current.currentSelectedGameObject ? EventSystem.current.currentSelectedGameObject.GetComponent<Selectable>() : null;
 
-            if (selectedItem) {
-                selectedID = _selectables.IndexOf(selectedItem);
+            if (selectedItem!= null) {
+                selectedID = _scrollRectData.IndexOf(selectedItem);
             }
 
             if (selectedID <= -1) return;
 
             if (isInstant) {
-                _scrollRect.normalizedPosition = new Vector2(0, 1 - selectedID / ((float)_selectables.Count - 1));
+                _scrollRect.normalizedPosition = new Vector2(0, 1 - selectedID / ((float)_scrollRectData.Count - 1));
                 _newScrollPosition = _scrollRect.normalizedPosition;
             }
             else {
-                _newScrollPosition = new Vector2(0, 1 - selectedID / ((float)_selectables.Count - 1));
+                _newScrollPosition = new Vector2(0, 1 - selectedID / ((float)_scrollRectData.Count - 1));
             }
         }
     }

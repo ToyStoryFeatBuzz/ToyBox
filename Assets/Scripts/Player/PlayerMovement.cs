@@ -11,7 +11,7 @@ namespace ToyBox.Player
         [Header("Movement variables")]
         [SerializeField] float _acceleration;
         [SerializeField] float _deceleration;
-        [SerializeField] float _maxSpeed;
+        public float MaxSpeed;
         
         [Header("Jump variables")]
         [SerializeField] float _jumpForce;
@@ -65,7 +65,7 @@ namespace ToyBox.Player
             }
             
             _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse); //Makes the player move in the direction of the input
-            _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -_maxSpeed, _maxSpeed); //Clamps the speed to the max speed
+            _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -MaxSpeed, MaxSpeed); //Clamps the speed to the max speed
 
             if (_inputSystem.MoveValue == 0) {
                 _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player

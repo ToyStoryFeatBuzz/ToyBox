@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using ToyBox.Player;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ulti : MonoBehaviour
@@ -7,6 +9,7 @@ public class ulti : MonoBehaviour
     [SerializeField] private float _duration;
 
     private bool _canUlti = true;
+    public event Action callUltiEvent; 
     public virtual void Ultimate()
     {
         
@@ -21,7 +24,7 @@ public class ulti : MonoBehaviour
     {
         if (_canUlti)
         {
-            Debug.Log("Ultimate");
+            callUltiEvent?.Invoke();
             StartCoroutine(UltimateCoroutine());
         }
     }

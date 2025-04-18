@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using ToyBox.Managers;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace ToyBox.Player {

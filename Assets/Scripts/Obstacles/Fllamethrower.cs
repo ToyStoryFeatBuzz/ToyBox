@@ -1,7 +1,5 @@
 using ToyBox.Managers;
-using ToyBox.Player;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Fllamethrower : MonoBehaviour
 {

@@ -885,7 +885,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Players: []
   PlayerInputManager: {fileID: 6355520917006203822}
-  AnimationClips: []
+  AnimationClips:
+  - {fileID: 9100000, guid: a57c14091b8568146a7012f145cbbba8, type: 2}
+  - {fileID: 9100000, guid: 3614065e20e47a34b927c40a5349c80d, type: 2}
+  - {fileID: 9100000, guid: a76116b55725cf246bab938212036803, type: 2}
+  - {fileID: 9100000, guid: 82a0e5caa367f6643a30c3979d1e23ec, type: 2}
+  - {fileID: 9100000, guid: 19b02e9b46901ab428650ed0f1129f93, type: 2}
+  - {fileID: 9100000, guid: a1313d417c76e5a4cbe6caf224fdb48c, type: 2}
   _spawnPoint: {fileID: 2932100133269912080}
 --- !u!114 &965559377940951561
 MonoBehaviour:

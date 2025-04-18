@@ -1,5 +1,4 @@
-﻿using System;
-using ToyBox.Managers;
+﻿using ToyBox.Managers;
 using UnityEngine;
 using static ToyBox.Enums;
 

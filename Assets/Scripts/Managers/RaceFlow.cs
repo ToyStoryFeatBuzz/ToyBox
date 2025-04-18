@@ -4,6 +4,7 @@ using System.Linq;
 using ToyBox.InputSystem;
 using ToyBox.Player;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static ToyBox.Enums;
 using Random = UnityEngine.Random;
 
@@ -30,6 +31,7 @@ namespace ToyBox.Managers {
             foreach (Player player in _playerManager.Players)
             {
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
+                player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
             }
         }
 
@@ -41,6 +43,7 @@ namespace ToyBox.Managers {
         private void RaceStart() {
             foreach (Player player in _playerManager.Players) {
                 player.PlayerObject.transform.position = new Vector2(_startTransform.position.x+Random.Range(-2,2), _startTransform.position.y); //Randomizing the start position for now
+                player.PlayerObject.GetComponent<PlayerInput>().ActivateInput();
                 player.PlayerState = EPlayerState.Alive;
             }
             _raceStarted = true;

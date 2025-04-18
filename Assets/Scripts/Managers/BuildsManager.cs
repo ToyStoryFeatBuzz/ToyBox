@@ -69,6 +69,7 @@ namespace ToyBox.Managers
                     i--;
                 }
 
+                Instantiate(build._bombVisualPrefab, build.transform.position, Quaternion.identity);
                 Destroy(build.gameObject);
             }
             else // Place object on map

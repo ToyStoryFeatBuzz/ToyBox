@@ -15,6 +15,8 @@ namespace ToyBox.Build {
         public bool DoErase = false;
 
         [FormerlySerializedAs("chosen")] public bool IsChosen = false;
+        
+        public GameObject _bombVisualPrefab; //Only necessary to be filled if it's a bomb
 
         private void Start() {
             Place(false);

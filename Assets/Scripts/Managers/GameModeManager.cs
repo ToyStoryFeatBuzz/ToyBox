@@ -95,6 +95,7 @@ namespace ToyBox.Managers {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
+                player.PlayerObject.GetComponent<speedUltimate>().enabled = true;
             }
             _playerManager.SetNewPlayersEntries(true);
             OnRaceStart?.Invoke();

@@ -13396,6 +13396,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955291045}
   m_CullTransparentMesh: 1
+--- !u!1 &960575488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6210895345960403057, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+  m_PrefabInstance: {fileID: 2138619951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &960575491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960575488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9fac3ac683bd343962ef71afb8659b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &984941733
 GameObject:
   m_ObjectHideFlags: 0
@@ -16698,11 +16715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1877146055014122813, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 72.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1877146055014122813, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1877146055014122813, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16736,21 +16753,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2584108327096294556, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2584108327096294556, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 31.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5388319346475431699, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -144
+      value: -74
       objectReference: {fileID: 0}
     - target: {fileID: 5388319346475431699, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.583333
+      value: 18.416668
       objectReference: {fileID: 0}
     - target: {fileID: 6645803664652723486, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6645803664652723486, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -34
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 7637565309497370689, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
       propertyPath: m_Size.x
@@ -16764,10 +16789,29 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8390029314443267560, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390029314443267560, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390029314443267560, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390029314443267560, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6210895345960403057, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 960575491}
   m_SourcePrefab: {fileID: 100100000, guid: c2d01588d18da3448813a8d16f0d35b7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

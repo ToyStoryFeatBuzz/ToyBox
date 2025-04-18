@@ -13,6 +13,7 @@ namespace ToyBox.Managers {
     {
         [SerializeField] Transform _startTransform;
         [SerializeField] Transform _winnersBox;
+        ColliderDetector _endCollider;
 
         GameModeManager _gameModeManager => GameModeManager.Instance;
         MapPath _mapPath => MapPath.Instance;
@@ -27,6 +28,8 @@ namespace ToyBox.Managers {
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
            // _leaderboard = _gameModeManager.transform.parent.GetComponentInChildren<Leaderboard.Leaderboard>();
             _gameModeManager.OnRaceStart += RaceStart;
+            _endCollider=transform.GetComponentInChildren<ColliderDetector>();
+            _endCollider._onTriggerEnterFunction = OnTriggerEndFunction;
 
             foreach (Player player in _playerManager.Players)
             {
@@ -41,16 +44,16 @@ namespace ToyBox.Managers {
         }
 
         private void RaceStart() {
-            foreach (Player player in _playerManager.Players) {
-                player.PlayerObject.transform.position = new Vector2(_startTransform.position.x+Random.Range(-2,2), _startTransform.position.y); //Randomizing the start position for now
+            foreach (Player player in _playerManager.Players) { 
                 player.PlayerObject.GetComponent<PlayerInput>().ActivateInput();
                 player.PlayerState = EPlayerState.Alive;
             }
             _raceStarted = true;
             _finishedPlayers = 0;
         }
-    
-        private void OnTriggerEnter2D(Collider2D collision) {
+
+        private void OnTriggerEndFunction(Collider2D collision)
+        {
             if (!collision.gameObject.TryGetComponent(out PlayerEnd player)) {
                 return;
             }
@@ -58,6 +61,14 @@ namespace ToyBox.Managers {
             player.gameObject.transform.position = _winnersBox.position;
             player.SetWin();
         }
+        // private void OnTriggerEnter2D(Collider2D collision) {
+        //     if (!collision.gameObject.TryGetComponent(out PlayerEnd player)) {
+        //         return;
+        //     }
+        //     _finishedPlayers++;
+        //     player.gameObject.transform.position = _winnersBox.position;
+        //     player.SetWin();
+        // }
     
         void Update() {
             if (!_raceStarted) return;

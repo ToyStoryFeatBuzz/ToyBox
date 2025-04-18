@@ -21,6 +21,7 @@ public class ulti : MonoBehaviour
     {
         if (_canUlti)
         {
+            Debug.Log("Ultimate");
             StartCoroutine(UltimateCoroutine());
         }
     }

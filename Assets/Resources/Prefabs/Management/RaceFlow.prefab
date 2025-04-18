@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2584108327096294556}
   - component: {fileID: 8390029314443267560}
+  - component: {fileID: 4614223465411401614}
   m_Layer: 0
   m_Name: LevelEndCollider
   m_TagString: Untagged
@@ -189,3 +190,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4614223465411401614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6210895345960403057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9fac3ac683bd343962ef71afb8659b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

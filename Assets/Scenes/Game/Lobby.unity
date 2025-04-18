@@ -468,7 +468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db08981de06da142af5e17b0c499ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapName: Level1
+  MapName: Map1
 --- !u!1001 &726334051
 PrefabInstance:
   m_ObjectHideFlags: 0

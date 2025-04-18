@@ -34,6 +34,7 @@ namespace ToyBox.Menu  {
                     _filteredResolutions.Add(resolution);
                 }
             }
+            _filteredResolutions.Reverse();
             
             List<string> options = new ();
             for (int u = 0; u < _filteredResolutions.Count; u++) {

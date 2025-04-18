@@ -469,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapName: Map1
+  _voteManager: {fileID: 2090643621}
 --- !u!1001 &726334051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -842,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapName: Level1
+  _voteManager: {fileID: 2090643621}
 --- !u!61 &1722936465
 BoxCollider2D:
   m_ObjectHideFlags: 0

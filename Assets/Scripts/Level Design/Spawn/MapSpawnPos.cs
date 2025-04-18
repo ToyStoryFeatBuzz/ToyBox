@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using ToyBox.Managers;
 using UnityEngine;
 

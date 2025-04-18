@@ -1,12 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using ToyBox.InputSystem;
+using ToyBox.LevelDesign;
 using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static ToyBox.Enums;
-using Random = UnityEngine.Random;
 
 namespace ToyBox.Managers {
     public class RaceFlow : MonoBehaviour

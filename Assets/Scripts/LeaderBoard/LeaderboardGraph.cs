@@ -1,11 +1,8 @@
-﻿using System;
-using ToyBox.Managers;
+﻿using ToyBox.Managers;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
 using ToyBox.Player;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace ToyBox.Leaderboard
 {

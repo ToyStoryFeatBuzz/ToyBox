@@ -4,8 +4,6 @@ using System.Collections;
 using TMPro;
 using ToyBox.Player;
 using UnityEngine;
-using UnityEngine.Serialization;
-using ToyBox.LevelDesign;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
@@ -95,7 +93,7 @@ namespace ToyBox.Managers {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
-                player.PlayerObject.GetComponent<speedUltimate>().enabled = true;
+                player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
             }
             _playerManager.SetNewPlayersEntries(true);
             OnRaceStart?.Invoke();

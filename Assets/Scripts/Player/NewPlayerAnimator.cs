@@ -1,8 +1,6 @@
 using ToyBox.InputSystem;
-using ToyBox.Managers;
 using ToyBox.Player;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class NewPlayerAnimator : MonoBehaviour
 {

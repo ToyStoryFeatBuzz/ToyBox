@@ -7,12 +7,7 @@ public class VoteZone : MonoBehaviour
     public string MapName;
     private List<string> _voters = new List<string>(); 
     private PlayerManager _playerManager => PlayerManager.Instance;
-    private VoteManager _voteManager;
-
-    void Start()
-    {
-        _voteManager = FindObjectOfType<VoteManager>();
-    }
+    [SerializeField] VoteManager _voteManager;
     
     public void AddVoter(string playerId)
     {

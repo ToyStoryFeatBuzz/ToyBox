@@ -1,4 +1,3 @@
-using System;
 using ToyBox.InputSystem;
 using UnityEngine;
 

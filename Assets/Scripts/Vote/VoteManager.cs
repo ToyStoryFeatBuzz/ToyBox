@@ -23,7 +23,7 @@ public class VoteManager : MonoBehaviour
 
         float majority = _playerManager.Players.Count / 2f;
 
-        if (!_hasTallied)
+        if (!_hasTallied && _playerManager.Players.Count >= 2)
         {
             if (_votedPlayers.Count >= _playerManager.Players.Count)
             {

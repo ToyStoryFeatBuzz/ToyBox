@@ -445,7 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseBody: {fileID: 0}
   _mouseBodyPrefab: {fileID: 5856802055748394309, guid: 6985ed1ea1fca1e448a76c1d155245db, type: 3}
-  _mouseSensitivity: 0.015
+  _mouseSensitivity: 0.15
 --- !u!114 &6600526362747087022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.82, y: 1.9}
+  m_Size: {x: 0.82, y: 1.76}
   m_EdgeRadius: 0.15
 --- !u!114 &8664904631484114108
 MonoBehaviour:
@@ -573,7 +573,7 @@ Transform:
   m_GameObject: {fileID: 4606521089102164464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.0000029653306}
-  m_LocalPosition: {x: 0.005, y: 0.725, z: 0}
+  m_LocalPosition: {x: 0.005, y: 1.275, z: 0}
   m_LocalScale: {x: 0.1466, y: 0.1466, z: 0.1466}
   m_ConstrainProportionsScale: 0
   m_Children:

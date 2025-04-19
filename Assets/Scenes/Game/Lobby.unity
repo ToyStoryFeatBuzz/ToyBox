@@ -843,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapName: Level-Design
+  _voteManager: {fileID: 2090643621}
 --- !u!61 &1722936465
 BoxCollider2D:
   m_ObjectHideFlags: 0

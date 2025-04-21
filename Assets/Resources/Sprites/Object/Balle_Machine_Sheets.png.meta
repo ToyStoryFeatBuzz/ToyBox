@@ -1,0 +1,1683 @@
+fileFormatVersion: 2
+guid: f657c673f9b862b45b6d5c08a00f133d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3968886181643842617
+    second: Balle_Machine_Sheets_0
+  - first:
+      213: -5064549093114270514
+    second: Balle_Machine_Sheets_1
+  - first:
+      213: 3893171211036772709
+    second: Balle_Machine_Sheets_2
+  - first:
+      213: 1702365264858806408
+    second: Balle_Machine_Sheets_3
+  - first:
+      213: -7922431102580198954
+    second: Balle_Machine_Sheets_4
+  - first:
+      213: -8195108617584147186
+    second: Balle_Machine_Sheets_5
+  - first:
+      213: 6202134693622798287
+    second: Balle_Machine_Sheets_6
+  - first:
+      213: 3170190047686480442
+    second: Balle_Machine_Sheets_7
+  - first:
+      213: 7230842028174622456
+    second: Balle_Machine_Sheets_8
+  - first:
+      213: 2793556018406015923
+    second: Balle_Machine_Sheets_9
+  - first:
+      213: -5753976070130574010
+    second: Balle_Machine_Sheets_10
+  - first:
+      213: 1850662646349462580
+    second: Balle_Machine_Sheets_11
+  - first:
+      213: 2482456156004856841
+    second: Balle_Machine_Sheets_12
+  - first:
+      213: 1984951967802141139
+    second: Balle_Machine_Sheets_13
+  - first:
+      213: 3426428945191753987
+    second: Balle_Machine_Sheets_14
+  - first:
+      213: -460156481800453675
+    second: Balle_Machine_Sheets_15
+  - first:
+      213: -826373336893070215
+    second: Balle_Machine_Sheets_16
+  - first:
+      213: -4062943006213660187
+    second: Balle_Machine_Sheets_17
+  - first:
+      213: -3571989006300376859
+    second: Balle_Machine_Sheets_18
+  - first:
+      213: -2854404227620279316
+    second: Balle_Machine_Sheets_19
+  - first:
+      213: 10107665592269147
+    second: Balle_Machine_Sheets_20
+  - first:
+      213: -4856534937045572744
+    second: Balle_Machine_Sheets_21
+  - first:
+      213: -973782194093282245
+    second: Balle_Machine_Sheets_22
+  - first:
+      213: -7026097097037924875
+    second: Balle_Machine_Sheets_23
+  - first:
+      213: 2503790528837457193
+    second: Balle_Machine_Sheets_24
+  - first:
+      213: -5060149890261388838
+    second: Balle_Machine_Sheets_25
+  - first:
+      213: -272118858697067303
+    second: Balle_Machine_Sheets_26
+  - first:
+      213: 3990684278988320593
+    second: Balle_Machine_Sheets_27
+  - first:
+      213: -3127245079346572520
+    second: Balle_Machine_Sheets_28
+  - first:
+      213: -8171465725893079287
+    second: Balle_Machine_Sheets_29
+  - first:
+      213: -578844245276242898
+    second: Balle_Machine_Sheets_30
+  - first:
+      213: 2781809454868821757
+    second: Balle_Machine_Sheets_31
+  - first:
+      213: -3572942071994724235
+    second: Balle_Machine_Sheets_32
+  - first:
+      213: 8805681337784531300
+    second: Balle_Machine_Sheets_33
+  - first:
+      213: -4320871723898775188
+    second: Balle_Machine_Sheets_34
+  - first:
+      213: 1836245074837450719
+    second: Balle_Machine_Sheets_35
+  - first:
+      213: -3223912413091255413
+    second: Balle_Machine_Sheets_36
+  - first:
+      213: 8785922138429705244
+    second: Balle_Machine_Sheets_37
+  - first:
+      213: -8171417585524833807
+    second: Balle_Machine_Sheets_38
+  - first:
+      213: 5630508179240154167
+    second: Balle_Machine_Sheets_39
+  - first:
+      213: 1379047512535350788
+    second: Balle_Machine_Sheets_40
+  - first:
+      213: -7649627429593911338
+    second: Balle_Machine_Sheets_41
+  - first:
+      213: 5826272448100096170
+    second: Balle_Machine_Sheets_42
+  - first:
+      213: -21872482108253020
+    second: Balle_Machine_Sheets_43
+  - first:
+      213: -6125883057425836381
+    second: Balle_Machine_Sheets_44
+  - first:
+      213: 9138730297873844041
+    second: Balle_Machine_Sheets_45
+  - first:
+      213: -4349776086712096200
+    second: Balle_Machine_Sheets_46
+  - first:
+      213: 4192459279076645970
+    second: Balle_Machine_Sheets_47
+  - first:
+      213: -2682365509985415325
+    second: Balle_Machine_Sheets_48
+  - first:
+      213: -7912476674861507922
+    second: Balle_Machine_Sheets_49
+  - first:
+      213: 6203703448578209735
+    second: Balle_Machine_Sheets_50
+  - first:
+      213: -7128915445051803425
+    second: Balle_Machine_Sheets_51
+  - first:
+      213: -4189716148083385488
+    second: Balle_Machine_Sheets_52
+  - first:
+      213: 5837332458906614475
+    second: Balle_Machine_Sheets_53
+  - first:
+      213: -1147197655525844964
+    second: Balle_Machine_Sheets_54
+  - first:
+      213: -7265403153068741334
+    second: Balle_Machine_Sheets_55
+  - first:
+      213: -5045976846150712073
+    second: Balle_Machine_Sheets_56
+  - first:
+      213: -6279810245976674828
+    second: Balle_Machine_Sheets_57
+  - first:
+      213: 6337747392125648108
+    second: Balle_Machine_Sheets_58
+  - first:
+      213: -7460803851317211722
+    second: Balle_Machine_Sheets_59
+  - first:
+      213: 8975367213051186608
+    second: Balle_Machine_Sheets_60
+  - first:
+      213: -8261090525938823292
+    second: Balle_Machine_Sheets_61
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93476d244f0541730800000000000000
+      internalID: 3968886181643842617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecca565de6b17b9b0800000000000000
+      internalID: -5064549093114270514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569cf9be692570630800000000000000
+      internalID: 3893171211036772709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8887fd9503400a710800000000000000
+      internalID: 1702365264858806408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1733513eedd0290800000000000000
+      internalID: -7922431102580198954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e058721c120254e80800000000000000
+      internalID: -8195108617584147186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7538eb4a8621650800000000000000
+      internalID: 6202134693622798287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32d4de4d07cefb20800000000000000
+      internalID: 3170190047686480442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe3054938c195460800000000000000
+      internalID: 7230842028174622456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_9
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b3ce39d564b4c620800000000000000
+      internalID: 2793556018406015923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64dd4c50045c520b0800000000000000
+      internalID: -5753976070130574010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c7eb22fdfdea910800000000000000
+      internalID: 1850662646349462580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904b625a8b4737220800000000000000
+      internalID: 2482456156004856841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_13
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d92f094c47fb8b10800000000000000
+      internalID: 1984951967802141139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309554eb8fe1d8f20800000000000000
+      internalID: 3426428945191753987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_15
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1c0392e123d99f0800000000000000
+      internalID: -460156481800453675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_16
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97462a214d12884f0800000000000000
+      internalID: -826373336893070215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_17
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e12afbbcd68d97c0800000000000000
+      internalID: -4062943006213660187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_18
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e09dd98ceebd6ec0800000000000000
+      internalID: -3571989006300376859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_19
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cebe15f6a7e1368d0800000000000000
+      internalID: -2854404227620279316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59b2294ed8e32000800000000000000
+      internalID: 10107665592269147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_21
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873ef1ea43f1a9cb0800000000000000
+      internalID: -4856534937045572744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c2878f04e6c72f0800000000000000
+      internalID: -973782194093282245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5b6a58ae94e7e90800000000000000
+      internalID: -7026097097037924875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925185768304fb220800000000000000
+      internalID: 2503790528837457193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_25
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1fcb01c7cb6c9b0800000000000000
+      internalID: -5060149890261388838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_26
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d43daaf65d393cf0800000000000000
+      internalID: -272118858697067303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_27
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fa5db4532c16730800000000000000
+      internalID: 3990684278988320593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_28
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81395ff4b2bc994d0800000000000000
+      internalID: -3127245079346572520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_29
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f0dd1773f199e80800000000000000
+      internalID: -8171465725893079287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2cc70cc93887f7f0800000000000000
+      internalID: -578844245276242898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_31
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df67746e5f8fa9620800000000000000
+      internalID: 2781809454868821757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_32
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570d4b3ad1c5a6ec0800000000000000
+      internalID: -3572942071994724235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_33
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469feefa580143a70800000000000000
+      internalID: 8805681337784531300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_34
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69dbf06f0e2904c0800000000000000
+      internalID: -4320871723898775188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_35
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf2f3eaa27ab7910800000000000000
+      internalID: 1836245074837450719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_36
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b29b6cdbc5243d0800000000000000
+      internalID: -3223912413091255413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_37
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1cc75592addde970800000000000000
+      internalID: 8785922138429705244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_38
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f1896ffffa499e80800000000000000
+      internalID: -8171417585524833807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_39
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7347a887b55932e40800000000000000
+      internalID: 5630508179240154167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e3e09f76c532310800000000000000
+      internalID: 1379047512535350788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_41
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6df68fad16017d590800000000000000
+      internalID: -7649627429593911338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_42
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8d6a13ce31bd050800000000000000
+      internalID: 5826272448100096170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_43
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4acd499e71b42bff0800000000000000
+      internalID: -21872482108253020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_44
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a69c8ac0dd7cfaa0800000000000000
+      internalID: -6125883057425836381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_45
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947cede69ca43de70800000000000000
+      internalID: 9138730297873844041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_46
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a690bf1bd72a3c0800000000000000
+      internalID: -4349776086712096200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_47
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c57a0708b9e2a30800000000000000
+      internalID: 4192459279076645970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_48
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f4f8bc7c256cad0800000000000000
+      internalID: -2682365509985415325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_49
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaad055e26c313290800000000000000
+      internalID: -7912476674861507922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7be58fa6bf71650800000000000000
+      internalID: 6203703448578209735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_51
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd834ef5c21011d90800000000000000
+      internalID: -7128915445051803425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_52
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b95c38c532bd5c0800000000000000
+      internalID: -4189716148083385488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_53
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bca7cf0a1fe520150800000000000000
+      internalID: 5837332458906614475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_54
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1898377fc55410f0800000000000000
+      internalID: -1147197655525844964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_55
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2da557735a1c2b90800000000000000
+      internalID: -7265403153068741334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_56
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f4475c0bc619f9b0800000000000000
+      internalID: -5045976846150712073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_57
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fda3b76ad1a9d8a0800000000000000
+      internalID: -6279810245976674828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_58
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecbecf9ca334f750800000000000000
+      internalID: 6337747392125648108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Balle_Machine_Sheets_59
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bd0f5f1d66e57890800000000000000
+      internalID: -7460803851317211722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9d62a9e7814a237449d64bce92cfa5b3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Balle_Machine_Sheets_0: 3968886181643842617
+      Balle_Machine_Sheets_1: -5064549093114270514
+      Balle_Machine_Sheets_10: -5753976070130574010
+      Balle_Machine_Sheets_11: 1850662646349462580
+      Balle_Machine_Sheets_12: 2482456156004856841
+      Balle_Machine_Sheets_13: 1984951967802141139
+      Balle_Machine_Sheets_14: 3426428945191753987
+      Balle_Machine_Sheets_15: -460156481800453675
+      Balle_Machine_Sheets_16: -826373336893070215
+      Balle_Machine_Sheets_17: -4062943006213660187
+      Balle_Machine_Sheets_18: -3571989006300376859
+      Balle_Machine_Sheets_19: -2854404227620279316
+      Balle_Machine_Sheets_2: 3893171211036772709
+      Balle_Machine_Sheets_20: 10107665592269147
+      Balle_Machine_Sheets_21: -4856534937045572744
+      Balle_Machine_Sheets_22: -973782194093282245
+      Balle_Machine_Sheets_23: -7026097097037924875
+      Balle_Machine_Sheets_24: 2503790528837457193
+      Balle_Machine_Sheets_25: -5060149890261388838
+      Balle_Machine_Sheets_26: -272118858697067303
+      Balle_Machine_Sheets_27: 3990684278988320593
+      Balle_Machine_Sheets_28: -3127245079346572520
+      Balle_Machine_Sheets_29: -8171465725893079287
+      Balle_Machine_Sheets_3: 1702365264858806408
+      Balle_Machine_Sheets_30: -578844245276242898
+      Balle_Machine_Sheets_31: 2781809454868821757
+      Balle_Machine_Sheets_32: -3572942071994724235
+      Balle_Machine_Sheets_33: 8805681337784531300
+      Balle_Machine_Sheets_34: -4320871723898775188
+      Balle_Machine_Sheets_35: 1836245074837450719
+      Balle_Machine_Sheets_36: -3223912413091255413
+      Balle_Machine_Sheets_37: 8785922138429705244
+      Balle_Machine_Sheets_38: -8171417585524833807
+      Balle_Machine_Sheets_39: 5630508179240154167
+      Balle_Machine_Sheets_4: -7922431102580198954
+      Balle_Machine_Sheets_40: 1379047512535350788
+      Balle_Machine_Sheets_41: -7649627429593911338
+      Balle_Machine_Sheets_42: 5826272448100096170
+      Balle_Machine_Sheets_43: -21872482108253020
+      Balle_Machine_Sheets_44: -6125883057425836381
+      Balle_Machine_Sheets_45: 9138730297873844041
+      Balle_Machine_Sheets_46: -4349776086712096200
+      Balle_Machine_Sheets_47: 4192459279076645970
+      Balle_Machine_Sheets_48: -2682365509985415325
+      Balle_Machine_Sheets_49: -7912476674861507922
+      Balle_Machine_Sheets_5: -8195108617584147186
+      Balle_Machine_Sheets_50: 6203703448578209735
+      Balle_Machine_Sheets_51: -7128915445051803425
+      Balle_Machine_Sheets_52: -4189716148083385488
+      Balle_Machine_Sheets_53: 5837332458906614475
+      Balle_Machine_Sheets_54: -1147197655525844964
+      Balle_Machine_Sheets_55: -7265403153068741334
+      Balle_Machine_Sheets_56: -5045976846150712073
+      Balle_Machine_Sheets_57: -6279810245976674828
+      Balle_Machine_Sheets_58: 6337747392125648108
+      Balle_Machine_Sheets_59: -7460803851317211722
+      Balle_Machine_Sheets_6: 6202134693622798287
+      Balle_Machine_Sheets_7: 3170190047686480442
+      Balle_Machine_Sheets_8: 7230842028174622456
+      Balle_Machine_Sheets_9: 2793556018406015923
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

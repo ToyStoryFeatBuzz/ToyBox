@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doesSnap: 1
-  _snapInterval: 0.5
+  _snapInterval: 1
   _objectsPrefabs: []
 --- !u!114 &1151530574228795280
 MonoBehaviour:
@@ -461,6 +461,7 @@ MonoBehaviour:
   <Score>k__BackingField: 0
   MatchScores: 
   Name: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &3026143181099416496
 MonoBehaviour:
   m_ObjectHideFlags: 0

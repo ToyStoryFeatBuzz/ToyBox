@@ -9,6 +9,7 @@ namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         
         [SerializeField] int _pointToWin = 100;
+        public static int PointToWin = 100;
         public static GameModeManager Instance { get; private set; }
 
         private BuildsManager _buildsManager => BuildsManager.Instance;
@@ -27,6 +28,7 @@ namespace ToyBox.Managers {
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                PointToWin = _pointToWin;
                 DontDestroyOnLoad(transform.root);
             } else {
                 Destroy(gameObject);
@@ -39,10 +41,12 @@ namespace ToyBox.Managers {
         }
 
         private void OpenLeaderBoard() {
-            if (_playerManager.GetBestScore() < _pointToWin) {
+            if (_playerManager.GetBestScore() < PointToWin)
+            {
                 OnLeaderboardStart?.Invoke();
             }
             else {
+                //_playerManager.ClampScoreToMax(_pointToWin);
                 OnLeaderboardGraphStart?.Invoke();
             }
         }
@@ -113,7 +117,7 @@ namespace ToyBox.Managers {
         
         public int GetPointToWin()
         {
-            return _pointToWin;
+            return PointToWin;
         }
         
     }

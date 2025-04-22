@@ -242,7 +242,182 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 6646100214048588130, guid: 057cca87507d1a542bbfa00dc4faf1ba, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   - ObjectPrefab: {fileID: 6646100214048588130, guid: de77e87b121b8844f87c7a1ec57758c4, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 3042514387566853941, guid: 64d10d2ae77ed394eba1c12d2c21dfa4, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 5505612072138041094, guid: 8220cdbcf6ccc0d47a679466dd90f6ac, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 5475432701753714441, guid: 7de9816c4eb42b748be037cf54daaa06, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 6274018235631952284, guid: fd753bb7666a6a24bba7144f06035b85, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 4375861349660653404, guid: 908a4394e78091840822177a005b74f1, type: 3}
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  - ObjectPrefab: {fileID: 5667357639506699088, guid: 3e9fca2043dbb124fa8856e26fd3d542, type: 3}
     Curve:
       serializedVersion: 2
       m_Curve:
@@ -317,6 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeToShow: 5
+  _maxScore: 0
 --- !u!114 &867946578891329500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc9f37fd6468b2a49afd2af7d749865f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointsPerDeath: 1
+  _scoreList: 0a0000000800000006000000040000000200000001000000
 --- !u!114 &2639602786272737210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +1083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b030ca7e10da4eca88b5b7e662001791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointToWin: 100
   cdText: {fileID: 4411612208557259524}
 --- !u!1001 &2741855442045895356
 PrefabInstance:

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2ad002288c39f9f4b9ca78b125aca003
+guid: 01caefe4be83a0c4db7ad41f7dfc0e69
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 145
+  spritePixelsToUnits: 142
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,20 +116,64 @@ TextureImporter:
       name: P_Orange_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 184
-        width: 436
-        height: 144
-      alignment: 9
-      pivot: {x: 0.125, y: 0.5}
+        x: 0
+        y: 0
+        width: 144
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aacd46f637fbfc950800000000000000
-      internalID: 6471601692065717418
+      spriteID: 086fd475c73f16a489376bf35ea20569
+      internalID: -1270999391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Orange_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 144
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82215fcca13560648b3270b42df8e415
+      internalID: -1215681544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Orange_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 144
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bf95be1f629554da4e0d169271a384
+      internalID: 158788710
       vertices: []
       indices: 
       edges: []
@@ -138,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3ef4bdc143eadab499fd3629ce3d20dd
+    spriteID: 7158920c93142ab4ebac386dd9d83774
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      P_Orange_0: 6471601692065717418
+      P_Orange_0: -1270999391
+      P_Orange_1: -1215681544
+      P_Orange_2: 158788710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using ToyBox.LevelDesign;
 using ToyBox.Player;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace ToyBox.Managers {
         [SerializeField] Transform _winnersBox;
         ColliderDetector _endCollider;
         [SerializeField] MapSpawnPos _spawnPos;
+        
+        [SerializeField] TextMeshProUGUI _roundsText;
 
         GameModeManager _gameModeManager => GameModeManager.Instance;
         MapPath _mapPath => MapPath.Instance;
@@ -29,13 +32,14 @@ namespace ToyBox.Managers {
             _gameModeManager.OnRaceStart += RaceStart;
             _endCollider=transform.GetComponentInChildren<ColliderDetector>();
             _endCollider._onTriggerEnterFunction = OnTriggerEndFunction;
-
             foreach (Player player in _playerManager.Players)
             {
                 
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
                 player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
             }
+            _gameModeManager.roundsText=_roundsText;
+            _gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
         }
 
         public List<(string player, Transform t, float score)> GetPlayersInOrder()

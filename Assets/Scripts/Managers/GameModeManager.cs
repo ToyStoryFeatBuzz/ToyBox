@@ -9,19 +9,23 @@ namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         
         [SerializeField] int _pointToWin = 100;
+        
         public static GameModeManager Instance { get; private set; }
 
         private BuildsManager _buildsManager => BuildsManager.Instance;
 
         private PlayerManager _playerManager => PlayerManager.Instance;
-
+        
+        public int nbRounds=0;
+        
         public Action OnRaceStart;
         public Action OnRaceEnd;
         public Action OnLeaderboardStart;
         public Action OnLeaderboardGraphStart;
         public Action OnLeaderboardFinish;
         public Action OnBuildStart;
-
+        
+        public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
 
         private void Awake() {
@@ -41,6 +45,16 @@ namespace ToyBox.Managers {
         private void OpenLeaderBoard() {
             if (_playerManager.GetBestScore() < _pointToWin) {
                 OnLeaderboardStart?.Invoke();
+                if (roundsText != null)
+                {
+                    nbRounds++;
+                    roundsText.text = nbRounds.ToString();
+                }
+                else
+                {
+                    Debug.LogWarning("Rounds Text is null");
+                }
+
             }
             else {
                 OnLeaderboardGraphStart?.Invoke();

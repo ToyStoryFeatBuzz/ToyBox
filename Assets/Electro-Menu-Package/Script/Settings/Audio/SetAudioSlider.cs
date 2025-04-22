@@ -25,19 +25,19 @@ public class SetAudioSlider : MonoBehaviour
         switch (_sliderType)
         {
             case SliderType.SFX:
-                GetSetAudioMixer.Instance._sfxSlider.Slider = _audioSlider;
+                GetSetAudioMixer.Instance._sfxSlider = _audioSlider;
                 _audioSlider.value = GetSetAudioMixer.Instance.GetVolume("SFX");
                 _audioSlider.onValueChanged.AddListener(GetSetAudioMixer.Instance.SetSFXSound);
                 break;
 
             case SliderType.Main:
-                GetSetAudioMixer.Instance._mainSlider.Slider = _audioSlider;
+                GetSetAudioMixer.Instance._mainSlider = _audioSlider;
                 _audioSlider.value = GetSetAudioMixer.Instance.GetVolume("Master");
                 _audioSlider.onValueChanged.AddListener(GetSetAudioMixer.Instance.SetMainSound);
                 break;
 
             case SliderType.Music:
-                GetSetAudioMixer.Instance._musicSlider.Slider = _audioSlider;
+                GetSetAudioMixer.Instance._musicSlider = _audioSlider;
                 _audioSlider.value = GetSetAudioMixer.Instance.GetVolume("Music");
                 _audioSlider.onValueChanged.AddListener(GetSetAudioMixer.Instance.SetMusicSound);
                 break;

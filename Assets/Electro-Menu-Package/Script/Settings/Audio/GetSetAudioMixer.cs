@@ -1,5 +1,3 @@
-using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -7,16 +5,10 @@ using UnityEngine.UI;
 public class GetSetAudioMixer : MonoBehaviour
 {
     public AudioMixer _audioMixer;
-    
-    
-    [Header("~~~~~~ General ~~~~~~")] 
-    public StVolumeSlider _mainSlider;
-        
-    [Header("~~~~~~ Music ~~~~~~")]
-    public StVolumeSlider _musicSlider;
-        
-    [Header("~~~~~~ SFX ~~~~~~")]
-    public StVolumeSlider _sfxSlider;
+
+    public Slider _sfxSlider;
+    public Slider _musicSlider;
+    public Slider _mainSlider;
 
     public static GetSetAudioMixer Instance;
 
@@ -31,19 +23,16 @@ public class GetSetAudioMixer : MonoBehaviour
     public void SetMusicSound(float volume)
     {
         SetVolume("Music", volume);
-        SetVolumePercentage(_musicSlider);
     }
 
     public void SetSFXSound(float volume)
     {
         SetVolume("SFX", volume);
-        SetVolumePercentage(_sfxSlider);
     }
 
     public void SetMainSound(float volume)
     {
         SetVolume("Master", volume);
-        SetVolumePercentage(_mainSlider);
     }
 
     public void SetVolume(string volumeName, float volume)
@@ -66,18 +55,5 @@ public class GetSetAudioMixer : MonoBehaviour
             Debug.LogWarning("Audio parameter not found : " + volumeName);
             return 0f;
         }
-    }
-
-    void SetVolumePercentage(StVolumeSlider _soundSlider)
-    {
-        
-        float rslt=(5*_soundSlider.Slider.value)/4+100;
-        _soundSlider.TextPercent.text = $"{(int)rslt} %";
-    }
-    [Serializable]
-    public struct StVolumeSlider {
-        public string Name;
-        public Slider Slider;
-        public TextMeshProUGUI TextPercent;
     }
 }

@@ -897,6 +897,7 @@ MonoBehaviour:
       m_Calls: []
   DoErase: 0
   IsChosen: 0
+  _bombVisualPrefab: {fileID: 0}
 --- !u!1 &5852730028012373126
 GameObject:
   m_ObjectHideFlags: 0

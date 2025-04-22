@@ -1,12 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using ToyBox.InputSystem;
+using ToyBox.LevelDesign;
 using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static ToyBox.Enums;
-using Random = UnityEngine.Random;
 
 namespace ToyBox.Managers {
     public class RaceFlow : MonoBehaviour
@@ -14,6 +12,7 @@ namespace ToyBox.Managers {
         [SerializeField] Transform _startTransform;
         [SerializeField] Transform _winnersBox;
         ColliderDetector _endCollider;
+        [SerializeField] MapSpawnPos _spawnPos;
 
         GameModeManager _gameModeManager => GameModeManager.Instance;
         MapPath _mapPath => MapPath.Instance;
@@ -33,6 +32,7 @@ namespace ToyBox.Managers {
 
             foreach (Player player in _playerManager.Players)
             {
+                
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
                 player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
             }
@@ -44,7 +44,9 @@ namespace ToyBox.Managers {
         }
 
         private void RaceStart() {
-            foreach (Player player in _playerManager.Players) { 
+            foreach (Player player in _playerManager.Players) 
+            { 
+                _spawnPos.SetPlayersPos();
                 player.PlayerObject.GetComponent<PlayerInput>().ActivateInput();
                 player.PlayerState = EPlayerState.Alive;
             }

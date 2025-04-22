@@ -4,11 +4,11 @@ using System.Collections;
 using TMPro;
 using ToyBox.Player;
 using UnityEngine;
-using UnityEngine.Serialization;
-using ToyBox.LevelDesign;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
+        
+        [SerializeField] int _pointToWin = 100;
         public static GameModeManager Instance { get; private set; }
 
         private BuildsManager _buildsManager => BuildsManager.Instance;
@@ -39,7 +39,7 @@ namespace ToyBox.Managers {
         }
 
         private void OpenLeaderBoard() {
-            if (_playerManager.GetBestScore() < 10) {
+            if (_playerManager.GetBestScore() < _pointToWin) {
                 OnLeaderboardStart?.Invoke();
             }
             else {
@@ -95,7 +95,7 @@ namespace ToyBox.Managers {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
-                player.PlayerObject.GetComponent<speedUltimate>().enabled = true;
+                player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
             }
             _playerManager.SetNewPlayersEntries(true);
             OnRaceStart?.Invoke();
@@ -111,7 +111,10 @@ namespace ToyBox.Managers {
             OnBuildStart?.Invoke();
         }
         
-        
+        public int GetPointToWin()
+        {
+            return _pointToWin;
+        }
         
     }
 }

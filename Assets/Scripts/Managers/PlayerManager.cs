@@ -5,9 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using ToyBox.Player;
-using static ToyBox.Enums;
 using ToyBox.Build;
-using UnityEditor.Animations;
+using static ToyBox.Enums;
 
 namespace ToyBox.Managers {
     public class PlayerManager : MonoBehaviour {
@@ -16,8 +15,8 @@ namespace ToyBox.Managers {
         public static PlayerManager Instance;
         
         public PlayerInputManager PlayerInputManager;
-        public List<AnimatorController> AnimationClips;
-        private List<AnimatorController> Animators = new();
+        public List<RuntimeAnimatorController> AnimationClips;
+        private List<RuntimeAnimatorController> Animators = new();
         
         [SerializeField] Transform _spawnPoint;
         

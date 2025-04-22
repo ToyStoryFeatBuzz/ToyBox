@@ -16844,9 +16844,21 @@ PrefabInstance:
       propertyPath: parallaxCamera
       value: 
       objectReference: {fileID: 1876818668}
+    - target: {fileID: 5030624693268599179, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.380055
+      objectReference: {fileID: 0}
     - target: {fileID: 5455340239394777946, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
       propertyPath: m_Name
       value: BackgroundLevel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846600246322843502, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.254909
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685159703693915214, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.424868
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

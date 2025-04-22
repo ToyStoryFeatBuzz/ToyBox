@@ -1,7 +1,5 @@
-using System;
 using ToyBox.InputSystem;
 using UnityEngine;
-using UnityEngine.Serialization;
 using static ToyBox.Enums;
 
 namespace ToyBox.Player

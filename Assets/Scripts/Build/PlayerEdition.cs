@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using ToyBox.Managers;
 using ToyBox.InputSystem;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace ToyBox.Build {
     public class PlayerEdition : MonoBehaviour

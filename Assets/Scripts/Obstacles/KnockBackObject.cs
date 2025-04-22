@@ -1,4 +1,3 @@
-using System;
 using ToyBox.Player;
 using UnityEngine;
 

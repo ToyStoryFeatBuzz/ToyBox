@@ -22,7 +22,8 @@ namespace ToyBox.Leaderboard
 
         #region Positioning
         [Header("Positioning")]
-        [SerializeField] private Vector3 _graphOrigin = new Vector3(-5f, -2f, 0f);
+        [SerializeField] private Transform _graphOrigin;
+        [SerializeField] private Transform _graphEnd;
         [SerializeField] private float _lineWidth = 0.15f;
         #endregion
 
@@ -37,6 +38,10 @@ namespace ToyBox.Leaderboard
         #region Unity Methods
 
         private void Start() {
+
+            _maxGraphHeight = _graphEnd.position.y - _graphOrigin.position.y;
+            _maxGraphWidth = _graphEnd.position.x - _graphOrigin.position.x;
+
             _gameModeManager.OnLeaderboardGraphStart += UpdateLeaderBoard;
             _leaderBoard = GetComponent<Leaderboard>();
             _leaderboardData.PanelEndGame.SetActive(false);
@@ -130,7 +135,7 @@ namespace ToyBox.Leaderboard
             float xStep = maxMatches > 0 ? availableWidth / maxMatches : 0;
             float yScaleFactor = maxScore > 0 ? availableHeight / maxScore : 0;
 
-            positions[0] = _graphOrigin + new Vector3(_xMargin, _yMargin, 0);
+            positions[0] = _graphOrigin.position + new Vector3(_xMargin, _yMargin, 0);
             
             for (int i = 0; i < matchScores.Count; i++)
             {
@@ -140,7 +145,7 @@ namespace ToyBox.Leaderboard
                 xPos = Mathf.Clamp(xPos, _xMargin, _maxGraphWidth - _xMargin);
                 yPos = Mathf.Clamp(yPos, _yMargin, _maxGraphHeight - _yMargin);
 
-                positions[i + 1] = _graphOrigin + new Vector3(xPos, yPos, 0);
+                positions[i + 1] = _graphOrigin.position + new Vector3(xPos, yPos, 0);
             }
 
             lr.SetPositions(positions);
@@ -160,11 +165,11 @@ namespace ToyBox.Leaderboard
             float xStep = maxMatches > 0 ? availableWidth / maxMatches : 0;
             float yScaleFactor = maxScore > 0 ? availableHeight / maxScore : 0;
 
-            borderX[0] = _graphOrigin + new Vector3(_xMargin, _yMargin, 0);
-            borderX[1] = _graphOrigin + new Vector3(_xMargin + availableWidth, _yMargin, 0);
+            borderX[0] = _graphOrigin.position + new Vector3(_xMargin, _yMargin, 0);
+            borderX[1] = _graphOrigin.position + new Vector3(_xMargin + availableWidth, _yMargin, 0);
 
-            borderY[0] = _graphOrigin + new Vector3(_xMargin, _yMargin, 0);
-            borderY[1] = _graphOrigin + new Vector3(_xMargin, _yMargin + availableHeight, 0);
+            borderY[0] = _graphOrigin.position + new Vector3(_xMargin, _yMargin, 0);
+            borderY[1] = _graphOrigin.position + new Vector3(_xMargin, _yMargin + availableHeight, 0);
             
             Vector3 xLongGraph = borderX[1] - borderX[0];
             Vector3 yLongGraph = borderY[1] - borderY[0];
@@ -175,13 +180,13 @@ namespace ToyBox.Leaderboard
 
             for (int i = 0; i < maxMatches + 1; i++)
             {
-                GameObject graphElement = Instantiate(_graphLine, (Vector3)(_graphOrigin + new Vector3(_xMargin, _yMargin, 0) + i * xStepGraph), Quaternion.identity);
+                GameObject graphElement = Instantiate(_graphLine, (Vector3)(_graphOrigin.position + new Vector3(_xMargin, _yMargin, 0) + i * xStepGraph), Quaternion.identity);
                 graphElement.GetComponent<GraphElement>().Init(i, new Vector2(14f, -20f), new(0, 1));
             }
             
             for (int i = 0; i < (int)(maxScore /10) + 1; i++)
             {
-                GameObject graphElement = Instantiate(_graphLine, (Vector3)(_graphOrigin + new Vector3(_xMargin, _yMargin, 0) + i * 10 * yStepGraph), Quaternion.identity);
+                GameObject graphElement = Instantiate(_graphLine, (Vector3)(_graphOrigin.position + new Vector3(_xMargin, _yMargin, 0) + i * 10 * yStepGraph), Quaternion.identity);
                 graphElement.GetComponent<GraphElement>().Init(i * 10, new Vector2(-28f, 14f), new(1, 0));
             }
             

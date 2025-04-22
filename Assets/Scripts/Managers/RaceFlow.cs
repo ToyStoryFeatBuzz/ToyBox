@@ -80,6 +80,7 @@ namespace ToyBox.Managers {
             if (!_raceStarted) return;
             if (_playerManager.GetAlivePlayers().Count == 0) {
                 _gameModeManager.OnRaceEnd?.Invoke();
+                AudioManager.Instance.PlaySFX("RaceEnd_Crowd");
                 _raceStarted = false;
             }
 

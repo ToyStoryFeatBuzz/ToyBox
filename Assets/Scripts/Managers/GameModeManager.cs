@@ -87,6 +87,7 @@ namespace ToyBox.Managers {
 
         public void StartCountDown(float newTime)
         {
+            AudioManager.Instance.StopMusic();
             _playerManager.SetPlayersMovements(false);
             StartCoroutine(Countdown(newTime));
 
@@ -94,6 +95,7 @@ namespace ToyBox.Managers {
             {
                 player.PlayerObject.GetComponent<Rigidbody2D>().linearVelocity.Set(0, 0);
             }
+            AudioManager.Instance.PlaySFX("RaceStart");
         }
 
         private void OnCountdownFinished()
@@ -101,6 +103,7 @@ namespace ToyBox.Managers {
             Debug.Log("Countdown finished");
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
+            //AudioManager.Instance.PlayMusic("RaceMode");
         }
         
         public void StartRaceMode()
@@ -123,6 +126,7 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }
             OnBuildStart?.Invoke();
+            AudioManager.Instance.PlayMusic("EditMode");
         }
         
         public int GetPointToWin()

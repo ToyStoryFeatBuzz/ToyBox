@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void PlaySound( Sound[] soundList, string name,Vector3 pos ,float sonsLocale, float volume=1f)
+    private void PlaySound( Sound[] soundList, string name,Vector3 pos=new() ,float sonsLocale=0.0f, float volume=1f)
     {
         Sound sound = Array.Find(soundList, s => s._name == name);
     
@@ -47,6 +47,22 @@ public class AudioManager : MonoBehaviour
         }
     }
     
+    private void PlaySound(Sound[] soundList,string name, AudioSource audioSource, float volume=1f)
+    {
+        Sound sound = Array.Find(soundList, s => s._name == name);
+    
+        if (sound == null)
+        {
+            Debug.Log($"{name} Not Found");
+        }
+        else
+        {
+            audioSource.clip = sound._clip;
+            audioSource.volume = volume;
+            audioSource.Play();
+        }
+    }
+    
 
     private void StopSound(AudioSource audioSource)
     {
@@ -65,7 +81,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayMusic(string name)
     {
-        //PlaySound(_audioSourceMusic, _musicSounds, name);
+        PlaySound(_musicSounds,name, _audioSourceMusic);
     }
 
     public void PlaySFX(string name, Vector2 pos=new(), float spatialBlend=0.0f, float volume=1.0f)

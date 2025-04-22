@@ -7,6 +7,8 @@ using UnityEngine;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
+        
+        [SerializeField] int _pointToWin = 100;
         public static GameModeManager Instance { get; private set; }
 
         private BuildsManager _buildsManager => BuildsManager.Instance;
@@ -37,7 +39,7 @@ namespace ToyBox.Managers {
         }
 
         private void OpenLeaderBoard() {
-            if (_playerManager.GetBestScore() < 10) {
+            if (_playerManager.GetBestScore() < _pointToWin) {
                 OnLeaderboardStart?.Invoke();
             }
             else {
@@ -109,7 +111,10 @@ namespace ToyBox.Managers {
             OnBuildStart?.Invoke();
         }
         
-        
+        public int GetPointToWin()
+        {
+            return _pointToWin;
+        }
         
     }
 }

@@ -9,6 +9,7 @@ namespace ToyBox.Leaderboard
     public class Leaderboard : MonoBehaviour
     {
         [SerializeField] float _timeToShow = 3f;
+        [SerializeField] private float _maxScore;
         private PlayerManager _playerManager => PlayerManager.Instance;
         private ScoreManager _scoreManager => ScoreManager.Instance;
         GameModeManager _gameModeManager => GameModeManager.Instance;
@@ -18,6 +19,7 @@ namespace ToyBox.Leaderboard
 
         private void Start()
         {
+            _maxScore = _gameModeManager.GetPointToWin();
             _gameModeManager.OnLeaderboardStart += ShowLeaderboard;
             HideLeaderboard();
             _playerScoreDict = _scoreManager.PlayerScores;
@@ -60,7 +62,7 @@ namespace ToyBox.Leaderboard
                     Debug.Log($"AFTER SORTING Name: {playerName}, Score: {score}");
 
                     parent.gameObject.SetActive(true);
-                    _leaderboardData.PlayerInfos[i].FillBar.fillAmount = score / 10f;
+                    _leaderboardData.PlayerInfos[i].FillBar.fillAmount = score / _maxScore;
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
                 }
                 else
@@ -72,7 +74,11 @@ namespace ToyBox.Leaderboard
 
         public void CheckPlayers()
         {
-            _scoreManager.PlayerScores = _playerScoreDict;
+            _playerScoreDict = _scoreManager.PlayerScores;
+            for (int i = 0; i < _playerScoreDict.Count; i++)
+            {
+                Debug.Log($"Player in dict: " + _playerScoreDict.ElementAt(i).Key + " Score: " + _playerScoreDict.ElementAt(i).Value);
+            }
         }
 
         public List<(string name, int score)> GetSortedPlayers()

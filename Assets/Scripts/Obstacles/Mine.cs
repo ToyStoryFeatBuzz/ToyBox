@@ -15,6 +15,7 @@ namespace ToyBox.Obstacles {
         {
             if (collision.gameObject.TryGetComponent(out PlayerMovement playerMovement)) // Checks if it was a player that hit the mine
             {
+                AudioManager.Instance.PlaySFX("MineExplosion");
                 foreach (Collider2D colliderInRange in Physics2D.OverlapCircleAll(transform.position, _explosionRange)) // For each player in the explosion range
                 {
                     if (!colliderInRange.gameObject.TryGetComponent(out PlayerMovement playerInRange)) {

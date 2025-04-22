@@ -57,6 +57,7 @@ namespace ToyBox.Managers {
                 return;
             }
             Debug.Log("Player added");
+            AudioManager.Instance.PlaySFX("PlayerJoin");
             string name = "Player " + (Players.Count + 1);
             player.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = name;
             InputDevice device = player.user.pairedDevices.First();

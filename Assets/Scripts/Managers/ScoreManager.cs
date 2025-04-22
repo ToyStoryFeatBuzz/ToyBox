@@ -11,7 +11,7 @@ namespace ToyBox.Managers {
         private List<Player> _players => _playerManager.Players; // List of all players
         public static ScoreManager Instance;
         
-        public Dictionary<string, int> PlayerScores = new();
+        public Dictionary<string, (int score, Color color)> PlayerScores = new();
 
         private List<string> _arrivalOrder = new(); // Liste d'arrivée des joueurs
 
@@ -24,16 +24,16 @@ namespace ToyBox.Managers {
             }
         }
 
-        public void AddScoreDic(string playerName, int score)
+        public void AddScoreDic(string playerName, int score, Color c)
         {
             if (PlayerScores.ContainsKey(playerName))
             {
-                PlayerScores[playerName] = score;
+                PlayerScores[playerName] = (score, c);
                 Debug.Log("Mise à jour du score dans le dictionnaire : " + playerName + " => " + score);
             }
             else
             {
-                PlayerScores.Add(playerName, score);
+                PlayerScores.Add(playerName, (score, c));
                 Debug.Log("Ajout score dans dictionnaire : " + playerName + " => " + score);
             }
             Debug.Log("Ajout score dans dictionnaire : " + playerName + " => " + score);
@@ -49,14 +49,18 @@ namespace ToyBox.Managers {
             int position = _arrivalOrder.Count - 1;
             int scoreToAdd = (position < _scoreList.Length) ? _scoreList[position] : 0;
 
+            int diff = playerStats.Score + scoreToAdd - GameModeManager.PointToWin;
+            
+            if(diff >0) scoreToAdd -= diff;
+
             playerStats.AddScore(scoreToAdd); // Mise à jour locale
-            AddScoreDic(playerName, playerStats.Score); // Mise à jour dans le dico
+            AddScoreDic(playerName, playerStats.Score, playerStats.color); // Mise à jour dans le dico
         }
 
         public void AddDeathScore(string playerName, PlayerStats playerStats)
         {
             playerStats.AddScore(_pointsPerDeath);
-            AddScoreDic(playerName, playerStats.Score);
+            AddScoreDic(playerName, playerStats.Score, playerStats.color);
         }
 
         

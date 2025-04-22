@@ -20,7 +20,7 @@ namespace ToyBox.Obstacles {
                     if (!colliderInRange.gameObject.TryGetComponent(out PlayerMovement playerInRange)) {
                         continue;
                     }
-                    playerInRange.gameObject.GetComponent<PlayerEnd>().IsDead = true;
+                    playerInRange.gameObject.GetComponent<PlayerEnd>().SetDeath();
                     playerInRange.ApplyKnockBack((playerInRange.transform.position-transform.position).normalized*30); // Applies a knockback depending on the direction the hit players have from the center of the mine, mimics an explosion
                 }
                 Destroy(gameObject); //Destroy self after explosion

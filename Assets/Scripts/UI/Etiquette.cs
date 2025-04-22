@@ -1,5 +1,6 @@
 using TMPro;
 using ToyBox.Managers;
+using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ public class Etiquette : MonoBehaviour
     [SerializeField] private RawImage ultiImage;
     void Start()
     {
-        PlayerRef.PlayerObject.GetComponent<ulti>().callUltiEvent += UpdateUltiImage;
+        PlayerRef.PlayerObject.GetComponent<Ultime>().callUltiEvent += UpdateUltiImage;
         SetPlayerEtiquette();
     }
 

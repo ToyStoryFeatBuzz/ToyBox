@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35bd809bb3311604f9b66dc2f73d2442
+guid: 10115a818a000304c9476fe5d2c6765f
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 145
+  spritePixelsToUnits: 144
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,20 +116,42 @@ TextureImporter:
       name: P_Bleue_0
       rect:
         serializedVersion: 2
-        x: 112
-        y: 182
-        width: 288
-        height: 148
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+        x: 0
+        y: 0
+        width: 142
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d0d9fb828c5a2e2b0800000000000000
-      internalID: -5556696711126082291
+      spriteID: 15fc876120502414ebdba0bc63ea20b9
+      internalID: 254339583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Bleue_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 142
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa509796b1a4c54b8a44ffac07153b5
+      internalID: -1270018674
       vertices: []
       indices: 
       edges: []
@@ -138,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 269e4bed9cb2d794fbe3a67e09d2f7dd
+    spriteID: 4d6aaf3ebca90e540b0278e8bb78ab62
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +170,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      P_Bleue_0: -5556696711126082291
+      P_Bleue_0: 254339583
+      P_Bleue_1: -1270018674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,28 +11,19 @@ namespace ToyBox.Leaderboard
         #region References
         [Header("References")]
         Leaderboard _leaderBoard;
+        
+        [SerializeField] private LineRenderer _lineBorderX;
+        [SerializeField] private LineRenderer _lineBorderY;
+        [SerializeField] private GameObject _graphLine;
         PlayerManager _playerManager => PlayerManager.Instance;
         private LeaderboardData _leaderboardData => LeaderboardData.Instance;
         private GameModeManager _gameModeManager => GameModeManager.Instance;
         #endregion
 
-        #region Graph Settings
-        [Header("Graph Settings")]
-        [SerializeField] private List<Color> _playerColors = new List<Color>
-        {
-            Color.red,
-            Color.blue,
-            Color.green,
-            Color.yellow,
-            new Color(1f, 0f, 1f),        // rose
-            new Color(0.5f, 0f, 0.5f),    // violet
-            new Color(1f, 0.5f, 0f)       // orange
-        };
-        #endregion
-
         #region Positioning
         [Header("Positioning")]
-        [SerializeField] private Vector3 _graphOrigin = new Vector3(-5f, -2f, 0f);
+        [SerializeField] private Transform _graphOrigin;
+        [SerializeField] private Transform _graphEnd;
         [SerializeField] private float _lineWidth = 0.15f;
         #endregion
 
@@ -47,6 +38,10 @@ namespace ToyBox.Leaderboard
         #region Unity Methods
 
         private void Start() {
+
+            _maxGraphHeight = _graphEnd.position.y - _graphOrigin.position.y;
+            _maxGraphWidth = _graphEnd.position.x - _graphOrigin.position.x;
+
             _gameModeManager.OnLeaderboardGraphStart += UpdateLeaderBoard;
             _leaderBoard = GetComponent<Leaderboard>();
             _leaderboardData.PanelEndGame.SetActive(false);
@@ -86,7 +81,7 @@ namespace ToyBox.Leaderboard
             _leaderboardData.PanelEndGame.SetActive(true);
             _leaderboardData.Graph.SetActive(true);
             _leaderboardData.Background.SetActive(true);
-            List<(string name, int score)> sortedPlayers = _leaderBoard.GetSortedPlayers();
+            List<(string name, int score, Color c)> sortedPlayers = _leaderBoard.GetSortedPlayers();
 
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
@@ -96,25 +91,27 @@ namespace ToyBox.Leaderboard
                 if (i >= sortedPlayers.Count) {
                     continue;
                 }
-                (string name, int score) = sortedPlayers[i];
+                (string name, int score, Color c) = sortedPlayers[i];
                 _leaderboardData.PlayerInfos[i].TextPoints.text = score.ToString();
                 _leaderboardData.PlayerInfos[i].TextName.text = name;
             }
 
-            int maxScore = Mathf.Max(1, sortedPlayers.Max(p => p.Item2));
+            int maxScore = Mathf.Max(1, sortedPlayers.Max(p => p.score));
             int maxMatches = _playerManager.Players.Max(p => p.PlayerStats?.MatchScores.Count ?? 0);
 
             for (int i = 0; i < sortedPlayers.Count && i < _leaderboardData.PlayerInfos.Count; i++)
             {
-                DrawPlayerLine(i, sortedPlayers[i].Item1, maxScore, maxMatches);
+                DrawPlayerLine(i, sortedPlayers[i].name, maxScore, maxMatches, sortedPlayers[i].c);
             }
+            
+            DrawnBorderLines(maxScore, maxMatches);
         }
 
         #endregion
 
         #region Drawing
 
-        private void DrawPlayerLine(int playerIndex, string playerName, int maxScore, int maxMatches)
+        private void DrawPlayerLine(int playerIndex, string playerName, int maxScore, int maxMatches, Color c)
         {
             Managers.Player player = _playerManager.Players.FirstOrDefault(p => p.Name == playerName);
             if (player == null || string.IsNullOrEmpty(player.Name)) return;
@@ -122,12 +119,12 @@ namespace ToyBox.Leaderboard
             PlayerStats stats = player.PlayerStats;
             if (stats == null || stats.MatchScores == null || stats.MatchScores.Count == 0) return;
 
-            List<int> matchScores = GetPaddedScores(stats.MatchScores, maxMatches);
+            List<int> matchScores = stats.MatchScores;
 
             LineRenderer lr = _leaderboardData.PlayerInfos[playerIndex].LineRenderer;
             lr.positionCount = matchScores.Count + 1;
 
-            Color playerColor = _playerColors[playerIndex % _playerColors.Count];
+            Color playerColor = c;
             lr.startColor = lr.endColor = playerColor;
 
             Vector3[] positions = new Vector3[matchScores.Count + 1];
@@ -135,34 +132,70 @@ namespace ToyBox.Leaderboard
             float availableWidth = _maxGraphWidth - 2 * _xMargin;
             float availableHeight = _maxGraphHeight - 2 * _yMargin;
 
-            float xStep = matchScores.Count > 0 ? availableWidth / matchScores.Count : 0;
+            float xStep = maxMatches > 0 ? availableWidth / maxMatches : 0;
             float yScaleFactor = maxScore > 0 ? availableHeight / maxScore : 0;
 
-            positions[0] = _graphOrigin + new Vector3(_xMargin, _yMargin, 0);
-
-            int cumulativeScore = 0;
+            positions[0] = _graphOrigin.position + new Vector3(_xMargin, _yMargin, 0);
+            
             for (int i = 0; i < matchScores.Count; i++)
             {
-                cumulativeScore += matchScores[i];
                 float xPos = _xMargin + ((i + 1) * xStep);
-                float yPos = _yMargin + (cumulativeScore * yScaleFactor);
+                float yPos = _yMargin + (matchScores[i] * yScaleFactor);
 
                 xPos = Mathf.Clamp(xPos, _xMargin, _maxGraphWidth - _xMargin);
                 yPos = Mathf.Clamp(yPos, _yMargin, _maxGraphHeight - _yMargin);
 
-                positions[i + 1] = _graphOrigin + new Vector3(xPos, yPos, 0);
+                positions[i + 1] = _graphOrigin.position + new Vector3(xPos, yPos, 0);
             }
 
             lr.SetPositions(positions);
         }
 
-        private List<int> GetPaddedScores(List<int> original, int targetLength)
+        private void DrawnBorderLines(int maxScore, int maxMatches)
         {
-            List<int> padded = new List<int>(original);
-            int lastScore = original.Count > 0 ? original.Last() : 0;
-            while (padded.Count < targetLength)
-                padded.Add(lastScore);
-            return padded;
+            _lineBorderX.startWidth = _lineWidth;
+            _lineBorderY.startWidth = _lineWidth;
+            
+            Vector3[] borderX = new Vector3[2];
+            Vector3[] borderY = new Vector3[2];
+
+            float availableWidth = _maxGraphWidth - 2 * _xMargin;
+            float availableHeight = _maxGraphHeight - 2 * _yMargin;
+
+            float xStep = maxMatches > 0 ? availableWidth / maxMatches : 0;
+            float yScaleFactor = maxScore > 0 ? availableHeight / maxScore : 0;
+
+            borderX[0] = _graphOrigin.position + new Vector3(_xMargin, _yMargin, 0);
+            borderX[1] = _graphOrigin.position + new Vector3(_xMargin + availableWidth, _yMargin, 0);
+
+            borderY[0] = _graphOrigin.position + new Vector3(_xMargin, _yMargin, 0);
+            borderY[1] = _graphOrigin.position + new Vector3(_xMargin, _yMargin + availableHeight, 0);
+            
+            Vector3 xLongGraph = borderX[1] - borderX[0];
+            Vector3 yLongGraph = borderY[1] - borderY[0];
+            
+            Vector3 xStepGraph = xLongGraph / maxMatches;
+            Vector3 yStepGraph = yLongGraph / maxScore;
+
+
+            for (int i = 0; i < maxMatches + 1; i++)
+            {
+                GameObject graphElement = Instantiate(_graphLine, (Vector3)(_graphOrigin.position + new Vector3(_xMargin, _yMargin, 0) + i * xStepGraph), Quaternion.identity);
+                graphElement.GetComponent<GraphElement>().Init(i, new Vector2(14f, -20f), new(0, 1));
+            }
+            
+            for (int i = 0; i < (int)(maxScore /10) + 1; i++)
+            {
+                GameObject graphElement = Instantiate(_graphLine, (Vector3)(_graphOrigin.position + new Vector3(_xMargin, _yMargin, 0) + i * 10 * yStepGraph), Quaternion.identity);
+                graphElement.GetComponent<GraphElement>().Init(i * 10, new Vector2(-28f, 14f), new(1, 0));
+            }
+            
+            // arriver - départ = distance
+            //     distance / nb de rounds ou score max = step
+            //         pos départ + step
+
+            _lineBorderX.SetPositions(borderX);
+            _lineBorderY.SetPositions(borderY);
         }
 
         #endregion

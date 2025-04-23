@@ -276,6 +276,7 @@ MonoBehaviour:
       m_Calls: []
   DoErase: 0
   IsChosen: 0
+  _bombVisualPrefab: {fileID: 0}
 --- !u!1 &6500630030234741135
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,8 +450,8 @@ Transform:
   m_GameObject: {fileID: 6926392770668493985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.159, z: 0}
+  m_LocalScale: {x: 1.0884, y: 1.319685, z: 1.0884}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5783985666797831858}
@@ -482,8 +483,8 @@ Transform:
   m_GameObject: {fileID: 8551811787068717250}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.1590005, z: 0}
+  m_LocalScale: {x: 1.0884, y: 1.319685, z: 1.0884}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7617186604215924992}

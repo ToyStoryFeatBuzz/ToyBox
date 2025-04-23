@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace ToyBox.Menu {
     public class MenuManager : MonoBehaviour {
@@ -11,20 +12,31 @@ namespace ToyBox.Menu {
             }
         }
 
+        private void Start() {
+            AudioManager.Instance.PlayMusic("MenuMusic");
+        }
+        
         public void PlayGame() {
+            AudioManager.Instance.StopMusic();
+            AudioManager.Instance.PlaySFX("ButtonClick1");
+            AudioManager.Instance.PlayMusic("LobbyMusic");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         public void OpenMenu(GameObject menu) {
+            AudioManager.Instance.PlaySFX("ButtonClick2");
             menu.SetActive(true);
         }
 
         public void CloseMenu(GameObject menu) {
+            AudioManager.Instance.PlaySFX("ButtonClick2");
             menu.SetActive(false);
         }
 
         public void QuitGame() {
             Application.Quit();
         }
+        
+        public void Select(Selectable selectable) => selectable.Select();
     }
 }

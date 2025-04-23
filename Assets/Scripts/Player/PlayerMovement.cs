@@ -95,6 +95,7 @@ namespace ToyBox.Player
                     _platformLayer) && !IsGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
             {
                 _wallJumpDirection = EWallJumpDirection.Left;
+                AudioManager.Instance.PlaySFX("PlayerDoubleJump");
                 Jump(_wallJumpVector*_jumpForce);
                 
             }
@@ -103,11 +104,13 @@ namespace ToyBox.Player
                      (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
                 _wallJumpDirection = EWallJumpDirection.Right;
+                AudioManager.Instance.PlaySFX("PlayerDoubleJump");
                 Jump(new Vector2(-_wallJumpVector.x,_wallJumpVector.y)*_jumpForce);
                 
             }
             else if (_remainJump >  0) {
                 // If you jump after being in the air without jumping (i.e a jump pad)
+                if (!IsGrounded) AudioManager.Instance.PlaySFX("PlayerDoubleJump");
                 Jump(_jumpForce);
             }
         }

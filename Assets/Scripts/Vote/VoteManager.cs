@@ -120,7 +120,7 @@ public class VoteManager : MonoBehaviour
                 winner = topZones[Random.Range(0, topZones.Count)];
                 Debug.Log($"🎲 Égalité entre plusieurs maps. Map choisie au hasard : {winner.MapName} !");
             }
-
+            AudioManager.Instance.StopMusic();
             LoadMap(winner.MapName);
         }
         else

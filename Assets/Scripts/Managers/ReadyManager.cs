@@ -28,10 +28,7 @@ public class ReadyManager : MonoBehaviour
 
     private void Start()
     {
-        for(int i= 0; i < _playerManager.Players.Count; i++)
-        {
-            CheckedImageList[i].gameObject.SetActive(true);
-        }
+        GameModeManager.Instance.OnLeaderboardGraphStart += PlayerCheckUI;
     }
 
     public void PlayerSetReady(ReadyUpHandler handler)
@@ -83,5 +80,13 @@ public class ReadyManager : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void PlayerCheckUI()
+    {
+        for(int i= 0; i < _playerManager.Players.Count; i++)
+        {
+            CheckedImageList[i].gameObject.SetActive(true);
+        }
     }
 }

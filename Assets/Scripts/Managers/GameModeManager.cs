@@ -90,7 +90,6 @@ namespace ToyBox.Managers {
 
         public void StartCountDown(float newTime)
         {
-            AudioManager.Instance.StopMusic();
             _playerManager.SetPlayersMovements(false);
             StartCoroutine(Countdown(newTime));
 
@@ -106,7 +105,7 @@ namespace ToyBox.Managers {
             Debug.Log("Countdown finished");
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
-            //AudioManager.Instance.PlayMusic("RaceMode");
+            AudioManager.Instance.PlayMusic("RaceMode",0.5f);
         }
         
         public void StartRaceMode()

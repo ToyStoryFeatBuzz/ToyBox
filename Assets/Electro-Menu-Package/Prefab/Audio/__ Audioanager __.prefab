@@ -241,7 +241,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSourceMusic: {fileID: 7057383784975185611}
   _audioSourceSFX: {fileID: 744642989708214876}
-  _musicSounds: []
+  _musicSounds:
+  - _name: EditMode
+    _clip: {fileID: 8300000, guid: 85efdc6e386efb54b92568b204b4b423, type: 3}
+  - _name: RaceMode
+    _clip: {fileID: 8300000, guid: afaf531d257f97c41bb3dab02415a886, type: 3}
+  - _name: MenuMusic
+    _clip: {fileID: 8300000, guid: 301950c7e9cabf441bd653e8954af6f8, type: 3}
+  - _name: LobbyMusic
+    _clip: {fileID: 8300000, guid: d32218de61e7b3e44a770ab203e4463f, type: 3}
   _sfxSounds:
   - _name: ButtonClick1
     _clip: {fileID: 8300000, guid: 6b92a2dcd7f564548959f38146bcd7f5, type: 3}
@@ -257,6 +265,20 @@ MonoBehaviour:
     _clip: {fileID: 8300000, guid: 9da197471a669de45a8848218834f469, type: 3}
   - _name: BallThrowerLaunch
     _clip: {fileID: 8300000, guid: 86c42f59561cda942a2fc6152b03df32, type: 3}
+  - _name: RaceEnd_Crowd
+    _clip: {fileID: 8300000, guid: 28efbf684d19ce94eb77d23d66308705, type: 3}
+  - _name: Cardboard_Open
+    _clip: {fileID: 8300000, guid: 675973b807fc9384c98d25078132162f, type: 3}
+  - _name: Cardboard_Close
+    _clip: {fileID: 8300000, guid: 804b04b2fbc0a364b82d433e491f7d3a, type: 3}
+  - _name: RaceStart
+    _clip: {fileID: 8300000, guid: 53a2df9c58933e540a3c0d942b7ebb21, type: 3}
+  - _name: MineExplosion
+    _clip: {fileID: 8300000, guid: 9da197471a669de45a8848218834f469, type: 3}
+  - _name: Trampoline_Bounce
+    _clip: {fileID: 8300000, guid: 8ed713a981e12d44587acc1afdaa9809, type: 3}
+  - _name: RaceEnd_Horn
+    _clip: {fileID: 8300000, guid: e8635f94232ad4a4eb02f5c9818a8dfc, type: 3}
 --- !u!114 &8071303050364632587
 MonoBehaviour:
   m_ObjectHideFlags: 0

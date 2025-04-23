@@ -18,6 +18,7 @@ namespace ToyBox.Menu {
         public void PlayGame() {
             AudioManager.Instance.StopMusic();
             AudioManager.Instance.PlaySFX("ButtonClick1");
+            AudioManager.Instance.PlayMusic("LobbyMusic");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 

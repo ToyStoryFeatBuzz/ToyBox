@@ -59,6 +59,7 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.clip = sound._clip;
             audioSource.volume = volume;
+            audioSource.loop = true;
             audioSource.Play();
         }
     }
@@ -73,15 +74,17 @@ public class AudioManager : MonoBehaviour
     {
         StopSound(_audioSourceMusic);
     }
+    
+    
 
     public void StopSFX()
     {
         StopSound(_audioSourceSFX);
     }
 
-    public void PlayMusic(string name)
+    public void PlayMusic(string name, float volume=1f)
     {
-        PlaySound(_musicSounds,name, _audioSourceMusic);
+        PlaySound(_musicSounds,name, _audioSourceMusic, volume);
     }
 
     public void PlaySFX(string name, Vector2 pos=new(), float spatialBlend=0.0f, float volume=1.0f)

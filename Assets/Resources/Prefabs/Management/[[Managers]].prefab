@@ -511,7 +511,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2442064234514651381}
         m_TargetAssemblyTypeName: Toybox.InputSystem.MenuInputManager, Assembly-CSharp
-        m_MethodName: ReleasePause
+        m_MethodName: OnReleasePause
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

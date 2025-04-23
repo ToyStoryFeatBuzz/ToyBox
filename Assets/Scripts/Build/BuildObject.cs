@@ -18,6 +18,10 @@ namespace ToyBox.Build {
         
         public GameObject _bombVisualPrefab; //Only necessary to be filled if it's a bomb
 
+        public bool IsMovingPlatform;
+        public GameObject MovingPart;
+        public GameObject MovingPartPlaceholder;
+
         private void Start() {
             Place(false);
         }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace ToyBox.Menu {
     public class MenuManager : MonoBehaviour {
@@ -35,5 +36,7 @@ namespace ToyBox.Menu {
         public void QuitGame() {
             Application.Quit();
         }
+        
+        public void Select(Selectable selectable) => selectable.Select();
     }
 }

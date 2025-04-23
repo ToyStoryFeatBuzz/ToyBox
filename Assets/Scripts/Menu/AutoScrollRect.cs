@@ -32,8 +32,6 @@ namespace ToyBox.Menu {
             if (_scrollRect != null) {
                 _scrollRect.content.GetComponentsInChildren(_scrollRectData);
             }
-            Debug.Log("Pieak");
-
             ScrollToSelected(true);
         }
 

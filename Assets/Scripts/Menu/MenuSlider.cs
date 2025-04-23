@@ -1,9 +1,10 @@
 ﻿using ToyBox.InputSystem;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ToyBox.Menu {
-    public class MenuSlider : MonoBehaviour {
+    public class MenuSlider : MonoBehaviour,ISelectHandler, IDeselectHandler {
         private Slider _slider;
         [SerializeField] private bool _isSelected;
         [SerializeField] private bool _isInteracting;
@@ -43,7 +44,7 @@ namespace ToyBox.Menu {
 
             _isInteracting = false;
             _slider.interactable = true;
-            _handler.sprite = _default;
+            _slider.Select();
             _inputManager.OnNavigateEvent.Started -= UpdateSlider;
         }
 
@@ -58,6 +59,16 @@ namespace ToyBox.Menu {
             }
 
             _slider.value = (float)value / 100;
+        }
+        
+        public void OnSelect(BaseEventData eventData) {
+            _handler.sprite = _selected;
+            _isSelected = true;
+        }
+        
+        public void OnDeselect(BaseEventData eventData) {
+            _isSelected = false;
+            _handler.sprite = _default;
         }
     }
 }

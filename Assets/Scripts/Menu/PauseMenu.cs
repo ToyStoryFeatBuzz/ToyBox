@@ -1,6 +1,7 @@
 ﻿using ToyBox.Managers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace ToyBox.Menu {
@@ -8,7 +9,8 @@ namespace ToyBox.Menu {
         public static PauseMenu Instance { get; private set; }
         PauseManager _pauseManager => PauseManager.Instance;
 
-        public GameObject Panel;
+        [SerializeField] GameObject _panel;
+        [SerializeField] private Selectable _resumeBtn;
         
         private void Awake() {
             if (Instance == null) {
@@ -17,6 +19,11 @@ namespace ToyBox.Menu {
         }
 
         public void Resume() => _pauseManager.EndPause();
+
+        public void TogglePause(bool toggle) {
+            _panel.SetActive(toggle);
+            _resumeBtn.Select();
+        }
         
         public void MainMenu() {
             SceneManager.LoadScene(0);

@@ -40,7 +40,7 @@ namespace ToyBox.Managers {
             _menuInput.user.UnpairDevices();
             if (pausedPlayer.Device == null) return;
             InputUser.PerformPairingWithDevice(pausedPlayer.Device, _menuInput.user);
-            _pauseMenu.Panel.SetActive(true);
+            _pauseMenu.TogglePause(true);
         }
         
         public void StartPause(GameObject pausedPlayer) {
@@ -48,7 +48,7 @@ namespace ToyBox.Managers {
         }
 
         public void EndPause() {
-            _pauseMenu.Panel.SetActive(false);
+            _pauseMenu.TogglePause(false);
             _menuInput.enabled = false;
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.enabled = true;

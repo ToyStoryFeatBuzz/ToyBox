@@ -2637,7 +2637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navigation:
-    Up: {fileID: 0}
+    Up: {fileID: 5248958085196157359}
     Down: {fileID: 3769170623988952614}
     Left: {fileID: 4731371119698789705}
     Right: {fileID: 4731371119698789705}
@@ -3183,7 +3183,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b593bb4a4d974af7939c881c346b8ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 2251973374745819624}
+  _panel: {fileID: 2251973374745819624}
+  _resumeBtn: {fileID: 9059377857514652115}
 --- !u!1 &5085079998446459297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3651,7 +3652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _navigation:
-    Up: {fileID: 0}
+    Up: {fileID: 5248958085196157359}
     Down: {fileID: 3769170623988952614}
     Left: {fileID: 9114146671173086715}
     Right: {fileID: 9114146671173086715}

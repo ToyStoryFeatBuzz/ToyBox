@@ -76,6 +76,7 @@ namespace ToyBox.Managers {
             
             PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();
             playerStats.color = AnimationClips[Players.Count].color;
+            playerStats.sprite = AnimationClips[Players.Count].sprite;
             
             ReadyUpHandler readyUpHandler = player.gameObject.GetComponent<ReadyUpHandler>();
             
@@ -85,7 +86,7 @@ namespace ToyBox.Managers {
             }
             
             Players.Add(new Player
-                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive , Color = AnimationClips[Players.Count].color, ReadyUpHandler = readyUpHandler});
+                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive , Color = AnimationClips[Players.Count].color, sprite = AnimationClips[Players.Count].sprite ,ReadyUpHandler = readyUpHandler});
 
             player.transform.parent = transform;
             player.transform.position = GetSpawnPoint();
@@ -156,12 +157,14 @@ namespace ToyBox.Managers {
         public EPlayerState PlayerState;
         public ReadyUpHandler ReadyUpHandler;
         public Color Color;
+        public Sprite sprite;
     }
 
     [Serializable]
     public struct SPLayerColor
     {
         public RuntimeAnimatorController animator;
+        public Sprite sprite;
         public Color color;
         public Sprite spriteIdlle;
         public Sprite spriteClic;

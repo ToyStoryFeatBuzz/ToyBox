@@ -10,6 +10,8 @@ namespace ToyBox.Player {
         public List<int> MatchScores = new();
         public string Name;
         public Color color;
+        public Sprite sprite;
+        
         private void Start() {
             Name = gameObject.name;
             Debug.Log("Initialisé PlayerStats avec nom : " + Name);

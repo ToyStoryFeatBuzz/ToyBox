@@ -1,15 +1,21 @@
+using System.Collections.Generic;
+using ToyBox.Managers;
 using UnityEngine;
 using UnityEngine.Serialization;
+
+using UnityEngine.UI;
+using Cursor = UnityEngine.Cursor;
+
 
 namespace ToyBox.Build {
     public class PlayerMouse : MonoBehaviour {
         Vector2 _mousePos = Vector2.zero;
 
         [FormerlySerializedAs("mouseBody")] [SerializeField]
-        Transform _mouseBody;
+         Transform _mouseBody;
 
         [FormerlySerializedAs("mouseBodyPrefab")] [SerializeField]
-        Transform _mouseBodyPrefab;
+         Transform _mouseBodyPrefab;
 
         [FormerlySerializedAs("mouseSensivity")] [SerializeField]
         float _mouseSensitivity;
@@ -18,6 +24,7 @@ namespace ToyBox.Build {
         float maxY;
 
         Camera cam;
+        PlayerManager _playerManager => PlayerManager.Instance;
 
         private void Awake() {
             if (!_mouseBody) {
@@ -28,6 +35,8 @@ namespace ToyBox.Build {
             ActivateMouse(false);
             cam = Camera.main;
             _mouseBody.parent = cam.transform;
+            _mouseBody.GetComponentInChildren<Image>().sprite = 
+                _playerManager.AnimationClips[_playerManager.Players.Count + 1].CursorSpritesIddle;
         }
 
 
@@ -56,6 +65,8 @@ namespace ToyBox.Build {
         }
 
         public Vector2 Click() {
+            _mouseBody.GetComponentInChildren<Image>().sprite = 
+                _playerManager.AnimationClips[_playerManager.Players.Count + 1].CursorSpritesClic;
             return _mouseBody.position;
         }
 
@@ -70,5 +81,5 @@ namespace ToyBox.Build {
             Cursor.visible = !activation;
         }
     }
-
+    
 }

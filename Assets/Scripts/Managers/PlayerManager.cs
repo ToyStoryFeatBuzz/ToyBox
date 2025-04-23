@@ -18,6 +18,7 @@ namespace ToyBox.Managers {
         public List<SPLayerColor> AnimationClips;
         private List<RuntimeAnimatorController> Animators = new();
         
+        
         [SerializeField] Transform _spawnPoint;
         
         private void Awake() {
@@ -153,5 +154,7 @@ namespace ToyBox.Managers {
     {
         public RuntimeAnimatorController animator;
         public Color color;
+        public Sprite CursorSpritesIddle;
+        public Sprite CursorSpritesClic;
     }
 }

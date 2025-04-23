@@ -43,7 +43,6 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -7462863343732204413, guid: 2a94e5001a89c1648b502ea4ee55f496, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -54,9 +53,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 200
+  MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -64,86 +63,23 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.005
+      time: 0
       value: 1
-      inSlope: -200.07968
-      outSlope: -200.07968
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.01
-      value: 0.5
-      inSlope: -50.01992
-      outSlope: -50.01992
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.02
-      value: 0.25
-      inSlope: -12.50498
-      outSlope: -12.50498
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.044585265
-      value: 0.11820984
-      inSlope: -3.126245
-      outSlope: -3.126245
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.08
-      value: 0.0625
-      inSlope: -0.78156126
-      outSlope: -0.78156126
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.16
-      value: 0.03125
-      inSlope: -0.19539031
-      outSlope: -0.19539031
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.32
-      value: 0.015625
-      inSlope: -0.04884758
-      outSlope: -0.04884758
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.64
-      value: 0.0078125
-      inSlope: -0.012211895
-      outSlope: -0.012211895
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 0.005
-      inSlope: -0.005001994
-      outSlope: -0.005001994
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -202,6 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5834535006141690326}
   - component: {fileID: 6149335325540718733}
+  - component: {fileID: 8071303050364632587}
   m_Layer: 0
   m_Name: __ Audioanager __
   m_TagString: Untagged
@@ -240,44 +177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSourceMusic: {fileID: 7057383784975185611}
   _audioSourceSFX: {fileID: 744642989708214876}
-  _musicSounds:
-  - _name: EditMode
-    _clip: {fileID: 8300000, guid: 85efdc6e386efb54b92568b204b4b423, type: 3}
-  - _name: RaceMode
-    _clip: {fileID: 8300000, guid: afaf531d257f97c41bb3dab02415a886, type: 3}
-  - _name: MenuMusic
-    _clip: {fileID: 8300000, guid: 301950c7e9cabf441bd653e8954af6f8, type: 3}
-  - _name: LobbyMusic
-    _clip: {fileID: 8300000, guid: d32218de61e7b3e44a770ab203e4463f, type: 3}
-  _sfxSounds:
-  - _name: ButtonClick1
-    _clip: {fileID: 8300000, guid: 6b92a2dcd7f564548959f38146bcd7f5, type: 3}
-  - _name: ButtonClick2
-    _clip: {fileID: 8300000, guid: 84993fc179fcdd94ead1677d17eb7de5, type: 3}
-  - _name: PlayerJoin
-    _clip: {fileID: 8300000, guid: b41939c0f1145074899d6fc42a3ac85d, type: 3}
-  - _name: PlayerDie
-    _clip: {fileID: 8300000, guid: 1ec49983ff21c704395140ae4386aee3, type: 3}
-  - _name: PlayerDoubleJump
-    _clip: {fileID: 8300000, guid: 8401614308b9e5442a6fc3c0f762775d, type: 3}
-  - _name: MineExplosion
-    _clip: {fileID: 8300000, guid: 9da197471a669de45a8848218834f469, type: 3}
-  - _name: BallThrowerLaunch
-    _clip: {fileID: 8300000, guid: 86c42f59561cda942a2fc6152b03df32, type: 3}
-  - _name: RaceEnd_Crowd
-    _clip: {fileID: 8300000, guid: 28efbf684d19ce94eb77d23d66308705, type: 3}
-  - _name: Cardboard_Open
-    _clip: {fileID: 8300000, guid: 675973b807fc9384c98d25078132162f, type: 3}
-  - _name: Cardboard_Close
-    _clip: {fileID: 8300000, guid: 804b04b2fbc0a364b82d433e491f7d3a, type: 3}
-  - _name: RaceStart
-    _clip: {fileID: 8300000, guid: 53a2df9c58933e540a3c0d942b7ebb21, type: 3}
-  - _name: MineExplosion
-    _clip: {fileID: 8300000, guid: 9da197471a669de45a8848218834f469, type: 3}
-  - _name: Trampoline_Bounce
-    _clip: {fileID: 8300000, guid: 8ed713a981e12d44587acc1afdaa9809, type: 3}
-  - _name: RaceEnd_Horn
-    _clip: {fileID: 8300000, guid: e8635f94232ad4a4eb02f5c9818a8dfc, type: 3}
+  _musicSounds: []
+  _sfxSounds: []
 --- !u!114 &8071303050364632587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +238,6 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2127064223325720072, guid: 2a94e5001a89c1648b502ea4ee55f496, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

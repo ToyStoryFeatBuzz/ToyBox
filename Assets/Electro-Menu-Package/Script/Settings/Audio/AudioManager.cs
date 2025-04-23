@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -25,32 +24,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void PlaySound( Sound[] soundList, string name,Vector3 pos=new() ,float sonsLocale=0.0f, float volume=1f)
+    private void PlaySound(AudioSource audioSource, Sound[] soundList, string name)
     {
         Sound sound = Array.Find(soundList, s => s._name == name);
-    
-        if (sound == null)
-        {
-            Debug.Log($"{name} Not Found");
-        }
-        else
-        {
-            GameObject tempAudio=new GameObject("tempAudio");
-            tempAudio.transform.position=pos;
-            AudioSource audioSource= tempAudio.AddComponent<AudioSource>();
-            audioSource.spatialBlend=sonsLocale;
-            audioSource.clip = sound._clip;
-            audioSource.volume = volume;
-            audioSource.Play();
-            Destroy(tempAudio,sound._clip.length);
-          
-        }
-    }
-    
-    private void PlaySound(Sound[] soundList,string name, AudioSource audioSource, float volume=1f)
-    {
-        Sound sound = Array.Find(soundList, s => s._name == name);
-    
+
         if (sound == null)
         {
             Debug.Log($"{name} Not Found");
@@ -58,42 +35,18 @@ public class AudioManager : MonoBehaviour
         else
         {
             audioSource.clip = sound._clip;
-            audioSource.volume = volume;
-            audioSource.loop = true;
             audioSource.Play();
+            Debug.Log(audioSource.clip.name);
         }
     }
-    
 
-    private void StopSound(AudioSource audioSource)
+    public void PlayMusic(string name)
     {
-        audioSource.Stop();
+        PlaySound(_audioSourceMusic, _musicSounds, name);
     }
 
-    public void StopMusic()
+    public void PlaySFX(string name)
     {
-        StopSound(_audioSourceMusic);
-    }
-    
-    
-
-    public void StopSFX()
-    {
-        StopSound(_audioSourceSFX);
-    }
-
-    public void PlayMusic(string name, float volume=1f)
-    {
-        PlaySound(_musicSounds,name, _audioSourceMusic, volume);
-    }
-
-    public void PlaySFX(string name, Vector2 pos=new(), float spatialBlend=0.0f, float volume=1.0f)
-    {
-        PlaySound(_sfxSounds,name, pos, spatialBlend);
-    }
-
-    public bool IsSoundInList(Sound[] soundList, string name)
-    {
-        return Array.Exists(soundList, s => s._name == name);
+        PlaySound(_audioSourceSFX, _sfxSounds, name);
     }
 }

@@ -11,7 +11,7 @@ namespace ToyBox.Managers {
         
         public static PauseManager Instance { get; private set; }
         
-        private PauseMenu _pauseMenu => PauseMenu.Instance;
+        private MenuManager _menuManager => MenuManager.Instance;
         
         private void Awake() {
             if (Instance == null) {
@@ -28,7 +28,7 @@ namespace ToyBox.Managers {
         }
 
         void StartPause(Player pausedPlayer) {
-            if (!_pauseMenu) {
+            if (!_menuManager) {
                 return;
             }
             Time.timeScale = 0f;
@@ -40,7 +40,7 @@ namespace ToyBox.Managers {
             _menuInput.user.UnpairDevices();
             if (pausedPlayer.Device == null) return;
             InputUser.PerformPairingWithDevice(pausedPlayer.Device, _menuInput.user);
-            _pauseMenu.Panel.SetActive(true);
+            _menuManager.gameObject.SetActive(true);
         }
         
         public void StartPause(GameObject pausedPlayer) {
@@ -48,7 +48,7 @@ namespace ToyBox.Managers {
         }
 
         public void EndPause() {
-            _pauseMenu.Panel.SetActive(false);
+            _menuManager.gameObject.SetActive(false);
             _menuInput.enabled = false;
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.enabled = true;

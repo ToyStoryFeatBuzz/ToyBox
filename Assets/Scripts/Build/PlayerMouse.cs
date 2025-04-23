@@ -1,35 +1,23 @@
-using System;
-using System.Collections.Generic;
-using ToyBox.Managers;
 using UnityEngine;
 using UnityEngine.Serialization;
-
-using UnityEngine.UI;
-using Cursor = UnityEngine.Cursor;
-
 
 namespace ToyBox.Build {
     public class PlayerMouse : MonoBehaviour {
         Vector2 _mousePos = Vector2.zero;
 
         [FormerlySerializedAs("mouseBody")] [SerializeField]
-         Transform _mouseBody;
+        Transform _mouseBody;
 
         [FormerlySerializedAs("mouseBodyPrefab")] [SerializeField]
-         Transform _mouseBodyPrefab;
+        Transform _mouseBodyPrefab;
 
         [FormerlySerializedAs("mouseSensivity")] [SerializeField]
         float _mouseSensitivity;
 
         float maxX;
         float maxY;
-        
-        public Action<float> mouseInBorderXEvent;
-        public Action<float> mouseInBorderYEvent;
 
         Camera cam;
-        public Sprite sprite;
-        PlayerManager _playerManager => PlayerManager.Instance;
 
         private void Awake() {
             if (!_mouseBody) {
@@ -42,10 +30,6 @@ namespace ToyBox.Build {
             _mouseBody.parent = cam.transform;
         }
 
-        private void Start()
-        {
-           sprite = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].CursorSpritesIddle;
-        }
 
         private void SetMaxPos()
         {
@@ -67,14 +51,6 @@ namespace ToyBox.Build {
 
             Vector2 camPos = cam.transform.position;
             _mousePos += movement * _mouseSensitivity;
-            if (Mathf.Abs(_mousePos.x) > maxX * 0.95f)
-            {
-                mouseInBorderXEvent.Invoke(Mathf.Sign(_mousePos.x));
-            }
-            if (Mathf.Abs(_mousePos.y) > maxY * 0.95f)
-            {
-                mouseInBorderYEvent.Invoke(Mathf.Sign(_mousePos.y));
-            }
             _mousePos.Set(Mathf.Clamp(_mousePos.x, -maxX, maxX), Mathf.Clamp(_mousePos.y, -maxY, maxY));
             _mouseBody.position = camPos + _mousePos;
         }
@@ -88,12 +64,11 @@ namespace ToyBox.Build {
                 _mouseBody = Instantiate(_mouseBodyPrefab);
                 ResetMousePos();
                 _mouseBody.position = _mousePos;
-                _mouseBody.GetComponentInChildren<Image>().sprite = sprite;
             }
 
             _mouseBody?.gameObject?.SetActive(activation);
             Cursor.visible = !activation;
         }
     }
-    
+
 }

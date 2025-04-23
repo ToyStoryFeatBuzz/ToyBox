@@ -22,9 +22,9 @@ public class NewPlayerAnimator : MonoBehaviour
         _rigidbody = _player.GetComponent<Rigidbody2D>();
         _playerInput = _player.GetComponent<PlayerInputSystem>();
 
-        _playerInput.OnJumpEvent.Started += StartJumpAnim;
-        _playerInput.OnJumpEvent.Canceled += CancelJumpAnim;
-        _playerInput.OnJumpEvent.Performed += CancelJumpAnim;
+        _playerMovement.OnJumpEvent += StartJumpAnim;
+        _playerMovement.OnJumpCancelEvent += CancelJumpAnim;
+        
         _animator.SetBool("IsGrounded", true);
     }
 

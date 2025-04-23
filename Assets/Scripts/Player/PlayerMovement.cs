@@ -1,5 +1,6 @@
 using ToyBox.InputSystem;
 using UnityEngine;
+using UnityEngine.Events;
 using static ToyBox.Enums;
 
 namespace ToyBox.Player
@@ -43,8 +44,9 @@ namespace ToyBox.Player
         PlayerInputSystem _inputSystem;
         Rigidbody2D _rb;
         private PlayerEnd _playerEnd;
-        
-        
+
+        public UnityAction OnJumpEvent;
+        public UnityAction OnJumpCancelEvent;
         
         private void Start()
         {
@@ -55,6 +57,7 @@ namespace ToyBox.Player
             _inputSystem.OnJumpEvent.Canceled += OnJumpCancel;
             _inputSystem.OnJumpEvent.Performed += OnJumpCancel; // If held too long, cancels the jump, simpler than making some timer
             _remainJump = _maxJump;
+            _rb.gravityScale = _gravity;
         }
 
         private void FixedUpdate() {
@@ -122,6 +125,7 @@ namespace ToyBox.Player
             _remainJump--;
             IsGrounded = false;
             _performGroundCheck = false;
+            OnJumpEvent?.Invoke();
         }
         
         void Jump(Vector2 jumpValue) {
@@ -131,12 +135,14 @@ namespace ToyBox.Player
             _remainJump = 1;
             IsGrounded = false;
             _performGroundCheck = false;
+            OnJumpEvent?.Invoke();
         }
         
         private void OnJumpCancel() //Gets automatically called if the player releases the jump input or holds it too long
         {
             _performGroundCheck = true;
             _rb.gravityScale = _gravity;
+            OnJumpCancelEvent?.Invoke();
         }
 
         public void ApplyKnockBack(Vector2 knockBackVector) // Used for obstacles that knockbacks you

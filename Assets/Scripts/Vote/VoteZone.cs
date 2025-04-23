@@ -44,11 +44,13 @@ public class VoteZone : MonoBehaviour
             opened ++;
 
             if (opened > 1) return;
-
-
+            
             StopAllCoroutines();
-
             StartCoroutine(Open());
+
+            AudioManager.Instance.StopSFX();
+            AudioManager.Instance.PlaySFX("Cardboard_Open",pos:transform.position, volume:2f);
+            
         }            
     }
 
@@ -63,10 +65,12 @@ public class VoteZone : MonoBehaviour
             opened--;
 
             if(opened > 0) return;
-
+            
+            StartCoroutine(Close());
             StopAllCoroutines();
 
-            StartCoroutine(Close());
+            AudioManager.Instance.StopSFX();
+            AudioManager.Instance.PlaySFX("Cardboard_Close",pos:transform.position, volume:2f);
         }
     }
 

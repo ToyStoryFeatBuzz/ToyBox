@@ -78,6 +78,7 @@ namespace ToyBox.Managers {
             _finishedPlayers++;
             player.gameObject.transform.position = _winnersBox.position;
             player.SetWin();
+            AudioManager.Instance.PlaySFX("RaceEnd_Crowd",volume:0.5f);
         }
         // private void OnTriggerEnter2D(Collider2D collision) {
         //     if (!collision.gameObject.TryGetComponent(out PlayerEnd player)) {
@@ -92,6 +93,8 @@ namespace ToyBox.Managers {
             if (!_raceStarted) return;
             if (_playerManager.GetAlivePlayers().Count == 0) {
                 _gameModeManager.OnRaceEnd?.Invoke();
+                AudioManager.Instance.StopMusic();
+                AudioManager.Instance.PlaySFX("RaceEnd_Horn", volume:0.7f);
                 _raceStarted = false;
             }
 

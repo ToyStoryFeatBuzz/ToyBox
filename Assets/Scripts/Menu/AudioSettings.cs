@@ -28,14 +28,14 @@ namespace ToyBox.Menu {
         }
 
         void SetVolume(StVolumeSlider volumeSlider) {
-            _audioMixer.SetFloat(volumeSlider.Name, Mathf.Log10(volumeSlider.Slider.value) * 20);
+            _audioMixer.SetFloat(volumeSlider.Name, Mathf.Log10(volumeSlider.Slider.value) * 40);
             volumeSlider.TextPercent.text = $"{Mathf.RoundToInt(volumeSlider.Slider.value * 100)} %";
             PlayerPrefs.SetFloat(volumeSlider.Name, volumeSlider.Slider.value);
             PlayerPrefs.Save();
         }
         
         void SetVolume(StVolumeSlider volumeSlider, float value) {
-            _audioMixer.SetFloat(volumeSlider.Name, Mathf.Log10(value) * 20);
+            _audioMixer.SetFloat(volumeSlider.Name, Mathf.Log10(value) * 40);
             PlayerPrefs.SetFloat(volumeSlider.Name, value);
             PlayerPrefs.Save();
         }

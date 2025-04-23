@@ -163,5 +163,7 @@ namespace ToyBox.Managers {
     {
         public RuntimeAnimatorController animator;
         public Color color;
+        public Sprite spriteIdlle;
+        public Sprite spriteClic;
     }
 }

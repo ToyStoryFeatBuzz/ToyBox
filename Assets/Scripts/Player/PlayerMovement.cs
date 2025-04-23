@@ -45,7 +45,6 @@ namespace ToyBox.Player
         private PlayerEnd _playerEnd;
         
         
-        
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
@@ -66,7 +65,7 @@ namespace ToyBox.Player
             _rb.AddForceX(_acceleration * _inputSystem.MoveValue * Time.fixedDeltaTime, ForceMode2D.Impulse); //Makes the player move in the direction of the input
             _rb.linearVelocityX = Mathf.Clamp(_rb.linearVelocityX, -MaxSpeed, MaxSpeed); //Clamps the speed to the max speed
 
-            if (_inputSystem.MoveValue == 0 && IsGrounded) {
+            if (_inputSystem.MoveValue == 0) {
                 _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player
             }
 
@@ -95,22 +94,16 @@ namespace ToyBox.Player
                     _platformLayer) && !IsGrounded && (_wallJumpDirection != EWallJumpDirection.Left || _canWallJumpOnSameWall)) //Wall jump checks
             {
                 _wallJumpDirection = EWallJumpDirection.Left;
-                AudioManager.Instance.PlaySFX("PlayerDoubleJump");
                 Jump(_wallJumpVector*_jumpForce);
                 
             }
-            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0,
-                         _platformLayer) && !IsGrounded &&
-                     (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
+            else if (Physics2D.OverlapBox(transform.position + (Vector3)_rightWallOffset, _rightWallCheckSize, 0, _platformLayer) && !IsGrounded && (_wallJumpDirection != EWallJumpDirection.Right || _canWallJumpOnSameWall))
             {
                 _wallJumpDirection = EWallJumpDirection.Right;
-                AudioManager.Instance.PlaySFX("PlayerDoubleJump");
-                Jump(new Vector2(-_wallJumpVector.x,_wallJumpVector.y)*_jumpForce);
-                
+                Jump(new Vector2(-_wallJumpVector.x,_wallJumpVector.y) * _jumpForce);
             }
             else if (_remainJump >  0) {
                 // If you jump after being in the air without jumping (i.e a jump pad)
-                if (!IsGrounded) AudioManager.Instance.PlaySFX("PlayerDoubleJump");
                 Jump(_jumpForce);
             }
         }
@@ -132,7 +125,7 @@ namespace ToyBox.Player
             IsGrounded = false;
             _performGroundCheck = false;
         }
-        
+
         private void OnJumpCancel() //Gets automatically called if the player releases the jump input or holds it too long
         {
             _performGroundCheck = true;

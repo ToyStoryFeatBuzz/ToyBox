@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using static UnityEngine.UI.Button;
 
 public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
@@ -16,13 +18,13 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     [Header("Events")]
     [FormerlySerializedAs("onClick")]
-    [SerializeField] public UnityEvent _onClick;
+    [SerializeField] private ButtonClickedEvent _onClick = new ButtonClickedEvent();
 
     [FormerlySerializedAs("onEnter")]
-    [SerializeField] private UnityEvent _onEnter;
+    [SerializeField] private ButtonClickedEvent _onEnter = new ButtonClickedEvent();
 
     [FormerlySerializedAs("onExit")]
-    [SerializeField] private UnityEvent _onExit;
+    [SerializeField] private ButtonClickedEvent _onExit = new ButtonClickedEvent();
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -40,50 +42,49 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     {
         ButtonInteraction("Click");
         _onClick.Invoke();
-        AudioManager.Instance.PlaySFX("Button");
     }
 
     private void ButtonInteraction(string interactionType)
     {
         ModifyImages(interactionType);
         ModifyTexts(interactionType);
+
     }
 
     #region ImageModification
     private void ModifyImages(string interactionType)
     {
-        if (_imageList == null)
-            return;
-
-        for (int i = 0; i < _imageList.Length; i++)
+        if (_imageList != null)
         {
-            if (_imageList[i] == null)
-                continue;
-
-            switch (interactionType)
+            for (int i = 0; i < _imageList.Length; i++)
             {
-                case "Enter":
-                    ApplyImageModification(_imageList[i]._image, _imageList[i]._enterColor, _imageList[i]._enterSprite);
-                    break;
-                case "Exit":
-                    ApplyImageModification(_imageList[i]._image, _imageList[i]._exitColor, _imageList[i]._exitSprite);
-                    break;
-                case "Click":
-                    ApplyImageModification(_imageList[i]._image, _imageList[i]._clickColor, _imageList[i]._clickSprite);
-                    break;
+                if (_imageList[i] != null)
+                {
+                    switch (interactionType)
+                    {
+                        case "Enter":
+                            ApplyImageModification(_imageList[i]._image, _imageList[i]._enterColor, _imageList[i]._enterSprite);
+                            break;
+                        case "Exit":
+                            ApplyImageModification(_imageList[i]._image, _imageList[i]._exitColor, _imageList[i]._exitSprite);
+                            break;
+                        case "Click":
+                            ApplyImageModification(_imageList[i]._image, _imageList[i]._clickColor, _imageList[i]._clickSprite);
+                            AudioManager.Instance.PlaySFX("Button");
+                            break;
+                    }
+                }
             }
         }
     }
     private void ApplyImageModification(Image image, List<Color> colors, Sprite sprite)
     {
         Multicolor multicolorImage = image.GetComponent<Multicolor>();
-
         if (colors != null && colors.Count > 0)
         {
             multicolorImage.ResetColorIndex();
             multicolorImage._colors = colors;
         }
-
         if (sprite != null)
         {
             image.sprite = sprite;
@@ -94,25 +95,25 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     #region TextModification
     private void ModifyTexts(string interactionType)
     {
-        if (_textList == null)
-            return;
-
-        for (int t = 0; t < _textList.Length; t++)
+        if (_textList != null)
         {
-            if (_textList[t] != null)
-                continue;
-
-            switch (interactionType)
+            for (int t = 0; t < _textList.Length; t++)
             {
-                case "Enter":
-                    ApplyTextModification(_textList[t]._text, _textList[t]._enterColor);
-                    break;
-                case "Exit":
-                    ApplyTextModification(_textList[t]._text, _textList[t]._exitColor);
-                    break;
-                case "Click":
-                    ApplyTextModification(_textList[t]._text, _textList[t]._clickColor);
-                    break;
+                if (_textList[t] != null)
+                {
+                    switch (interactionType)
+                    {
+                        case "Enter":
+                            ApplyTextModification(_textList[t]._text, _textList[t]._enterColor);
+                            break;
+                        case "Exit":
+                            ApplyTextModification(_textList[t]._text, _textList[t]._exitColor);
+                            break;
+                        case "Click":
+                            ApplyTextModification(_textList[t]._text, _textList[t]._clickColor);
+                            break;
+                    }
+                }
             }
         }
     }
@@ -120,7 +121,6 @@ public class SpecialButton: MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     private void ApplyTextModification(TMP_Text text, List<Color> colors)
     {
         Multicolor multicolorText = text.GetComponent<Multicolor>();
-
         if (colors != null && colors.Count > 0)
         {
             multicolorText.ResetColorIndex();

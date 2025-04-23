@@ -9,17 +9,15 @@ namespace ToyBox.Leaderboard
     public class Leaderboard : MonoBehaviour
     {
         [SerializeField] float _timeToShow = 3f;
-        [SerializeField] private float _maxScore;
         private PlayerManager _playerManager => PlayerManager.Instance;
         private ScoreManager _scoreManager => ScoreManager.Instance;
         GameModeManager _gameModeManager => GameModeManager.Instance;
         private LeaderboardData _leaderboardData => LeaderboardData.Instance;
         
-        private Dictionary<string, (int score, Color color)> _playerScoreDict;
+        private Dictionary<string, int> _playerScoreDict;
 
         private void Start()
         {
-            _maxScore = _gameModeManager.GetPointToWin();
             _gameModeManager.OnLeaderboardStart += ShowLeaderboard;
             HideLeaderboard();
             _playerScoreDict = _scoreManager.PlayerScores;
@@ -44,14 +42,13 @@ namespace ToyBox.Leaderboard
         public void HideLeaderboard()
         {
             _leaderboardData.PanelEndMatch.SetActive(false);
-            _scoreManager.ResetRound();
         }
 
         public void UpdateLeaderboard()
         {
             CheckPlayers();
 
-            List<(string name, int score, Color c)> sortedPlayers = GetSortedPlayers();
+            List<(string name, int score)> sortedPlayers = GetSortedPlayers();
 
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
@@ -59,12 +56,11 @@ namespace ToyBox.Leaderboard
 
                 if (i < sortedPlayers.Count)
                 {
-                    (string playerName, int score, Color c) = sortedPlayers[i];
+                    (string playerName, int score) = sortedPlayers[i];
                     Debug.Log($"AFTER SORTING Name: {playerName}, Score: {score}");
 
                     parent.gameObject.SetActive(true);
-                    _leaderboardData.PlayerInfos[i].FillBar.color = c;
-                    _leaderboardData.PlayerInfos[i].FillBar.fillAmount = score / _maxScore;
+                    _leaderboardData.PlayerInfos[i].FillBar.fillAmount = score / 10f;
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
                 }
                 else
@@ -76,23 +72,18 @@ namespace ToyBox.Leaderboard
 
         public void CheckPlayers()
         {
-            _playerScoreDict = _scoreManager.PlayerScores;
-            for (int i = 0; i < _playerScoreDict.Count; i++)
-            {
-                Debug.Log($"Player in dict: " + _playerScoreDict.ElementAt(i).Key + " Score: " + _playerScoreDict.ElementAt(i).Value);
-            }
+            _scoreManager.PlayerScores = _playerScoreDict;
         }
 
-        public List<(string name, int score, Color c)> GetSortedPlayers()
+        public List<(string name, int score)> GetSortedPlayers()
         {
-            List<(string name, int score, Color c)> playerList = new();
+            List<(string name, int score)> playerList = new List<(string name, int score)>();
 
             foreach (Managers.Player player in _playerManager.Players)
             {
                 if (_playerScoreDict.ContainsKey(player.Name))
                 {
-                    print("TESSSST ========== " + player.Name + " / " + _playerScoreDict[player.Name].score);
-                    playerList.Add((player.Name, _playerScoreDict[player.Name].score, _playerScoreDict[player.Name].color));
+                    playerList.Add((player.Name, _playerScoreDict[player.Name]));
                 }
             }
 

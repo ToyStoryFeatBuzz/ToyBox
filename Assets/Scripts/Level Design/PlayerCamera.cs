@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using ToyBox.Build;
 using ToyBox.Managers;
 using UnityEngine;
 
@@ -22,9 +21,6 @@ namespace ToyBox.LevelDesign
         private Vector3 _camTargetPos = Vector3.zero;
 
         public Transform EditorMapCenter;
-        private Vector2 centerPos;
-        [SerializeField] float _centerMovementSpeed;
-
         public float EditorCamZoom;
         public Action ActualModeFunction;
 
@@ -40,42 +36,18 @@ namespace ToyBox.LevelDesign
 
         void Start()
         {
-            centerPos = EditorMapCenter.position;
-
             _mainCam = Camera.main;
             EditorMapCenter.position = new Vector3(EditorMapCenter.position.x, EditorMapCenter.position.y, -10);
             ActualModeFunction = RaceMode;
 
-            foreach (var player in _playerManager.Players)
-            {
-                var mouse = player.PlayerObject.GetComponent<PlayerMouse>();
-                mouse.mouseInBorderXEvent += MoveCenterX;
-                mouse.mouseInBorderYEvent += MoveCenterY;
-            }
-
             GameModeManager.Instance.OnRaceStart += () => { ActualModeFunction = RaceMode; };
             GameModeManager.Instance.OnBuildStart += () => { ActualModeFunction = EditorMode; };
-        }
-
-        public void ResetCenterMap()
-        {
-            EditorMapCenter.position = centerPos;
         }
 
         void Update()
         {
             ActualModeFunction.Invoke();
             _alivePlayers = _playerManager.GetAlivePlayers();
-        }
-
-        public void MoveCenterX(float x)
-        {
-            EditorMapCenter.position += new Vector3(x * _centerMovementSpeed * Time.deltaTime, 0f);
-        }
-
-        public void MoveCenterY(float y)
-        {
-            EditorMapCenter.position += new Vector3(0f, y * _centerMovementSpeed * Time.deltaTime);
         }
 
 

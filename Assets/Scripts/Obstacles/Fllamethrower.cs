@@ -10,28 +10,23 @@ public class Fllamethrower : MonoBehaviour
     [SerializeField] Animator _animator;
 
     void Start()
-    {   //Currently broken and causes the game to softlock
-        //GameModeManager.Instance.OnRaceStart += () =>
-        //{
-        //    Animate(true);
-        //};
-        //
-        //GameModeManager.Instance.OnRaceEnd += () =>
-        //{
-        //    Animate(false);
-        //};
+    {
+        GameModeManager.Instance.OnRaceStart += () =>
+        {
+            _animator.SetBool("Active", true);
+        };
+        
+        GameModeManager.Instance.OnRaceEnd += () =>
+        {
+            _animator.SetBool("Active", false);
+        };
     }
 
     public void Shoot()
     {
         GameObject bolt = Instantiate(_projectile, _nozzle.position, Quaternion.identity);
         bolt.GetComponent<Rigidbody2D>().AddForce(-transform.right * _projectileSpeed, ForceMode2D.Impulse);
-        AudioManager.Instance.PlaySFX("BallThrowerLaunch",transform.position,1f);
+        
         Destroy(bolt, 1f);
-    }
-
-    private void Animate(bool state)
-    {
-        _animator?.SetBool("Active", state);
     }
 }

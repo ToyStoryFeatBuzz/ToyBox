@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -42,22 +43,22 @@ public class Multicolor : MonoBehaviour
 
     private void CheckColorsList()
     {
-        if (_colors == null)
-            return;
-
-        if (_colors.Count > 1)
+        if (_colors != null)
         {
-            Transition();
-        }
-        else
-        {
-            if (_image != null)
+            if (_colors.Count > 1)
             {
-                _image.color = _colors[0];
+                Transition();
             }
-            if (_text != null)
+            else
             {
-                _text.color = _colors[0];
+                if (_image != null)
+                {
+                    _image.color = _colors[0];
+                }
+                if (_text != null)
+                {
+                    _text.color = _colors[0];
+                }
             }
         }
     }
@@ -65,7 +66,6 @@ public class Multicolor : MonoBehaviour
     private void Transition()
     {
         _transitionPoint += Time.deltaTime / _time;
-
         if (_image != null)
         {
             _image.color = Color.Lerp(_colors[_currentColorIndex], _colors[_targetColorIndex], _transitionPoint);

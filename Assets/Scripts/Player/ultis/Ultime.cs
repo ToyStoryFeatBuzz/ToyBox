@@ -1,37 +1,28 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-namespace ToyBox.Player
-{
-    public class Ultime : MonoBehaviour
-    {
+namespace ToyBox.Player {
+    public class Ultime : MonoBehaviour {
         [SerializeField] private float _duration;
 
         private bool _canUlti = true;
-        public event Action callUltiEvent;
 
-        public virtual void Ultimate()
-        {
+        public virtual void Ultimate() {
 
         }
 
-        public virtual void RestoreDefaultState()
-        {
+        public virtual void RestoreDefaultState() {
 
         }
 
-        public void UseUltimate()
-        {
-            if (_canUlti)
-            {
-                callUltiEvent?.Invoke();
+        public void UseUltimate() {
+            if (_canUlti) {
+                Debug.Log("Ultimate");
                 StartCoroutine(UltimateCoroutine());
             }
         }
 
-        private IEnumerator UltimateCoroutine()
-        {
+        private IEnumerator UltimateCoroutine() {
             Ultimate();
             _canUlti = false;
             yield return new WaitForSeconds(_duration);

@@ -37,7 +37,7 @@ namespace ToyBox.InputSystem {
             IsLastInputMouse = true;
         }
         
-        public void OnReleasePause(InputAction.CallbackContext ctx) => PauseManager.Instance.EndPause();
+        public void ReleasePause(InputAction.CallbackContext ctx) => PauseManager.Instance.EndPause();
         
         
     }

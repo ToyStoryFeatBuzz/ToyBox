@@ -208,7 +208,6 @@ MonoBehaviour:
   _camMovementSpeed: 5
   _camZoomSpeed: 5
   EditorMapCenter: {fileID: 0}
-  _centerMovementSpeed: 40
   EditorCamZoom: 20
   _raceFlow: {fileID: 0}
   playersImpact:

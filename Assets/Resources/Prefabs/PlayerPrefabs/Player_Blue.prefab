@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 8094816976503817908}
   - component: {fileID: 8664904631484114108}
   - component: {fileID: 171805937038989068}
+  - component: {fileID: 268580732029807119}
   m_Layer: 0
   m_Name: Player_Blue
   m_TagString: Player
@@ -328,6 +329,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0f885da2-b1dd-44da-821c-bde79e80ca0c
     m_ActionName: 'Race/ulti[/Keyboard/w,/SwitchProControllerHID/buttonWest]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 919401749552064481}
+        m_TargetAssemblyTypeName: ToyBox.InputSystem.PlayerInputSystem, Assembly-CSharp
+        m_MethodName: OnValidateReady
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 558ebf21-fd25-49ff-9ec6-3d3308cf6a2e
+    m_ActionName: 'Construct/Interact[/SwitchProControllerHID/buttonSouth,/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Race
@@ -548,6 +565,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _duration: 3
   _speedBoost: 5
+--- !u!114 &268580732029807119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487653895152395575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77f007d8acea2543acb61d07f91bf28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isReady: 0
+  canReturnToLobby: 0
 --- !u!1 &4606521089102164464
 GameObject:
   m_ObjectHideFlags: 0

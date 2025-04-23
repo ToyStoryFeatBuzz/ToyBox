@@ -77,19 +77,29 @@ namespace ToyBox.Managers {
             PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();
             playerStats.color = AnimationClips[Players.Count].color;
             
+            ReadyUpHandler readyUpHandler = player.gameObject.GetComponent<ReadyUpHandler>();
+            
             Animator animator = player.gameObject.GetComponentInChildren<Animator>();
             if (animator != null && AnimationClips.Count >= Players.Count + 1) {
                 animator.runtimeAnimatorController = AnimationClips[Players.Count].animator;
             }
             
             Players.Add(new Player
-                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive , Color = AnimationClips[Players.Count].color});
+                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive , Color = AnimationClips[Players.Count].color, ReadyUpHandler = readyUpHandler});
 
             player.transform.parent = transform;
-            player.transform.position = _spawnPoint.position;
+            player.transform.position = GetSpawnPoint();
         }
         
 
+        public Vector3 GetSpawnPoint()=> _spawnPoint.position;
+        
+        public void ResetAllPlayerPositions() {
+            foreach (Player player in Players) {
+                player.PlayerObject.transform.position = GetSpawnPoint();
+            }
+        }
+        
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {
             if (change != InputDeviceChange.Disconnected) return;
             foreach (Player player in Players.Where(_player => _player.Device == device)) {
@@ -144,6 +154,7 @@ namespace ToyBox.Managers {
         public InputDevice Device;
         public PlayerStats PlayerStats;
         public EPlayerState PlayerState;
+        public ReadyUpHandler ReadyUpHandler;
         public Color Color;
     }
 

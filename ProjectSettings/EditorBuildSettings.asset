@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestParallax.unity
     guid: e9af543ff7741684f8d59a2dcef1f7f7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game/Level-Design.unity
     guid: e9f0e9236bebfed4680dfdc049c727ca
   m_configObjects:

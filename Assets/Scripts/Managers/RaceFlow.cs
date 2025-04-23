@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using ToyBox.Build;
 using ToyBox.LevelDesign;
 using ToyBox.Player;
 using UnityEngine;
@@ -40,6 +42,16 @@ namespace ToyBox.Managers {
             }
             _gameModeManager.roundsText=_roundsText;
             _gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
+        }
+
+        public void SetCamCenterMovements(Action<float> movementX, Action<float> movementY)
+        {
+            foreach (Player player in _playerManager.Players)
+            {
+                var mouse = player.PlayerObject.GetComponent<PlayerMouse>();
+                mouse.mouseInBorderXEvent += movementX;
+                mouse.mouseInBorderYEvent += movementY;
+            }
         }
 
         public List<(string player, Transform t, float score)> GetPlayersInOrder()

@@ -33,7 +33,6 @@ namespace ToyBox.InputSystem {
         public void OnValidateReady(InputAction.CallbackContext ctx)
         {
             if (ctx.performed)
-                Debug.Log("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEESSSSSSSSSSSSSSSSSSSSSSSSTTTTTTTTTTTTTTTTTTTTTTTTT");
                 InputEventSystem.InvokeInputEvent(OnValidateReadyEvent, ctx);
         }
         

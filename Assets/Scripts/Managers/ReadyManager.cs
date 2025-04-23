@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using ToyBox.Leaderboard;
@@ -11,6 +12,8 @@ public class ReadyManager : MonoBehaviour
     public static ReadyManager Instance;
 
     [SerializeField] LeaderboardGraph _leaderboardGraph;
+    [SerializeField] Sprite checkSprite;
+    [SerializeField] Sprite uncheckSprite;
     public List<Image> CheckedImageList = new();
     
     PlayerManager _playerManager => PlayerManager.Instance;
@@ -23,10 +26,30 @@ public class ReadyManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        for(int i= 0; i < _playerManager.Players.Count; i++)
+        {
+            CheckedImageList[i].gameObject.SetActive(true);
+        }
+    }
+
     public void PlayerSetReady(ReadyUpHandler handler)
     {
         if (!readyPlayers.Contains(handler))
             readyPlayers.Add(handler);
+        
+        for(int i = 0; i < _playerManager.Players.Count; i++)
+        {
+            if (_playerManager.Players[i].ReadyUpHandler.CheckReady())
+            {
+                CheckedImageList[i].sprite = checkSprite;
+            }
+            else
+            {
+                CheckedImageList[i].sprite = uncheckSprite;
+            }
+        }
 
         if (AreAllPlayersReady())
         {

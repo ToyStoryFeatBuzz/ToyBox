@@ -9,16 +9,16 @@ namespace ToyBox.Player {
         
         public List<int> MatchScores = new();
         public string Name;
-        
+        public Color color;
         private void Start() {
             Name = gameObject.name;
+            Debug.Log("Initialisé PlayerStats avec nom : " + Name);
         }
         
         public void AddScore(int amount) {
             Score += amount;
             AddScoreToList(Score);
             Debug.Log(Name + " added score: " + Score);
-            AddToScoreManager();
         }
         
         public void RemoveScore(int amount) {
@@ -29,20 +29,16 @@ namespace ToyBox.Player {
         public void ResetScore() {
             Score = 0;
             MatchScores.Clear();
-            ResetScoreManager();
         }
         
         public void AddScoreToList(int amount) {
             MatchScores.Add(amount);
         }
         
-        public void AddToScoreManager() {
-            ScoreManager.Instance.AddScoreDic(Name, Score);
-        }
-
-        public void ResetScoreManager()
-        {
-            ScoreManager.Instance.RestScoreDic();
+        public void SetScore(int amount) {
+            int diff = Score - amount;
+            Score = amount;
+            MatchScores[MatchScores.Count - 1] -= diff;
         }
     }
 }

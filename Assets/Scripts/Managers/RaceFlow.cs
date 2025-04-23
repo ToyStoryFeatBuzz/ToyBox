@@ -1,5 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
+using ToyBox.Build;
 using ToyBox.LevelDesign;
 using ToyBox.Player;
 using UnityEngine;
@@ -13,6 +16,8 @@ namespace ToyBox.Managers {
         [SerializeField] Transform _winnersBox;
         ColliderDetector _endCollider;
         [SerializeField] MapSpawnPos _spawnPos;
+        
+        [SerializeField] TextMeshProUGUI _roundsText;
 
         GameModeManager _gameModeManager => GameModeManager.Instance;
         MapPath _mapPath => MapPath.Instance;
@@ -29,12 +34,23 @@ namespace ToyBox.Managers {
             _gameModeManager.OnRaceStart += RaceStart;
             _endCollider=transform.GetComponentInChildren<ColliderDetector>();
             _endCollider._onTriggerEnterFunction = OnTriggerEndFunction;
-
             foreach (Player player in _playerManager.Players)
             {
                 
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
                 player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
+            }
+            _gameModeManager.roundsText=_roundsText;
+            _gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
+        }
+
+        public void SetCamCenterMovements(Action<float> movementX, Action<float> movementY)
+        {
+            foreach (Player player in _playerManager.Players)
+            {
+                var mouse = player.PlayerObject.GetComponent<PlayerMouse>();
+                mouse.mouseInBorderXEvent += movementX;
+                mouse.mouseInBorderYEvent += movementY;
             }
         }
 
@@ -62,6 +78,7 @@ namespace ToyBox.Managers {
             _finishedPlayers++;
             player.gameObject.transform.position = _winnersBox.position;
             player.SetWin();
+            AudioManager.Instance.PlaySFX("RaceEnd_Crowd",volume:0.5f);
         }
         // private void OnTriggerEnter2D(Collider2D collision) {
         //     if (!collision.gameObject.TryGetComponent(out PlayerEnd player)) {
@@ -76,6 +93,8 @@ namespace ToyBox.Managers {
             if (!_raceStarted) return;
             if (_playerManager.GetAlivePlayers().Count == 0) {
                 _gameModeManager.OnRaceEnd?.Invoke();
+                AudioManager.Instance.StopMusic();
+                AudioManager.Instance.PlaySFX("RaceEnd_Horn", volume:0.7f);
                 _raceStarted = false;
             }
 

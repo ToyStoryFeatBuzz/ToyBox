@@ -7,24 +7,31 @@ using UnityEngine;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
+        
+        [SerializeField] int _pointToWin = 100;
+        public static int PointToWin = 100;
         public static GameModeManager Instance { get; private set; }
 
         private BuildsManager _buildsManager => BuildsManager.Instance;
 
         private PlayerManager _playerManager => PlayerManager.Instance;
-
+        
+        public int nbRounds=0;
+        
         public Action OnRaceStart;
         public Action OnRaceEnd;
         public Action OnLeaderboardStart;
         public Action OnLeaderboardGraphStart;
         public Action OnLeaderboardFinish;
         public Action OnBuildStart;
-
+        
+        public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
 
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                PointToWin = _pointToWin;
                 DontDestroyOnLoad(transform.root);
             } else {
                 Destroy(gameObject);
@@ -37,10 +44,22 @@ namespace ToyBox.Managers {
         }
 
         private void OpenLeaderBoard() {
-            if (_playerManager.GetBestScore() < 10) {
+            if (_playerManager.GetBestScore() < PointToWin)
+            {
                 OnLeaderboardStart?.Invoke();
+                if (roundsText != null)
+                {
+                    nbRounds++;
+                    roundsText.text = nbRounds.ToString();
+                }
+                else
+                {
+                    Debug.LogWarning("Rounds Text is null");
+                }
+
             }
             else {
+                //_playerManager.ClampScoreToMax(_pointToWin);
                 OnLeaderboardGraphStart?.Invoke();
             }
         }
@@ -78,6 +97,7 @@ namespace ToyBox.Managers {
             {
                 player.PlayerObject.GetComponent<Rigidbody2D>().linearVelocity.Set(0, 0);
             }
+            AudioManager.Instance.PlaySFX("RaceStart");
         }
 
         private void OnCountdownFinished()
@@ -85,6 +105,7 @@ namespace ToyBox.Managers {
             Debug.Log("Countdown finished");
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
+            AudioManager.Instance.PlayMusic("RaceMode",0.5f);
         }
         
         public void StartRaceMode()
@@ -107,9 +128,13 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }
             OnBuildStart?.Invoke();
+            AudioManager.Instance.PlayMusic("EditMode");
         }
         
-        
+        public int GetPointToWin()
+        {
+            return PointToWin;
+        }
         
     }
 }

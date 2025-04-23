@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -13,6 +14,9 @@ namespace ToyBox.Build {
 
         [FormerlySerializedAs("mouseSensivity")] [SerializeField]
         float _mouseSensitivity;
+
+        public Action<float> mouseInBorderXEvent;
+        public Action<float> mouseInBorderYEvent;
 
         float maxX;
         float maxY;
@@ -51,6 +55,16 @@ namespace ToyBox.Build {
 
             Vector2 camPos = cam.transform.position;
             _mousePos += movement * _mouseSensitivity;
+
+            if (Mathf.Abs(_mousePos.x) > maxX * 0.95f)
+            {
+                mouseInBorderXEvent.Invoke(Mathf.Sign(_mousePos.x));
+            }
+            if (Mathf.Abs(_mousePos.y) > maxY * 0.95f)
+            {
+                mouseInBorderYEvent.Invoke(Mathf.Sign(_mousePos.y));
+            }
+
             _mousePos.Set(Mathf.Clamp(_mousePos.x, -maxX, maxX), Mathf.Clamp(_mousePos.y, -maxY, maxY));
             _mouseBody.position = camPos + _mousePos;
         }

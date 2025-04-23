@@ -45,6 +45,9 @@ public class VoteZone : MonoBehaviour
 
             if (opened > 1) return;
 
+
+            StopAllCoroutines();
+
             StartCoroutine(Open());
         }            
     }
@@ -60,6 +63,8 @@ public class VoteZone : MonoBehaviour
             opened--;
 
             if(opened > 0) return;
+
+            StopAllCoroutines();
 
             StartCoroutine(Close());
         }

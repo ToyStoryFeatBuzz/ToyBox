@@ -40,6 +40,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void StopSound(AudioSource audioSource)
+    {
+        audioSource.Stop();
+    }
+
+    public void StopMusic()
+    {
+        StopSound(_audioSourceMusic);
+    }
+
+    public void StopSFX()
+    {
+        StopSound(_audioSourceSFX);
+    }
+
     public void PlayMusic(string name)
     {
         PlaySound(_audioSourceMusic, _musicSounds, name);
@@ -48,5 +63,10 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(string name)
     {
         PlaySound(_audioSourceSFX, _sfxSounds, name);
+    }
+
+    public bool IsSoundInList(Sound[] soundList, string name)
+    {
+        return Array.Exists(soundList, s => s._name == name);
     }
 }

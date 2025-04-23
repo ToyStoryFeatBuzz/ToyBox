@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &510517459 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8071303050364632587, guid: 093384d343465f241bdf601aeec7db53, type: 3}
-  m_PrefabInstance: {fileID: 383567508289622854}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f3d9d24ef5d2f540bbbf4fdf454e14f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &517337516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1232155817190486482, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
@@ -873,21 +862,61 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1195790829246504313, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2048
+      objectReference: {fileID: 0}
     - target: {fileID: 2097199296253534313, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 510517459}
+      objectReference: {fileID: 0}
     - target: {fileID: 2991957776970691969, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 510517459}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014475611933184853, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014475611933184853, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014475611933184853, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3339114273256366342, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4133440733739677146, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 510517459}
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970742320383484922, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970742320383484922, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7970742320383484922, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8569915554917309026, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
       propertyPath: m_Name
       value: '|| MenuManager ||'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569915554917309026, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8930433464473646046, guid: 562fbcd226bcc624a92da0a3ac2bf974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

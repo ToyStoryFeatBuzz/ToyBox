@@ -36,5 +36,6 @@ namespace ToyBox.Leaderboard {
         public TextMeshProUGUI TextName;
         public TextMeshProUGUI TextPoints;
         public LineRenderer LineRenderer;
+        public Image ImagePlayer;
     }
 }

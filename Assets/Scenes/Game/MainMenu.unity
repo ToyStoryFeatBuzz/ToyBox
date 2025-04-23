@@ -3623,7 +3623,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 920523493}
   m_HandleRect: {fileID: 920523492}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5206,7 +5206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00002102971}
+  m_AnchoredPosition: {x: 0, y: -0.00005275011}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1154601660
@@ -7882,22 +7882,6 @@ PrefabInstance:
     - target: {fileID: 5834535006141690326, guid: 093384d343465f241bdf601aeec7db53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
-      propertyPath: _sfxSounds.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
-      propertyPath: _musicSounds.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
-      propertyPath: _sfxSounds.Array.data[0]._name
-      value: jhgfd
-      objectReference: {fileID: 0}
-    - target: {fileID: 6149335325540718733, guid: 093384d343465f241bdf601aeec7db53, type: 3}
-      propertyPath: _musicSounds.Array.data[0]._name
-      value: sfgs
       objectReference: {fileID: 0}
     - target: {fileID: 7057383784975185611, guid: 093384d343465f241bdf601aeec7db53, type: 3}
       propertyPath: m_Resource

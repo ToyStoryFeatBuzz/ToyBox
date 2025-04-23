@@ -15,7 +15,7 @@ namespace ToyBox.Managers {
         public static PlayerManager Instance;
         
         public PlayerInputManager PlayerInputManager;
-        public List<RuntimeAnimatorController> AnimationClips;
+        public List<SPLayerColor> AnimationClips;
         private List<RuntimeAnimatorController> Animators = new();
         
         [SerializeField] Transform _spawnPoint;
@@ -46,6 +46,17 @@ namespace ToyBox.Managers {
             }
         }
 
+        public void ClampScoreToMax(int score)
+        {
+            foreach (Player player in Players)
+            {
+                if (player.PlayerStats.Score > score)
+                {
+                    player.PlayerStats.SetScore(score);
+                }
+            }
+        }
+
         public bool DoesAllPlayersFinishedBuilding()
         {
             return Players.All(player => !player.PlayerObject.GetComponent<PlayerEdition>().IsPlacing());
@@ -57,19 +68,22 @@ namespace ToyBox.Managers {
                 return;
             }
             Debug.Log("Player added");
+            AudioManager.Instance.PlaySFX("PlayerJoin");
             string name = "Player " + (Players.Count + 1);
             player.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = name;
             InputDevice device = player.user.pairedDevices.First();
             player.gameObject.name = name;
+            
             PlayerStats playerStats = player.gameObject.GetComponent<PlayerStats>();
+            playerStats.color = AnimationClips[Players.Count].color;
             
             Animator animator = player.gameObject.GetComponentInChildren<Animator>();
             if (animator != null && AnimationClips.Count >= Players.Count + 1) {
-                animator.runtimeAnimatorController = AnimationClips[Players.Count];
+                animator.runtimeAnimatorController = AnimationClips[Players.Count].animator;
             }
             
             Players.Add(new Player
-                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive });
+                { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive , Color = AnimationClips[Players.Count].color});
 
             player.transform.parent = transform;
             player.transform.position = _spawnPoint.position;
@@ -130,5 +144,13 @@ namespace ToyBox.Managers {
         public InputDevice Device;
         public PlayerStats PlayerStats;
         public EPlayerState PlayerState;
+        public Color Color;
+    }
+
+    [Serializable]
+    public struct SPLayerColor
+    {
+        public RuntimeAnimatorController animator;
+        public Color color;
     }
 }

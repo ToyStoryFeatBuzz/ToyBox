@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c02f7b435cbae248ac57e48924388c7
+guid: d4eac5e8b84f40b4dabcab81ab946019
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 145
+  spritePixelsToUnits: 142
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,20 +116,42 @@ TextureImporter:
       name: P_Jaune_0
       rect:
         serializedVersion: 2
-        x: 111
-        y: 184
-        width: 285
-        height: 144
-      alignment: 9
-      pivot: {x: 0.25, y: 0.5}
+        x: 0
+        y: 0
+        width: 141
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 82cac07c5712cadf0800000000000000
-      internalID: -167722296385164248
+      spriteID: 513aeb3a80d91174381d15a406309302
+      internalID: 1414376046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Jaune_1
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 0
+        width: 141
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b8e09f515bb85419f2b9e9f5f749a6
+      internalID: -1492573907
       vertices: []
       indices: 
       edges: []
@@ -138,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 91306d7014242dc4589f90855f07fe9c
+    spriteID: a513a8b892953264aaa88543aeb70424
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +170,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      P_Jaune_0: -167722296385164248
+      P_Jaune_0: 1414376046
+      P_Jaune_1: -1492573907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

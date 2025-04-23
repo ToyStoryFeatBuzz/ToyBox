@@ -9,7 +9,7 @@ namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         
         [SerializeField] int _pointToWin = 100;
-        
+        public static int PointToWin = 100;
         public static GameModeManager Instance { get; private set; }
 
         private BuildsManager _buildsManager => BuildsManager.Instance;
@@ -31,6 +31,7 @@ namespace ToyBox.Managers {
         private void Awake() {
             if (Instance == null) {
                 Instance = this;
+                PointToWin = _pointToWin;
                 DontDestroyOnLoad(transform.root);
             } else {
                 Destroy(gameObject);
@@ -43,7 +44,8 @@ namespace ToyBox.Managers {
         }
 
         private void OpenLeaderBoard() {
-            if (_playerManager.GetBestScore() < _pointToWin) {
+            if (_playerManager.GetBestScore() < PointToWin)
+            {
                 OnLeaderboardStart?.Invoke();
                 if (roundsText != null)
                 {
@@ -57,6 +59,7 @@ namespace ToyBox.Managers {
 
             }
             else {
+                //_playerManager.ClampScoreToMax(_pointToWin);
                 OnLeaderboardGraphStart?.Invoke();
             }
         }
@@ -94,6 +97,7 @@ namespace ToyBox.Managers {
             {
                 player.PlayerObject.GetComponent<Rigidbody2D>().linearVelocity.Set(0, 0);
             }
+            AudioManager.Instance.PlaySFX("RaceStart");
         }
 
         private void OnCountdownFinished()
@@ -101,6 +105,7 @@ namespace ToyBox.Managers {
             Debug.Log("Countdown finished");
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
+            AudioManager.Instance.PlayMusic("RaceMode",0.5f);
         }
         
         public void StartRaceMode()
@@ -123,11 +128,12 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }
             OnBuildStart?.Invoke();
+            AudioManager.Instance.PlayMusic("EditMode");
         }
         
         public int GetPointToWin()
         {
-            return _pointToWin;
+            return PointToWin;
         }
         
     }

@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 608984841}
   - component: {fileID: 608984840}
   - component: {fileID: 608984843}
+  - component: {fileID: 608984844}
   m_Layer: 0
   m_Name: map1
   m_TagString: Untagged
@@ -844,6 +845,29 @@ MonoBehaviour:
   - {fileID: -1220713869, guid: 6d3d126a635122842a806c9bbfe32a38, type: 3}
   - {fileID: 1009255734, guid: 6d3d126a635122842a806c9bbfe32a38, type: 3}
   - {fileID: -1748127824, guid: 6d3d126a635122842a806c9bbfe32a38, type: 3}
+  _animator: {fileID: 608984844}
+--- !u!95 &608984844
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608984838}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab758e1d25b2929419afb4d260a79a7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &726334051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1415,6 +1439,7 @@ MonoBehaviour:
   _voteManager: {fileID: 2090643621}
   _spriteRenderer: {fileID: 0}
   boxSprites: []
+  _animator: {fileID: 0}
 --- !u!61 &1722936465
 BoxCollider2D:
   m_ObjectHideFlags: 0

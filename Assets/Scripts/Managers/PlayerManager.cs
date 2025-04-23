@@ -68,6 +68,7 @@ namespace ToyBox.Managers {
                 return;
             }
             Debug.Log("Player added");
+            AudioManager.Instance.PlaySFX("PlayerJoin");
             string name = "Player " + (Players.Count + 1);
             player.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = name;
             InputDevice device = player.user.pairedDevices.First();
@@ -113,10 +114,8 @@ namespace ToyBox.Managers {
 
         private void RefreshPlayerName() {
             for (int i = 0; i < Players.Count; i++) {
-                Player player = Players[i];
-                player.Name = $"Player {i + 1}"; 
-                Players[i].PlayerObject.name = player.Name;
-                Players[i] = player;
+                Players[i].Name = $"Player {i + 1}";
+                Players[i].PlayerObject.name = Players[i].Name;
             }
         }
         

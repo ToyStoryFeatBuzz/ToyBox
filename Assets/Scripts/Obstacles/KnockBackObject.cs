@@ -14,6 +14,7 @@ namespace ToyBox.Obstacles {
                 
                 playerMovement.ApplyKnockBack(_knockBackDirection.normalized * _knockBackForce); 
                 _animator?.SetTrigger("Bounce");
+                AudioManager.Instance.PlaySFX("Trampoline_Bounce",transform.position,volume:4f);
             }
         }
         

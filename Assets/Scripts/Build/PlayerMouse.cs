@@ -1,6 +1,8 @@
 using System;
+using ToyBox.Managers;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace ToyBox.Build {
     public class PlayerMouse : MonoBehaviour {
@@ -22,6 +24,9 @@ namespace ToyBox.Build {
         float maxY;
 
         Camera cam;
+        
+        Sprite sprite;
+        PlayerManager _playerManager => PlayerManager.Instance;
 
         private void Awake() {
             if (!_mouseBody) {
@@ -32,6 +37,12 @@ namespace ToyBox.Build {
             ActivateMouse(false);
             cam = Camera.main;
             _mouseBody.parent = cam.transform;
+           
+        }
+        
+        private void Start()
+        {
+            sprite = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteIdlle;
         }
 
 
@@ -78,6 +89,7 @@ namespace ToyBox.Build {
                 _mouseBody = Instantiate(_mouseBodyPrefab);
                 ResetMousePos();
                 _mouseBody.position = _mousePos;
+                _mouseBody.GetComponentInChildren<Image>().sprite = sprite;
             }
 
             _mouseBody?.gameObject?.SetActive(activation);

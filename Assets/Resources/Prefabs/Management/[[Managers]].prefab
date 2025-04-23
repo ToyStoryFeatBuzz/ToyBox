@@ -1971,16 +1971,28 @@ MonoBehaviour:
   AnimationClips:
   - animator: {fileID: 9100000, guid: b1c611fafe004174b85b59a02defe4df, type: 2}
     color: {r: 0.3238992, g: 0.36050916, b: 1, a: 1}
+    spriteIdlle: {fileID: 21300000, guid: 494fc29e38f4c124d92b4328d5fe3bb3, type: 3}
+    spriteClic: {fileID: 21300000, guid: 8dcf7aa38b96f6149b9217975a3d6e2b, type: 3}
   - animator: {fileID: 9100000, guid: 3614065e20e47a34b927c40a5349c80d, type: 2}
     color: {r: 0.58176094, g: 1, b: 0.46226406, a: 1}
+    spriteIdlle: {fileID: 21300000, guid: 17d9392c286bf5649adc26fc150308d9, type: 3}
+    spriteClic: {fileID: 21300000, guid: 9df4c43bcb21f454bb6b33688e93cc3a, type: 3}
   - animator: {fileID: 9100000, guid: 19b02e9b46901ab428650ed0f1129f93, type: 2}
     color: {r: 1, g: 0.65916675, b: 0.33018857, a: 1}
+    spriteIdlle: {fileID: 21300000, guid: 3bd21c7dd4be7e345bdd775ed3541494, type: 3}
+    spriteClic: {fileID: 21300000, guid: 3f1673ac039d12d4db70c94fb700db34, type: 3}
   - animator: {fileID: 9100000, guid: a1313d417c76e5a4cbe6caf224fdb48c, type: 2}
     color: {r: 0.9771218, g: 0.36715314, b: 0.9811321, a: 1}
+    spriteIdlle: {fileID: 21300000, guid: 0bfeff8e286f25e419b2d4ec8f848432, type: 3}
+    spriteClic: {fileID: 21300000, guid: 545d6162b84adba43b8bb5824269547b, type: 3}
   - animator: {fileID: 9100000, guid: 82a0e5caa367f6643a30c3979d1e23ec, type: 2}
     color: {r: 1, g: 0.24842751, b: 0.24842751, a: 1}
+    spriteIdlle: {fileID: 21300000, guid: 3b883a05106ec5d4a93e5bb2787ca36e, type: 3}
+    spriteClic: {fileID: 21300000, guid: 30bf55d33f3790443bcf411fe4fc00f3, type: 3}
   - animator: {fileID: 9100000, guid: a76116b55725cf246bab938212036803, type: 2}
     color: {r: 1, g: 0.84867543, b: 0.27358478, a: 1}
+    spriteIdlle: {fileID: 21300000, guid: 6c0f9ec8e837ad74a831b94327e832b5, type: 3}
+    spriteClic: {fileID: 21300000, guid: f514048249c3871419881baecae019ee, type: 3}
   _spawnPoint: {fileID: 2932100133269912080}
 --- !u!114 &965559377940951561
 MonoBehaviour:

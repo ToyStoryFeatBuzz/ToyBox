@@ -4,6 +4,7 @@ using System.Collections;
 using TMPro;
 using ToyBox.Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
@@ -24,7 +25,6 @@ namespace ToyBox.Managers {
         public Action OnLeaderboardGraphStart;
         public Action OnLeaderboardFinish;
         public Action OnBuildStart;
-        
         public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
 
@@ -40,7 +40,7 @@ namespace ToyBox.Managers {
 
         private void Start() {
             OnRaceEnd += OpenLeaderBoard;
-            OnLeaderboardFinish += StartConstructMode;
+            OnLeaderboardFinish += StartConstructMode;  
             OnLeaderboardGraphStart += EnableLobbyReturnForAllPlayers;
         }
 
@@ -153,6 +153,19 @@ namespace ToyBox.Managers {
             }
             OnBuildStart?.Invoke();
             AudioManager.Instance.PlayMusic("EditMode");
+        }
+
+        public void ReturnToLobby() {
+            _playerManager.ResetAllPlayerPositions();
+            foreach (Player player in _playerManager.Players) {
+                player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
+                player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
+                player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
+                player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
+                player.PlayerStats.ResetScore();
+            }
+            ScoreManager.Instance.ResetRound();
+            SceneManager.LoadScene("Lobby");
         }
         
         public int GetPointToWin()

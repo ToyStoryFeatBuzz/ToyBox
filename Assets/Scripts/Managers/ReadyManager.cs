@@ -17,6 +17,7 @@ public class ReadyManager : MonoBehaviour
     public List<Image> CheckedImageList = new();
     
     PlayerManager _playerManager => PlayerManager.Instance;
+    GameModeManager _gameModeManager => GameModeManager.Instance;
     
     [SerializeField] private List<ReadyUpHandler> readyPlayers = new();
 
@@ -51,7 +52,7 @@ public class ReadyManager : MonoBehaviour
         if (AreAllPlayersReady())
         {
             Debug.Log("Tous les joueurs sont prêts !");
-            SceneManager.LoadScene("Lobby");
+            _gameModeManager.ReturnToLobby();
             _leaderboardGraph.HideLeaderboard();
         }
     }

@@ -67,13 +67,6 @@ namespace ToyBox.Leaderboard
         #endregion
 
         #region LeaderBoard Display
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                UpdateLeaderBoard();
-            }
-        }
 
         public void UpdateLeaderBoard()
         {

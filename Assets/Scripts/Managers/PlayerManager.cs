@@ -88,10 +88,18 @@ namespace ToyBox.Managers {
                 { Name = name, PlayerInput = player, PlayerObject = player.gameObject, Device = device, PlayerStats = playerStats, PlayerState = EPlayerState.Alive , Color = AnimationClips[Players.Count].color, ReadyUpHandler = readyUpHandler});
 
             player.transform.parent = transform;
-            player.transform.position = _spawnPoint.position;
+            player.transform.position = GetSpawnPoint();
         }
         
 
+        public Vector3 GetSpawnPoint()=> _spawnPoint.position;
+        
+        public void ResetAllPlayerPositions() {
+            foreach (Player player in Players) {
+                player.PlayerObject.transform.position = GetSpawnPoint();
+            }
+        }
+        
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {
             if (change != InputDeviceChange.Disconnected) return;
             foreach (Player player in Players.Where(_player => _player.Device == device)) {

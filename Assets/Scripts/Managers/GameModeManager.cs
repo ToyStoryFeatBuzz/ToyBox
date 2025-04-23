@@ -41,7 +41,9 @@ namespace ToyBox.Managers {
         private void Start() {
             OnRaceEnd += OpenLeaderBoard;
             OnLeaderboardFinish += StartConstructMode;
+            OnLeaderboardGraphStart += EnableLobbyReturnForAllPlayers;
         }
+
 
         private void OpenLeaderBoard() {
             if (_playerManager.GetBestScore() < PointToWin)
@@ -60,9 +62,31 @@ namespace ToyBox.Managers {
             }
             else {
                 //_playerManager.ClampScoreToMax(_pointToWin);
+                foreach (Player player in _playerManager.Players) {
+                    player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
+                }
                 OnLeaderboardGraphStart?.Invoke();
+                
             }
         }
+        
+        private void EnableLobbyReturnForAllPlayers()
+        {
+            foreach (Player player in _playerManager.Players)
+            {
+                var handler = player.PlayerObject.GetComponent<ReadyUpHandler>();
+                if (handler != null)
+                {
+                    handler.EnableLobbyReturn();
+                    Debug.Log($"Lobby retour activé pour {player.PlayerObject.name}");
+                }
+                else
+                {
+                    Debug.LogWarning($"Aucun ReadyUpHandler trouvé pour {player.PlayerObject.name}");
+                }
+            }
+        }
+
 
         private void Update()
         {

@@ -199,5 +199,18 @@ namespace ToyBox.Leaderboard
         }
 
         #endregion
+
+        public void HideLeaderboard()
+        {
+            _leaderboardData.PanelEndGame.SetActive(false);
+            _leaderboardData.Graph.SetActive(false);
+            _leaderboardData.Background.SetActive(false);
+            foreach (PlayerInfo playerInfo in _leaderboardData.PlayerInfos)
+            {
+                playerInfo.LineRenderer.positionCount = 0;
+                playerInfo.TextPoints.text = "";
+                playerInfo.TextName.text = "";
+            }
+        }
     }
 }

@@ -23,4 +23,5 @@ namespace ToyBox.InputSystem {
         public void PerformEvent() => Performed?.Invoke();
         public void CancelEvent() => Canceled?.Invoke();
     }
+    
 }

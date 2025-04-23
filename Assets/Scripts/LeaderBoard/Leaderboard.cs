@@ -60,7 +60,6 @@ namespace ToyBox.Leaderboard
                 if (i < sortedPlayers.Count)
                 {
                     (string playerName, int score, Color c) = sortedPlayers[i];
-                    Debug.Log($"AFTER SORTING Name: {playerName}, Score: {score}");
 
                     parent.gameObject.SetActive(true);
                     _leaderboardData.PlayerInfos[i].FillBar.color = c;
@@ -77,10 +76,6 @@ namespace ToyBox.Leaderboard
         public void CheckPlayers()
         {
             _playerScoreDict = _scoreManager.PlayerScores;
-            for (int i = 0; i < _playerScoreDict.Count; i++)
-            {
-                Debug.Log($"Player in dict: " + _playerScoreDict.ElementAt(i).Key + " Score: " + _playerScoreDict.ElementAt(i).Value);
-            }
         }
 
         public List<(string name, int score, Color c)> GetSortedPlayers()
@@ -91,7 +86,6 @@ namespace ToyBox.Leaderboard
             {
                 if (_playerScoreDict.ContainsKey(player.Name))
                 {
-                    print("TESSSST ========== " + player.Name + " / " + _playerScoreDict[player.Name].score);
                     playerList.Add((player.Name, _playerScoreDict[player.Name].score, _playerScoreDict[player.Name].color));
                 }
             }

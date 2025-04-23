@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ToyBox.Managers;
 using UnityEngine;
@@ -22,8 +23,12 @@ namespace ToyBox.Build {
 
         float maxX;
         float maxY;
+        
+        public Action<float> mouseInBorderXEvent;
+        public Action<float> mouseInBorderYEvent;
 
         Camera cam;
+        public Sprite sprite;
         PlayerManager _playerManager => PlayerManager.Instance;
 
         private void Awake() {
@@ -35,10 +40,12 @@ namespace ToyBox.Build {
             ActivateMouse(false);
             cam = Camera.main;
             _mouseBody.parent = cam.transform;
-            _mouseBody.GetComponentInChildren<Image>().sprite = 
-                _playerManager.AnimationClips[_playerManager.Players.Count + 1].CursorSpritesIddle;
         }
 
+        private void Start()
+        {
+           sprite = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].CursorSpritesIddle;
+        }
 
         private void SetMaxPos()
         {
@@ -60,13 +67,19 @@ namespace ToyBox.Build {
 
             Vector2 camPos = cam.transform.position;
             _mousePos += movement * _mouseSensitivity;
+            if (Mathf.Abs(_mousePos.x) > maxX * 0.95f)
+            {
+                mouseInBorderXEvent.Invoke(Mathf.Sign(_mousePos.x));
+            }
+            if (Mathf.Abs(_mousePos.y) > maxY * 0.95f)
+            {
+                mouseInBorderYEvent.Invoke(Mathf.Sign(_mousePos.y));
+            }
             _mousePos.Set(Mathf.Clamp(_mousePos.x, -maxX, maxX), Mathf.Clamp(_mousePos.y, -maxY, maxY));
             _mouseBody.position = camPos + _mousePos;
         }
 
         public Vector2 Click() {
-            _mouseBody.GetComponentInChildren<Image>().sprite = 
-                _playerManager.AnimationClips[_playerManager.Players.Count + 1].CursorSpritesClic;
             return _mouseBody.position;
         }
 
@@ -75,6 +88,7 @@ namespace ToyBox.Build {
                 _mouseBody = Instantiate(_mouseBodyPrefab);
                 ResetMousePos();
                 _mouseBody.position = _mousePos;
+                _mouseBody.GetComponentInChildren<Image>().sprite = sprite;
             }
 
             _mouseBody?.gameObject?.SetActive(activation);

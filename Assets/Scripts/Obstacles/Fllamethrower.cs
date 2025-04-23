@@ -26,7 +26,7 @@ public class Fllamethrower : MonoBehaviour
     {
         GameObject bolt = Instantiate(_projectile, _nozzle.position, Quaternion.identity);
         bolt.GetComponent<Rigidbody2D>().AddForce(-transform.right * _projectileSpeed, ForceMode2D.Impulse);
-        
+        AudioManager.Instance.PlaySFX("BallThrowerLaunch",transform.position,1f);
         Destroy(bolt, 1f);
     }
 

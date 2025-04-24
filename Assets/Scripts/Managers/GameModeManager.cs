@@ -36,6 +36,8 @@ namespace ToyBox.Managers {
         
         public Action OnBuildStartIntern;
         public Action OnBuildStartExtern;
+
+        public Action OnPreStart;
         
         public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
@@ -126,9 +128,11 @@ namespace ToyBox.Managers {
 
         public void StartCountDown(float newTime)
         {
+            StartRaceMode();    
+            _playerManager.SetAnimInIddle(true);
             _playerManager.SetPlayersMovements(false);
+            
             StartCoroutine(Countdown(newTime));
-
             foreach (Player player in _playerManager.Players)
             {
                 player.PlayerObject.GetComponent<Rigidbody2D>().linearVelocity.Set(0, 0);
@@ -139,6 +143,7 @@ namespace ToyBox.Managers {
         private void OnCountdownFinished()
         {
             Debug.Log("Countdown finished");
+            _playerManager.SetAnimInIddle(false);
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
             AudioManager.Instance.PlayMusic("RaceMode",0.5f);

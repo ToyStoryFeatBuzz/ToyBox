@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using ToyBox.Player;
 using ToyBox.Build;
+using ToyBox.InputSystem;
 using static ToyBox.Enums;
 
 namespace ToyBox.Managers {
@@ -46,6 +47,15 @@ namespace ToyBox.Managers {
             }
         }
 
+        public void SetAnimInIddle(bool activation)
+        {
+         
+            foreach (Player player in Players )
+            {
+                player.PlayerObject.GetComponentInChildren<Animator>().enabled = !activation;
+            }
+        }
+        
         public void ClampScoreToMax(int score)
         {
             foreach (Player player in Players)

@@ -84,7 +84,12 @@ namespace ToyBox.Build {
 
         public void TriggerClicked()
         {
-            _mouseBody.GetComponentInChildren<Image>().sprite = spriteClicked;
+            _mouseBody.GetChild(0).GetComponent<Image>().sprite = spriteClicked;
+        }
+
+        public void SetPlacingPossibility(bool possibility)
+        {
+            _mouseBody.GetChild(1).gameObject.SetActive(!possibility);
         }
 
         public Vector2 Click() {
@@ -96,7 +101,7 @@ namespace ToyBox.Build {
                 _mouseBody = Instantiate(_mouseBodyPrefab);
                 ResetMousePos();
                 _mouseBody.position = _mousePos;
-                _mouseBody.GetComponentInChildren<Image>().sprite = spriteIdle;
+                _mouseBody.GetChild(0).GetComponent<Image>().sprite = spriteIdle;
             }
 
             _mouseBody?.gameObject?.SetActive(activation);

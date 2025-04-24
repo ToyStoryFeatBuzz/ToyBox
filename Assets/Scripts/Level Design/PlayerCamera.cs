@@ -56,6 +56,8 @@ namespace ToyBox.LevelDesign
             foreach (var player in _playerManager.Players)
             {
                 var mouse = player.PlayerObject.GetComponent<PlayerMouse>();
+                mouse.mouseInBorderXEvent = (float f) => { };
+                mouse.mouseInBorderYEvent = (float f) => { };
                 mouse.mouseInBorderXEvent += MoveCenterX;
                 mouse.mouseInBorderYEvent += MoveCenterY;
             }

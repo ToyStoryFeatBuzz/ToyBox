@@ -117,9 +117,11 @@ namespace ToyBox.Build {
 
         private void Update()
         {
-            if (_playerInputManager.GridMoveDir.magnitude > 0) _playerMouse.Move(_playerInputManager.GridMoveDir); // Apply Mouse/Joystick movements to cursor
+            if (_playerInputManager?.GridMoveDir.magnitude > 0) _playerMouse.Move(_playerInputManager.GridMoveDir); // Apply Mouse/Joystick movements to cursor
 
             _mousePos = _playerMouse.Click();
+
+            _playerMouse.SetPlacingPossibility(true);
 
             if (_draggedObject == null) return;
 
@@ -141,6 +143,8 @@ namespace ToyBox.Build {
             }
             _placeable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
             _lastDifferentPos = targetPos;
+
+            _playerMouse.SetPlacingPossibility(_placeable || _draggedObject.GetComponent<BuildObject>().DoErase);
         }
     }
 }

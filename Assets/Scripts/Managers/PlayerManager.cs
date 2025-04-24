@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using ToyBox.Player;
 using ToyBox.Build;
 using ToyBox.InputSystem;
+using UnityEngine.SceneManagement;
 using static ToyBox.Enums;
 
 namespace ToyBox.Managers {
@@ -114,29 +115,20 @@ namespace ToyBox.Managers {
         void OnDeviceChange(InputDevice device, InputDeviceChange change) {
             if (change != InputDeviceChange.Disconnected) return;
             foreach (Player player in Players.Where(_player => _player.Device == device)) {
-                RemovePlayer(player);
+                RemovePlayer();
                 break;
             }
         }
-
-        void RemovePlayer(Player player) {
-            Players.Remove(player);
-            RefreshPlayerName();
-            if (player.PlayerObject != null) {
-                Destroy(player.PlayerObject);
-            }
+        void RemovePlayer() {
+            SceneManager.LoadScene(0);
+            DestroyImmediate(ManagerHolder.Instance.gameObject);
         }
 
         public Player GetPlayer(GameObject playerGameObject) {
             return Players.FirstOrDefault(_player => _player.PlayerObject == playerGameObject);
         }
 
-        private void RefreshPlayerName() {
-            for (int i = 0; i < Players.Count; i++) {
-                Players[i].Name = $"Player {i + 1}";
-                Players[i].PlayerObject.name = Players[i].Name;
-            }
-        }
+
         
         public void SetPlayerState(GameObject player, EPlayerState state) {
             SetPlayerState(GetPlayer(player), state);

@@ -29,7 +29,7 @@ public class ReadyManager : MonoBehaviour
 
     private void Start()
     {
-        GameModeManager.Instance.OnLeaderboardGraphStart += PlayerCheckUI;
+        GameModeManager.Instance.OnLeaderboardGraphStartIntern += PlayerCheckUI;
     }
 
     public void PlayerSetReady(ReadyUpHandler handler)
@@ -52,6 +52,7 @@ public class ReadyManager : MonoBehaviour
         if (AreAllPlayersReady())
         {
             Debug.Log("Tous les joueurs sont prêts !");
+            ResetReady();
             _gameModeManager.ReturnToLobby();
             _leaderboardGraph.HideLeaderboard();
         }
@@ -81,6 +82,19 @@ public class ReadyManager : MonoBehaviour
         }
 
         return true;
+    }
+    
+    public void ResetReady()
+    {
+        for (int i = 0; i < CheckedImageList.Count; i++)
+        {
+            CheckedImageList[i].sprite = uncheckSprite;
+        }
+        foreach (Player player in _playerManager.Players)
+        {
+            player.ReadyUpHandler.ResetReady();
+        }
+        readyPlayers.Clear();
     }
 
     public void PlayerCheckUI()

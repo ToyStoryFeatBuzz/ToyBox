@@ -22,7 +22,7 @@ namespace ToyBox.Leaderboard
         private void Start()
         {
             _maxScore = _gameModeManager.GetPointToWin();
-            _gameModeManager.OnLeaderboardStart += ShowLeaderboard;
+            _gameModeManager.OnLeaderboardStartIntern += ShowLeaderboard;
             HideLeaderboard();
             _playerScoreDict = _scoreManager.PlayerScores;
             CheckPlayers();
@@ -42,7 +42,8 @@ namespace ToyBox.Leaderboard
             print("EEEEEEEEEEEEEEEEEEEEEEEEE");
             yield return new WaitForSeconds(_timeToShow);
             HideLeaderboard();
-            _gameModeManager.OnLeaderboardFinish.Invoke();
+            _gameModeManager.OnLeaderboardFinishIntern.Invoke();
+            _gameModeManager.OnLeaderboardFinishExtern.Invoke();
         }
 
         public void HideLeaderboard()

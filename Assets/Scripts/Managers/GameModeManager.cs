@@ -19,12 +19,24 @@ namespace ToyBox.Managers {
         
         public int nbRounds=0;
         
-        public Action OnRaceStart;
-        public Action OnRaceEnd;
-        public Action OnLeaderboardStart;
-        public Action OnLeaderboardGraphStart;
-        public Action OnLeaderboardFinish;
-        public Action OnBuildStart;
+        public Action OnRaceStartIntern;
+        public Action OnRaceStartExtern;
+        
+        public Action OnRaceEndIntern;
+        public Action OnRaceEndExtern;
+        
+        public Action OnLeaderboardStartIntern;
+        public Action OnLeaderboardStartExtern;
+        
+        public Action OnLeaderboardGraphStartIntern;
+        public Action OnLeaderboardGraphStartExtern;
+        
+        public Action OnLeaderboardFinishIntern;
+        public Action OnLeaderboardFinishExtern;
+        
+        public Action OnBuildStartIntern;
+        public Action OnBuildStartExtern;
+        
         public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
 
@@ -39,9 +51,9 @@ namespace ToyBox.Managers {
         }
 
         private void Start() {
-            OnRaceEnd += OpenLeaderBoard;
-            OnLeaderboardFinish += StartConstructMode;  
-            OnLeaderboardGraphStart += EnableLobbyReturnForAllPlayers;
+            OnRaceEndIntern += OpenLeaderBoard;
+            OnLeaderboardFinishIntern += StartConstructMode;  
+            OnLeaderboardGraphStartIntern += EnableLobbyReturnForAllPlayers;
         }
 
 
@@ -50,7 +62,8 @@ namespace ToyBox.Managers {
             if (_playerManager.GetBestScore() < PointToWin)
             {
                 print("BBBBBBBBBBBBBBBBBB");
-                OnLeaderboardStart?.Invoke();
+                OnLeaderboardStartIntern?.Invoke();
+                OnLeaderboardStartExtern?.Invoke();
                 if (roundsText != null)
                 {
                     nbRounds++;
@@ -68,7 +81,8 @@ namespace ToyBox.Managers {
                 foreach (Player player in _playerManager.Players) {
                     player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
                 }
-                OnLeaderboardGraphStart?.Invoke();
+                OnLeaderboardGraphStartIntern?.Invoke();
+                OnLeaderboardGraphStartExtern?.Invoke();
                 
             }
         }
@@ -144,7 +158,8 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
             }
             _playerManager.SetNewPlayersEntries(true);
-            OnRaceStart?.Invoke();
+            OnRaceStartIntern?.Invoke();
+            OnRaceStartExtern?.Invoke();
         }
 
         public void StartConstructMode() {
@@ -154,7 +169,8 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = true;
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = true;
             }
-            OnBuildStart?.Invoke();
+            OnBuildStartIntern?.Invoke();
+            OnBuildStartExtern?.Invoke();
             AudioManager.Instance.PlayMusic("EditMode");
         }
 
@@ -168,9 +184,16 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
                 player.PlayerStats.ResetScore();
             }
+            
+            _buildsManager.ClearObjects();
 
-            OnRaceEnd = null;
-            OnRaceEnd = null;
+            OnRaceEndExtern = () => {};
+            OnBuildStartExtern = () => {};
+            OnLeaderboardFinishExtern = () => {};
+            OnLeaderboardGraphStartExtern = () => {};
+            OnLeaderboardStartExtern = () => {};
+            OnRaceStartExtern = () => {};
+            
             
             ScoreManager.Instance.ResetRound();
             SceneManager.LoadScene("Lobby");

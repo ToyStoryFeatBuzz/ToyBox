@@ -147,6 +147,10 @@ namespace ToyBox.Managers
         public bool CanPlace(BuildObject testedBuild) { // Tells if testedBuild can be placed and does not collid with already placed objects
             return !(from build in Objects from offset in build.Offsets where testedBuild.ContainsPos((Vector2)build.transform.position + offset) select build).Any();
         }
+        public void ClearObjects() // Clear all placed objects
+        {
+            Objects.Clear();
+        }
     }
     
     [Serializable]

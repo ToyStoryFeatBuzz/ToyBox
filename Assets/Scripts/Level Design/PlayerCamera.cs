@@ -53,8 +53,8 @@ namespace ToyBox.LevelDesign
                 mouse.mouseInBorderYEvent += MoveCenterY;
             }
 
-            GameModeManager.Instance.OnRaceStart += () => { ActualModeFunction = RaceMode; };
-            GameModeManager.Instance.OnBuildStart += () => { ActualModeFunction = EditorMode; };
+            GameModeManager.Instance.OnRaceStartExtern += () => { ActualModeFunction = RaceMode; };
+            GameModeManager.Instance.OnBuildStartExtern += () => { ActualModeFunction = EditorMode; };
         }
 
         public void ResetCenterMap()

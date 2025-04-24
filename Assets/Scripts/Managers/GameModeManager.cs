@@ -5,6 +5,7 @@ using TMPro;
 using ToyBox.Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
@@ -17,7 +18,7 @@ namespace ToyBox.Managers {
 
         private PlayerManager _playerManager => PlayerManager.Instance;
         
-        public int nbRounds=0;
+        public int NbRounds = 1;
         
         public Action OnRaceStartIntern;
         public Action OnRaceStartExtern;
@@ -39,7 +40,6 @@ namespace ToyBox.Managers {
 
         public Action OnPreStart;
         
-        public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
 
         private void Awake() {
@@ -64,16 +64,7 @@ namespace ToyBox.Managers {
             {
                 OnLeaderboardStartIntern?.Invoke();
                 OnLeaderboardStartExtern?.Invoke();
-                if (roundsText != null)
-                {
-                    nbRounds++;
-                    roundsText.text = nbRounds.ToString();
-                }
-                else
-                {
-                    Debug.LogWarning("Rounds Text is null");
-                }
-
+                NbRounds++;
             }
             else {
                 foreach (Player player in _playerManager.Players) {

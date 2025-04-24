@@ -274,9 +274,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 8918068422395019252, guid: 83e237b245d5ae34589d7371ad5afa51, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -342,6 +342,9 @@ MonoBehaviour:
   DoErase: 1
   IsChosen: 0
   _bombVisualPrefab: {fileID: 7554404367411553199, guid: 999d056deb754984cb33903478f56182, type: 3}
+  IsMovingPlatform: 0
+  MovingPart: {fileID: 0}
+  MovingPartPlaceholder: {fileID: 0}
 --- !u!1001 &2577329293260607977
 PrefabInstance:
   m_ObjectHideFlags: 0

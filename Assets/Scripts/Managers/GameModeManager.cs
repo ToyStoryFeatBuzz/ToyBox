@@ -163,7 +163,7 @@ namespace ToyBox.Managers {
         }
 
         public void StartConstructMode() {
-            _buildsManager.Shuffle(0);
+            _buildsManager.Shuffle();
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = true;

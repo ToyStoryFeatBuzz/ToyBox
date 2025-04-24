@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ManagerHolder : MonoBehaviour
 {
-    private static ManagerHolder Instance;
+    public static ManagerHolder Instance;
 
     private void Awake()
     {

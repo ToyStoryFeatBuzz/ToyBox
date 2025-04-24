@@ -7,6 +7,12 @@ namespace ToyBox.Build {
         public Transform TR;
         public Transform BL;
 
+        [SerializeField] private Animator _chooseBox;
+
+        public void OpenChooseBox() {
+            _chooseBox.SetTrigger("Open");
+        }
+
         private void Awake() {
             Instance = this;
             gameObject.SetActive(false);

@@ -290,9 +290,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.08334541, g: 0, b: 1, a: 0.56078434}
+  m_Color: {r: 0.08334541, g: 0, b: 1, a: 0.8627451}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -438,6 +438,10 @@ MonoBehaviour:
       m_Calls: []
   DoErase: 0
   IsChosen: 0
+  _bombVisualPrefab: {fileID: 0}
+  IsMovingPlatform: 0
+  MovingPart: {fileID: 0}
+  MovingPartPlaceholder: {fileID: 0}
 --- !u!114 &5688057558878990295
 MonoBehaviour:
   m_ObjectHideFlags: 0

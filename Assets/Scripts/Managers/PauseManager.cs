@@ -1,17 +1,22 @@
-﻿using ToyBox.Menu;
+﻿using System.Linq;
+using ToyBox.InputSystem;
+using ToyBox.Menu;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
 namespace ToyBox.Managers {
     public class PauseManager : MonoBehaviour {
-        PlayerInput _menuInput;
-        
+       
         PlayerManager _playerManager => PlayerManager.Instance;
         
         public static PauseManager Instance { get; private set; }
         
         private PauseMenu _pauseMenu => PauseMenu.Instance;
+        private MenuInputDelegate _menuInput => MenuInputDelegate.Instance;
+        
+        private Player _pausedBy;
+        private InputActionMap _oldActionMap;
         
         private void Awake() {
             if (Instance == null) {
@@ -22,25 +27,18 @@ namespace ToyBox.Managers {
             }
         }
 
-        private void Start() {
-            _menuInput = GetComponent<PlayerInput>();
-            Debug.Log(_menuInput);
-        }
-
         void StartPause(Player pausedPlayer) {
-            if (!_pauseMenu) {
-                return;
-            }
+            if (!_pauseMenu) return;
             Time.timeScale = 0f;
-            _playerManager.PlayerInputManager.enabled = false;
-            foreach (Player player in _playerManager.Players) {
-                player.PlayerInput.enabled = false;
-            }
-            _menuInput.enabled = true;
-            _menuInput.user.UnpairDevices();
             if (pausedPlayer.Device == null) return;
-            InputUser.PerformPairingWithDevice(pausedPlayer.Device, _menuInput.user);
-            _pauseMenu.Panel.SetActive(true);
+            _pausedBy = pausedPlayer;
+
+            _oldActionMap = _pausedBy.PlayerInput.currentActionMap;
+            _pausedBy.PlayerInput.currentActionMap = _pausedBy.PlayerInput.actions.FindActionMap("Menu");
+            _menuInput.PlayerInControl = _pausedBy.PlayerObject.GetComponent<MenuPlayerInputManager>();
+            
+            Cursor.lockState = CursorLockMode.Confined;
+            _pauseMenu.TogglePause(true);
         }
         
         public void StartPause(GameObject pausedPlayer) {
@@ -48,13 +46,14 @@ namespace ToyBox.Managers {
         }
 
         public void EndPause() {
-            _pauseMenu.Panel.SetActive(false);
+            _pauseMenu.TogglePause(false);
+            Cursor.lockState = CursorLockMode.Locked;
             _menuInput.enabled = false;
-            foreach (Player player in _playerManager.Players) {
-                player.PlayerInput.enabled = true;
-            }
-            _playerManager.PlayerInputManager.enabled = true;
+            _pausedBy.PlayerInput.currentActionMap = _oldActionMap;
             Time.timeScale = 1f;
+            _oldActionMap = null;
+            _pausedBy = null;
+            _menuInput.PlayerInControl = null;
         }
 
     }

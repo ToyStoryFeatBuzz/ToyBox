@@ -12,7 +12,7 @@ public class Crossbow : MonoBehaviour
 
     void Start()
     {
-        GameModeManager.Instance.OnRaceStart += () =>
+        GameModeManager.Instance.OnRaceStartExtern += () =>
         {
             _shot = false;
         };

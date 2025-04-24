@@ -11,7 +11,7 @@ namespace ToyBox.Managers {
         private List<Player> _players => _playerManager.Players; // List of all players
         public static ScoreManager Instance;
         
-        public Dictionary<string, (int score, Color color)> PlayerScores = new();
+        public Dictionary<string, (int score, Color color, Sprite sprite)> PlayerScores = new();
 
         private List<string> _arrivalOrder = new(); // Liste d'arrivée des joueurs
 
@@ -24,16 +24,16 @@ namespace ToyBox.Managers {
             }
         }
 
-        public void AddScoreDic(string playerName, int score, Color c)
+        public void AddScoreDic(string playerName, int score, Color c, Sprite sprite)
         {
             if (PlayerScores.ContainsKey(playerName))
             {
-                PlayerScores[playerName] = (score, c);
+                PlayerScores[playerName] = (score, c, sprite);
                 Debug.Log("Mise à jour du score dans le dictionnaire : " + playerName + " => " + score);
             }
             else
             {
-                PlayerScores.Add(playerName, (score, c));
+                PlayerScores.Add(playerName, (score, c, sprite));
                 Debug.Log("Ajout score dans dictionnaire : " + playerName + " => " + score);
             }
             Debug.Log("Ajout score dans dictionnaire : " + playerName + " => " + score);
@@ -54,13 +54,13 @@ namespace ToyBox.Managers {
             if(diff >0) scoreToAdd -= diff;
 
             playerStats.AddScore(scoreToAdd); // Mise à jour locale
-            AddScoreDic(playerName, playerStats.Score, playerStats.color); // Mise à jour dans le dico
+            AddScoreDic(playerName, playerStats.Score, playerStats.color, playerStats.sprite); // Mise à jour dans le dico
         }
 
         public void AddDeathScore(string playerName, PlayerStats playerStats)
         {
             playerStats.AddScore(_pointsPerDeath);
-            AddScoreDic(playerName, playerStats.Score, playerStats.color);
+            AddScoreDic(playerName, playerStats.Score, playerStats.color, playerStats.sprite);
         }
 
         

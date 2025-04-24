@@ -53,8 +53,8 @@ namespace ToyBox.LevelDesign
                 mouse.mouseInBorderYEvent += MoveCenterY;
             }
 
-            GameModeManager.Instance.OnRaceStart += () => { ActualModeFunction = RaceMode; };
-            GameModeManager.Instance.OnBuildStart += () => { ActualModeFunction = EditorMode; };
+            GameModeManager.Instance.OnRaceStartExtern += () => { ActualModeFunction = RaceMode; };
+            GameModeManager.Instance.OnBuildStartExtern += () => { ActualModeFunction = EditorMode; };
         }
 
         public void ResetCenterMap()
@@ -121,6 +121,10 @@ namespace ToyBox.LevelDesign
 
                 _mainCam.orthographicSize = Mathf.Lerp(_mainCam.orthographicSize, _camSize, Time.deltaTime * _camZoomSpeed);
                 
+            }
+            else
+            {
+                Debug.Log("No player in the game");
             }
         }
 

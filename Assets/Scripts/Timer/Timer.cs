@@ -21,8 +21,8 @@ namespace ToyBox.Timer
                 PlayerPrefs.SetFloat("BestTime", float.MaxValue);
             }
 
-            _gameModeManager.OnRaceStart += StartTimer;
-            _gameModeManager.OnRaceEnd += StopTimer;
+            _gameModeManager.OnRaceStartExtern += StartTimer;
+            _gameModeManager.OnRaceEndExtern += StopTimer;
         }
 
         void StartTimer()

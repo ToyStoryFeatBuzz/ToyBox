@@ -10,15 +10,15 @@ namespace ToyBox.Player {
         public List<int> MatchScores = new();
         public string Name;
         public Color color;
+        public Sprite sprite;
+        
         private void Start() {
             Name = gameObject.name;
-            Debug.Log("Initialisé PlayerStats avec nom : " + Name);
         }
         
         public void AddScore(int amount) {
             Score += amount;
             AddScoreToList(Score);
-            Debug.Log(Name + " added score: " + Score);
         }
         
         public void RemoveScore(int amount) {

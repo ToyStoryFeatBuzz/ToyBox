@@ -54,6 +54,12 @@ public class ReadyUpHandler : MonoBehaviour
     {
         return isReady;
     }
+    
+    public void ResetReady()
+    {
+        isReady = false;
+        canReturnToLobby = false;
+    }
 
     public bool IsReady() => isReady;
 }

@@ -71,6 +71,9 @@ namespace ToyBox.Player
 
             if (_inputSystem.MoveValue == 0 && IsGrounded) {
                 _rb.AddForceX(-_rb.linearVelocityX * _deceleration * Time.fixedDeltaTime, ForceMode2D.Impulse); // If there is no input, quickly slow down the player
+            } else if (!IsGrounded)
+            {
+                _rb.AddForceX(-_rb.linearVelocityX * (_deceleration*0.1f) * Time.fixedDeltaTime, ForceMode2D.Impulse);
             }
 
             if (Physics2D.OverlapBox(transform.position+(Vector3)_groundOffset,_groundCheckSize,0,_platformLayer) && _performGroundCheck) // Ground check

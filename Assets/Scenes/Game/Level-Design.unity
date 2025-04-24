@@ -31177,10 +31177,6 @@ PrefabInstance:
       propertyPath: EditorMapCenter
       value: 
       objectReference: {fileID: 1942090014}
-    - target: {fileID: 2539138170384967273, guid: b928079a2d4feb24d9880115d52f8d96, type: 3}
-      propertyPath: _maxTime
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 6143122980351512643, guid: b928079a2d4feb24d9880115d52f8d96, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.7

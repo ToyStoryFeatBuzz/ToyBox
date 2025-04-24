@@ -41,8 +41,8 @@ namespace ToyBox.Managers {
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
                 player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
             }
-            _roundsText.text = _gameModeManager.NbRounds + " Round";
         }
+        
 
         public void SetCamCenterMovements(Action<float> movementX, Action<float> movementY)
         {
@@ -60,6 +60,7 @@ namespace ToyBox.Managers {
         }
 
         private void RaceStart() {
+            _roundsText.text = _gameModeManager.NbRounds + " Round";
             foreach (Player player in _playerManager.Players) 
             { 
                 _spawnPos.SetPlayersPos();

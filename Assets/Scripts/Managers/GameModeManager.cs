@@ -11,12 +11,14 @@ namespace ToyBox.Managers {
     public class GameModeManager : MonoBehaviour {
         
         [SerializeField] int _pointToWin = 100;
+        [SerializeField] CountDown _countDown;
         public static int PointToWin = 100;
         public static GameModeManager Instance { get; private set; }
 
         private BuildsManager _buildsManager => BuildsManager.Instance;
 
         private PlayerManager _playerManager => PlayerManager.Instance;
+        private LevelKit _levelKit => LevelKit.Instance;
         
         public int NbRounds = 1;
         
@@ -40,7 +42,7 @@ namespace ToyBox.Managers {
 
         public Action OnPreStart;
         
-        public TextMeshProUGUI cdText;
+        
 
         private void Awake() {
             if (Instance == null) {
@@ -60,6 +62,7 @@ namespace ToyBox.Managers {
 
 
         private void OpenLeaderBoard() {
+            _levelKit.ToggleUI(false);
             if (_playerManager.GetBestScore() < PointToWin)
             {
                 OnLeaderboardStartIntern?.Invoke();
@@ -92,28 +95,22 @@ namespace ToyBox.Managers {
             }
         }
 
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                OnCountdownFinished();
-            }
-        }
+        
 
         IEnumerator Countdown(float newTime)
         {
+            _countDown.ToggleImage(true);
             float currentTime = newTime;
 
             while (currentTime > 0)
             {
-                 cdText.text = (Mathf.RoundToInt(currentTime)).ToString();
+                _countDown.SetSprites(Mathf.RoundToInt(currentTime));
 
                 yield return new WaitForSeconds(0.1f);
                 currentTime -= 0.1f;
             }
 
-            cdText.text = "";
+            _countDown.ToggleImage(false);
             OnCountdownFinished();
         }
 
@@ -137,6 +134,7 @@ namespace ToyBox.Managers {
             _playerManager.SetAnimInIddle(false);
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
+            _levelKit.ToggleUI(true);
             AudioManager.Instance.PlayMusic("RaceMode",0.5f);
         }
         

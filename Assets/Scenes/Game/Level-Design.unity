@@ -31187,10 +31187,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelKit
       objectReference: {fileID: 0}
-    - target: {fileID: 2178147747781872335, guid: b928079a2d4feb24d9880115d52f8d96, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2466653926792903573, guid: b928079a2d4feb24d9880115d52f8d96, type: 3}
       propertyPath: EditorMapCenter
       value: 

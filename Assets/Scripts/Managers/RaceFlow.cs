@@ -60,7 +60,7 @@ namespace ToyBox.Managers {
         }
 
         private void RaceStart() {
-            _roundsText.text = _gameModeManager.NbRounds + " Round";
+            _roundsText.text ="Round "+ _gameModeManager.NbRounds;
             foreach (Player player in _playerManager.Players) 
             { 
                 _spawnPos.SetPlayersPos();

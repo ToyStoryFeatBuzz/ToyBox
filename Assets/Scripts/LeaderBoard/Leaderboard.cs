@@ -32,7 +32,6 @@ namespace ToyBox.Leaderboard
 
         public void ShowLeaderboard()
         {
-            ResetLeaderBoard();
             _playerManager.SetNewPlayersEntries(false);
             _leaderboardData.PanelEndMatch.SetActive(true);
             StartCoroutine(DelayedUpdateAndShow());
@@ -74,10 +73,20 @@ namespace ToyBox.Leaderboard
                 {
                     (string playerName, int score, Color c, Sprite sprite) = sortedPlayers[i];
                     parent.gameObject.SetActive(true);
-
+                    
                     _leaderboardData.PlayerInfos[i].FillBar.color = c;
-                    StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBarAdd, score / _maxScore));
+                    Color colorAdd = c;
+                    colorAdd.a = 0.75f;
+                    _leaderboardData.PlayerInfos[i].FillBarAdd.color = colorAdd;
+
+                    
+                    _leaderboardData.PlayerInfos[i].TextPoint.text = score.ToString();
+                    _leaderboardData.PlayerInfos[i].TextPoint.color = c;
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
+                    
+                    _leaderboardData.PlayerInfos[i].FillBar.fillAmount = _leaderboardData.PlayerInfos[i].FillBarAdd.fillAmount;
+                    
+                    StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBarAdd, score / _maxScore));
 
                     activeSlots.Add(parent);
                 }
@@ -112,11 +121,12 @@ namespace ToyBox.Leaderboard
             fillBar.fillAmount = targetFill;
         }
 
-        private void ResetLeaderBoard()
+        public void ResetLeaderBoard()
         {
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
                 _leaderboardData.PlayerInfos[i].FillBar.fillAmount = 0;
+                _leaderboardData.PlayerInfos[i].FillBarAdd.fillAmount = 0;
                 _leaderboardData.PlayerInfos[i].TextSlot.text = "";
                 _leaderboardData.PlayerInfos[i].FillBar.color = Color.white;
             }

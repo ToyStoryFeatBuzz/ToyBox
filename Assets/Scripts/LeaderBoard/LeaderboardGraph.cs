@@ -70,6 +70,7 @@ namespace ToyBox.Leaderboard
 
         public void UpdateLeaderBoard()
         {
+            _leaderBoard.ResetLeaderBoard();
             _leaderBoard.CheckPlayers();
             _leaderboardData.PanelEndGame.SetActive(true);
             _leaderboardData.Graph.SetActive(true);

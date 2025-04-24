@@ -925,6 +925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeToShow: 5
   _maxScore: 0
+  _animationDuration: 2
 --- !u!114 &867946578891329500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2012,7 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b030ca7e10da4eca88b5b7e662001791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointToWin: 20
+  _pointToWin: 40
   nbRounds: 0
   roundsText: {fileID: 0}
   cdText: {fileID: 4411612208557259524}
@@ -2095,6 +2096,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 811815451046188532, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 826156507011272326, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2109,6 +2114,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826156507011272326, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876898974244583991, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 999787262038779604, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1487649647422162757, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
@@ -2199,6 +2212,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5377699722280301508, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5562729626778584266, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_Name
       value: LeaderBoard
@@ -2251,6 +2268,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7626355428702975222, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7950654967430604926, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 960
@@ -2302,6 +2323,10 @@ PrefabInstance:
     - target: {fileID: 7987296609969509382, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012309199572666408, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8458982182246419225, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_Color.b

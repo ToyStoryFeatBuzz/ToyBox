@@ -31,7 +31,7 @@ namespace ToyBox.Managers {
         void Start() {
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
            // _leaderboard = _gameModeManager.transform.parent.GetComponentInChildren<Leaderboard.Leaderboard>();
-            _gameModeManager.OnRaceStart += RaceStart;
+            _gameModeManager.OnRaceStartExtern += RaceStart;
             _endCollider=transform.GetComponentInChildren<ColliderDetector>();
             _endCollider._onTriggerEnterFunction = OnTriggerEndFunction;
             foreach (Player player in _playerManager.Players)
@@ -40,8 +40,8 @@ namespace ToyBox.Managers {
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
                 player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
             }
-            _gameModeManager.roundsText=_roundsText;
-            _gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
+            //_gameModeManager.roundsText=_roundsText;
+            //_gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
         }
 
         public void SetCamCenterMovements(Action<float> movementX, Action<float> movementY)
@@ -92,7 +92,9 @@ namespace ToyBox.Managers {
         void Update() {
             if (!_raceStarted) return;
             if (_playerManager.GetAlivePlayers().Count == 0) {
-                _gameModeManager.OnRaceEnd?.Invoke();
+                print("ZZZZZZZZZZZZZZZZZZZZZZZ");
+                _gameModeManager.OnRaceEndIntern?.Invoke();
+                _gameModeManager.OnRaceEndExtern?.Invoke();
                 AudioManager.Instance.StopMusic();
                 AudioManager.Instance.PlaySFX("RaceEnd_Horn", volume:0.7f);
                 _raceStarted = false;

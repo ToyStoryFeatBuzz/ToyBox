@@ -407,170 +407,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[0].sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 84afc039c9caf32418c78269e399e05f, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[1].sprite
-      value: 
-      objectReference: {fileID: -8988937731237626735, guid: 6dcaaafa191fa2841b98a46acc2a8c97, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[2].sprite
-      value: 
-      objectReference: {fileID: 3323359508697691226, guid: 44b54a12531f6c74eb2bad2b878e53f5, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[3].sprite
-      value: 
-      objectReference: {fileID: -7044011513977843984, guid: 470a1a1ee6e8b454cb894f5455318d56, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[4].sprite
-      value: 
-      objectReference: {fileID: 4570731461001906860, guid: 969bf19e159f546448eb504a74da9863, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[5].sprite
-      value: 
-      objectReference: {fileID: 185591107774609784, guid: fd6d1e0b56efd35449fc58ea78e4f99c, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[0].color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[0].color.g
-      value: 0.36050916
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[0].color.r
-      value: 0.3238992
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[1].color.b
-      value: 0.46226406
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[1].color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[1].color.r
-      value: 0.58176094
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[2].color.b
-      value: 0.33018857
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[2].color.g
-      value: 0.65916675
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[2].color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[3].color.b
-      value: 0.9811321
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[3].color.g
-      value: 0.36715314
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[3].color.r
-      value: 0.9771218
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[4].color.b
-      value: 0.24842751
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[4].color.g
-      value: 0.24842751
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[4].color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[5].color.b
-      value: 0.27358478
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[5].color.g
-      value: 0.84867543
-      objectReference: {fileID: 0}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[0].animator
-      value: 
-      objectReference: {fileID: 9100000, guid: b1c611fafe004174b85b59a02defe4df, type: 2}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[1].animator
-      value: 
-      objectReference: {fileID: 9100000, guid: 3614065e20e47a34b927c40a5349c80d, type: 2}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[2].animator
-      value: 
-      objectReference: {fileID: 9100000, guid: 19b02e9b46901ab428650ed0f1129f93, type: 2}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[3].animator
-      value: 
-      objectReference: {fileID: 9100000, guid: a1313d417c76e5a4cbe6caf224fdb48c, type: 2}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[4].animator
-      value: 
-      objectReference: {fileID: 9100000, guid: 82a0e5caa367f6643a30c3979d1e23ec, type: 2}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[5].animator
-      value: 
-      objectReference: {fileID: 9100000, guid: a76116b55725cf246bab938212036803, type: 2}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[0].spriteClic
-      value: 
-      objectReference: {fileID: 21300000, guid: 8dcf7aa38b96f6149b9217975a3d6e2b, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[1].spriteClic
-      value: 
-      objectReference: {fileID: 21300000, guid: 9df4c43bcb21f454bb6b33688e93cc3a, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[2].spriteClic
-      value: 
-      objectReference: {fileID: 21300000, guid: 3f1673ac039d12d4db70c94fb700db34, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[3].spriteClic
-      value: 
-      objectReference: {fileID: 21300000, guid: 545d6162b84adba43b8bb5824269547b, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[4].spriteClic
-      value: 
-      objectReference: {fileID: 21300000, guid: 30bf55d33f3790443bcf411fe4fc00f3, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[5].spriteClic
-      value: 
-      objectReference: {fileID: 21300000, guid: f514048249c3871419881baecae019ee, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[0].spriteIdlle
-      value: 
-      objectReference: {fileID: 21300000, guid: 494fc29e38f4c124d92b4328d5fe3bb3, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[1].spriteIdlle
-      value: 
-      objectReference: {fileID: 21300000, guid: 17d9392c286bf5649adc26fc150308d9, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[2].spriteIdlle
-      value: 
-      objectReference: {fileID: 21300000, guid: 3bd21c7dd4be7e345bdd775ed3541494, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[3].spriteIdlle
-      value: 
-      objectReference: {fileID: 21300000, guid: 0bfeff8e286f25e419b2d4ec8f848432, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[4].spriteIdlle
-      value: 
-      objectReference: {fileID: 21300000, guid: 3b883a05106ec5d4a93e5bb2787ca36e, type: 3}
-    - target: {fileID: 3197488185280598623, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
-      propertyPath: AnimationClips.Array.data[5].spriteIdlle
-      value: 
-      objectReference: {fileID: 21300000, guid: 6c0f9ec8e837ad74a831b94327e832b5, type: 3}
     - target: {fileID: 3276964699275971642, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -619,6 +455,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7072894404495675428, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      propertyPath: _slotAnimator
+      value: 
+      objectReference: {fileID: 273700111}
     - target: {fileID: 8287856591218169101, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -638,8 +478,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1984225246011537560, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 273700111}
   m_SourcePrefab: {fileID: 100100000, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+--- !u!1 &273700110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1984225246011537560, guid: 7b499ebd56ece474b9301c2f3a0ca8a6, type: 3}
+  m_PrefabInstance: {fileID: 273700109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &273700111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273700110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4dd27c9c89066469fb34fd193e419f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationDuration: 0.5
 --- !u!1 &573410843
 GameObject:
   m_ObjectHideFlags: 0

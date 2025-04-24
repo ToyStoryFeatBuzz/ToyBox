@@ -42,7 +42,7 @@ namespace ToyBox.Leaderboard
             _maxGraphHeight = _graphEnd.position.y - _graphOrigin.position.y;
             _maxGraphWidth = _graphEnd.position.x - _graphOrigin.position.x;
 
-            _gameModeManager.OnLeaderboardGraphStart += UpdateLeaderBoard;
+            _gameModeManager.OnLeaderboardGraphStartIntern += UpdateLeaderBoard;
             _leaderBoard = GetComponent<Leaderboard>();
             _leaderboardData.PanelEndGame.SetActive(false);
             _leaderboardData.Graph.SetActive(false);

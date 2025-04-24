@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -39, y: -17}
-  m_SizeDelta: {x: 230.2808, y: 119.2715}
+  m_AnchoredPosition: {x: -6, y: -36}
+  m_SizeDelta: {x: 367.0895, y: 212.3235}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &570124730621928961
 CanvasRenderer:
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 6280550633518211474}
   - component: {fileID: 2079057346996216772}
   m_Layer: 5
-  m_Name: Text_MatchX
+  m_Name: Text_Match
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,8 +231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 32.261, y: 7}
-  m_SizeDelta: {x: 153.0835, y: 65.9884}
+  m_AnchoredPosition: {x: 51.726, y: 35.3291}
+  m_SizeDelta: {x: 249.63, y: 102.6593}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &6280550633518211474
 CanvasRenderer:

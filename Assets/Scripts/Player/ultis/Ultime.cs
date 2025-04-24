@@ -21,6 +21,11 @@ namespace ToyBox.Player
 
         }
 
+        private void OnEnable()
+        {
+            callUltiEvent?.Invoke();
+        }
+
         public void UseUltimate()
         {
             if (_canUlti)

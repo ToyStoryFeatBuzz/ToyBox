@@ -41,8 +41,7 @@ namespace ToyBox.Managers {
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
                 player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
             }
-            //_gameModeManager.roundsText=_roundsText;
-            //_gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
+            _roundsText.text = _gameModeManager.NbRounds + " Round";
         }
 
         public void SetCamCenterMovements(Action<float> movementX, Action<float> movementY)
@@ -81,14 +80,6 @@ namespace ToyBox.Managers {
             player.SetWin();
             AudioManager.Instance.PlaySFX("RaceEnd_Crowd",volume:0.5f);
         }
-        // private void OnTriggerEnter2D(Collider2D collision) {
-        //     if (!collision.gameObject.TryGetComponent(out PlayerEnd player)) {
-        //         return;
-        //     }
-        //     _finishedPlayers++;
-        //     player.gameObject.transform.position = _winnersBox.position;
-        //     player.SetWin();
-        // }
     
         void Update() {
             if (!_raceStarted) return;

@@ -1,5 +1,7 @@
+using System.Linq;
 using TMPro;
 using ToyBox.Managers;
+using ToyBox.Player;
 using UnityEngine;
 
 namespace ToyBox.Timer
@@ -7,47 +9,45 @@ namespace ToyBox.Timer
     public class Timer : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI _timerText;
+        GameModeManager _gameModeManager => GameModeManager.Instance; 
+        PlayerManager _playerManager => PlayerManager.Instance;
+        [SerializeField] private float _maxTime;
 
-        GameModeManager _gameModeManager;
+        float _remainTime;
+        bool _isRaceStarted;
 
-        float _time;
-        bool _running;
-
-        void Start()
-        {
-            _gameModeManager = GameModeManager.Instance;
-            if (!PlayerPrefs.HasKey("BestTime"))
-            {
-                PlayerPrefs.SetFloat("BestTime", float.MaxValue);
-            }
-
+        void Start() {
             _gameModeManager.OnRaceStartExtern += StartTimer;
             _gameModeManager.OnRaceEndExtern += StopTimer;
+            _remainTime = _maxTime;
+            _timerText.text = _remainTime.ToString("00:00<style=\"Smaller\">.00</style>");
         }
 
-        void StartTimer()
-        {
-            _time = 0.0f;
-            _running = true;
+        void StartTimer() {
+            _remainTime = _maxTime;
+            _isRaceStarted = true;
         }
 
-        void StopTimer()
-        {
-            _running = false;
-            
-            if (PlayerPrefs.GetFloat("BestTime") > _time)
-            {
-                PlayerPrefs.SetFloat("BestTime", _time);
+        void StopTimer() {
+            _isRaceStarted = false;
+        }
+
+        void Update() {
+            if (!_isRaceStarted) return;
+            if (_remainTime > 0f) {
+                _remainTime -= Time.deltaTime;
             }
-            _time = 0.0f;
+            else {
+                KillAllPlayer();
+                _remainTime = 0f;
+            }
+            _timerText.text = _remainTime.ToString("00:00<style=\"Smaller\">.00</style>");
         }
 
-        void Update()
-        {
-            if (_running)
-            {
-                _time += Time.deltaTime;
-                _timerText.text = _time.ToString("00:00<style=\"Smaller\">.00</style>");
+        void KillAllPlayer() {
+            
+            foreach (Managers.Player player in _playerManager.Players.Where(player => player.PlayerState == Enums.EPlayerState.Alive)) {
+                player.PlayerObject.GetComponent<PlayerEnd>().SetDeath();
             }
         }
 

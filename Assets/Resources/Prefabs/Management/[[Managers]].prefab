@@ -635,9 +635,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314551740108125448}
-  - component: {fileID: 2442064234514651381}
-  - component: {fileID: 1995618593192938870}
   - component: {fileID: 842512705575206234}
+  - component: {fileID: 1247388835512814777}
   m_Layer: 0
   m_Name: MenuInputManager
   m_TagString: Untagged
@@ -660,122 +659,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1734128982179708709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2442064234514651381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6799419880746509414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b293fddfa6f94086bacdcecaef0373d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NavigationValue: {x: 0, y: 0}
-  IsLastInputMouse: 0
---- !u!114 &1995618593192938870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6799419880746509414}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 8cdf494bbf9636146843f5772a11baf5, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2442064234514651381}
-        m_TargetAssemblyTypeName: Toybox.InputSystem.MenuInputManager, Assembly-CSharp
-        m_MethodName: OnNavigate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 5b5ab707-ea91-49f6-ab23-8ed45404cdfe
-    m_ActionName: 'UI/NavigateValue[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2442064234514651381}
-        m_TargetAssemblyTypeName: Toybox.InputSystem.MenuInputManager, Assembly-CSharp
-        m_MethodName: OnAny
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 4afdc8c6-794e-4d15-ab71-18c4b367bc6e
-    m_ActionName: 'UI/Any[/Keyboard/anyKey,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonWest,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStickPress,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStickPress,/XInputControllerWindows/rightTrigger,/XInputControllerWindows/rightShoulder,/XInputControllerWindows/select,/XInputControllerWindows/start,/Mouse/press]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2442064234514651381}
-        m_TargetAssemblyTypeName: Toybox.InputSystem.MenuInputManager, Assembly-CSharp
-        m_MethodName: OnMouseMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 85ecb4fe-9ea1-480c-966a-07633f6069d3
-    m_ActionName: 'UI/MouseMove[/Mouse/position]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2442064234514651381}
-        m_TargetAssemblyTypeName: Toybox.InputSystem.MenuInputManager, Assembly-CSharp
-        m_MethodName: OnReleasePause
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 303cf73b-25e6-4923-86ff-f4d87df2b9a5
-    m_ActionName: 'UI/Pause[/Keyboard/escape,/XInputControllerWindows/start]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7e29bd8b-6f2b-43ec-a860-ab936b5cfd9e
-    m_ActionName: 'UI/Submit[/Keyboard/enter,/SwitchProControllerHID/buttonEast]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 07d11937-1c4c-4f95-9955-f142b36f2549
-    m_ActionName: 'UI/Cancel[/Keyboard/escape,/SwitchProControllerHID/buttonSouth]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: UI
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &842512705575206234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -788,6 +671,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5615d10625d54c129e8ef4a88554f0d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1247388835512814777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6799419880746509414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a9c41b781f644f3aa2621bff4345227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerInControl: {fileID: 0}
 --- !u!1 &7926270653652292246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,8 +1075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointToWin: 40
-  nbRounds: 0
-  roundsText: {fileID: 0}
+  NbRounds: 1
   cdText: {fileID: 4411612208557259524}
 --- !u!114 &6810828121202103032
 MonoBehaviour:

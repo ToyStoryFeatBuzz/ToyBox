@@ -112,6 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1905771291702432170}
   - component: {fileID: 5341375981269494536}
+  - component: {fileID: 1044442117188087946}
   - component: {fileID: 919401749552064481}
   - component: {fileID: 6236381995556238032}
   - component: {fileID: 459715410737926392}
@@ -361,11 +362,121 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0b777428-5b9f-4f93-a24c-260ed26759e5
     m_ActionName: 'Race/Suicide[/XInputControllerWindows/select]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044442117188087946}
+        m_TargetAssemblyTypeName: ToyBox.InputSystem.MenuPlayerInputManager, Assembly-CSharp
+        m_MethodName: OnNavigate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 5b5ab707-ea91-49f6-ab23-8ed45404cdfe
+    m_ActionName: 'Menu/NavigateValue[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044442117188087946}
+        m_TargetAssemblyTypeName: ToyBox.InputSystem.MenuPlayerInputManager, Assembly-CSharp
+        m_MethodName: OnAny
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4afdc8c6-794e-4d15-ab71-18c4b367bc6e
+    m_ActionName: 'Menu/Any[/Keyboard/anyKey,/XInputControllerWindows/buttonEast,/XInputControllerWindows/buttonNorth,/XInputControllerWindows/buttonSouth,/XInputControllerWindows/buttonWest,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/right,/XInputControllerWindows/dpad/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStickPress,/XInputControllerWindows/leftTrigger,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/rightStickPress,/XInputControllerWindows/rightTrigger,/XInputControllerWindows/rightShoulder,/XInputControllerWindows/select,/XInputControllerWindows/start,/Mouse/press]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044442117188087946}
+        m_TargetAssemblyTypeName: ToyBox.InputSystem.MenuPlayerInputManager, Assembly-CSharp
+        m_MethodName: OnMouseMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 85ecb4fe-9ea1-480c-966a-07633f6069d3
+    m_ActionName: 'Menu/MouseMove[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044442117188087946}
+        m_TargetAssemblyTypeName: ToyBox.InputSystem.MenuPlayerInputManager, Assembly-CSharp
+        m_MethodName: OnReleasePause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 303cf73b-25e6-4923-86ff-f4d87df2b9a5
+    m_ActionName: 'Menu/Pause[/Keyboard/escape,/XInputControllerWindows/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044442117188087946}
+        m_TargetAssemblyTypeName: ToyBox.InputSystem.MenuPlayerInputManager, Assembly-CSharp
+        m_MethodName: OnSubmit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7e29bd8b-6f2b-43ec-a860-ab936b5cfd9e
+    m_ActionName: 'Menu/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1044442117188087946}
+        m_TargetAssemblyTypeName: ToyBox.InputSystem.MenuPlayerInputManager, Assembly-CSharp
+        m_MethodName: OnCanceled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 07d11937-1c4c-4f95-9955-f142b36f2549
+    m_ActionName: 'Menu/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Race
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1044442117188087946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487653895152395575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f135cb47c74c1fa427b63f175ff29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NavigationValue: {x: 0, y: 0}
+  IsLastInputMouse: 0
 --- !u!114 &919401749552064481
 MonoBehaviour:
   m_ObjectHideFlags: 0

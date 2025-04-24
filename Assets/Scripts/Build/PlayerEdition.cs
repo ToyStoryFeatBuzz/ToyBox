@@ -121,6 +121,8 @@ namespace ToyBox.Build {
 
             _mousePos = _playerMouse.Click();
 
+            _playerMouse.SetPlacingPossibility(true);
+
             if (_draggedObject == null) return;
 
             Vector2 targetPos = _mousePos + (Vector2.one * _snapInterval / 2f);
@@ -141,6 +143,8 @@ namespace ToyBox.Build {
             }
             _placeable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
             _lastDifferentPos = targetPos;
+
+            _playerMouse.SetPlacingPossibility(_placeable || _draggedObject.GetComponent<BuildObject>().DoErase);
         }
     }
 }

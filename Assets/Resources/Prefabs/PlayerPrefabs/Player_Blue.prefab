@@ -462,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doesSnap: 1
-  _snapInterval: 0.5
+  _snapInterval: 1
   _objectsPrefabs: []
 --- !u!114 &1151530574228795280
 MonoBehaviour:

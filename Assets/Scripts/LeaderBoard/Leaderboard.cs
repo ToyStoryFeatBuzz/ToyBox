@@ -49,8 +49,8 @@ namespace ToyBox.Leaderboard
         {
             yield return new WaitForSeconds(_timeToShow);
             HideLeaderboard();
-            _gameModeManager.OnLeaderboardFinishIntern.Invoke();
-            _gameModeManager.OnLeaderboardFinishExtern.Invoke();
+            _gameModeManager.OnLeaderboardFinishIntern?.Invoke();
+            _gameModeManager.OnLeaderboardFinishExtern?.Invoke();
         }
 
         public void HideLeaderboard()

@@ -8,7 +8,7 @@ namespace ToyBox.Player
     {
         [SerializeField] private float _duration;
 
-        private bool _canUlti = true;
+        public bool _canUlti = true;
         public event Action callUltiEvent;
 
         public virtual void Ultimate()
@@ -28,6 +28,7 @@ namespace ToyBox.Player
 
         public void UseUltimate()
         {
+            Debug.Log("Ultimate" + _canUlti);
             if (_canUlti)
             {
                 callUltiEvent?.Invoke();
@@ -41,7 +42,6 @@ namespace ToyBox.Player
             _canUlti = false;
             yield return new WaitForSeconds(_duration);
             RestoreDefaultState();
-            _canUlti = true;
         }
     }
 }

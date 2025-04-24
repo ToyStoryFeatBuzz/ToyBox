@@ -1,3 +1,4 @@
+using ToyBox.Managers;
 using UnityEngine;
 
 namespace ToyBox.Player {
@@ -10,6 +11,7 @@ namespace ToyBox.Player {
 
         void Start() {
             _movement = GetComponent<PlayerMovement>();
+            GameModeManager.Instance.OnRaceStartIntern += () => { _canUlti = true;};
             _baseSpeed = _movement.MaxSpeed;
             _speedBoostParticle.Stop();
         }

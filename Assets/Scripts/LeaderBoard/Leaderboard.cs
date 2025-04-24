@@ -12,11 +12,12 @@ namespace ToyBox.Leaderboard
         [SerializeField] private float _maxScore;
         [SerializeField] private float _animationDuration = 2f;
         [SerializeField] private LeaderboardSlotAnimator _slotAnimator;
+
         private PlayerManager _playerManager => PlayerManager.Instance;
         private ScoreManager _scoreManager => ScoreManager.Instance;
-        GameModeManager _gameModeManager => GameModeManager.Instance;
+        private GameModeManager _gameModeManager => GameModeManager.Instance;
         private LeaderboardData _leaderboardData => LeaderboardData.Instance;
-        
+
         private Dictionary<string, (int score, Color color, Sprite sprite)> _playerScoreDict;
 
         private void Start()
@@ -32,12 +33,23 @@ namespace ToyBox.Leaderboard
         {
             ResetLeaderBoard();
             _playerManager.SetNewPlayersEntries(false);
-            UpdateLeaderboard();
+
+            // Activer le panel avant toute animation
             _leaderboardData.PanelEndMatch.SetActive(true);
-            StartCoroutine(ShowingLeaderboard());
+
+            // Attendre une frame pour garantir que tous les enfants sont actifs
+            StartCoroutine(DelayedUpdateAndShow());
         }
-        
-        IEnumerator ShowingLeaderboard()
+
+        private IEnumerator DelayedUpdateAndShow()
+        {
+            yield return null; // attendre une frame pour que PanelEndMatch soit bien activé
+
+            UpdateLeaderboard(); // maintenant on peut lancer les animations
+            yield return StartCoroutine(ShowingLeaderboard()); // continuer normalement
+        }
+
+        private IEnumerator ShowingLeaderboard()
         {
             yield return new WaitForSeconds(_timeToShow);
             HideLeaderboard();
@@ -54,9 +66,7 @@ namespace ToyBox.Leaderboard
         public void UpdateLeaderboard()
         {
             CheckPlayers();
-
             List<(string name, int score, Color c, Sprite sprite)> sortedPlayers = GetSortedPlayers();
-
             List<Transform> activeSlots = new();
 
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
@@ -66,8 +76,8 @@ namespace ToyBox.Leaderboard
                 if (i < sortedPlayers.Count)
                 {
                     (string playerName, int score, Color c, Sprite sprite) = sortedPlayers[i];
-
                     parent.gameObject.SetActive(true);
+
                     _leaderboardData.PlayerInfos[i].FillBar.color = c;
                     StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBar, score / _maxScore));
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
@@ -79,15 +89,15 @@ namespace ToyBox.Leaderboard
                     parent.gameObject.SetActive(false);
                 }
             }
+
             _slotAnimator.AnimateReorder(activeSlots);
         }
-
 
         public void CheckPlayers()
         {
             _playerScoreDict = _scoreManager.PlayerScores;
         }
-        
+
         private IEnumerator AnimateFillBar(UnityEngine.UI.Image fillBar, float targetFill)
         {
             float startFill = fillBar.fillAmount;

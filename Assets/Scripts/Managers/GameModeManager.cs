@@ -58,10 +58,8 @@ namespace ToyBox.Managers {
 
 
         private void OpenLeaderBoard() {
-            print("AAAAAAAAAAAAAAAAAAAA");
             if (_playerManager.GetBestScore() < PointToWin)
             {
-                print("BBBBBBBBBBBBBBBBBB");
                 OnLeaderboardStartIntern?.Invoke();
                 OnLeaderboardStartExtern?.Invoke();
                 if (roundsText != null)
@@ -76,8 +74,6 @@ namespace ToyBox.Managers {
 
             }
             else {
-                print("CCCCCCCCCCCCCCCCCCC");
-                //_playerManager.ClampScoreToMax(_pointToWin);
                 foreach (Player player in _playerManager.Players) {
                     player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
                 }
@@ -95,7 +91,6 @@ namespace ToyBox.Managers {
                 if (handler != null)
                 {
                     handler.EnableLobbyReturn();
-                    Debug.Log($"Lobby retour activé pour {player.PlayerObject.name}");
                 }
                 else
                 {

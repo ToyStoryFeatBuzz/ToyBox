@@ -92,7 +92,6 @@ namespace ToyBox.Managers {
         void Update() {
             if (!_raceStarted) return;
             if (_playerManager.GetAlivePlayers().Count == 0) {
-                print("ZZZZZZZZZZZZZZZZZZZZZZZ");
                 _gameModeManager.OnRaceEndIntern?.Invoke();
                 _gameModeManager.OnRaceEndExtern?.Invoke();
                 AudioManager.Instance.StopMusic();

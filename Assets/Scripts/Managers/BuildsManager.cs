@@ -27,8 +27,9 @@ namespace ToyBox.Managers
         public bool IsSelecting;
 
         public Action OnObjectPlaced;
-        public Action OnOpeningFinished;
 
+        private int _shuffleAmount;
+        
         private void Awake(){
             if(_chooseBox !=null)
             {
@@ -45,11 +46,7 @@ namespace ToyBox.Managers
                 Destroy(gameObject);
             }
         }
-
-        private void Start() {
-            OnOpeningFinished += SpawnItem;
-        }
-
+        
         public void AddObject(BuildObject build) { // Called when player placed an object
             
             if (build.DoErase) // Bombes that delete overed objects
@@ -93,19 +90,26 @@ namespace ToyBox.Managers
         
 
 
-        public void Shuffle(int amount) // Create and place items in the choosing box
+        public void Shuffle() // Create and place items in the choosing box
         {
             if (_turnNumber <= 10)
             {
                 _turnNumber++;
             }
             IsSelecting = true;
-            amount = _playerManager.Players.Count + 3;
+            _shuffleAmount = _playerManager.Players.Count + 3;
 
             _chooseBox.gameObject.SetActive(true);
             _chooseBox.OpenChooseBox();
 
-            for (int i = 0; i < amount; i++)
+        }
+
+        
+        public void SpawnItem() {
+            Debug.Log("Spawn");
+            Debug.Log(_shuffleAmount);
+            
+            for (int i = 0; i < _shuffleAmount; i++)
             {
                 float probability = 0;
                 GameObject chosenObject = _objectsStruct[0].ObjectPrefab;
@@ -129,11 +133,6 @@ namespace ToyBox.Managers
                 _objectsList.Add(b);
                 b.OnPickedEvent.AddListener(ObjectPicked);
             }
-        }
-
-        
-        private void SpawnItem() {
-            throw new NotImplementedException();
         }
         
         public void ObjectPicked() // Called when a player picked an object

@@ -25,6 +25,7 @@ namespace ToyBox.Managers {
         public Action OnLeaderboardGraphStart;
         public Action OnLeaderboardFinish;
         public Action OnBuildStart;
+        public Action CountdownStarted;
         public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7cf83935807b6214fb18b2e49451aaeb
+guid: 66d7df5945925c541a5939db5f4e6080
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7149758376637670246
-    second: Panneau_Interdit_0
+      213: 8586385167896602618
+    second: Marche3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Panneau_Interdit_0
+      name: Marche3_0
       rect:
         serializedVersion: 2
-        x: 87
-        y: 87
-        width: 338
-        height: 338
+        x: 1899
+        y: 14
+        width: 806
+        height: 654
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 663ac5dcc5b093360800000000000000
-      internalID: 7149758376637670246
+      spriteID: af7e82d41d7f82770800000000000000
+      internalID: 8586385167896602618
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Panneau_Interdit_0: 7149758376637670246
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

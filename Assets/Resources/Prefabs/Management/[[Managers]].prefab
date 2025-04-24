@@ -1108,9 +1108,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2836554805390951470}
     m_Modifications:
+    - target: {fileID: 720950051034773428, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720950051034773428, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 650731847860862622, guid: e183ef61aeea21640bd6a7f82ccfd27e, type: 3}
+    - target: {fileID: 720950051034773428, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819148116867544987, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 5562729626778584266, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_Name
       value: LeaderBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7717245345759984279, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7950654967430604926, guid: bb3d4fac13f03b64e90e62e340a2012d, type: 3}
       propertyPath: m_LocalPosition.x

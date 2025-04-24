@@ -28,6 +28,7 @@ namespace ToyBox.Leaderboard
 
         public void ShowLeaderboard()
         {
+            print("DDDDDDDDDDDDDDDDDDDD");
             _playerManager.SetNewPlayersEntries(false);
             UpdateLeaderboard();
             _leaderboardData.PanelEndMatch.SetActive(true);
@@ -36,6 +37,7 @@ namespace ToyBox.Leaderboard
         
         IEnumerator ShowingLeaderboard()
         {
+            print("EEEEEEEEEEEEEEEEEEEEEEEEE");
             yield return new WaitForSeconds(_timeToShow);
             HideLeaderboard();
             _gameModeManager.OnLeaderboardFinish.Invoke();

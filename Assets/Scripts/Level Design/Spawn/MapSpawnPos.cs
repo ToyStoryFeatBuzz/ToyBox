@@ -12,8 +12,8 @@ public class MapSpawnPos : MonoBehaviour
     {
         for (int i = 0; i <PlayerManager.Instance.Players.Count; i++)
         {
-            
-            PlayerManager.Instance.Players[i].PlayerObject.transform.position=transform.GetChild(i).position;
+            Vector3 newPos = transform.GetChild(i).position;
+            PlayerManager.Instance.Players[i].PlayerObject.transform.position = newPos;
         }
     }
 }

@@ -40,8 +40,8 @@ namespace ToyBox.Managers {
                 playersOrder.Add((player.Name, player.PlayerObject.transform, 0f));
                 player.PlayerObject.GetComponent<PlayerInput>().DeactivateInput();
             }
-            _gameModeManager.roundsText=_roundsText;
-            _gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
+            //_gameModeManager.roundsText=_roundsText;
+            //_gameModeManager.roundsText.text = _gameModeManager.nbRounds.ToString();
         }
 
         public void SetCamCenterMovements(Action<float> movementX, Action<float> movementY)
@@ -92,6 +92,7 @@ namespace ToyBox.Managers {
         void Update() {
             if (!_raceStarted) return;
             if (_playerManager.GetAlivePlayers().Count == 0) {
+                print("ZZZZZZZZZZZZZZZZZZZZZZZ");
                 _gameModeManager.OnRaceEnd?.Invoke();
                 AudioManager.Instance.StopMusic();
                 AudioManager.Instance.PlaySFX("RaceEnd_Horn", volume:0.7f);

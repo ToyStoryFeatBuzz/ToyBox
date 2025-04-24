@@ -46,8 +46,10 @@ namespace ToyBox.Managers {
 
 
         private void OpenLeaderBoard() {
+            print("AAAAAAAAAAAAAAAAAAAA");
             if (_playerManager.GetBestScore() < PointToWin)
             {
+                print("BBBBBBBBBBBBBBBBBB");
                 OnLeaderboardStart?.Invoke();
                 if (roundsText != null)
                 {
@@ -61,6 +63,7 @@ namespace ToyBox.Managers {
 
             }
             else {
+                print("CCCCCCCCCCCCCCCCCCC");
                 //_playerManager.ClampScoreToMax(_pointToWin);
                 foreach (Player player in _playerManager.Players) {
                     player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
@@ -159,11 +162,16 @@ namespace ToyBox.Managers {
             _playerManager.ResetAllPlayerPositions();
             foreach (Player player in _playerManager.Players) {
                 player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Race");
+                player.PlayerState = Enums.EPlayerState.Alive;
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
                 player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
                 player.PlayerStats.ResetScore();
             }
+
+            OnRaceEnd = null;
+            OnRaceEnd = null;
+            
             ScoreManager.Instance.ResetRound();
             SceneManager.LoadScene("Lobby");
         }

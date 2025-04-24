@@ -10,6 +10,7 @@ namespace ToyBox.Leaderboard
     {
         [SerializeField] float _timeToShow = 3f;
         [SerializeField] private float _maxScore;
+        [SerializeField] private float _animationDuration = 2f;
         private PlayerManager _playerManager => PlayerManager.Instance;
         private ScoreManager _scoreManager => ScoreManager.Instance;
         GameModeManager _gameModeManager => GameModeManager.Instance;
@@ -65,7 +66,7 @@ namespace ToyBox.Leaderboard
 
                     parent.gameObject.SetActive(true);
                     _leaderboardData.PlayerInfos[i].FillBar.color = c;
-                    _leaderboardData.PlayerInfos[i].FillBar.fillAmount = score / _maxScore;
+                    StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBar, score / _maxScore));
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
                 }
                 else
@@ -79,6 +80,23 @@ namespace ToyBox.Leaderboard
         {
             _playerScoreDict = _scoreManager.PlayerScores;
         }
+        
+        private IEnumerator AnimateFillBar(UnityEngine.UI.Image fillBar, float targetFill)
+        {
+            float startFill = fillBar.fillAmount;
+            float elapsed = 0f;
+
+            while (elapsed < _animationDuration)
+            {
+                elapsed += Time.deltaTime;
+                float t = elapsed / _animationDuration;
+                fillBar.fillAmount = Mathf.Lerp(startFill, targetFill, t);
+                yield return null;
+            }
+
+            fillBar.fillAmount = targetFill;
+        }
+
 
         public List<(string name, int score, Color c, Sprite sprite)> GetSortedPlayers()
         {

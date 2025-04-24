@@ -303,10 +303,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7161069049892516604, guid: b4aac9eecf0f4e342a51ad79766f0cae, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -11.12207
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -530,6 +526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7868306183973680684, guid: 657238549b121414a9e5414f549ee1bb, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -559,10 +559,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6143122980351512643}
     m_Modifications:
+    - target: {fileID: 135916259629656567, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 135916259629656567, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.71
+      objectReference: {fileID: 0}
     - target: {fileID: 1322207101502094880, guid: 887377dfea42b3a4693a83b383567078, type: 3}
       propertyPath: m_Name
       value: Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2552993592495706339, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2927102059591150072, guid: ec96d3c750205ba4cb991dfc8aa586fb, type: 3}
     - target: {fileID: 3120329028088417592, guid: 887377dfea42b3a4693a83b383567078, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -607,6 +619,14 @@ PrefabInstance:
       propertyPath: _raceFlow
       value: 
       objectReference: {fileID: 8494190365545230486}
+    - target: {fileID: 7743383268879716298, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743383268879716298, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

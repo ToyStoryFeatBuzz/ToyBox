@@ -3081,6 +3081,7 @@ GameObject:
   - component: {fileID: 5956686428775381163}
   - component: {fileID: 11176993990907096}
   - component: {fileID: 9205165536231102652}
+  - component: {fileID: 2635492650691662745}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -3185,6 +3186,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panel: {fileID: 2251973374745819624}
   _resumeBtn: {fileID: 9059377857514652115}
+--- !u!114 &2635492650691662745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5079065226035254377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba41baecb3445c1a9bcf27d67c622be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentSelectable: {fileID: 0}
+  IsHoovering: 0
 --- !u!1 &5085079998446459297
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,7 +5662,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -11.1223755, y: 95}
+  m_AnchoredPosition: {x: -11.12207, y: 95}
   m_SizeDelta: {x: -22.244751, y: 1104.2651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1450852722116601499

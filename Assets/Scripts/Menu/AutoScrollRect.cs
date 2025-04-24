@@ -15,11 +15,14 @@ namespace ToyBox.Menu {
         [SerializeField] Vector2 _newScrollPosition = Vector2.up;
 
         MenuInputManager _inputManager => MenuInputManager.Instance;
+        MenuInputDelegate _inputDelegate => MenuInputDelegate.Instance;
 
         private void Awake() {
             _scrollRect = GetComponent<ScrollRect>();
         }
 
+        bool _isLastInputMouse => _inputManager != null ? _inputManager.IsLastInputMouse : _inputDelegate.PlayerInControl.IsLastInputMouse;
+        
         private void OnEnable() {
             if (_scrollRect != null) {
                 _scrollRect.content.GetComponentsInChildren(_scrollRectData);
@@ -27,7 +30,13 @@ namespace ToyBox.Menu {
         }
 
         private void Start() {
-            _inputManager.OnNavigateEvent.Started += Scroll;
+            if (_inputManager != null) {
+                _inputManager.OnNavigateEvent.Started += Scroll;
+            }
+            else {
+                _inputDelegate.PlayerInControl.OnNavigateEvent.Started += Scroll;
+            }
+            
 
             if (_scrollRect != null) {
                 _scrollRect.content.GetComponentsInChildren(_scrollRectData);
@@ -38,7 +47,7 @@ namespace ToyBox.Menu {
         private void Update() {
             Scroll();
 
-            if (!_inputManager.IsLastInputMouse) {
+            if (!_isLastInputMouse) {
                 _scrollRect.normalizedPosition = Vector2.Lerp(_scrollRect.normalizedPosition, _newScrollPosition, Time.unscaledDeltaTime * _scrollSpeed);
             }
             else {
@@ -73,5 +82,6 @@ namespace ToyBox.Menu {
                 _newScrollPosition = new Vector2(0, 1 - selectedID / ((float)_scrollRectData.Count - 1));
             }
         }
+        
     }
 }

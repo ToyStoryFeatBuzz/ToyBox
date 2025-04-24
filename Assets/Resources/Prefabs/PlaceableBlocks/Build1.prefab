@@ -77,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.61320746, b: 0.61320746, a: 0.78431374}
+  m_Sprite: {fileID: -1831431818305375865, guid: bbe79085db86d9d4cbdbb8c5b7e28915, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -190,6 +190,9 @@ MonoBehaviour:
   DoErase: 0
   IsChosen: 0
   _bombVisualPrefab: {fileID: 0}
+  IsMovingPlatform: 0
+  MovingPart: {fileID: 0}
+  MovingPartPlaceholder: {fileID: 0}
 --- !u!1 &6429431674262460505
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,9 +269,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 0.61320746, b: 0.61320746, a: 0.39215687}
+  m_SortingOrder: 15
+  m_Sprite: {fileID: -1831431818305375865, guid: bbe79085db86d9d4cbdbb8c5b7e28915, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

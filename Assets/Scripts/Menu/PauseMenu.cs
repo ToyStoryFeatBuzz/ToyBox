@@ -26,7 +26,7 @@ namespace ToyBox.Menu {
         }
         
         public void MainMenu() {
-            SceneManager.LoadScene(0);
+            
         }
         
         public void Select(Selectable selectable) => selectable.Select();

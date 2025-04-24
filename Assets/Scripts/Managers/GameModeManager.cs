@@ -76,7 +76,6 @@ namespace ToyBox.Managers {
 
             }
             else {
-                //_playerManager.ClampScoreToMax(_pointToWin);
                 foreach (Player player in _playerManager.Players) {
                     player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
                 }
@@ -94,7 +93,6 @@ namespace ToyBox.Managers {
                 if (handler != null)
                 {
                     handler.EnableLobbyReturn();
-                    Debug.Log($"Lobby retour activé pour {player.PlayerObject.name}");
                 }
                 else
                 {

@@ -33,14 +33,12 @@ public class ReadyUpHandler : MonoBehaviour
 
         if (isReady)
         {
-            Debug.Log($"{gameObject.name} n'est plus prêt !");
             isReady = false;
             ReadyManager.Instance.PlayerSetReady(this);
             return;
         };
 
         isReady = true;
-        Debug.Log($"{gameObject.name} est prêt !");
         ReadyManager.Instance.PlayerSetReady(this);
     }
 

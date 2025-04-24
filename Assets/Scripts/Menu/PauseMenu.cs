@@ -26,7 +26,9 @@ namespace ToyBox.Menu {
         }
         
         public void MainMenu() {
-            
+            DestroyImmediate(ManagerHolder.Instance.gameObject);
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(0);
         }
         
         public void Select(Selectable selectable) => selectable.Select();

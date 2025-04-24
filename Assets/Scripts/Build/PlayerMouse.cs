@@ -25,7 +25,8 @@ namespace ToyBox.Build {
 
         Camera cam;
         
-        Sprite sprite;
+        Sprite spriteIdle;
+        Sprite spriteClicked;
         PlayerManager _playerManager => PlayerManager.Instance;
 
         private void Awake() {
@@ -42,7 +43,8 @@ namespace ToyBox.Build {
         
         private void Start()
         {
-            sprite = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteIdlle;
+            spriteIdle = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteIdlle;
+            spriteClicked = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteClic;
         }
 
 
@@ -80,6 +82,11 @@ namespace ToyBox.Build {
             _mouseBody.position = camPos + _mousePos;
         }
 
+        public void TriggerClicked()
+        {
+            _mouseBody.GetComponentInChildren<Image>().sprite = spriteClicked;
+        }
+
         public Vector2 Click() {
             return _mouseBody.position;
         }
@@ -89,7 +96,7 @@ namespace ToyBox.Build {
                 _mouseBody = Instantiate(_mouseBodyPrefab);
                 ResetMousePos();
                 _mouseBody.position = _mousePos;
-                _mouseBody.GetComponentInChildren<Image>().sprite = sprite;
+                _mouseBody.GetComponentInChildren<Image>().sprite = spriteIdle;
             }
 
             _mouseBody?.gameObject?.SetActive(activation);

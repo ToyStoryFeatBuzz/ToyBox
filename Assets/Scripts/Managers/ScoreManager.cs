@@ -45,11 +45,6 @@ namespace ToyBox.Managers {
 
             int position = _arrivalOrder.Count - 1;
             int scoreToAdd = (position < _scoreList.Length) ? _scoreList[position] : 0;
-
-            int diff = playerStats.Score + scoreToAdd - GameModeManager.PointToWin;
-            
-            if(diff >0) scoreToAdd -= diff;
-
             playerStats.AddScore(scoreToAdd);
             AddScoreDic(playerName, playerStats.Score, playerStats.color, playerStats.sprite);
         }

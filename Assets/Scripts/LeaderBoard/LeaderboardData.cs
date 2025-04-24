@@ -30,6 +30,7 @@ namespace ToyBox.Leaderboard {
     public class PlayerInfo {
         [Header("Leaderboard")] 
         public Image FillBar;
+        public Image FillBarAdd;
         public TextMeshProUGUI TextSlot;
 
         [Header("Leaderboard Graph")] 

@@ -3,6 +3,7 @@ using ToyBox.Managers;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ToyBox.Leaderboard
 {
@@ -33,20 +34,16 @@ namespace ToyBox.Leaderboard
         {
             ResetLeaderBoard();
             _playerManager.SetNewPlayersEntries(false);
-
-            // Activer le panel avant toute animation
             _leaderboardData.PanelEndMatch.SetActive(true);
-
-            // Attendre une frame pour garantir que tous les enfants sont actifs
             StartCoroutine(DelayedUpdateAndShow());
         }
 
         private IEnumerator DelayedUpdateAndShow()
         {
-            yield return null; // attendre une frame pour que PanelEndMatch soit bien activé
+            yield return null;
 
-            UpdateLeaderboard(); // maintenant on peut lancer les animations
-            yield return StartCoroutine(ShowingLeaderboard()); // continuer normalement
+            UpdateLeaderboard();
+            yield return StartCoroutine(ShowingLeaderboard());
         }
 
         private IEnumerator ShowingLeaderboard()
@@ -79,7 +76,7 @@ namespace ToyBox.Leaderboard
                     parent.gameObject.SetActive(true);
 
                     _leaderboardData.PlayerInfos[i].FillBar.color = c;
-                    StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBar, score / _maxScore));
+                    StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBarAdd, score / _maxScore));
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
 
                     activeSlots.Add(parent);
@@ -89,16 +86,17 @@ namespace ToyBox.Leaderboard
                     parent.gameObject.SetActive(false);
                 }
             }
-
+            
             _slotAnimator.AnimateReorder(activeSlots);
         }
+
 
         public void CheckPlayers()
         {
             _playerScoreDict = _scoreManager.PlayerScores;
         }
 
-        private IEnumerator AnimateFillBar(UnityEngine.UI.Image fillBar, float targetFill)
+        private IEnumerator AnimateFillBar(Image fillBar, float targetFill)
         {
             float startFill = fillBar.fillAmount;
             float elapsed = 0f;

@@ -92,6 +92,9 @@ namespace ToyBox.Leaderboard
             }
 
             int maxScore = Mathf.Max(1, sortedPlayers.Max(p => p.score));
+            
+            maxScore = Mathf.Clamp(maxScore, 0, _gameModeManager.GetPointToWin());
+            
             int maxMatches = _playerManager.Players.Max(p => p.PlayerStats?.MatchScores.Count ?? 0);
 
             for (int i = 0; i < sortedPlayers.Count && i < _leaderboardData.PlayerInfos.Count; i++)
@@ -115,6 +118,8 @@ namespace ToyBox.Leaderboard
             if (stats == null || stats.MatchScores == null || stats.MatchScores.Count == 0) return;
 
             List<int> matchScores = stats.MatchScores;
+            
+            matchScores[matchScores.Count - 1] = Mathf.Min(matchScores[matchScores.Count - 1], maxScore);
 
             LineRenderer lr = _leaderboardData.PlayerInfos[playerIndex].LineRenderer;
             lr.positionCount = matchScores.Count + 1;

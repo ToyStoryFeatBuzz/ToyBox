@@ -29,8 +29,7 @@ public class LeaderboardSlotAnimator : MonoBehaviour
                 originalPositions[rect] = rect.anchoredPosition;
             }
         }
-
-        // Réordonner dans la hiérarchie
+        
         for (int i = 0; i < newOrder.Count; i++)
         {
             newOrder[i].SetSiblingIndex(i);
@@ -41,21 +40,18 @@ public class LeaderboardSlotAnimator : MonoBehaviour
 
     IEnumerator DelayAndAnimate()
     {
-        // Attendre une frame pour que le LayoutGroup applique les nouvelles positions
         yield return null;
 
         if (layoutGroup != null)
             layoutGroup.enabled = false;
-
-        // Stocker les nouvelles positions
+        
         Dictionary<RectTransform, Vector2> newPositions = new Dictionary<RectTransform, Vector2>();
         foreach (RectTransform slot in slots)
         {
             newPositions[slot] = slot.anchoredPosition;
-            slot.anchoredPosition = originalPositions[slot]; // Reset position pour animation
+            slot.anchoredPosition = originalPositions[slot]; 
         }
-
-        // Lancer les animations
+        
         foreach (RectTransform slot in slots)
         {
             StartCoroutine(AnimateMove(slot, originalPositions[slot], newPositions[slot]));

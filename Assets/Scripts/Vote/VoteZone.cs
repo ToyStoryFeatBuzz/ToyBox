@@ -13,8 +13,11 @@ public class VoteZone : MonoBehaviour
 
     [SerializeField] SpriteRenderer _spriteRenderer;
     [SerializeField] List<Sprite> boxSprites = new();
+    [SerializeField] Animator _animator;
 
     int opened = 0;
+    
+    
     
     public void AddVoter(string playerId)
     {
@@ -45,8 +48,9 @@ public class VoteZone : MonoBehaviour
 
             if (opened > 1) return;
             
-            StopAllCoroutines();
-            StartCoroutine(Open());
+            _animator.SetBool("Opened", true);
+            //StopAllCoroutines();
+            //StartCoroutine(Open());
 
             AudioManager.Instance.StopSFX();
             AudioManager.Instance.PlaySFX("Cardboard_Open",pos:transform.position, volume:2f);
@@ -66,8 +70,9 @@ public class VoteZone : MonoBehaviour
 
             if(opened > 0) return;
             
-            StartCoroutine(Close());
-            StopAllCoroutines();
+            _animator.SetBool("Opened", false);
+            //StartCoroutine(Close());
+            //StopAllCoroutines();
 
             AudioManager.Instance.StopSFX();
             AudioManager.Instance.PlaySFX("Cardboard_Close",pos:transform.position, volume:2f);

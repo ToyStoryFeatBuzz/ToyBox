@@ -15,7 +15,7 @@ namespace ToyBox.Leaderboard
         GameModeManager _gameModeManager => GameModeManager.Instance;
         private LeaderboardData _leaderboardData => LeaderboardData.Instance;
         
-        private Dictionary<string, (int score, Color color)> _playerScoreDict;
+        private Dictionary<string, (int score, Color color, Sprite sprite)> _playerScoreDict;
 
         private void Start()
         {
@@ -53,7 +53,7 @@ namespace ToyBox.Leaderboard
         {
             CheckPlayers();
 
-            List<(string name, int score, Color c)> sortedPlayers = GetSortedPlayers();
+            List<(string name, int score, Color c, Sprite sprite)> sortedPlayers = GetSortedPlayers();
 
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
@@ -61,7 +61,7 @@ namespace ToyBox.Leaderboard
 
                 if (i < sortedPlayers.Count)
                 {
-                    (string playerName, int score, Color c) = sortedPlayers[i];
+                    (string playerName, int score, Color c, Sprite sprite) = sortedPlayers[i];
 
                     parent.gameObject.SetActive(true);
                     _leaderboardData.PlayerInfos[i].FillBar.color = c;
@@ -80,15 +80,15 @@ namespace ToyBox.Leaderboard
             _playerScoreDict = _scoreManager.PlayerScores;
         }
 
-        public List<(string name, int score, Color c)> GetSortedPlayers()
+        public List<(string name, int score, Color c, Sprite sprite)> GetSortedPlayers()
         {
-            List<(string name, int score, Color c)> playerList = new();
+            List<(string name, int score, Color c, Sprite sprite)> playerList = new();
 
             foreach (Managers.Player player in _playerManager.Players)
             {
                 if (_playerScoreDict.ContainsKey(player.Name))
                 {
-                    playerList.Add((player.Name, _playerScoreDict[player.Name].score, _playerScoreDict[player.Name].color));
+                    playerList.Add((player.Name, _playerScoreDict[player.Name].score, _playerScoreDict[player.Name].color, _playerScoreDict[player.Name].sprite));
                 }
             }
 

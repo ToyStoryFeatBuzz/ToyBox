@@ -74,7 +74,8 @@ namespace ToyBox.Leaderboard
             _leaderboardData.PanelEndGame.SetActive(true);
             _leaderboardData.Graph.SetActive(true);
             _leaderboardData.Background.SetActive(true);
-            List<(string name, int score, Color c)> sortedPlayers = _leaderBoard.GetSortedPlayers();
+            
+            List<(string name, int score, Color c, Sprite sprite)> sortedPlayers = _leaderBoard.GetSortedPlayers();
 
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
@@ -84,7 +85,8 @@ namespace ToyBox.Leaderboard
                 if (i >= sortedPlayers.Count) {
                     continue;
                 }
-                (string name, int score, Color c) = sortedPlayers[i];
+                (string name, int score, Color c, Sprite sprite) = sortedPlayers[i];
+                _leaderboardData.PlayerInfos[i].ImagePlayer.sprite = sprite;
                 _leaderboardData.PlayerInfos[i].TextPoints.text = score.ToString();
                 _leaderboardData.PlayerInfos[i].TextName.text = name;
             }

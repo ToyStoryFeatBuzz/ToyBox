@@ -60,9 +60,15 @@ namespace ToyBox.Menu  {
             PlayerPrefs.SetInt("Resolution", _currentResolutionID);
             PlayerPrefs.Save();
         }
+        
+        public void SetResolution(int resolutionID) {
+            _currentResolutionID = resolutionID;
+        }   
+
 
         void GetSavedDisplay() {
-            _currentDisplayID = !PlayerPrefs.HasKey("Display") ? 0 : PlayerPrefs.GetInt("Display");
+            Debug.Log(PlayerPrefs.GetInt("Display"));
+            _currentDisplayID = PlayerPrefs.GetInt("Display");
             _displayDropdown.value = _currentDisplayID;
         }
 
@@ -82,8 +88,14 @@ namespace ToyBox.Menu  {
                     break;
             }
 
+            Debug.Log(_currentDisplayID);
+            
             PlayerPrefs.SetInt("Display", _currentDisplayID);
             PlayerPrefs.Save();
+        }
+        
+        public void SetDisplay(int displayID) {
+            _currentDisplayID = displayID;
         }
         
         public void Default() {

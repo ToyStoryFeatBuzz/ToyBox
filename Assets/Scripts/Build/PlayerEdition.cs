@@ -108,8 +108,8 @@ namespace ToyBox.Build {
             _placeable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
             if (_draggedObject.GetComponent<BuildObject>().IsMovingPlatform)
             {
-                _draggedObject.GetComponent<BuildObject>().MovingPart.transform.eulerAngles = new(0, 0, _draggedObject.transform.eulerAngles.z + angle);
-                _draggedObject.GetComponent<BuildObject>().MovingPartPlaceholder.transform.eulerAngles = new(0, 0, _draggedObject.transform.eulerAngles.z + angle);
+                _draggedObject.GetComponent<BuildObject>().MovingPart.transform.eulerAngles = new(0, 0, 0);
+                _draggedObject.GetComponent<BuildObject>().MovingPartPlaceholder.transform.eulerAngles = new(0, 0, 0);
             }
         }
 

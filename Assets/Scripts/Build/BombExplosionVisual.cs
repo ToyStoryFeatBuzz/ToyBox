@@ -9,7 +9,7 @@ public class BombExplosionVisual : MonoBehaviour
 
     public void DestroyAfterAnimation()
     {
-        if (Player) Player.SetDeath();
+        if (Player && !Player.IsDead) Player.SetDeath();
         Destroy(gameObject);
     }
     

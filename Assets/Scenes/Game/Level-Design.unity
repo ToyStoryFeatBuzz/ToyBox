@@ -2462,6 +2462,14 @@ PrefabInstance:
       propertyPath: EditorMapCenter
       value: 
       objectReference: {fileID: 1942090014}
+    - target: {fileID: 5153082043022019535, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: _playerExplosion
+      value: 
+      objectReference: {fileID: 8198391124807663358, guid: 12377e3d9dd0b274c8948e62bd8719f2, type: 3}
+    - target: {fileID: 5153082043022019535, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: camLimitToKillPlayerMult
+      value: 1.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
       propertyPath: m_BackGroundColor.b
       value: 0.4666667

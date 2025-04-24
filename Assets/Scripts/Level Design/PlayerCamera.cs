@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using ToyBox.Build;
 using ToyBox.Managers;
+using ToyBox.Obstacles;
+using ToyBox.Player;
 using UnityEngine;
 
 namespace ToyBox.LevelDesign
@@ -37,6 +39,11 @@ namespace ToyBox.LevelDesign
         [HideInInspector]
         public List<float> playersImpact = new List<float> {};
 
+        [SerializeField] GameObject _playerExplosion;
+        [SerializeField] float camLimitToKillPlayerMult;
+
+        [SerializeField] bool canKillPlayersOutside = false;
+
 
         void Start()
         {
@@ -53,8 +60,8 @@ namespace ToyBox.LevelDesign
                 mouse.mouseInBorderYEvent += MoveCenterY;
             }
 
-            GameModeManager.Instance.OnRaceStartExtern += () => { ActualModeFunction = RaceMode; };
-            GameModeManager.Instance.OnBuildStartExtern += () => { ActualModeFunction = EditorMode; };
+            GameModeManager.Instance.OnRaceStartExtern += () => { ActualModeFunction = RaceMode; canKillPlayersOutside = true; };
+            GameModeManager.Instance.OnBuildStartExtern += () => { ActualModeFunction = EditorMode; canKillPlayersOutside = false; };
         }
 
         public void ResetCenterMap()
@@ -120,6 +127,36 @@ namespace ToyBox.LevelDesign
                 _camSize = Mathf.Clamp(_camSize, _minCamSize, _maxCamSize);
 
                 _mainCam.orthographicSize = Mathf.Lerp(_mainCam.orthographicSize, _camSize, Time.deltaTime * _camZoomSpeed);
+
+                if (!canKillPlayersOutside) return;
+
+                float distX = _mainCam.orthographicSize * _mainCam.aspect;
+                float distY = _mainCam.orthographicSize;
+
+                float minX = _mainCam.transform.position.x - distX * camLimitToKillPlayerMult; 
+                float maxX = _mainCam.transform.position.x + distX * camLimitToKillPlayerMult; 
+                float minY = _mainCam.transform.position.y - distY * camLimitToKillPlayerMult; 
+                float maxY = _mainCam.transform.position.y + distY * camLimitToKillPlayerMult;
+
+                foreach (var player in players)
+                {
+                    if (player.transform.position.x < minX || player.transform.position.x > maxX || player.transform.position.y < minY || player.transform.position.y > maxY)
+                    {
+
+                        if (player.TryGetComponent(out PlayerEnd p))
+                        {
+                            if (p.IsDead) continue;
+
+                            AudioManager.Instance.PlaySFX("PlayerDie", player.position, 1f, 0.7f);
+                            if (_playerExplosion)
+                            {
+                                GameObject playerExplosionVisual = Instantiate(_playerExplosion, transform.position, Quaternion.identity);
+                                playerExplosionVisual.GetComponent<BombExplosionVisual>().Player = p;
+                            }
+                        }
+                    }
+                }
+                
                 
             }
             else

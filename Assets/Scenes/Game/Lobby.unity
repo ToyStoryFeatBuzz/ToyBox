@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db08981de06da142af5e17b0c499ed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapName: Level-Design
+  MapName: LevelDesign2
   _voteManager: {fileID: 2090643621}
   _spriteRenderer: {fileID: 608984841}
   boxSprites:

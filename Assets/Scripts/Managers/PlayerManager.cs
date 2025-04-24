@@ -16,7 +16,7 @@ namespace ToyBox.Managers {
         public static PlayerManager Instance;
         
         public PlayerInputManager PlayerInputManager;
-        public List<SPLayerColor> AnimationClips;
+        public List<StLayerColor> AnimationClips;
         private List<RuntimeAnimatorController> Animators = new();
         
         [SerializeField] Transform _spawnPoint;
@@ -171,7 +171,7 @@ namespace ToyBox.Managers {
     }
 
     [Serializable]
-    public struct SPLayerColor
+    public struct StLayerColor
     {
         public RuntimeAnimatorController animator;
         public Sprite sprite;

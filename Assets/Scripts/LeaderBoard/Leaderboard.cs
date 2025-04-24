@@ -84,6 +84,8 @@ namespace ToyBox.Leaderboard
                     _leaderboardData.PlayerInfos[i].TextPoint.text = score.ToString();
                     _leaderboardData.PlayerInfos[i].TextPoint.color = c;
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
+                    _leaderboardData.PlayerInfos[i].SlotImage.sprite = sprite;
+                    _leaderboardData.PlayerInfos[i].PlayerNameTag.color = c;
                     
                     _leaderboardData.PlayerInfos[i].FillBar.fillAmount = _leaderboardData.PlayerInfos[i].FillBarAdd.fillAmount;
                     

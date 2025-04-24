@@ -1,6 +1,7 @@
 ﻿using ToyBox.Managers;
 using UnityEngine;
 using static ToyBox.Enums;
+using UnityEngine.InputSystem;
 
 namespace ToyBox.Player {
     public class PlayerEnd : MonoBehaviour {

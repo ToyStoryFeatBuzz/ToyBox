@@ -13,22 +13,21 @@ namespace ToyBox.Timer
         PlayerManager _playerManager => PlayerManager.Instance;
         [SerializeField] private float _maxTime;
 
-        float _remainTime;
+        [SerializeField] float _remainTime;
         bool _isRaceStarted;
 
         void Start() {
-            _gameModeManager.OnRaceStartExtern += StartTimer;
-            _gameModeManager.OnRaceEndExtern += StopTimer;
             _remainTime = _maxTime;
             _timerText.text = _remainTime.ToString("00:00<style=\"Smaller\">.00</style>");
         }
 
-        void StartTimer() {
+        public void StartTimer() {
+            Debug.Log("AAAAAAAAAAA");
             _remainTime = _maxTime;
             _isRaceStarted = true;
         }
 
-        void StopTimer() {
+        public void StopTimer() {
             _isRaceStarted = false;
         }
 

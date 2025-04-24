@@ -33,8 +33,8 @@ Transform:
   - {fileID: 5689628275733265762}
   - {fileID: 4318925615928871840}
   - {fileID: 7665360650938235050}
-  - {fileID: 4558337023514017197}
   - {fileID: 552671236442418048}
+  - {fileID: 4558337023514017197}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1558960268788155509
@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UI: {fileID: 3729993669251846734}
+  _timer: {fileID: 2539138170384967273}
 --- !u!1 &2879348101044587013
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &552671236442418048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -388,6 +389,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4228713304179642104, guid: b4aac9eecf0f4e342a51ad79766f0cae, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5079065226035254377, guid: b4aac9eecf0f4e342a51ad79766f0cae, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
@@ -617,13 +622,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5780185033746143882, guid: 657238549b121414a9e5414f549ee1bb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 657238549b121414a9e5414f549ee1bb, type: 3}
+--- !u!114 &2539138170384967273 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7868306183973680684, guid: 657238549b121414a9e5414f549ee1bb, type: 3}
+  m_PrefabInstance: {fileID: 5624154257607151685}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb61bf12ffec02b4fa82194bc0fb1d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4770333746835717576 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 882322052799769997, guid: 657238549b121414a9e5414f549ee1bb, type: 3}

@@ -25,6 +25,8 @@ namespace ToyBox.Managers {
         public Action OnRaceStartIntern;
         public Action OnRaceStartExtern;
         
+        public Action OnCountDownFinishExtern;
+        
         public Action OnRaceEndIntern;
         public Action OnRaceEndExtern;
         
@@ -62,6 +64,7 @@ namespace ToyBox.Managers {
 
 
         private void OpenLeaderBoard() {
+            _levelKit.StopTimer();
             _levelKit.ToggleUI(false);
             if (_playerManager.GetBestScore() < PointToWin)
             {
@@ -130,11 +133,11 @@ namespace ToyBox.Managers {
 
         private void OnCountdownFinished()
         {
-            Debug.Log("Countdown finished");
+            _levelKit.ToggleUI(true);
+            _levelKit.StartTimer();
             _playerManager.SetAnimInIddle(false);
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
-            _levelKit.ToggleUI(true);
             AudioManager.Instance.PlayMusic("RaceMode",0.5f);
         }
         

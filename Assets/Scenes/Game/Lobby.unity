@@ -677,7 +677,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.0004885, y: 2}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2.0004885, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -733,7 +733,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.0004885, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1814,7 +1814,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.0004885, y: 2}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2.0004885, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1870,7 +1870,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.0004885, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2492,7 +2492,25 @@ MonoBehaviour:
   MapName: LevelDesign2
   _voteManager: {fileID: 2090643621}
   _spriteRenderer: {fileID: 1722936466}
-  boxSprites: []
+  boxSprites:
+  - {fileID: 5726586853709832628, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 7507844823958567157, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -762320285649371280, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -8756174595231771998, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -5704547374269120159, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -894891550071576509, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -1638663179738961078, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 5375227112023447842, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -4209583158624194444, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 2059555801834680165, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 3567558362954304430, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -95651599381305129, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -392301726070163207, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 6485263882407577936, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 6090316317397199729, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 3075075101905398386, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: 673623969850029803, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
+  - {fileID: -6226457158022621571, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
   _animator: {fileID: 1722936467}
 --- !u!61 &1722936465
 BoxCollider2D:
@@ -2532,8 +2550,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.0004885, y: 2}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 0.95335776, y: 0.703125}
+    newSize: {x: 2.0004885, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -2583,13 +2601,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -1748127824, guid: 6d3d126a635122842a806c9bbfe32a38, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 5726586853709832628, guid: aa447266f33cc2d4390ab9b05000a2a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.0004885, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2605,7 +2623,7 @@ Animator:
   m_GameObject: {fileID: 1722936462}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ab758e1d25b2929419afb4d260a79a7c, type: 2}
+  m_Controller: {fileID: 9100000, guid: ae147e3008a958644b6135835e2b3cf6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

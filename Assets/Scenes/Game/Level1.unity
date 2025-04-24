@@ -2489,6 +2489,18 @@ PrefabInstance:
       propertyPath: EditorMapCenter
       value: 
       objectReference: {fileID: 67578303}
+    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.027450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.3137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.7568628
+      objectReference: {fileID: 0}
     - target: {fileID: 6903936482531906517, guid: 887377dfea42b3a4693a83b383567078, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -13012,12 +13024,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2686428872622054271, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8497956707384756870, guid: 8d9ac8e9f947403468fce90c6940e713, type: 3}
     - target: {fileID: 5455340239394777946, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
       propertyPath: m_Name
       value: BackgroundLevel1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7235548564733506713, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 8529200168067889147, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 455142113265390617, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 5464043565002205012, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 2830092646226536775, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 823396732982758151, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 7761540876042918888, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 4433471237592306837, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 8504307446032894598, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 3056353880654243153, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 5501572780561887761, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 1208209617070388686, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
+    - {fileID: 8853188411333706554, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cade6c388894f8346ae9aaec64b0dcfa, type: 3}

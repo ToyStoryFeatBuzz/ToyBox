@@ -96,6 +96,8 @@ namespace ToyBox.Build {
                     obj.Pick();
                     _draggedObject = obj.gameObject;
                     _placeable = _buildsManager.CanPlace(_draggedObject.GetComponent<BuildObject>());
+
+                    _playerMouse.TriggerClicked();
                 }
             }
         }

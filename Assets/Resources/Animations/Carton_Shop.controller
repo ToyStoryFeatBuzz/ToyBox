@@ -102,7 +102,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Carton_Chambre_Sprite_0
+  m_Name: Carton_Shop
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Opened
@@ -170,7 +170,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 90c3e438525bad9419ba77e69a54613b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 551004248ae68d04aa41cb5e45e59f7d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -197,7 +197,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 56a0ee9d1c94f5541aacc185fa39b1bc, type: 2}
+  m_Motion: {fileID: 7400000, guid: 54c40ac97ef887d488c6736e9584fce4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -224,7 +224,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4c47809e4840a464d9694a79f11c4a3e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 30d4f84c798f93a478d6c2fb1109bd39, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

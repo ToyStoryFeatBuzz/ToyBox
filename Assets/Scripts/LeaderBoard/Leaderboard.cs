@@ -30,7 +30,7 @@ namespace ToyBox.Leaderboard
 
         public void ShowLeaderboard()
         {
-            print("DDDDDDDDDDDDDDDDDDDD");
+            ResetLeaderBoard();
             _playerManager.SetNewPlayersEntries(false);
             UpdateLeaderboard();
             _leaderboardData.PanelEndMatch.SetActive(true);
@@ -39,7 +39,6 @@ namespace ToyBox.Leaderboard
         
         IEnumerator ShowingLeaderboard()
         {
-            print("EEEEEEEEEEEEEEEEEEEEEEEEE");
             yield return new WaitForSeconds(_timeToShow);
             HideLeaderboard();
             _gameModeManager.OnLeaderboardFinishIntern.Invoke();
@@ -73,15 +72,13 @@ namespace ToyBox.Leaderboard
                     StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBar, score / _maxScore));
                     _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
 
-                    activeSlots.Add(parent); // ajouter à la liste des slots actifs
+                    activeSlots.Add(parent);
                 }
                 else
                 {
                     parent.gameObject.SetActive(false);
                 }
             }
-
-            // Appeler l'animation de classement
             _slotAnimator.AnimateReorder(activeSlots);
         }
 
@@ -107,6 +104,15 @@ namespace ToyBox.Leaderboard
             fillBar.fillAmount = targetFill;
         }
 
+        private void ResetLeaderBoard()
+        {
+            for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
+            {
+                _leaderboardData.PlayerInfos[i].FillBar.fillAmount = 0;
+                _leaderboardData.PlayerInfos[i].TextSlot.text = "";
+                _leaderboardData.PlayerInfos[i].FillBar.color = Color.white;
+            }
+        }
 
         public List<(string name, int score, Color c, Sprite sprite)> GetSortedPlayers()
         {

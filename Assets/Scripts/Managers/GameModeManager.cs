@@ -36,6 +36,8 @@ namespace ToyBox.Managers {
         
         public Action OnBuildStartIntern;
         public Action OnBuildStartExtern;
+
+        public Action OnPreStart;
         
         public TextMeshProUGUI roundsText;
         public TextMeshProUGUI cdText;
@@ -58,10 +60,8 @@ namespace ToyBox.Managers {
 
 
         private void OpenLeaderBoard() {
-            print("AAAAAAAAAAAAAAAAAAAA");
             if (_playerManager.GetBestScore() < PointToWin)
             {
-                print("BBBBBBBBBBBBBBBBBB");
                 OnLeaderboardStartIntern?.Invoke();
                 OnLeaderboardStartExtern?.Invoke();
                 if (roundsText != null)
@@ -76,7 +76,6 @@ namespace ToyBox.Managers {
 
             }
             else {
-                print("CCCCCCCCCCCCCCCCCCC");
                 //_playerManager.ClampScoreToMax(_pointToWin);
                 foreach (Player player in _playerManager.Players) {
                     player.PlayerInput.currentActionMap = player.PlayerInput.actions.FindActionMap("Construct");
@@ -131,9 +130,11 @@ namespace ToyBox.Managers {
 
         public void StartCountDown(float newTime)
         {
+            StartRaceMode();    
+            _playerManager.SetAnimInIddle(true);
             _playerManager.SetPlayersMovements(false);
+            
             StartCoroutine(Countdown(newTime));
-
             foreach (Player player in _playerManager.Players)
             {
                 player.PlayerObject.GetComponent<Rigidbody2D>().linearVelocity.Set(0, 0);
@@ -144,6 +145,7 @@ namespace ToyBox.Managers {
         private void OnCountdownFinished()
         {
             Debug.Log("Countdown finished");
+            _playerManager.SetAnimInIddle(false);
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
             AudioManager.Instance.PlayMusic("RaceMode",0.5f);

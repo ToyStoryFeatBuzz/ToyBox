@@ -32,6 +32,7 @@ namespace ToyBox.Managers {
             _playerManager = _gameModeManager.gameObject.GetComponent<PlayerManager>();
            // _leaderboard = _gameModeManager.transform.parent.GetComponentInChildren<Leaderboard.Leaderboard>();
             _gameModeManager.OnRaceStartExtern += RaceStart;
+            _gameModeManager.OnPreStart += RaceStart;
             _endCollider=transform.GetComponentInChildren<ColliderDetector>();
             _endCollider._onTriggerEnterFunction = OnTriggerEndFunction;
             foreach (Player player in _playerManager.Players)

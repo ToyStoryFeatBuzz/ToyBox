@@ -560,7 +560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7161069049892516604, guid: b4aac9eecf0f4e342a51ad79766f0cae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -11.122314
+      value: -11.12207
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -658,18 +658,6 @@ PrefabInstance:
       propertyPath: EditorMapCenter
       value: 
       objectReference: {fileID: 1942090014}
-    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0.4666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0.2901961
-      objectReference: {fileID: 0}
-    - target: {fileID: 6696371537082829100, guid: 887377dfea42b3a4693a83b383567078, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

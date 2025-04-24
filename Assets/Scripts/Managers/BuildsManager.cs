@@ -27,6 +27,7 @@ namespace ToyBox.Managers
         public bool IsSelecting;
 
         public Action OnObjectPlaced;
+        public Action OnOpeningFinished;
 
         private void Awake(){
             if(_chooseBox !=null)
@@ -43,6 +44,10 @@ namespace ToyBox.Managers
             {
                 Destroy(gameObject);
             }
+        }
+
+        private void Start() {
+            OnOpeningFinished += SpawnItem;
         }
 
         public void AddObject(BuildObject build) { // Called when player placed an object
@@ -98,6 +103,7 @@ namespace ToyBox.Managers
             amount = _playerManager.Players.Count + 3;
 
             _chooseBox.gameObject.SetActive(true);
+            _chooseBox.OpenChooseBox();
 
             for (int i = 0; i < amount; i++)
             {
@@ -125,6 +131,11 @@ namespace ToyBox.Managers
             }
         }
 
+        
+        private void SpawnItem() {
+            throw new NotImplementedException();
+        }
+        
         public void ObjectPicked() // Called when a player picked an object
         {
             _picked++;

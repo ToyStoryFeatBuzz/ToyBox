@@ -152,7 +152,19 @@ namespace ToyBox.Managers
 
         public bool CanPlace(BuildObject testedBuild)  // Tells if testedBuild can be placed and does not collide with already placed objects
         {
-            return !((from build in Objects from offset in build.Offsets where testedBuild.ContainsPos((Vector2)build.transform.position + offset) select build).Any() || (from t in TilemapManager.tilesPos where testedBuild.ContainsPos(t) select t).Any());
+            foreach (Vector2 offset in testedBuild.Offsets)
+            {
+                //Debug.Log("Offset " + offset + "is :" + TilemapManager.Instance.tileMapPolygon.OverlapPoint(offset+(Vector2)testedBuild.transform.position));
+                if (!TilemapManager.Instance.tileMapPolygon.OverlapPoint((Vector2)testedBuild.transform.position + offset))
+                {
+                    return false;
+                }
+            }
+            return !((from build in Objects
+                         from offset in build.Offsets
+                         where testedBuild.ContainsPos((Vector2)build.transform.position + offset)
+                         select build).Any() ||
+                     (from t in TilemapManager.tilesPos where testedBuild.ContainsPos(t) select t).Any());
         }
 
         public void ClearObjects() // Clear all placed objects

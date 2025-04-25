@@ -72,21 +72,26 @@ namespace ToyBox.Menu  {
         }
 
         public void ApplyDisplay() {
+            FullScreenMode mode = FullScreenMode.FullScreenWindow;
+
             switch (_currentDisplayID) {
                 case 0:
-                    Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+                    mode = FullScreenMode.ExclusiveFullScreen;
                     break;
                 case 1:
-                    Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+                    mode = FullScreenMode.FullScreenWindow;
                     break;
                 case 2:
-                    Screen.fullScreenMode = FullScreenMode.MaximizedWindow;
+                    mode = FullScreenMode.MaximizedWindow;
                     break;
                 case 3:
-                    Screen.fullScreenMode = FullScreenMode.Windowed;
+                    mode = FullScreenMode.Windowed;
                     break;
             }
-            
+
+            Resolution resolution = _filteredResolutions[_currentResolutionID];
+            Screen.SetResolution(resolution.width, resolution.height, mode, _currentRefreshRate);
+
             PlayerPrefs.SetInt("Display", _currentDisplayID);
             PlayerPrefs.Save();
         }

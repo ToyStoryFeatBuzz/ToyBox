@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: bfcaf215e6b1a674388c5e81d07a6647
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6672172051453188763
+    second: Carton_Playground_Sprite_0
+  - first:
+      213: -7100372085382133525
+    second: Carton_Playground_Sprite_1
+  - first:
+      213: 609910457463221713
+    second: Carton_Playground_Sprite_2
+  - first:
+      213: -8742169633064862406
+    second: Carton_Playground_Sprite_3
+  - first:
+      213: -3122574653857598532
+    second: Carton_Playground_Sprite_4
+  - first:
+      213: 4721697764122906642
+    second: Carton_Playground_Sprite_5
+  - first:
+      213: 75969339372802194
+    second: Carton_Playground_Sprite_6
+  - first:
+      213: 6959280220302264844
+    second: Carton_Playground_Sprite_7
+  - first:
+      213: -4880453090451743618
+    second: Carton_Playground_Sprite_8
+  - first:
+      213: 4829064964162960488
+    second: Carton_Playground_Sprite_9
+  - first:
+      213: -3886472657681282836
+    second: Carton_Playground_Sprite_10
+  - first:
+      213: -1137298639292948073
+    second: Carton_Playground_Sprite_11
+  - first:
+      213: 1616761319885819413
+    second: Carton_Playground_Sprite_12
+  - first:
+      213: -7136771634701480252
+    second: Carton_Playground_Sprite_13
+  - first:
+      213: -1622986587230353111
+    second: Carton_Playground_Sprite_14
+  - first:
+      213: 1410563221794426958
+    second: Carton_Playground_Sprite_15
+  - first:
+      213: 1527769519088999848
+    second: Carton_Playground_Sprite_16
+  - first:
+      213: -6450922824782125876
+    second: Carton_Playground_Sprite_17
+  - first:
+      213: -8608332448087142211
+    second: Carton_Playground_Sprite_18
+  - first:
+      213: -7388865426264193056
+    second: Carton_Playground_Sprite_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1705
+        width: 366
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a182f4121589c50800000000000000
+      internalID: 6672172051453188763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1705
+        width: 366
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8c2bd2539667d90800000000000000
+      internalID: -7100372085382133525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1705
+        width: 366
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd24e16456d67800800000000000000
+      internalID: 609910457463221713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 1705
+        width: 366
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d36f669039da680800000000000000
+      internalID: -8742169633064862406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 1705
+        width: 366
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb3fd2c75e26aa4d0800000000000000
+      internalID: -3122574653857598532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1193
+        width: 366
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2105d4f8917d68140800000000000000
+      internalID: 4721697764122906642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1193
+        width: 366
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290132f26b5ed0100800000000000000
+      internalID: 75969339372802194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1193
+        width: 366
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ac48f0d74549060800000000000000
+      internalID: 6959280220302264844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 1193
+        width: 361
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c9aa0a5c5254cb0800000000000000
+      internalID: -4880453090451743618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1193
+        width: 346
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86cb73adff8440340800000000000000
+      internalID: 4829064964162960488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 681
+        width: 317
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce883a195b9701ac0800000000000000
+      internalID: -3886472657681282836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 681
+        width: 300
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 791a869c9e08730f0800000000000000
+      internalID: -1137298639292948073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 681
+        width: 295
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ec26ebad3ef6610800000000000000
+      internalID: 1616761319885819413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 681
+        width: 281
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cec88ea20815fc90800000000000000
+      internalID: -7136771634701480252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_14
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 681
+        width: 256
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92949e04c4ef979e0800000000000000
+      internalID: -1622986587230353111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_15
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 169
+        width: 244
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e409948d6c3539310800000000000000
+      internalID: 1410563221794426958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_16
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 169
+        width: 244
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad18fb784ab33510800000000000000
+      internalID: 1527769519088999848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_17
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 169
+        width: 244
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc4e66b8ed7b976a0800000000000000
+      internalID: -6450922824782125876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_18
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 169
+        width: 244
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db01c435f3f098880800000000000000
+      internalID: -8608332448087142211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carton_Playground_Sprite_19
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 169
+        width: 244
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e78b5eea0a757990800000000000000
+      internalID: -7388865426264193056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Carton_Playground_Sprite_0: 6672172051453188763
+      Carton_Playground_Sprite_1: -7100372085382133525
+      Carton_Playground_Sprite_10: -3886472657681282836
+      Carton_Playground_Sprite_11: -1137298639292948073
+      Carton_Playground_Sprite_12: 1616761319885819413
+      Carton_Playground_Sprite_13: -7136771634701480252
+      Carton_Playground_Sprite_14: -1622986587230353111
+      Carton_Playground_Sprite_15: 1410563221794426958
+      Carton_Playground_Sprite_16: 1527769519088999848
+      Carton_Playground_Sprite_17: -6450922824782125876
+      Carton_Playground_Sprite_18: -8608332448087142211
+      Carton_Playground_Sprite_19: -7388865426264193056
+      Carton_Playground_Sprite_2: 609910457463221713
+      Carton_Playground_Sprite_3: -8742169633064862406
+      Carton_Playground_Sprite_4: -3122574653857598532
+      Carton_Playground_Sprite_5: 4721697764122906642
+      Carton_Playground_Sprite_6: 75969339372802194
+      Carton_Playground_Sprite_7: 6959280220302264844
+      Carton_Playground_Sprite_8: -4880453090451743618
+      Carton_Playground_Sprite_9: 4829064964162960488
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

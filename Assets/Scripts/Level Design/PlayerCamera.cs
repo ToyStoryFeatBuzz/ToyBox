@@ -37,7 +37,7 @@ namespace ToyBox.LevelDesign
 
         [Range(0f, 1f)]
         [HideInInspector]
-        public List<float> playersImpact = new List<float> {};
+        public List<float> playersImpact = new();
 
         [SerializeField] GameObject _playerExplosion;
         [SerializeField] float camLimitToKillPlayerMult;
@@ -56,10 +56,10 @@ namespace ToyBox.LevelDesign
             foreach (var player in _playerManager.Players)
             {
                 var mouse = player.PlayerObject.GetComponent<PlayerMouse>();
-                mouse.mouseInBorderXEvent = (float f) => { };
-                mouse.mouseInBorderYEvent = (float f) => { };
-                mouse.mouseInBorderXEvent += MoveCenterX;
-                mouse.mouseInBorderYEvent += MoveCenterY;
+                mouse.OnMouseInBorderXEvent = (float f) => { };
+                mouse.OnMouseInBorderYEvent = (float f) => { };
+                mouse.OnMouseInBorderXEvent += MoveCenterX;
+                mouse.OnMouseInBorderYEvent += MoveCenterY;
             }
 
             GameModeManager.Instance.OnRaceStartExtern += () => { ActualModeFunction = RaceMode; canKillPlayersOutside = true; };
@@ -160,10 +160,6 @@ namespace ToyBox.LevelDesign
                 }
                 
                 
-            }
-            else
-            {
-                Debug.Log("No player in the game");
             }
         }
 

@@ -49,8 +49,8 @@ namespace ToyBox.Managers {
             foreach (Player player in _playerManager.Players)
             {
                 var mouse = player.PlayerObject.GetComponent<PlayerMouse>();
-                mouse.mouseInBorderXEvent += movementX;
-                mouse.mouseInBorderYEvent += movementY;
+                mouse.OnMouseInBorderXEvent += movementX;
+                mouse.OnMouseInBorderYEvent += movementY;
             }
         }
 

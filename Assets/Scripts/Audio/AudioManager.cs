@@ -27,41 +27,28 @@ public class AudioManager : MonoBehaviour
 
     private void PlaySound( Sound[] soundList, string name,Vector3 pos=new() ,float sonsLocale=0.0f, float volume=1f)
     {
-        Sound sound = Array.Find(soundList, s => s._name == name);
-    
-        if (sound == null)
-        {
-            Debug.Log($"{name} Not Found");
-        }
-        else
-        {
-            GameObject tempAudio=new GameObject("tempAudio");
-            tempAudio.transform.position=pos;
-            AudioSource audioSource= tempAudio.AddComponent<AudioSource>();
-            audioSource.spatialBlend=sonsLocale;
-            audioSource.clip = sound._clip;
-            audioSource.volume = volume;
-            audioSource.Play();
-            Destroy(tempAudio,sound._clip.length);
-          
-        }
+        Sound sound = Array.Find(soundList, s => s.Name == name);
+
+        if (sound == null) return;
+        GameObject tempAudio=new ("tempAudio");
+        tempAudio.transform.position=pos;
+        AudioSource audioSource= tempAudio.AddComponent<AudioSource>();
+        audioSource.spatialBlend=sonsLocale;
+        audioSource.clip = sound.Clip;
+        audioSource.volume = volume;
+        audioSource.Play();
+        Destroy(tempAudio,sound.Clip.length);
     }
     
     private void PlaySound(Sound[] soundList,string name, AudioSource audioSource, float volume=1f)
     {
-        Sound sound = Array.Find(soundList, s => s._name == name);
-    
-        if (sound == null)
-        {
-            Debug.Log($"{name} Not Found");
-        }
-        else
-        {
-            audioSource.clip = sound._clip;
-            audioSource.volume = volume;
-            audioSource.loop = true;
-            audioSource.Play();
-        }
+        Sound sound = Array.Find(soundList, s => s.Name == name);
+
+        if (sound == null) return;
+        audioSource.clip = sound.Clip;
+        audioSource.volume = volume;
+        audioSource.loop = true;
+        audioSource.Play();
     }
     
 
@@ -94,6 +81,6 @@ public class AudioManager : MonoBehaviour
 
     public bool IsSoundInList(Sound[] soundList, string name)
     {
-        return Array.Exists(soundList, s => s._name == name);
+        return Array.Exists(soundList, s => s.Name == name);
     }
 }

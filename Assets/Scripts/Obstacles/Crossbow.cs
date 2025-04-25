@@ -33,7 +33,6 @@ public class Crossbow : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent(out PlayerMovement player))
             {
-                Debug.Log("Hit Player");
                 Shoot();
             }
         }

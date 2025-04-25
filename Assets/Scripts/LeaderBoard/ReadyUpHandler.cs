@@ -27,7 +27,6 @@ public class ReadyUpHandler : MonoBehaviour
     {
         if (!canReturnToLobby)
         {
-            Debug.Log("Retour au lobby désactivé pour le moment.");
             return;
         }
 

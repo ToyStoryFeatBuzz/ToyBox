@@ -13,7 +13,6 @@ namespace ToyBox.Managers {
         }
 
         public void ToggleImage(bool toggle) {
-            Debug.Log("Toggle" + toggle);
             _image.enabled = toggle;
         }
         

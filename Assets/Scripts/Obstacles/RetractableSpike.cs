@@ -23,7 +23,6 @@ public class RetractableSpike : MonoBehaviour
             {
                 if (collider.gameObject.GetComponent<PlayerMovement>())
                 {
-                    Debug.Log("Raising spikes");
                     StartCoroutine(ResettingSpiking());
                 }
             }

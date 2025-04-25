@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace ToyBox.Player
 {
@@ -9,6 +10,7 @@ namespace ToyBox.Player
         [SerializeField] private float _duration;
 
         public bool CanUlti = true;
+
         public event Action callUltiEvent;
 
         public virtual void Ultimate()
@@ -28,7 +30,6 @@ namespace ToyBox.Player
 
         public void UseUltimate()
         {
-            Debug.Log("Ultimate" + CanUlti);
             if (CanUlti)
             {
                 callUltiEvent?.Invoke();

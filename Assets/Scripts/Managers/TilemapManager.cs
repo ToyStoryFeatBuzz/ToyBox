@@ -5,13 +5,16 @@ using UnityEngine.Tilemaps;
 
 public class TilemapManager : MonoBehaviour
 {
+    public static TilemapManager Instance;
     [SerializeField] Tilemap _tilemap;
+    [SerializeField] public Collider2D tileMapPolygon;
 
     public static HashSet<Vector2> tilesPos = new();
 
     private void Awake()
     {
         GetAllTilesInTilemap();
+        Instance = this;
     }
 
     void GetAllTilesInTilemap()

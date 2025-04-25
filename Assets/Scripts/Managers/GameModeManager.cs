@@ -144,6 +144,7 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
                 player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
+                player.PlayerObject.GetComponent<SpeedUltimate>().CanUlti = true;
             }
             _playerManager.SetNewPlayersEntries(true);
             OnRaceStartIntern?.Invoke();
@@ -169,7 +170,7 @@ namespace ToyBox.Managers {
                 player.PlayerState = Enums.EPlayerState.Alive;
                 player.PlayerObject.GetComponent<PlayerEdition>().enabled = false;
                 player.PlayerObject.GetComponent<PlayerEnd>().IsDead = false;
-                player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
+                player.PlayerObject.GetComponent<SpeedUltimate>().enabled = false;
                 player.PlayerStats.ResetScore();
             }
             

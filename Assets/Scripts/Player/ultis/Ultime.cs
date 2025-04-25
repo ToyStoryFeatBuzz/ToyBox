@@ -9,7 +9,8 @@ namespace ToyBox.Player
     {
         [SerializeField] private float _duration;
 
-        [FormerlySerializedAs("_canUlti")] public bool CanUlti = true;
+        public bool CanUlti = true;
+
         public event Action callUltiEvent;
 
         public virtual void Ultimate()

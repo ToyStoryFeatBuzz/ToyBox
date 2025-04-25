@@ -154,7 +154,7 @@ namespace ToyBox.Managers
             }
         }
 
-        public bool CanPlace(BuildObject testedBuild)  // Tells if testedBuild can be placed and does not collid with already placed objects
+        public bool CanPlace(BuildObject testedBuild)  // Tells if testedBuild can be placed and does not collide with already placed objects
         {
             return !((from build in Objects from offset in build.Offsets where testedBuild.ContainsPos((Vector2)build.transform.position + offset) select build).Any() || (from t in TilemapManager.tilesPos where testedBuild.ContainsPos(t) select t).Any());
         }

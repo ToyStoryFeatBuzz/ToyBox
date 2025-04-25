@@ -20,8 +20,8 @@ namespace ToyBox.Player {
             Debug.Log(gameObject.name + " is dead (SetDeath called)");
             _playerManager.SetPlayerState(gameObject, EPlayerState.Dead);
             IsDead = true;
-            gameObject.transform.position = new Vector2(-999, -999);
             _scoreManager.AddDeathScore(_playerStats.Name, _playerStats);
+            gameObject.transform.position = new Vector2(transform.position.x, -200);
         }
 
         public void SetWin() {

@@ -29,7 +29,6 @@ namespace ToyBox.LevelDesign {
         }
 
         private void OnCompleted(AsyncOperation operation) {
-            print("GameManager is " + (_gameModeManager != null));
             _gameModeManager.StartCountDown(3.5f);
         }
     }

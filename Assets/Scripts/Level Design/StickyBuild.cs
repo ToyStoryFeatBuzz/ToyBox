@@ -27,7 +27,6 @@ namespace ToyBox.Build
 
         void CheckAroundForGluedItems()
         {
-            Debug.Log("Checking Around For Glued Items");
             _originalPosition = transform.position;
             HashSet<Vector2> globalGluePoints = GluePoints.Select(gp => _originalPosition + gp).ToHashSet();
 
@@ -35,13 +34,12 @@ namespace ToyBox.Build
             {
                 Vector2 blockPos = block.transform.position;
 
-                if (block.Offsets.Any(offset => globalGluePoints.Contains(blockPos + offset)))
-                {
-                    Debug.Log("Sticky");
-                    _gluedObjects.Add(block);
-                    _movingBlock.transform.position = _originalPosition;
-                    block.gameObject.transform.parent = _movingBlock.transform;
+                if (!block.Offsets.Any(offset => globalGluePoints.Contains(blockPos + offset))) {
+                    continue;
                 }
+                _gluedObjects.Add(block);
+                _movingBlock.transform.position = _originalPosition;
+                block.gameObject.transform.parent = _movingBlock.transform;
             }
 
         }

@@ -91,10 +91,6 @@ namespace ToyBox.Managers {
                 {
                     handler.EnableLobbyReturn();
                 }
-                else
-                {
-                    Debug.LogWarning($"Aucun ReadyUpHandler trouvé pour {player.PlayerObject.name}");
-                }
             }
         }
 

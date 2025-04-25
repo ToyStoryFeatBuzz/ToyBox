@@ -191,10 +191,8 @@ namespace ToyBox.Leaderboard
                 graphElement.GetComponent<GraphElement>().Init(i * 10, new Vector2(-28f, 14f), new(1, 0));
             }
             
-            // arriver - départ = distance
-            //     distance / nb de rounds ou score max = step
-            //         pos départ + step
 
+            
             _lineBorderX.SetPositions(borderX);
             _lineBorderY.SetPositions(borderY);
         }

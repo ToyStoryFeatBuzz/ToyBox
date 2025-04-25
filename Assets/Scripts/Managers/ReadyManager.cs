@@ -1,10 +1,7 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using ToyBox.Leaderboard;
 using ToyBox.Managers;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ReadyManager : MonoBehaviour
@@ -12,8 +9,8 @@ public class ReadyManager : MonoBehaviour
     public static ReadyManager Instance;
 
     [SerializeField] LeaderboardGraph _leaderboardGraph;
-    [SerializeField] Sprite checkSprite;
-    [SerializeField] Sprite uncheckSprite;
+    [SerializeField] Sprite _checkSprite;
+    [SerializeField] Sprite _uncheckSprite;
     public List<Image> CheckedImageList = new();
     
     PlayerManager _playerManager => PlayerManager.Instance;
@@ -37,32 +34,22 @@ public class ReadyManager : MonoBehaviour
         if (!readyPlayers.Contains(handler))
             readyPlayers.Add(handler);
         
-        for(int i = 0; i < _playerManager.Players.Count; i++)
-        {
-            if (_playerManager.Players[i].ReadyUpHandler.CheckReady())
-            {
-                CheckedImageList[i].sprite = checkSprite;
-            }
-            else
-            {
-                CheckedImageList[i].sprite = uncheckSprite;
-            }
+        for(int i = 0; i < _playerManager.Players.Count; i++) {
+            CheckedImageList[i].sprite = _playerManager.Players[i].ReadyUpHandler.CheckReady() ? _checkSprite : _uncheckSprite;
         }
 
-        if (AreAllPlayersReady())
-        {
-            Debug.Log("Tous les joueurs sont prêts !");
-            ResetReady();
-            _gameModeManager.ReturnToLobby();
-            _leaderboardGraph.HideLeaderboard();
+        if (!AreAllPlayersReady()) {
+            return;
         }
+        ResetReady();
+        _gameModeManager.ReturnToLobby();
+        _leaderboardGraph.HideLeaderboard();
     }
 
     bool AreAllPlayersReady()
     {
         if (_playerManager == null || _playerManager.Players == null || _playerManager.Players.Count == 0)
         {
-            Debug.LogWarning("Aucun joueur trouvé dans PlayerManager !");
             return false;
         }
 
@@ -70,7 +57,6 @@ public class ReadyManager : MonoBehaviour
         {
             if (player.ReadyUpHandler == null)
             {
-                Debug.LogWarning($"Un joueur n'a pas de ReadyUpHandler !");
                 return false;
             }
             
@@ -86,9 +72,8 @@ public class ReadyManager : MonoBehaviour
     
     public void ResetReady()
     {
-        for (int i = 0; i < CheckedImageList.Count; i++)
-        {
-            CheckedImageList[i].sprite = uncheckSprite;
+        foreach (Image image in CheckedImageList) {
+            image.sprite = _uncheckSprite;
         }
         foreach (Player player in _playerManager.Players)
         {

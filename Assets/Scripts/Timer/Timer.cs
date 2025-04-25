@@ -22,7 +22,6 @@ namespace ToyBox.Timer
         }
 
         public void StartTimer() {
-            Debug.Log("AAAAAAAAAAA");
             _remainTime = _maxTime;
             _isRaceStarted = true;
         }

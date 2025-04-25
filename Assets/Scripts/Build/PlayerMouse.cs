@@ -17,16 +17,16 @@ namespace ToyBox.Build {
         [FormerlySerializedAs("mouseSensivity")] [SerializeField]
         float _mouseSensitivity;
 
-        public Action<float> mouseInBorderXEvent;
-        public Action<float> mouseInBorderYEvent;
+        public Action<float> OnMouseInBorderXEvent;
+        public Action<float> OnMouseInBorderYEvent;
 
-        float maxX;
-        float maxY;
+        float _maxX;
+        float _maxY;
 
-        Camera cam;
+        Camera _cam;
         
-        Sprite spriteIdle;
-        Sprite spriteClicked;
+        Sprite _spriteIdle;
+        Sprite _spriteClicked;
         PlayerManager _playerManager => PlayerManager.Instance;
 
         private void Awake() {
@@ -36,26 +36,26 @@ namespace ToyBox.Build {
             ResetMousePos();
             _mouseBody.position = _mousePos;
             ActivateMouse(false);
-            cam = Camera.main;
-            _mouseBody.parent = cam.transform;
+            _cam = Camera.main;
+            _mouseBody.parent = _cam.transform;
            
         }
         
         private void Start()
         {
-            spriteIdle = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteIdlle;
-            spriteClicked = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteClic;
+            _spriteIdle = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteIdlle;
+            _spriteClicked = _playerManager.AnimationClips[_playerManager.Players.Count -1 ].spriteClic;
         }
 
 
         private void SetMaxPos()
         {
-            if (!cam) {
-                cam = Camera.main;
+            if (!_cam) {
+                _cam = Camera.main;
             }
 
-            maxX = cam.orthographicSize * cam.aspect;
-            maxY = cam.orthographicSize;
+            _maxX = _cam.orthographicSize * _cam.aspect;
+            _maxY = _cam.orthographicSize;
         }
 
 
@@ -66,25 +66,25 @@ namespace ToyBox.Build {
         public void Move(Vector2 movement) {
             SetMaxPos();
 
-            Vector2 camPos = cam.transform.position;
+            Vector2 camPos = _cam.transform.position;
             _mousePos += movement * _mouseSensitivity;
 
-            if (Mathf.Abs(_mousePos.x) > maxX * 0.95f)
+            if (Mathf.Abs(_mousePos.x) > _maxX * 0.95f)
             {
-                mouseInBorderXEvent.Invoke(Mathf.Sign(_mousePos.x));
+                OnMouseInBorderXEvent.Invoke(Mathf.Sign(_mousePos.x));
             }
-            if (Mathf.Abs(_mousePos.y) > maxY * 0.95f)
+            if (Mathf.Abs(_mousePos.y) > _maxY * 0.95f)
             {
-                mouseInBorderYEvent.Invoke(Mathf.Sign(_mousePos.y));
+                OnMouseInBorderYEvent.Invoke(Mathf.Sign(_mousePos.y));
             }
 
-            _mousePos.Set(Mathf.Clamp(_mousePos.x, -maxX, maxX), Mathf.Clamp(_mousePos.y, -maxY, maxY));
+            _mousePos.Set(Mathf.Clamp(_mousePos.x, -_maxX, _maxX), Mathf.Clamp(_mousePos.y, -_maxY, _maxY));
             _mouseBody.position = camPos + _mousePos;
         }
 
         public void TriggerClicked()
         {
-            _mouseBody.GetChild(0).GetComponent<Image>().sprite = spriteClicked;
+            _mouseBody.GetChild(0).GetComponent<Image>().sprite = _spriteClicked;
         }
 
         public void SetPlacingPossibility(bool possibility)
@@ -101,7 +101,7 @@ namespace ToyBox.Build {
                 _mouseBody = Instantiate(_mouseBodyPrefab);
                 ResetMousePos();
                 _mouseBody.position = _mousePos;
-                _mouseBody.GetChild(0).GetComponent<Image>().sprite = spriteIdle;
+                _mouseBody.GetChild(0).GetComponent<Image>().sprite = _spriteIdle;
             }
 
             _mouseBody?.gameObject?.SetActive(activation);

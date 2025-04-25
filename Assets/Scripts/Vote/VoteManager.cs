@@ -4,6 +4,7 @@ using NUnit.Framework.Constraints;
 using UnityEngine;
 using ToyBox.Managers;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 
 public class VoteManager : MonoBehaviour
@@ -11,21 +12,20 @@ public class VoteManager : MonoBehaviour
     public VoteZone[] VoteZones;
     
     private PlayerManager _playerManager => PlayerManager.Instance;
-    private List<string> _votedPlayers = new List<string>();
-    private bool _hasTallied = false;
+    private List<string> _votedPlayers = new ();
+    private bool _hasTallied;
     private Coroutine _countdownCoroutine;
-    public bool oneplayer =  false;
+    [FormerlySerializedAs("oneplayer")] public bool HasOneplayer;
     
     public void OnPlayerVoted(string playerId)
     {
         if (_votedPlayers.Contains(playerId)) return;
 
         _votedPlayers.Add(playerId);
-        Debug.Log($"{playerId} a voté. Total votes : {_votedPlayers.Count}/{_playerManager.Players.Count}");
-
+        
         float majority = _playerManager.Players.Count / 2f;
 
-        if (!_hasTallied && _playerManager.Players.Count >= 2 || !_hasTallied && oneplayer == true)
+        if (!_hasTallied && _playerManager.Players.Count >= 2 || !_hasTallied && HasOneplayer == true)
         {
             if (_votedPlayers.Count >= _playerManager.Players.Count)
             {
@@ -35,7 +35,6 @@ public class VoteManager : MonoBehaviour
             {
                 if (_countdownCoroutine == null)
                 {
-                    Debug.Log("⏳ Majorité atteinte. Début du compte à rebours de 15 secondes...");
                     _countdownCoroutine = StartCoroutine(VoteCountdown());
                 }
             }
@@ -47,20 +46,17 @@ public class VoteManager : MonoBehaviour
         if (!_votedPlayers.Contains(playerId)) return;
 
         _votedPlayers.Remove(playerId);
-        Debug.Log($"{playerId} a retiré son vote. Total votes : {_votedPlayers.Count}/{_playerManager.Players.Count}");
-
+        
         float majority = _playerManager.Players.Count / 2f;
         
         if (_votedPlayers.Count <= majority && _countdownCoroutine != null)
         {
             StopCoroutine(_countdownCoroutine);
             _countdownCoroutine = null;
-            Debug.Log("❌ Majorité perdue. Compte à rebours annulé.");
         }
         
         else if (_votedPlayers.Count > majority && _countdownCoroutine == null)
         {
-            Debug.Log("⏳ Majorité rétablie. Redémarrage du compte à rebours de 15 secondes...");
             _countdownCoroutine = StartCoroutine(VoteCountdown());
         }
     }
@@ -73,12 +69,10 @@ public class VoteManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             countdown -= 1f;
-            Debug.Log($"⏳ Fin du vote dans {countdown} secondes...");
         }
 
         if (!_hasTallied)
         {
-            Debug.Log("🕒 Temps écoulé. Vote terminé.");
             TallyVotes();
         }
     }
@@ -113,19 +107,13 @@ public class VoteManager : MonoBehaviour
             if (topZones.Count == 1)
             {
                 winner = topZones[0];
-                Debug.Log($"🏆 Map gagnante : {winner.MapName} avec {highestVote} votes !");
             }
             else
             {
                 winner = topZones[Random.Range(0, topZones.Count)];
-                Debug.Log($"🎲 Égalité entre plusieurs maps. Map choisie au hasard : {winner.MapName} !");
             }
             AudioManager.Instance.StopMusic();
             LoadMap(winner.MapName);
-        }
-        else
-        {
-            Debug.LogWarning("⚠️ Aucun vote reçu. Impossible de choisir une map.");
         }
     }
 

@@ -106,8 +106,6 @@ namespace ToyBox.Managers
 
         
         public void SpawnItem() {
-            Debug.Log("Spawn");
-            Debug.Log(_shuffleAmount);
             
             for (int i = 0; i < _shuffleAmount; i++)
             {
@@ -122,8 +120,6 @@ namespace ToyBox.Managers
                         probability = objectProbability;
                         chosenObject = _objectsStruct[j].ObjectPrefab;
                     }
-                    //Debug.Log($"Object : {_objectsStruct[j].ObjectPrefab.name} with probability : {objectProbability}");
-
                 }
                 
                 

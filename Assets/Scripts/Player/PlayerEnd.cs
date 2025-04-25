@@ -17,7 +17,6 @@ namespace ToyBox.Player {
         }
 
         public void SetDeath() {
-            Debug.Log(gameObject.name + " is dead (SetDeath called)");
             _playerManager.SetPlayerState(gameObject, EPlayerState.Dead);
             IsDead = true;
             gameObject.transform.position = new Vector2(-999, -999);
@@ -26,7 +25,6 @@ namespace ToyBox.Player {
 
         public void SetWin() {
             _playerManager.SetPlayerState(gameObject, EPlayerState.Finished);
-            print(_scoreManager==null);
             _scoreManager.AddScore(_playerStats.Name, _playerStats);
         }
     }

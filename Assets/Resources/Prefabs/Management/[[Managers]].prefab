@@ -1046,8 +1046,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _leaderboardGraph: {fileID: 2639602786272737210}
-  checkSprite: {fileID: 21300000, guid: 9886b7ea5cf0fde4b93b71add9a1ee89, type: 3}
-  uncheckSprite: {fileID: 21300000, guid: 64c27f3e44faa8c45a27fc82ed3048fd, type: 3}
+  _checkSprite: {fileID: 21300000, guid: 582bcac71a5b6774b8132d91051c1750, type: 3}
+  _uncheckSprite: {fileID: 21300000, guid: bd6c2ccb3851e014ab68eb190d8bed04, type: 3}
   CheckedImageList:
   - {fileID: 5053218763809566616}
   - {fileID: 5965926287916539383}

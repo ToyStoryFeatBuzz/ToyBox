@@ -20,12 +20,10 @@ public class ShowMap : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         _canvas.gameObject.SetActive(true);
-        Debug.Log("OnTriggerEnter2D");
     }
     
     private void OnTriggerExit2D(Collider2D other)
     {
         _canvas.gameObject.SetActive(false);
-        Debug.Log("OnTriggerExit2D");
     }
 }

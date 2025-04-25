@@ -67,7 +67,6 @@ namespace ToyBox.Menu  {
 
 
         void GetSavedDisplay() {
-            Debug.Log(PlayerPrefs.GetInt("Display"));
             _currentDisplayID = PlayerPrefs.GetInt("Display");
             _displayDropdown.value = _currentDisplayID;
         }
@@ -87,8 +86,6 @@ namespace ToyBox.Menu  {
                     Screen.fullScreenMode = FullScreenMode.Windowed;
                     break;
             }
-
-            Debug.Log(_currentDisplayID);
             
             PlayerPrefs.SetInt("Display", _currentDisplayID);
             PlayerPrefs.Save();

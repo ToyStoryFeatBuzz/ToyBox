@@ -78,7 +78,6 @@ namespace ToyBox.Managers {
             if(Players.FirstOrDefault(_player => _player.PlayerInput == player) != null){
                 return;
             }
-            Debug.Log("Player added");
             AudioManager.Instance.PlaySFX("PlayerJoin");
             string name = "Player " + (Players.Count + 1);
             player.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = name;

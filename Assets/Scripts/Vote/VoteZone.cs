@@ -42,7 +42,6 @@ public class VoteZone : MonoBehaviour
         if (pv != null)
         {
             pv.EnterZone(this);
-            Debug.Log(pv.name + " has entered vote zone");
 
             opened ++;
 
@@ -64,7 +63,6 @@ public class VoteZone : MonoBehaviour
         if (pv != null)
         {
             pv.ExitZone(this);
-            Debug.Log(_voters.Count);
 
             opened--;
 

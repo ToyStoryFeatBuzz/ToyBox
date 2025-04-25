@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using ToyBox.Leaderboard;
 using ToyBox.Managers;
 using UnityEngine;
@@ -102,6 +103,7 @@ public class ReadyManager : MonoBehaviour
         for(int i= 0; i < _playerManager.Players.Count; i++)
         {
             CheckedImageList[i].gameObject.SetActive(true);
+            CheckedImageList[i].transform.GetComponentInChildren<TextMeshProUGUI>().text = _playerManager.Players[i].Name;
         }
     }
 }

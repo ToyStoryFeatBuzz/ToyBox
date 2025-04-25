@@ -53,9 +53,9 @@ namespace ToyBox.LevelDesign
             EditorMapCenter.position = new Vector3(EditorMapCenter.position.x, EditorMapCenter.position.y, -10);
             ActualModeFunction = RaceMode;
 
-            foreach (var player in _playerManager.Players)
+            foreach (Managers.Player player in _playerManager.Players)
             {
-                var mouse = player.PlayerObject.GetComponent<PlayerMouse>();
+                PlayerMouse mouse = player.PlayerObject.GetComponent<PlayerMouse>();
                 mouse.OnMouseInBorderXEvent = (float f) => { };
                 mouse.OnMouseInBorderYEvent = (float f) => { };
                 mouse.OnMouseInBorderXEvent += MoveCenterX;
@@ -97,7 +97,7 @@ namespace ToyBox.LevelDesign
 
                 List<Transform> players = _raceFlow ? GetPlayerListOrder() : _alivePlayers.Select(player => player.PlayerObject.transform).ToList();
 
-                foreach (var player in players)
+                foreach (Transform player in players)
                 {
                     _centerPlayerPos += player.position;
                 }
@@ -111,7 +111,7 @@ namespace ToyBox.LevelDesign
 
                 for (int i = 0; i < players.Count; i++)
                 {
-                    var player = players[i];
+                    Transform player = players[i];
                     newCenter += (_centerPlayerPos - player.position) * (playersImpact.Count < i ? 0f : playersImpact[i]);
 
                     float distance = Vector3.Distance(player.position, _centerPlayerPos);
@@ -140,23 +140,23 @@ namespace ToyBox.LevelDesign
                 float minY = _mainCam.transform.position.y - distY * camLimitToKillPlayerMult; 
                 float maxY = _mainCam.transform.position.y + distY * camLimitToKillPlayerMult;
 
-                foreach (var player in players)
-                {
-                    if (player.transform.position.x < minX || player.transform.position.x > maxX || player.transform.position.y < minY || player.transform.position.y > maxY)
-                    {
-
-                        if (player.TryGetComponent(out PlayerEnd p))
-                        {
-                            if (p.IsDead) continue;
-
-                            AudioManager.Instance.PlaySFX("PlayerDie", player.position, 1f, 0.7f);
-                            if (_playerExplosion)
-                            {
-                                GameObject playerExplosionVisual = Instantiate(_playerExplosion, transform.position, Quaternion.identity);
-                                playerExplosionVisual.GetComponent<BombExplosionVisual>().Player = p;
-                            }
-                        }
+                foreach (Transform player in players) {
+                    if (!(player.transform.position.x < minX) && !(player.transform.position.x > maxX) && !(player.transform.position.y < minY) && !(player.transform.position.y > maxY)) {
+                        continue;
                     }
+                    if (!player.TryGetComponent(out PlayerEnd p)) {
+                        continue;
+                    }
+                    if (p.IsDead) {
+                        continue;
+                    }
+
+                    AudioManager.Instance.PlaySFX("PlayerDie", player.position, 1f, 0.7f);
+                    if (!_playerExplosion) {
+                        continue;
+                    }
+                    GameObject playerExplosionVisual = Instantiate(_playerExplosion, transform.position, Quaternion.identity);
+                    playerExplosionVisual.GetComponent<BombExplosionVisual>().Player = p;
                 }
                 
                 
@@ -165,15 +165,14 @@ namespace ToyBox.LevelDesign
 
         private List<Transform> GetPlayerListOrder()
         {
-            var list = _raceFlow.GetPlayersInOrder();
+            List<(string player, Transform t, float score)> list = _raceFlow.GetPlayersInOrder();
 
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (!_alivePlayers.Any(_alivePlayer => _alivePlayer.Name == list[i].player))
-                {
-                    list.RemoveAt(i);
-                    i--;
+            for (int i = 0; i < list.Count; i++) {
+                if (_alivePlayers.Any(_alivePlayer => _alivePlayer.Name == list[i].player)) {
+                    continue;
                 }
+                list.RemoveAt(i);
+                i--;
             }
 
             return list.Select(player => player.t).ToList();

@@ -75,7 +75,7 @@ namespace ToyBox.Build {
 
             foreach (Vector2 offSet1 in Offsets)
             {
-                var offSet = offSet1 + (Vector2)transform.position;
+                Vector2 offSet = offSet1 + (Vector2)transform.position;
                 Vector3 topLeft = new Vector3(offSet.x - halfSize, offSet.y + halfSize, 0f);
                 Vector3 topRight = new Vector3(offSet.x + halfSize, offSet.y + halfSize, 0f);
                 Vector3 bottomRight = new Vector3(offSet.x + halfSize, offSet.y - halfSize, 0f);

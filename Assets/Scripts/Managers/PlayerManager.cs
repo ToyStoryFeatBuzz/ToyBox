@@ -48,7 +48,7 @@ namespace ToyBox.Managers {
             }
         }
 
-        public void SetAnimInIddle(bool activation)
+        public void SetAnimInIdle(bool activation)
         {
          
             foreach (Player player in Players )

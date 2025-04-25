@@ -63,7 +63,7 @@ namespace ToyBox.Leaderboard
         public void UpdateLeaderboard()
         {
             CheckPlayers();
-            List<(string name, int score, Color c, Sprite sprite)> sortedPlayers = GetSortedPlayers();
+            List<PlayerData> sortedPlayers = GetSortedPlayers();
             List<Transform> activeSlots = new();
 
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
@@ -72,24 +72,23 @@ namespace ToyBox.Leaderboard
 
                 if (i < sortedPlayers.Count)
                 {
-                    (string playerName, int score, Color c, Sprite sprite) = sortedPlayers[i];
                     parent.gameObject.SetActive(true);
                     
-                    _leaderboardData.PlayerInfos[i].FillBar.color = c;
-                    Color colorAdd = c;
+                    _leaderboardData.PlayerInfos[i].FillBar.color = sortedPlayers[i].Color;
+                    Color colorAdd = sortedPlayers[i].Color;
                     colorAdd.a = 0.75f;
                     _leaderboardData.PlayerInfos[i].FillBarAdd.color = colorAdd;
 
                     
-                    _leaderboardData.PlayerInfos[i].TextPoint.text = score.ToString();
-                    _leaderboardData.PlayerInfos[i].TextPoint.color = c;
-                    _leaderboardData.PlayerInfos[i].TextSlot.text = playerName;
-                    _leaderboardData.PlayerInfos[i].SlotImage.sprite = sprite;
-                    _leaderboardData.PlayerInfos[i].PlayerNameTag.color = c;
+                    _leaderboardData.PlayerInfos[i].TextPoint.text = sortedPlayers[i].Score.ToString();
+                    _leaderboardData.PlayerInfos[i].TextPoint.color = sortedPlayers[i].Color;
+                    _leaderboardData.PlayerInfos[i].TextSlot.text = sortedPlayers[i].Name;
+                    _leaderboardData.PlayerInfos[i].SlotImage.sprite = sortedPlayers[i].Sprite;
+                    _leaderboardData.PlayerInfos[i].PlayerNameTag.color = sortedPlayers[i].Color;
                     
                     _leaderboardData.PlayerInfos[i].FillBar.fillAmount = _leaderboardData.PlayerInfos[i].FillBarAdd.fillAmount;
                     
-                    StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBarAdd, score / _maxScore));
+                    StartCoroutine(AnimateFillBar(_leaderboardData.PlayerInfos[i].FillBarAdd, sortedPlayers[i].Score / _maxScore));
 
                     activeSlots.Add(parent);
                 }
@@ -135,19 +134,28 @@ namespace ToyBox.Leaderboard
             }
         }
 
-        public List<(string name, int score, Color c, Sprite sprite)> GetSortedPlayers()
+        public List<PlayerData> GetSortedPlayers()
         {
-            List<(string name, int score, Color c, Sprite sprite)> playerList = new();
+            List<PlayerData> playerList = new();
 
             foreach (Managers.Player player in _playerManager.Players)
             {
-                if (_playerScoreDict.ContainsKey(player.Name))
-                {
-                    playerList.Add((player.Name, _playerScoreDict[player.Name].score, _playerScoreDict[player.Name].color, _playerScoreDict[player.Name].sprite));
+                if (_playerScoreDict.ContainsKey(player.Name)) {
+                    playerList.Add(new PlayerData {
+                        Name = player.Name, Score = _playerScoreDict[player.Name].score,
+                        Color = _playerScoreDict[player.Name].color, Sprite = _playerScoreDict[player.Name].sprite
+                    });
                 }
             }
 
-            return playerList.OrderByDescending(x => x.score).ToList();
+            return playerList.OrderByDescending(x => x.Score).ToList();
         }
+    }
+
+    public class PlayerData {
+        public string Name;
+        public int Score;
+        public Color Color;
+        public Sprite Sprite;
     }
 }

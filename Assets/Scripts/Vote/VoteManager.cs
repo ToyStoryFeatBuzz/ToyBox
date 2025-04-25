@@ -84,7 +84,7 @@ public class VoteManager : MonoBehaviour
         List<VoteZone> topZones = new List<VoteZone>();
         int highestVote = 0;
         
-        foreach (var zone in VoteZones)
+        foreach (VoteZone zone in VoteZones)
         {
             int count = zone.GetVoteCount();
 
@@ -104,14 +104,7 @@ public class VoteManager : MonoBehaviour
         {
             VoteZone winner;
 
-            if (topZones.Count == 1)
-            {
-                winner = topZones[0];
-            }
-            else
-            {
-                winner = topZones[Random.Range(0, topZones.Count)];
-            }
+            winner = topZones.Count == 1 ? topZones[0] : topZones[Random.Range(0, topZones.Count)];
             AudioManager.Instance.StopMusic();
             LoadMap(winner.MapName);
         }

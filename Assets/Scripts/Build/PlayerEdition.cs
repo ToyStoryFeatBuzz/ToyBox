@@ -86,7 +86,19 @@ namespace ToyBox.Build {
             }
             else // Try to get nearest object in the choosing box
             {
-                Collider2D hit = Physics2D.OverlapCircle(_mousePos, .1f);
+                Collider2D[] hits = Physics2D.OverlapCircleAll(_mousePos, .1f);
+
+                Collider2D hit = null;
+
+                foreach (Collider2D h in hits)
+                {
+                    if (h.transform.GetComponentInParent<BuildObject>())
+                    {
+                        hit = h;
+                        break;
+                    }
+                }
+                
                 if (hit && hit.transform && hit.transform.GetComponentInParent<BuildObject>())
                 {
                     BuildObject obj = hit.transform.GetComponentInParent<BuildObject>();

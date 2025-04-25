@@ -13,6 +13,8 @@ public class TilemapManager : MonoBehaviour
 
     private void Awake()
     {
+        tilesPos.Clear();
+        
         GetAllTilesInTilemap();
         Instance = this;
     }

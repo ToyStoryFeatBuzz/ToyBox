@@ -175,6 +175,8 @@ namespace ToyBox.Managers {
             }
             
             _buildsManager.ClearObjects();
+            
+            TilemapManager.tilesPos.Clear();
 
             OnRaceEndExtern = () => {};
             OnBuildStartExtern = () => {};

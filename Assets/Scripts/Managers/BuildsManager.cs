@@ -154,7 +154,7 @@ namespace ToyBox.Managers
             }
         }
 
-        public bool CanPlace(BuildObject testedBuild)  // Tells if testedBuild can be placed and does not collid with already placed objects
+        public bool CanPlace(BuildObject testedBuild)  // Tells if testedBuild can be placed and does not collide with already placed objects
         {
             foreach (Vector2 offset in testedBuild.Offsets)
             {

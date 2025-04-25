@@ -11,7 +11,7 @@ namespace ToyBox.Player {
 
         void Start() {
             _movement = GetComponent<PlayerMovement>();
-            GameModeManager.Instance.OnRaceStartIntern += () => { _canUlti = true;};
+            GameModeManager.Instance.OnRaceStartIntern += () => { CanUlti = true;};
             _baseSpeed = _movement.MaxSpeed;
             _speedBoostParticle.Stop();
         }

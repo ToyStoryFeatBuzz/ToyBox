@@ -116,7 +116,7 @@ namespace ToyBox.Managers {
         public void StartCountDown(float newTime)
         {
             StartRaceMode();    
-            _playerManager.SetAnimInIddle(true);
+            _playerManager.SetAnimInIdle(true);
             _playerManager.SetPlayersMovements(false);
             
             StartCoroutine(Countdown(newTime));
@@ -131,7 +131,7 @@ namespace ToyBox.Managers {
         {
             _levelKit.ToggleUI(true);
             _levelKit.StartTimer();
-            _playerManager.SetAnimInIddle(false);
+            _playerManager.SetAnimInIdle(false);
             _playerManager.SetPlayersMovements(true);
             StartRaceMode();
             AudioManager.Instance.PlayMusic("RaceMode",0.5f);
@@ -146,7 +146,7 @@ namespace ToyBox.Managers {
                 player.PlayerObject.GetComponent<SpeedUltimate>().enabled = true;
                 player.PlayerObject.GetComponent<SpeedUltimate>().CanUlti = true;
             }
-            _playerManager.SetNewPlayersEntries(true);
+            _playerManager.SetNewPlayersEntries(false);
             OnRaceStartIntern?.Invoke();
             OnRaceStartExtern?.Invoke();
         }

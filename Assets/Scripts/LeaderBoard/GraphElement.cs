@@ -16,8 +16,8 @@ public class GraphElement : MonoBehaviour
         _text.transform.localPosition = offSetText;
         _text.text = value.ToString();
 
-        var v = new Vector3[] { transform.position - (Vector3)(lineDir * _LengthLine), transform.position + (Vector3)(lineDir * _LengthLine) };
+        Vector3[] pos = { transform.position - (Vector3)(lineDir * _LengthLine), transform.position + (Vector3)(lineDir * _LengthLine) };
         
-        _line.SetPositions(v);
+        _line.SetPositions(pos);
     }
 }

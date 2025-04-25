@@ -94,7 +94,7 @@ namespace ToyBox.Managers {
 
             for (int i = 0; i < playersOrder.Count; i++)
             {
-                var p = playersOrder[i];
+                (string player, Transform t, float score) p = playersOrder[i];
 
                 p.score = _mapPath.GetPlayerAdvancement(p.t);
 

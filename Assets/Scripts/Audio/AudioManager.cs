@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
-using UnityEngine.Audio;
+using UnityEngine.Serialization;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    public AudioSource _audioSourceMusic;
-    public AudioSource _audioSourceSFX;
+    [FormerlySerializedAs("_audioSourceMusic")] public AudioSource AudioSourceMusic;
+    [FormerlySerializedAs("_audioSourceSFX")] public AudioSource AudioSourceSFX;
 
-    public Sound[] _musicSounds;
-    public Sound[] _sfxSounds;
+    [FormerlySerializedAs("_musicSounds")] public Sound[] MusicSounds;
+    [FormerlySerializedAs("_sfxSounds")] public Sound[] SFXSounds;
 
     private void Awake()
     {
@@ -29,7 +29,9 @@ public class AudioManager : MonoBehaviour
     {
         Sound sound = Array.Find(soundList, s => s.Name == name);
 
-        if (sound == null) return;
+        if (sound == null) {
+            return;
+        }
         GameObject tempAudio=new ("tempAudio");
         tempAudio.transform.position=pos;
         AudioSource audioSource= tempAudio.AddComponent<AudioSource>();
@@ -44,7 +46,9 @@ public class AudioManager : MonoBehaviour
     {
         Sound sound = Array.Find(soundList, s => s.Name == name);
 
-        if (sound == null) return;
+        if (sound == null) {
+            return;
+        }
         audioSource.clip = sound.Clip;
         audioSource.volume = volume;
         audioSource.loop = true;
@@ -59,24 +63,24 @@ public class AudioManager : MonoBehaviour
 
     public void StopMusic()
     {
-        StopSound(_audioSourceMusic);
+        StopSound(AudioSourceMusic);
     }
     
     
 
     public void StopSFX()
     {
-        StopSound(_audioSourceSFX);
+        StopSound(AudioSourceSFX);
     }
 
     public void PlayMusic(string name, float volume=1f)
     {
-        PlaySound(_musicSounds,name, _audioSourceMusic, volume);
+        PlaySound(MusicSounds,name, AudioSourceMusic, volume);
     }
 
     public void PlaySFX(string name, Vector2 pos=new(), float spatialBlend=0.0f, float volume=1.0f)
     {
-        PlaySound(_sfxSounds,name, pos, spatialBlend);
+        PlaySound(SFXSounds,name, pos, spatialBlend);
     }
 
     public bool IsSoundInList(Sound[] soundList, string name)

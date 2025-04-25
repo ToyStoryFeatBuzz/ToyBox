@@ -76,7 +76,7 @@ namespace ToyBox.Leaderboard
             _leaderboardData.Graph.SetActive(true);
             _leaderboardData.Background.SetActive(true);
             
-            List<(string name, int score, Color c, Sprite sprite)> sortedPlayers = _leaderBoard.GetSortedPlayers();
+            List<PlayerData> sortedPlayers = _leaderBoard.GetSortedPlayers();
 
             for (int i = 0; i < _leaderboardData.PlayerInfos.Count; i++)
             {
@@ -86,13 +86,12 @@ namespace ToyBox.Leaderboard
                 if (i >= sortedPlayers.Count) {
                     continue;
                 }
-                (string name, int score, Color c, Sprite sprite) = sortedPlayers[i];
-                _leaderboardData.PlayerInfos[i].ImagePlayer.sprite = sprite;
-                _leaderboardData.PlayerInfos[i].TextPoints.text = score.ToString();
-                _leaderboardData.PlayerInfos[i].TextName.text = name;
+                _leaderboardData.PlayerInfos[i].ImagePlayer.sprite = sortedPlayers[i].Sprite;
+                _leaderboardData.PlayerInfos[i].TextPoints.text = sortedPlayers[i].Score.ToString();
+                _leaderboardData.PlayerInfos[i].TextName.text = sortedPlayers[i].Name;
             }
 
-            int maxScore = Mathf.Max(1, sortedPlayers.Max(p => p.score));
+            int maxScore = Mathf.Max(1, sortedPlayers.Max(p => p.Score));
             
             maxScore = Mathf.Clamp(maxScore, 0, _gameModeManager.GetPointToWin());
             
@@ -100,7 +99,7 @@ namespace ToyBox.Leaderboard
 
             for (int i = 0; i < sortedPlayers.Count && i < _leaderboardData.PlayerInfos.Count; i++)
             {
-                DrawPlayerLine(i, sortedPlayers[i].name, maxScore, maxMatches, sortedPlayers[i].c);
+                DrawPlayerLine(i, sortedPlayers[i].Name, maxScore, maxMatches, sortedPlayers[i].Color);
             }
             
             DrawnBorderLines(maxScore, maxMatches);

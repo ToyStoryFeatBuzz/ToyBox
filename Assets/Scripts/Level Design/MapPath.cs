@@ -70,12 +70,12 @@ namespace ToyBox.LevelDesign {
         private Vector2
             NearestPointOnFiniteLine(Vector2 start, Vector2 end, Vector2 pnt) // Get a line and snap a position to it
         {
-            var line = (end - start);
-            var len = line.magnitude;
+            Vector2 line = (end - start);
+            float len = line.magnitude;
             line.Normalize();
 
-            var v = pnt - start;
-            var d = Vector2.Dot(v, line);
+            Vector2 v = pnt - start;
+            float d = Vector2.Dot(v, line);
             d = Mathf.Clamp(d, 0f, len);
             return start + line * d;
         }

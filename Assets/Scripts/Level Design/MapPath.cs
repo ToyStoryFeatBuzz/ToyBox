@@ -43,7 +43,7 @@ namespace ToyBox.LevelDesign {
             }
 
             if (index > 1) {
-                for (int i = 1; i < index - 1; i++) {
+                for (int i = 1; i <= index - 1; i++) {
                     advancement += Vector2.SqrMagnitude(points[i - 1] - points[i]);
                 }
             }

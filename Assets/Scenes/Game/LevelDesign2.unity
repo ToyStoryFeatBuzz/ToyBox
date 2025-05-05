@@ -272,7 +272,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1.9609689, y: 2.3366501}
+  m_Size: {x: 3.192883, y: 2.3366501}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
@@ -287,7 +287,7 @@ Transform:
   m_GameObject: {fileID: 1511932008}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.01, y: -6.47, z: 0}
+  m_LocalPosition: {x: -10.2959, y: -6.47, z: 0}
   m_LocalScale: {x: 2.609375, y: 2.609375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31740,9 +31740,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.16554356, y: -1.1761006}
-      - {x: -14.271947, y: -1.1738416}
-      - {x: -14.927376, y: -10.392294}
-      - {x: -13.291559, y: -10.899384}
+      - {x: -3.240675, y: -1.2423588}
+      - {x: -4.809667, y: -2.1017113}
+      - {x: -4.818264, y: -10.305566}
       - {x: 19.826626, y: -10.388105}
       - {x: 20.069105, y: -24.684599}
       - {x: 21.390228, y: -25.676332}
